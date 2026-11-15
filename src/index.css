@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html,
+  body,
+  #root {
+    width: 100%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    background-color: theme('colors.surface');
+    color: theme('colors.on-surface');
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    -webkit-font-smoothing: antialiased;
+    overscroll-behavior-y: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Selection uses the Stitch accent */
+  ::selection {
+    background-color: theme('colors.secondary-container');
+    color: theme('colors.on-secondary-container');
+  }
+
+  /* Safe-area helpers (Stitch .pt-safe / .pb-safe) */
+  .pt-safe {
+    padding-top: env(safe-area-inset-top, 0px);
+  }
+  .pb-safe {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  .pl-safe {
+    padding-left: env(safe-area-inset-left, 0px);
+  }
+
+  /* Content offset for the fixed 64px app header (safe-area aware) */
+  .pt-header {
+    padding-top: calc(4rem + env(safe-area-inset-top, 0px));
+  }
+  .pr-safe {
+    padding-right: env(safe-area-inset-right, 0px);
+  }
+
+  /* Material Symbols base — mirrors the Stitch icon setup */
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    user-select: none;
+  }
+
+  .material-symbols-outlined.is-filled {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+
+  /* Focus visibility for keyboard users (desktop) */
+  :focus-visible {
+    outline: 2px solid theme('colors.primary');
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+
+  /* Slim scrollbars on pointer devices instead of hiding them (Stitch hides
+     scrollbars entirely, which harms desktop usability). */
+  * {
+    scrollbar-width: thin;
+    scrollbar-color: theme('colors.outline-variant') transparent;
+  }
+
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background-color: theme('colors.outline-variant');
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  /* Landing page (Route `/`) — first/last child margin resets ported from
+     the standalone landing designs' <head> styles. */
+  .landing-page main > :first-child {
+    margin-top: 0 !important;
+  }
+  .landing-page main > :last-child {
+    margin-bottom: 0 !important;
+  }
+}
