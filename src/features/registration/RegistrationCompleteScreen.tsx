@@ -1,0 +1,420 @@
+import { useNavigate } from 'react-router-dom';
+import { useShallow } from 'zustand/react/shallow';
+import { AuthAside, AuthShell } from '../../design/AuthShell';
+import { Button } from '../../design/Button';
+import { Icon } from '../../design/Primitives';
+import { useToast } from '../../design/Toast';
+import { useRegistrationDraft } from '../../store/registrationDraft';
+import {
+  GENDER_OPTIONS,
+  ageFrom,
+  demoLifecode,
+  formatDob,
+  habitsAnswered,
+  healthLabel,
+  maskEmail,
+  maskPhone,
+} from './registrationData';
+
+type BadgeTone = 'ok' | 'warn' | 'muted' | 'alert';
+
+interface SummaryRow {
+  label: string;
+  value: string;
+  badge?: { text: string; tone: BadgeTone };
+  note?: string;
+}
+
+const badgeStyles: Record<BadgeTone, string> = {
+  ok: 'bg-secondary-container text-on-secondary-container',
+  warn: 'bg-surface-container-high text-on-surface-variant',
+  muted: 'bg-surface-variant text-on-surface-variant',
+  alert: 'bg-error-container text-on-error-container',
+};
+
+function SummaryCard({
+  icon,
+  title,
+  status,
+  statusTone = 'ok',
+  rows,
+}: {
+  icon: string;
+  title: string;
+  status: string;
+  statusTone?: BadgeTone;
+  rows: SummaryRow[];
+}) {
+  return (
+    <section className="rounded-xl bg-surface-container-lowest p-space-md shadow-sm">
+      <div className="mb-space-xs flex items-center justify-between gap-2 pb-space-2xs">
+        <span className="flex min-w-0 items-center gap-space-xs">
+          <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-surface-container text-primary">
+            <Icon name={icon} className="text-[16px]" />
+          </span>
+          <span className="truncate font-title-sm text-title-sm text-on-surface">{title}</span>
+        </span>
+        <span
+          className={`shrink-0 rounded-full px-space-xs py-0.5 font-label-sm ${badgeStyles[statusTone]}`}
+        >
+          {status}
+        </span>
+      </div>
+      <dl className="flex flex-col gap-space-xs pt-space-2xs">
+        {rows.map((row) => (
+          <div
+            key={row.label}
+            className={
+              row.note ? 'flex items-start justify-between gap-2 rounded-lg bg-surface-container-low p-space-2xs' : 'flex items-start justify-between gap-2'
+            }
+          >
+            <dt className="flex flex-col font-body-sm text-on-surface-variant">
+              {row.label}
+              {row.note ? (
+                <span className="font-label-sm text-outline">{row.note}</span>
+              ) : null}
+            </dt>
+            <dd className="text-right font-body-sm font-medium text-on-surface">
+              {row.badge ? (
+                <span
+                  className={`inline-block rounded px-1.5 py-0.5 font-label-sm font-semibold ${badgeStyles[row.badge.tone]}`}
+                >
+                  {row.badge.text}
+                </span>
+              ) : (
+                row.value
+              )}
+            </dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  );
+}
+
+/**
+ * Step 5 of 5 — registration complete & summary.
+ * Route: `/register/complete`
+ *
+ * Shows what was actually entered during this demo session (nothing is
+ * invented) and hands out a demonstration Lifecode that is explicitly labelled
+ * as an identifier, never a password or access token (Blueprint §4.1).
+ */
+export function RegistrationCompleteScreen() {
+  const navigate = useNavigate();
+  const { showToast } = useToast();
+  const draft = useRegistrationDraft(
+    useShallow((s) => ({
+      method: s.method,
+      phone: s.phone,
+      email: s.email,
+      passwordSet: s.passwordSet,
+      contactVerified: s.contactVerified,
+      firstName: s.firstName,
+      middleName: s.middleName,
+      lastName: s.lastName,
+      dob: s.dob,
+      gender: s.gender,
+      nin: s.nin,
+      accountType: s.accountType,
+      health: s.health,
+      healthSaved: s.healthSaved,
+      healthSkipped: s.healthSkipped,
+    })),
+  );
+
+  const fullName =
+    [draft.firstName, draft.middleName, draft.lastName].filter(Boolean).join(' ').trim() ||
+    'Not provided';
+  const genderLabel =
+    GENDER_OPTIONS.find((option) => option.value === draft.gender)?.label ?? 'Not provided';
+  const age = ageFrom(draft.dob);
+  const lifecode = demoLifecode([draft.firstName, draft.lastName, draft.dob]);
+  const hasDraft = Boolean(draft.contactVerified || draft.firstName || draft.email || draft.phone);
+
+  const healthStatus: { text: string; tone: BadgeTone } = draft.healthSaved
+    ? { text: 'Saved', tone: 'ok' }
+    : draft.healthSkipped
+      ? { text: 'Skipped', tone: 'warn' }
+      : { text: 'Not filled', tone: 'muted' };
+
+  const saveLifecode = async () => {
+    const card = [
+      'DHA — demonstration Lifecode card',
+      `Lifecode: ${lifecode}`,
+      `Name: ${fullName}`,
+      'This identifier locates a patient. It is never a password or access token.',
+      'Demonstration data generated by the DHA frontend demo — no account exists.',
+    ].join('\n');
+    try {
+      await navigator.clipboard.writeText(card);
+      showToast('Lifecode copied — demonstration card only.', 'success');
+    } catch {
+      showToast('Copying is blocked in this browser — the code is shown above.');
+    }
+  };
+
+  return (
+    <AuthShell
+      title="Registration Summary"
+      step={5}
+      stepCaption="Final step"
+      onBack={() => navigate('/register/health')}
+      aside={
+        <AuthAside
+          heading="What happens next"
+          points={[
+            {
+              icon: 'dashboard',
+              title: 'Your patient dashboard',
+              text: 'Profile completeness and next-step guidance live there once the service is connected.',
+            },
+            {
+              icon: 'qr_code_2',
+              title: 'Show your Lifecode at a clinic',
+              text: 'Display, save or print it — it locates your profile, it never unlocks it.',
+            },
+            {
+              icon: 'edit_note',
+              title: 'Finish skipped items later',
+              text: 'Anything you skipped can be completed from your profile any time.',
+            },
+          ]}
+        />
+      }
+    >
+      {/* Honest demo banner */}
+      <p className="flex items-start gap-2 rounded-xl bg-surface-container-low p-space-sm font-body-sm leading-snug text-on-surface-variant">
+        <Icon name="science" className="mt-0.5 shrink-0 text-[16px] text-primary" />
+        Frontend demo — no real account was created and no SMS or email was sent. Everything below
+        is what you entered in this browser session.
+      </p>
+
+      {!draft.contactVerified ? (
+        <p
+          role="alert"
+          className="flex items-start gap-2 rounded-xl bg-error-container p-space-sm font-body-sm leading-snug text-on-error-container"
+        >
+          <Icon name="error" className="mt-0.5 shrink-0 text-[16px]" />
+          Your contact has not been verified yet, so parts of this summary are incomplete.
+        </p>
+      ) : null}
+
+      {/* Success */}
+      <section className="relative flex flex-col items-center overflow-hidden rounded-xl bg-surface-container-lowest p-space-lg text-center shadow-sm">
+        <div className="pointer-events-none absolute -right-10 -top-10 h-32 w-32 rounded-full bg-secondary-container/20 blur-xl" />
+        <div className="pointer-events-none absolute -bottom-10 -left-10 h-28 w-28 rounded-full bg-primary-fixed/30 blur-lg" />
+        <span className="relative mb-space-sm flex h-16 w-16 items-center justify-center rounded-full bg-secondary-container text-on-secondary-container shadow-sm">
+          <Icon name="check_circle" filled className="text-[34px]" />
+        </span>
+        <h1 className="relative font-headline-lg-mobile text-headline-lg-mobile font-bold tracking-tight text-on-surface">
+          Registration Complete!
+        </h1>
+        <p className="relative mt-space-2xs max-w-[320px] font-body-md text-on-surface-variant">
+          Your demo profile is ready and a demonstration Lifecode has been generated for it.
+        </p>
+      </section>
+
+      {/* Lifecode card */}
+      <section className="relative overflow-hidden rounded-xl bg-gradient-to-br from-primary via-primary-container to-tertiary-container p-space-md text-on-primary shadow-md">
+        <div className="pointer-events-none absolute right-0 top-0 h-32 w-32 translate-x-4 -translate-y-4 rounded-full bg-white/10 blur-md" />
+        <div className="relative z-10 mb-space-sm flex items-start justify-between gap-3">
+          <div className="min-w-0">
+            <span className="flex items-center gap-1">
+              <Icon name="qr_code_scanner" className="text-[14px] text-secondary-fixed" />
+              <span className="font-label-sm uppercase tracking-wider text-secondary-fixed">
+                Oral Lifecode · demo
+              </span>
+            </span>
+            <p className="mt-1 truncate font-title-md font-semibold">{fullName}</p>
+          </div>
+          <span className="flex shrink-0 flex-col items-center rounded-lg bg-surface-container-lowest p-1.5 shadow-sm">
+            <svg className="h-12 w-12 text-on-surface" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M2 2h8v8H2V2zm2 2v4h4V4H4zm-2 10h8v8H2v-8zm2 2v4h4v-4H4zm10-14h8v8h-8V2zm2 2v4h4V4h-4zm2 10h2v2h-2v-2zm-2 2h2v2h-2v-2zm4 0h2v2h-2v-2zm-4 4h2v2h-2v-2zm4 0h2v2h-2v-2zm2-2h2v2h-2v-2zm0-4h2v2h-2v-2zm-8 4h2v2h-2v-2z" />
+            </svg>
+            <span className="text-[8px] font-bold leading-none text-on-surface-variant">SCAN</span>
+          </span>
+        </div>
+        <div className="relative z-10 flex flex-wrap items-center justify-between gap-space-xs rounded-lg bg-black/20 p-space-xs backdrop-blur-sm">
+          <span className="flex flex-col">
+            <span className="font-label-sm uppercase text-surface-variant/80">Lifecode</span>
+            <span className="font-title-sm font-bold tracking-widest text-surface-bright">
+              {lifecode}
+            </span>
+          </span>
+          <span className="flex items-center gap-1 rounded-full bg-secondary px-space-xs py-1 font-label-sm font-medium text-on-secondary">
+            <span className="h-2 w-2 rounded-full bg-secondary-fixed" aria-hidden="true" />
+            Demo card
+          </span>
+        </div>
+      </section>
+      <p className="-mt-space-sm flex items-start gap-1.5 font-body-sm leading-snug text-on-surface-variant">
+        <Icon name="info" className="mt-0.5 shrink-0 text-[15px] text-primary" />
+        This identifier locates a patient — it is never a password or access token. The live service
+        issues it only after identity checks.
+      </p>
+
+      {/* Summary */}
+      <div className="flex flex-col gap-space-xs">
+        <div className="flex items-center justify-between">
+          <span className="flex items-center gap-1.5">
+            <Icon name="assignment_turned_in" className="text-[20px] text-primary" />
+            <h2 className="font-title-md text-title-md text-on-surface">Session summary</h2>
+          </span>
+          <span className="rounded-full bg-surface-container-high px-space-xs py-0.5 font-label-sm text-on-surface-variant">
+            3 sections
+          </span>
+        </div>
+        <p className="font-body-sm text-on-surface-variant">
+          Everything you entered in this demo, alongside the items you skipped.
+        </p>
+      </div>
+
+      <div className="flex flex-col gap-space-sm">
+        <SummaryCard
+          icon="fingerprint"
+          title="Account & credentials"
+          status={draft.contactVerified ? 'Verified' : 'Unverified'}
+          statusTone={draft.contactVerified ? 'ok' : 'alert'}
+          rows={[
+            {
+              label: 'Verification contact',
+              value:
+                draft.method === 'phone'
+                  ? maskPhone(draft.phone)
+                  : maskEmail(draft.email),
+            },
+            {
+              label: 'Contact verification',
+              value: draft.contactVerified ? 'Code accepted (demo)' : 'Not verified',
+              badge: draft.contactVerified
+                ? { text: 'OTP OK', tone: 'ok' }
+                : { text: 'Pending', tone: 'warn' },
+            },
+            {
+              label: 'Password',
+              value: draft.passwordSet ? 'Set for this session' : 'Not set',
+            },
+            { label: 'Record visibility', value: 'Private until you share it' },
+          ]}
+        />
+
+        <SummaryCard
+          icon="person"
+          title="Personal identity"
+          status={draft.firstName && draft.lastName && draft.dob ? 'Complete' : 'Incomplete'}
+          statusTone={draft.firstName && draft.lastName && draft.dob ? 'ok' : 'warn'}
+          rows={[
+            { label: 'Legal name', value: fullName },
+            {
+              label: 'Date of birth',
+              value:
+                draft.dob
+                  ? `${formatDob(draft.dob)}${age !== null ? ` (age ${age})` : ''}`
+                  : 'Not provided',
+            },
+            { label: 'Gender', value: genderLabel },
+            {
+              label: 'NIN',
+              value: draft.nin ? 'Submitted' : 'Not submitted',
+              badge: draft.nin ? { text: 'Optional · added', tone: 'ok' } : { text: 'Skipped', tone: 'warn' },
+              note: draft.nin ? undefined : 'You can add it before your first visit',
+            },
+            {
+              label: 'Account type',
+              value: draft.accountType === 'guardian' ? 'Parent / guardian' : 'Self (adult)',
+            },
+          ]}
+        />
+
+        <SummaryCard
+          icon="dentistry"
+          title="General health profile"
+          status={healthStatus.text}
+          statusTone={healthStatus.tone}
+          rows={[
+            { label: 'Medical conditions', value: healthLabel('condition', draft.health.condition) },
+            { label: 'Drug allergies', value: healthLabel('allergy', draft.health.allergy) },
+            { label: 'Current medications', value: healthLabel('medication', draft.health.medication) },
+            { label: 'Blood group', value: draft.health.bloodGroup || 'Not answered' },
+            {
+              label: 'Dental habits',
+              value: `${habitsAnswered(draft.health)} of 3 answered`,
+            },
+          ]}
+        />
+      </div>
+
+      {draft.accountType === 'guardian' ? (
+        <section className="flex items-start gap-space-sm rounded-xl bg-tertiary-fixed/60 p-space-md">
+          <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-tertiary-fixed text-tertiary">
+            <Icon name="family_restroom" className="text-[18px]" />
+          </span>
+          <div className="flex flex-col gap-1">
+            <p className="font-title-sm font-semibold text-on-surface">
+              Guardian setup comes next
+            </p>
+            <p className="font-body-sm leading-snug text-on-surface-variant">
+              Linking a child&apos;s profile, guardian consent and assent handling arrive with the
+              guardian screens. Children&apos;s records stay strictly separate from your own.
+            </p>
+          </div>
+        </section>
+      ) : null}
+
+      {/* Skipped items */}
+      <section className="flex items-start gap-space-sm rounded-xl bg-secondary-container/30 p-space-md">
+        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-secondary-container text-secondary">
+          <Icon name="clinical_notes" className="text-[18px]" />
+        </span>
+        <div className="flex-1">
+          <p className="mb-0.5 font-title-sm font-semibold text-on-surface">
+            Finish skipped items any time
+          </p>
+          <p className="font-body-sm leading-snug text-on-surface-variant">
+            You can complete them from your profile. A clinician can also record verified details
+            during your first visit — patient-reported entries are labelled separately and never
+            silently replaced.
+          </p>
+        </div>
+      </section>
+
+      {/* Actions */}
+      <div className="sticky bottom-0 flex flex-col gap-space-xs bg-surface/95 pb-space-2xs pt-space-xs backdrop-blur-md">
+        <Button
+          id="go-dashboard-btn"
+          size="lg"
+          onClick={() => navigate('/patient-dashboard')}
+          icon={<Icon name="arrow_forward" className="text-[18px]" />}
+        >
+          Go to Patient Dashboard
+        </Button>
+        <div className="grid grid-cols-2 gap-space-xs">
+          <Button
+            variant="neutral"
+            size="md"
+            onClick={() => navigate('/register/health')}
+            icon={<Icon name="edit_note" className="text-[18px]" />}
+            className="text-primary"
+          >
+            {draft.healthSaved ? 'Review health' : 'Fill skipped'}
+          </Button>
+          <Button
+            variant="neutral"
+            size="md"
+            onClick={saveLifecode}
+            icon={<Icon name="badge" className="text-[18px]" />}
+          >
+            Save Lifecode
+          </Button>
+        </div>
+      </div>
+
+      {!hasDraft ? (
+        <Button variant="ghost" size="sm" onClick={() => navigate('/register')}>
+          Start a registration instead
+        </Button>
+      ) : null}
+    </AuthShell>
+  );
+}
