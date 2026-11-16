@@ -30,7 +30,7 @@ export function AdditionalBranchRegistrationScreen() {
         {/* Gateway Title */}
         <div className="text-left">
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary mb-2">
-            <span>DHA SEC 15.12</span> &bull; <span>Multi-Site Practice Hierarchy</span>
+            <span>Multi-Site Practice Hierarchy</span>
           </div>
           <h2 className="text-2xl sm:text-3xl font-heading font-extrabold text-on-surface tracking-tight">
             Does your organisation operate additional clinic locations?

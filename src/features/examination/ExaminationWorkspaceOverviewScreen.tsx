@@ -140,7 +140,7 @@ export function ExaminationWorkspaceOverviewScreen() {
         {/* Module Catalog Header */}
         <div className="flex items-center justify-between pt-1">
           <div>
-            <h2 className="text-base sm:text-lg font-bold text-on-surface">Section 10 Modules</h2>
+            <h2 className="text-base sm:text-lg font-bold text-on-surface">Clinical Examination Modules</h2>
             <p className="text-xs text-on-surface-variant">Systematic 8-phase diagnostic protocol</p>
           </div>
           <span className="text-[10px] font-bold uppercase tracking-wider text-primary bg-primary-fixed px-2.5 py-1 rounded-full">

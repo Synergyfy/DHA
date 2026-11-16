@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '../../design/Primitives';
+import { QuickLinks } from '../../design/QuickLinks';
 
 type WorkspaceFilter = 'all' | 'lounge' | 'sterilization' | 'financials';
 
@@ -607,6 +608,14 @@ export function BranchOperationsOverviewScreen() {
           </button>
         </div>
       </footer>
+      <QuickLinks
+        title="Clinics & Branches"
+        links={[
+          { to: '/clinic-operations/branch-operational-details', label: 'Branch Operational Details', icon: 'domain' },
+          { to: '/clinic-operations/branch-management', label: 'Branch Management', icon: 'account_tree' },
+          { to: '/clinic-operations/branch-switcher', label: 'Switch Branch', icon: 'swap_horiz' },
+        ]}
+      />
     </div>
   );
 }

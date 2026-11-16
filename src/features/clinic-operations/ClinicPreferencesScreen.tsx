@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '../../design/Primitives';
+import { QuickLinks } from '../../design/QuickLinks';
 
 export const ClinicPreferencesScreen: React.FC = () => {
   const navigate = useNavigate();
@@ -74,8 +75,6 @@ export const ClinicPreferencesScreen: React.FC = () => {
               <div className="flex flex-col min-w-0">
                 <div className="flex items-center gap-2">
                   <span className="text-[11px] font-semibold text-[#707881] uppercase tracking-wider">Facility Settings</span>
-                  <span className="text-[11px] text-[#707881]">•</span>
-                  <span className="text-[11px] font-medium text-[#006194]">Section 16.45</span>
                 </div>
                 <h1 className="font-['Plus_Jakarta_Sans',sans-serif] text-base md:text-lg font-bold text-[#131b2e] truncate">
                   Clinic Preferences
@@ -515,6 +514,13 @@ export const ClinicPreferencesScreen: React.FC = () => {
           </button>
         </div>
       </main>
+      <QuickLinks
+        title="Settings"
+        links={[
+          { to: '/clinic-operations/dashboard-settings', label: 'Dashboard Settings', icon: 'dashboard_customize' },
+          { to: '/clinic-operations/customise', label: 'Dashboard Customise', icon: 'tune' },
+        ]}
+      />
     </div>
   );
 };

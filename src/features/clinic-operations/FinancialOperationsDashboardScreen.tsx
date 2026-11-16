@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '../../design/Primitives';
+import { QuickLinks } from '../../design/QuickLinks';
 
 interface PaymentRecord {
   id: string;
@@ -119,9 +120,7 @@ export const FinancialOperationsDashboardScreen: React.FC = () => {
             </button>
             <div>
               <div className="flex items-center gap-2">
-                <span className="text-xs uppercase tracking-wider font-semibold text-[#006194]">Clinic Hub</span>
-                <span className="text-xs text-[#707881]">•</span>
-                <span className="font-mono text-xs text-[#3f4850]">Section 16.30</span>
+                <span className="text-xs uppercase tracking-wider font-semibold text-[#006194]">Clinic Operations</span>
               </div>
               <h1 className="font-['Plus_Jakarta_Sans',sans-serif] text-base md:text-lg font-bold text-[#131b2e] truncate">
                 Financial Operations Dashboard
@@ -639,6 +638,15 @@ export const FinancialOperationsDashboardScreen: React.FC = () => {
           </div>
         </div>
       )}
+      <QuickLinks
+        title="Finance"
+        links={[
+          { to: '/clinic-operations/billing-invoices', label: 'Billing & Invoices', icon: 'receipt_long' },
+          { to: '/clinic-operations/payment-history', label: 'Payment History', icon: 'history' },
+          { to: '/clinic-operations/refund-adjustments', label: 'Refunds & Adjustments', icon: 'replay' },
+          { to: '/clinic-operations/financial-reports', label: 'Financial Reports', icon: 'picture_as_pdf' },
+        ]}
+      />
     </div>
   );
 };

@@ -6,8 +6,7 @@ export function DiscoverySubNav() {
     { to: '/patient-dashboard/discovery', label: 'Discover', icon: 'explore', end: true },
     { to: '/patient-dashboard/discovery/results', label: 'Search Results', icon: 'search' },
     { to: '/patient-dashboard/discovery/map', label: 'Interactive Map', icon: 'map' },
-    { to: '/patient-dashboard/discovery/dentist', label: 'Dentist Profile', icon: 'badge' },
-    { to: '/patient-dashboard/discovery/clinic', label: 'Clinic Profile', icon: 'apartment' },
+    // Dentist Profile & Clinic Profile are dependent pages — they open from a result card.
     { to: '/patient-dashboard/discovery/services', label: 'Services & Specialities', icon: 'medical_services' },
   ];
 

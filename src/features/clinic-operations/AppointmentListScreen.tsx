@@ -228,7 +228,7 @@ export const AppointmentListScreen: React.FC = () => {
                 <span className="hidden sm:inline">Calendar View</span>
               </button>
               <button
-                onClick={() => showToast('Opening New Appointment modal')}
+                onClick={() => navigate('/clinic-operations/create-appointment')}
                 className="h-10 px-4 rounded-xl bg-[#006194] hover:bg-[#007bb9] active:scale-[0.98] text-white text-xs sm:text-sm font-semibold flex items-center gap-1.5 shadow-sm transition-all"
               >
                 <Icon name="add" className="text-[18px]" />

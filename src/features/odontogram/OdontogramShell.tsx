@@ -12,14 +12,13 @@ interface OdontogramShellProps {
   showBack?: boolean;
 }
 
-const ODONTOGRAM_SUBNAV = [
-  { to: '/odontogram/overview', label: 'Overview', icon: 'space_dashboard', code: '9.1' },
-  { to: '/odontogram/findings', label: 'Oral Findings', icon: 'clinical_notes', code: '9.5' },
-  { to: '/odontogram/investigations', label: 'Investigations', icon: 'hub', code: '9.6' },
-  { to: '/odontogram/summary', label: 'Clinical Summary', icon: 'assignment_turned_in', code: '9.7' },
-  { to: '/odontogram/confirmation', label: 'Confirmation', icon: 'verified_user', code: '9.8' },
-  { to: '/odontogram/history', label: 'History', icon: 'history_edu', code: '9.9' },
-  { to: '/odontogram/compare', label: 'Compare', icon: 'compare', code: '9.10' },
+type NavItem = { to: string; label: string; icon: string; end?: boolean; desc?: string };
+
+/* Sidebar shows module-level destinations only. Charting, imaging, summary and
+   verification are stages of one odontogram session; compare opens from History. */
+const ODONTOGRAM_SUBNAV: NavItem[] = [
+  { to: '/odontogram/overview', label: 'Odontogram Overview', icon: 'space_dashboard' },
+  { to: '/odontogram/history', label: 'Odontogram History', icon: 'history_edu' },
 ];
 
 export function OdontogramShell({
@@ -33,303 +32,487 @@ export function OdontogramShell({
 }: OdontogramShellProps) {
   const navigate = useNavigate();
   const location = useLocation();
-  const [navMenuOpen, setNavMenuOpen] = useState(false);
+  const [mobileMoreOpen, setMobileMoreOpen] = useState(false);
+  const [mobileProfileOpen, setMobileProfileOpen] = useState(false);
+  const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
+
+  const handleSignOut = () => {
+    navigate('/login');
+  };
 
   return (
-    <div className="min-h-screen bg-surface font-body-md text-on-surface flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-container">
-      {/* Top Application Header */}
-      <header className="sticky top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
-        {/* Clinician Operator Credentials Bar */}
-        <div className="bg-surface-container-low px-4 sm:px-6 lg:px-8 py-2 border-b border-outline-variant/20 flex items-center justify-between gap-3 text-xs">
-          <div className="flex items-center gap-2 min-w-0">
-            <span className="w-2 h-2 rounded-full bg-secondary animate-pulse shrink-0" />
-            <span className="font-semibold text-on-surface truncate">
-              Dr. Daniel Example
+    <div className="min-h-screen bg-[#faf8ff] text-[#131b2e] flex flex-col font-sans selection:bg-[#cce5ff] selection:text-[#001d31]">
+      {/* DESKTOP FIXED SIDEBAR */}
+      <aside className="hidden md:flex flex-col fixed inset-y-0 left-0 w-60 lg:w-64 bg-white border-r border-[#eaedff] z-40">
+        {/* Brand Header */}
+        <div className="p-4 border-b border-[#eaedff] flex items-center gap-3">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#006194] to-[#007bb9] text-white flex items-center justify-center shadow-sm shrink-0">
+            <Icon name="dentistry" className="text-[22px]" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-[#006194] block">
+              Digital Charting
             </span>
-            <span className="text-on-surface-variant font-mono text-[11px] hidden sm:inline">
+            <h2 className="text-sm font-bold text-[#131b2e] truncate">
+              Odontogram Suite
+            </h2>
+          </div>
+        </div>
+
+        {/* Active Patient File Capsule */}
+        <div className="p-3 bg-[#f2f3ff] border-b border-[#eaedff]">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-full bg-[#006194] text-white flex items-center justify-center font-bold text-xs shrink-0">
+              AY
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-bold text-[#131b2e] truncate">{patientName}</span>
+                <span className="text-[9px] px-1.5 py-0.2 rounded bg-emerald-100 text-emerald-800 font-semibold">
+                  Active
+                </span>
+              </div>
+              <span className="text-[11px] text-[#707881] font-mono">{dhaId} • 28y F</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Navigation Items */}
+        <div className="flex-1 overflow-y-auto p-3 space-y-1">
+          <div className="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#707881]">
+            Odontogram Tools
+          </div>
+          {ODONTOGRAM_SUBNAV.map((item) => {
+            const isActive = location.pathname === item.to;
+            return (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                className={`flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-medium transition-all ${
+                  isActive
+                    ? 'bg-[#006194] text-white font-semibold shadow-xs'
+                    : 'text-[#3f4850] hover:bg-[#f2f3ff] hover:text-[#131b2e]'
+                }`}
+              >
+                <Icon name={item.icon} className="text-[17px] shrink-0" />
+                <span className="truncate">{item.label}</span>
+              </NavLink>
+            );
+          })}
+
+          <div className="pt-3 mt-3 border-t border-[#eaedff]">
+            <div className="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#707881]">
+              Connected Suites
+            </div>
+            <NavLink
+              to="/clinical/workspace"
+              className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs text-[#3f4850] hover:bg-[#f2f3ff] hover:text-[#131b2e]"
+            >
+              <Icon name="space_dashboard" className="text-[17px] text-[#006194]" />
+              <span className="truncate">Dentist Workspace</span>
+            </NavLink>
+            <NavLink
+              to="/examination/workspace"
+              className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs text-[#3f4850] hover:bg-[#f2f3ff] hover:text-[#131b2e]"
+            >
+              <Icon name="clinical_notes" className="text-[17px] text-[#006194]" />
+              <span className="truncate">Clinical Examination</span>
+            </NavLink>
+            <NavLink
+              to="/investigations/dashboard"
+              className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs text-[#3f4850] hover:bg-[#f2f3ff] hover:text-[#131b2e]"
+            >
+              <Icon name="biotech" className="text-[17px] text-[#006194]" />
+              <span className="truncate">Investigations & Lab</span>
+            </NavLink>
+            <NavLink
+              to="/summaries/dashboard"
+              className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs text-[#3f4850] hover:bg-[#f2f3ff] hover:text-[#131b2e]"
+            >
+              <Icon name="auto_awesome" className="text-[17px] text-[#006194]" />
+              <span className="truncate">AI Diagnostic Summaries</span>
+            </NavLink>
+          </div>
+        </div>
+
+        {/* Sidebar Footer with Sign Out */}
+        <div className="p-3 border-t border-[#eaedff] bg-[#faf8ff] space-y-1">
+          <button
+            type="button"
+            onClick={handleSignOut}
+            className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-rose-600 hover:bg-rose-50 transition-colors"
+          >
+            <Icon name="logout" className="text-[18px]" />
+            <span>Sign Out</span>
+          </button>
+        </div>
+      </aside>
+
+      {/* TOP HEADER */}
+      <header className="sticky top-0 z-30 bg-white/90 backdrop-blur-xl border-b border-[#eaedff] shadow-[0_1px_8px_rgba(0,0,0,0.03)] md:pl-60 lg:pl-64">
+        {/* Clinician Operator Credentials Bar */}
+        <div className="bg-[#f2f3ff] px-4 sm:px-6 lg:px-8 py-1.5 border-b border-[#eaedff] flex items-center justify-between gap-3 text-xs">
+          <div className="flex items-center gap-2 min-w-0">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shrink-0" />
+            <span className="font-semibold text-[#131b2e] truncate">
+              Dr. Daniel James
+            </span>
+            <span className="text-[#707881] font-mono text-[11px] hidden sm:inline">
               (#DEN-48912)
             </span>
-            <span className="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-wider hidden xs:inline">
+            <span className="px-2 py-0.5 rounded-full bg-[#89f5e7]/40 text-[#006a61] text-[10px] font-bold uppercase tracking-wider hidden xs:inline">
               LIVE CLINICAL
             </span>
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-mono text-[10px] font-bold">
-              <Icon name="verified" className="text-[13px] text-secondary" />
-              <span>DHA Registered Odontogram</span>
+            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white text-[#006194] border border-[#eaedff] font-mono text-[10px] font-bold">
+              <Icon name="verified" className="text-[13px] text-emerald-600" />
+              <span>Registered Odontogram</span>
             </span>
             {badgeCode && (
-              <span className="font-mono text-[11px] font-bold bg-surface-container px-2 py-0.5 rounded text-primary">
+              <span className="font-mono text-[11px] font-bold bg-[#eaedff] px-2 py-0.5 rounded text-[#006194]">
                 {badgeCode}
               </span>
             )}
           </div>
         </div>
 
-        {/* Patient Identity Quick Bar */}
-        <div className="bg-surface-container-lowest px-4 sm:px-6 lg:px-8 py-1.5 border-b border-outline-variant/20 flex items-center justify-between gap-3 text-xs">
-          <div className="flex items-center gap-2 min-w-0">
-            <Icon name="badge" className="text-primary text-[16px] shrink-0" />
-            <span className="font-title-sm text-xs font-bold text-on-surface truncate">
-              {patientName}
-            </span>
-            <span className="text-outline hidden xs:inline">•</span>
-            <span className="font-label-code text-xs text-on-surface-variant font-mono truncate">
-              {dhaId}
-            </span>
-            <span className="text-outline hidden sm:inline">•</span>
-            <span className="text-on-surface-variant hidden sm:inline">28y Female</span>
-          </div>
-
-          <div className="flex items-center gap-1.5 shrink-0">
-            <span className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold">
-              <Icon name="verified_user" className="text-[12px] text-secondary" />
-              <span>Clinical Record Active</span>
-            </span>
-          </div>
-        </div>
-
         {/* Main Navbar */}
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 sm:h-16 flex items-center justify-between gap-3">
-          {/* Left: Back button & Title */}
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between gap-3">
           <div className="flex items-center gap-2 sm:gap-3 min-w-0">
             {showBack && (
               <button
                 type="button"
                 onClick={() => navigate(-1)}
-                className="w-10 h-10 rounded-xl flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors shrink-0"
+                className="w-9 h-9 flex items-center justify-center rounded-xl bg-[#f2f3ff] hover:bg-[#eaedff] text-[#131b2e] transition-colors shrink-0"
                 aria-label="Go back"
               >
-                <Icon name="arrow_back" className="text-[22px]" />
+                <Icon name="arrow_back_ios_new" className="text-[16px]" />
               </button>
             )}
 
-            <NavLink
-              to="/odontogram/overview"
-              className="flex items-center gap-2.5 shrink-0 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary rounded-xl py-1 px-1.5"
-            >
-              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm">
-                <Icon name="dentistry" className="text-[20px]" />
-              </div>
-              <div className="leading-tight">
-                <div className="flex items-center gap-1.5">
-                  <span className="font-headline-sm text-sm sm:text-base font-bold text-on-surface tracking-tight">
-                    Odontogram Matrix
+            <div className="flex flex-col min-w-0">
+              <div className="flex items-center gap-2">
+                <h1 className="text-base sm:text-lg font-bold text-[#131b2e] truncate">
+                  {pageTitle}
+                </h1>
+                {badgeLabel && (
+                  <span className="hidden sm:inline-block px-2 py-0.5 rounded-full bg-[#e2e7ff] text-[#006194] text-[11px] font-semibold">
+                    {badgeLabel}
                   </span>
-                  <span className="hidden sm:inline-block px-1.5 py-0.2 rounded bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase">
-                    FDI / ISO 3950
-                  </span>
-                </div>
-                <span className="text-[10px] text-on-surface-variant tracking-wider uppercase font-semibold block">
-                  Comprehensive Dental Charting & History
-                </span>
+                )}
               </div>
-            </NavLink>
-
-            {badgeLabel ? (
-              <span className="hidden lg:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container-high text-xs font-semibold text-primary truncate max-w-[260px]">
-                <Icon name="clinical_notes" className="text-[14px] text-secondary" />
-                <span className="truncate">{badgeLabel}</span>
+              <span className="text-[11px] text-[#707881] font-medium truncate">
+                {patientName} • {dhaId}
               </span>
-            ) : pageTitle ? (
-              <span className="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-surface-container-high text-xs font-medium text-on-surface-variant truncate max-w-[220px]">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary shrink-0" />
-                <span className="truncate">{pageTitle}</span>
-              </span>
-            ) : null}
+            </div>
           </div>
 
-          {/* Right Action Menu */}
-          <div className="flex items-center gap-2 sm:gap-3">
-            {/* Quick Switch Dropdown */}
-            <div className="relative">
+          {/* Quick Actions & Profile */}
+          <div className="flex items-center gap-2 shrink-0">
+            <NavLink
+              to="/odontogram/findings"
+              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-[#006194] text-white text-xs font-bold hover:bg-[#007bb9] transition shadow-xs"
+            >
+              <Icon name="edit_note" className="text-[16px]" />
+              <span className="hidden xs:inline">Chart Findings</span>
+            </NavLink>
+
+            {/* Desktop Profile Dropdown */}
+            <div className="relative hidden md:block">
               <button
                 type="button"
-                onClick={() => setNavMenuOpen(!navMenuOpen)}
-                className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-surface-container text-xs font-semibold text-on-surface hover:bg-surface-container-high border border-outline-variant/30 transition-colors shadow-2xs"
-                aria-expanded={navMenuOpen}
+                onClick={() => setProfileDropdownOpen(!profileDropdownOpen)}
+                className="flex items-center gap-2 p-1 rounded-xl hover:bg-[#f2f3ff] transition-colors"
               >
-                <Icon name="dentistry" className="text-[16px] text-primary" />
-                <span className="hidden sm:inline">Section 9 Suite</span>
-                <Icon
-                  name="expand_more"
-                  className={`text-[18px] text-on-surface-variant transition-transform ${
-                    navMenuOpen ? 'rotate-180' : ''
-                  }`}
-                />
+                <div className="w-8 h-8 rounded-full bg-[#006194] text-white flex items-center justify-center font-bold text-xs">
+                  DJ
+                </div>
+                <Icon name="expand_more" className="text-[16px] text-slate-400" />
               </button>
 
-              {navMenuOpen && (
+              {profileDropdownOpen && (
                 <>
                   <div
-                    className="fixed inset-0 z-40 bg-black/20 backdrop-blur-[2px]"
-                    onClick={() => setNavMenuOpen(false)}
+                    className="fixed inset-0 z-30"
+                    onClick={() => setProfileDropdownOpen(false)}
                   />
-                  <div className="absolute right-0 mt-2 w-72 sm:w-80 rounded-2xl bg-surface-container-lowest border border-outline-variant/40 shadow-xl py-2 z-50 animate-in fade-in zoom-in-95 duration-150">
-                    <div className="px-3 py-1.5 border-b border-outline-variant/20 mb-1 flex items-center justify-between">
-                      <p className="text-[10px] font-bold uppercase tracking-wider text-on-surface-variant">
-                        Section 9: Odontogram & Charting
-                      </p>
-                      <button
-                        type="button"
-                        onClick={() => setNavMenuOpen(false)}
-                        className="text-[11px] text-on-surface-variant hover:text-on-surface"
-                      >
-                        ✕
-                      </button>
+                  <div className="absolute right-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-slate-200 py-2 z-40">
+                    <div className="px-4 py-2 border-b border-slate-100">
+                      <p className="text-xs font-bold text-slate-900">Dr. Daniel James</p>
+                      <p className="text-[11px] text-slate-500 font-mono">#DEN-48912 • MDCN Verified</p>
                     </div>
-
-                    <div className="max-h-[380px] overflow-y-auto px-1.5 space-y-0.5">
-                      {ODONTOGRAM_SUBNAV.map((page) => (
-                        <NavLink
-                          key={page.to}
-                          to={page.to}
-                          onClick={() => setNavMenuOpen(false)}
-                          className={({ isActive }) =>
-                            `flex items-center justify-between gap-2 px-3 py-2 rounded-xl text-xs font-medium transition-colors ${
-                              isActive
-                                ? 'bg-primary text-on-primary shadow-xs font-semibold'
-                                : 'text-on-surface hover:bg-surface-container-high'
-                            }`
-                          }
-                        >
-                          <div className="flex items-center gap-2.5 truncate">
-                            <Icon name={page.icon} className="text-[18px] shrink-0" />
-                            <span className="truncate">{page.label}</span>
-                          </div>
-                          <span
-                            className={`font-mono text-[10px] px-1.5 py-0.5 rounded ${
-                              location.pathname === page.to
-                                ? 'bg-white/20 text-white'
-                                : 'bg-surface-container text-on-surface-variant'
-                            }`}
-                          >
-                            {page.code}
-                          </span>
-                        </NavLink>
-                      ))}
-                    </div>
-
-                    <div className="mt-2 pt-2 border-t border-outline-variant/20 px-3 flex items-center justify-between">
-                      <NavLink
-                        to="/patient-dashboard"
-                        onClick={() => setNavMenuOpen(false)}
-                        className="text-xs font-semibold text-primary hover:underline flex items-center gap-1"
-                      >
-                        <span>Patient Portal Home</span>
-                        <Icon name="arrow_forward" className="text-[14px]" />
-                      </NavLink>
-                    </div>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setProfileDropdownOpen(false);
+                        navigate('/clinical/workspace');
+                      }}
+                      className="w-full text-left px-4 py-2.5 text-xs text-slate-700 hover:bg-slate-50 flex items-center gap-2"
+                    >
+                      <Icon name="space_dashboard" className="text-[16px] text-[#006194]" />
+                      <span>Switch to Clinical Workspace</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setProfileDropdownOpen(false);
+                        navigate('/patient-dashboard');
+                      }}
+                      className="w-full text-left px-4 py-2.5 text-xs text-slate-700 hover:bg-slate-50 flex items-center gap-2"
+                    >
+                      <Icon name="switch_account" className="text-[16px] text-[#006194]" />
+                      <span>Switch to Patient Portal</span>
+                    </button>
+                    <div className="my-1 border-t border-slate-100" />
+                    <button
+                      type="button"
+                      onClick={handleSignOut}
+                      className="w-full text-left px-4 py-2.5 text-xs text-rose-600 hover:bg-rose-50 flex items-center gap-2 font-semibold"
+                    >
+                      <Icon name="logout" className="text-[16px]" />
+                      <span>Sign Out</span>
+                    </button>
                   </div>
                 </>
               )}
             </div>
 
-            <NavLink
-              to="/odontogram/findings"
-              className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl bg-primary text-on-primary text-xs font-bold hover:bg-primary/90 transition shadow-xs"
+            {/* Mobile Profile Trigger */}
+            <button
+              type="button"
+              onClick={() => setMobileProfileOpen(true)}
+              className="md:hidden w-8 h-8 rounded-full bg-[#006194] text-white flex items-center justify-center font-bold text-xs"
+              aria-label="Clinician Profile"
             >
-              <Icon name="edit_note" className="text-[16px]" />
-              <span className="hidden xs:inline">Chart Findings</span>
-            </NavLink>
+              DJ
+            </button>
           </div>
-        </div>
-
-        {/* Desktop Quick Category Bar */}
-        <div className="hidden md:flex items-center justify-center gap-2 py-2 px-4 bg-surface-container-lowest border-t border-outline-variant/20 text-xs overflow-x-auto">
-          {ODONTOGRAM_SUBNAV.map((nav) => {
-            const isActive = location.pathname === nav.to;
-            return (
-              <NavLink
-                key={nav.to}
-                to={nav.to}
-                className={`px-3 py-1.5 rounded-full transition flex items-center gap-1.5 font-semibold shrink-0 ${
-                  isActive
-                    ? 'bg-primary text-on-primary shadow-2xs'
-                    : 'text-on-surface-variant hover:bg-surface-container'
-                }`}
-              >
-                <Icon name={nav.icon} className="text-[16px]" />
-                <span>{nav.label}</span>
-              </NavLink>
-            );
-          })}
         </div>
       </header>
 
       {/* Main Viewport Content */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10 pb-24 md:pb-12">
+      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10 pb-24 md:pb-12 md:pl-60 lg:pl-64">
         {children}
       </main>
 
-      {/* Mobile 5-Item Floating Nav */}
-      <nav className="md:hidden fixed bottom-0 w-full z-40 bg-surface/95 backdrop-blur-xl border-t border-outline-variant/30 shadow-[0_-2px_12px_rgba(0,0,0,0.04)] pb-safe">
-        <div className="flex justify-around items-center h-16 px-1">
+      {/* MOBILE STICKY BOTTOM NAVIGATION DOCK */}
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-xl border-t border-[#eaedff] shadow-[0_-2px_12px_rgba(0,0,0,0.06)] px-2 py-1.5 pb-safe">
+        <div className="flex justify-around items-center">
           <NavLink
             to="/odontogram/overview"
             className={({ isActive }) =>
-              `flex flex-col items-center justify-center gap-1 min-w-[50px] h-12 text-xs transition-colors ${
-                isActive ? 'text-primary font-bold' : 'text-on-surface-variant hover:text-on-surface'
+              `flex flex-col items-center justify-center py-1 px-2 rounded-xl transition-all ${
+                isActive ? 'text-[#006194] font-bold scale-105' : 'text-[#707881] hover:text-[#131b2e]'
               }`
             }
           >
             <Icon name="space_dashboard" className="text-[20px]" />
-            <span className="text-[9px]">Overview</span>
-          </NavLink>
-
-          <NavLink
-            to="/odontogram/findings"
-            className={({ isActive }) =>
-              `flex flex-col items-center justify-center gap-1 min-w-[50px] h-12 text-xs transition-colors ${
-                isActive ? 'text-primary font-bold' : 'text-on-surface-variant hover:text-on-surface'
-              }`
-            }
-          >
-            <Icon name="clinical_notes" className="text-[20px]" />
-            <span className="text-[9px]">Findings</span>
-          </NavLink>
-
-          <NavLink
-            to="/odontogram/investigations"
-            className={({ isActive }) =>
-              `flex flex-col items-center justify-center gap-1 min-w-[50px] h-12 text-xs transition-colors ${
-                isActive ? 'text-primary font-bold' : 'text-on-surface-variant hover:text-on-surface'
-              }`
-            }
-          >
-            <Icon name="hub" className="text-[20px]" />
-            <span className="text-[9px]">Images</span>
+            <span className="text-[10px] mt-0.5">Overview</span>
           </NavLink>
 
           <NavLink
             to="/odontogram/history"
             className={({ isActive }) =>
-              `flex flex-col items-center justify-center gap-1 min-w-[50px] h-12 text-xs transition-colors ${
-                isActive ? 'text-primary font-bold' : 'text-on-surface-variant hover:text-on-surface'
+              `flex flex-col items-center justify-center py-1 px-2 rounded-xl transition-all ${
+                isActive ? 'text-[#006194] font-bold scale-105' : 'text-[#707881] hover:text-[#131b2e]'
               }`
             }
           >
             <Icon name="history_edu" className="text-[20px]" />
-            <span className="text-[9px]">History</span>
+            <span className="text-[10px] mt-0.5">History</span>
           </NavLink>
 
-          <NavLink
-            to="/odontogram/compare"
-            className={({ isActive }) =>
-              `flex flex-col items-center justify-center gap-1 min-w-[50px] h-12 text-xs transition-colors ${
-                isActive ? 'text-primary font-bold' : 'text-on-surface-variant hover:text-on-surface'
-              }`
-            }
+          {/* MORE BUTTON */}
+          <button
+            type="button"
+            onClick={() => setMobileMoreOpen(true)}
+            className="flex flex-col items-center justify-center py-1 px-2 rounded-xl text-[#707881] hover:text-[#131b2e]"
           >
-            <Icon name="compare" className="text-[20px]" />
-            <span className="text-[9px]">Compare</span>
-          </NavLink>
+            <Icon name="more_horiz" className="text-[20px]" />
+            <span className="text-[10px] mt-0.5">More</span>
+          </button>
         </div>
       </nav>
+
+      {/* MOBILE "MORE" BOTTOM SHEET POPUP */}
+      {mobileMoreOpen && (
+        <div className="md:hidden fixed inset-0 z-50 flex items-end">
+          <div
+            className="fixed inset-0 bg-black/40 backdrop-blur-xs animate-in fade-in"
+            onClick={() => setMobileMoreOpen(false)}
+          />
+          <div className="relative w-full max-h-[85vh] bg-white rounded-t-3xl shadow-2xl flex flex-col z-10 animate-in slide-in-from-bottom duration-200 pb-safe">
+            <div className="pt-3 pb-1 flex justify-center">
+              <div className="w-10 h-1 bg-slate-300 rounded-full" />
+            </div>
+
+            <div className="p-4 border-b border-[#eaedff] flex items-center justify-between">
+              <div className="flex items-center gap-2.5">
+                <div className="w-9 h-9 rounded-xl bg-[#006194] text-white flex items-center justify-center">
+                  <Icon name="dentistry" className="text-[20px]" />
+                </div>
+                <div>
+                  <h3 className="text-sm font-bold text-slate-900">Odontogram Tools</h3>
+                  <p className="text-[11px] text-slate-500">Charting & clinical history</p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setMobileMoreOpen(false)}
+                className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500"
+              >
+                <Icon name="close" className="text-[18px]" />
+              </button>
+            </div>
+
+            <div className="flex-1 overflow-y-auto p-4 space-y-1">
+              <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-3 py-1">
+                Odontogram Screens
+              </p>
+              {ODONTOGRAM_SUBNAV.map((item) => {
+                const isActive = location.pathname === item.to;
+                return (
+                  <NavLink
+                    key={item.to}
+                    to={item.to}
+                    onClick={() => setMobileMoreOpen(false)}
+                    className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-colors ${
+                      isActive
+                        ? 'bg-[#006194] text-white'
+                        : 'text-slate-700 hover:bg-slate-100'
+                    }`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <Icon name={item.icon} className="text-[18px]" />
+                      <span>{item.label}</span>
+                    </div>
+                    {isActive && <Icon name="check" className="text-[16px]" />}
+                  </NavLink>
+                );
+              })}
+
+              <div className="pt-3 mt-3 border-t border-slate-100">
+                <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-3 py-1">
+                  Connected Suites
+                </p>
+                <NavLink
+                  to="/clinical/workspace"
+                  onClick={() => setMobileMoreOpen(false)}
+                  className="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs text-slate-700 hover:bg-slate-100 font-medium"
+                >
+                  <Icon name="space_dashboard" className="text-[18px] text-[#006194]" />
+                  <span>Dentist Workspace</span>
+                </NavLink>
+                <NavLink
+                  to="/examination/workspace"
+                  onClick={() => setMobileMoreOpen(false)}
+                  className="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs text-slate-700 hover:bg-slate-100 font-medium"
+                >
+                  <Icon name="clinical_notes" className="text-[18px] text-[#006194]" />
+                  <span>Clinical Examination</span>
+                </NavLink>
+                <NavLink
+                  to="/investigations/dashboard"
+                  onClick={() => setMobileMoreOpen(false)}
+                  className="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs text-slate-700 hover:bg-slate-100 font-medium"
+                >
+                  <Icon name="radiology" className="text-[18px] text-[#006194]" />
+                  <span>Investigations & Lab</span>
+                </NavLink>
+                <NavLink
+                  to="/summaries/dashboard"
+                  onClick={() => setMobileMoreOpen(false)}
+                  className="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs text-slate-700 hover:bg-slate-100 font-medium"
+                >
+                  <Icon name="auto_awesome" className="text-[18px] text-[#006194]" />
+                  <span>AI Diagnostic Summaries</span>
+                </NavLink>
+              </div>
+
+              {/* Sign Out */}
+              <div className="pt-3 mt-3 border-t border-slate-100">
+                <button
+                  type="button"
+                  onClick={handleSignOut}
+                  className="w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-bold text-rose-600 hover:bg-rose-50"
+                >
+                  <Icon name="logout" className="text-[18px]" />
+                  <span>Sign Out</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* MOBILE PROFILE BOTTOM SHEET POPUP */}
+      {mobileProfileOpen && (
+        <div className="md:hidden fixed inset-0 z-50 flex items-end">
+          <div
+            className="fixed inset-0 bg-black/40 backdrop-blur-xs animate-in fade-in"
+            onClick={() => setMobileProfileOpen(false)}
+          />
+          <div className="relative w-full bg-white rounded-t-3xl shadow-2xl flex flex-col z-10 animate-in slide-in-from-bottom duration-200 pb-safe">
+            <div className="pt-3 pb-1 flex justify-center">
+              <div className="w-10 h-1 bg-slate-300 rounded-full" />
+            </div>
+            <div className="p-4 border-b border-slate-100 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-[#006194] text-white flex items-center justify-center font-bold text-sm">
+                  DJ
+                </div>
+                <div>
+                  <h3 className="text-sm font-bold text-slate-900">Dr. Daniel James</h3>
+                  <p className="text-[11px] text-slate-500 font-mono">#DEN-48912 • MDCN Verified</p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setMobileProfileOpen(false)}
+                className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500"
+              >
+                <Icon name="close" className="text-[18px]" />
+              </button>
+            </div>
+            <div className="p-4 space-y-2">
+              <button
+                type="button"
+                onClick={() => {
+                  setMobileProfileOpen(false);
+                  navigate('/clinical/workspace');
+                }}
+                className="w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-50 hover:bg-slate-100 text-xs font-semibold text-slate-800"
+              >
+                <Icon name="space_dashboard" className="text-[18px] text-[#006194]" />
+                <span>Switch to Clinical Workspace</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setMobileProfileOpen(false);
+                  navigate('/patient-dashboard');
+                }}
+                className="w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-50 hover:bg-slate-100 text-xs font-semibold text-slate-800"
+              >
+                <Icon name="switch_account" className="text-[18px] text-[#006194]" />
+                <span>Switch to Patient Portal</span>
+              </button>
+              <button
+                type="button"
+                onClick={handleSignOut}
+                className="w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-rose-50 hover:bg-rose-100 text-xs font-bold text-rose-600"
+              >
+                <Icon name="logout" className="text-[18px]" />
+                <span>Sign Out</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 
 export default OdontogramShell;
-

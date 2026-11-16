@@ -175,7 +175,7 @@ export function CreateTreatmentPlanScreen() {
                 />
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center justify-between gap-1 mb-0.5">
-                    <span className="text-xs font-bold text-[#131b2e]">Sec 12 Approved AI Rec</span>
+                    <span className="text-xs font-bold text-[#131b2e]">Approved AI Recommendation</span>
                     <span className="font-mono text-[10px] bg-[#89f5e7]/50 text-[#006a61] px-1.5 py-0.5 rounded font-semibold">
                       #DHA-CS-9842
                     </span>
@@ -194,7 +194,7 @@ export function CreateTreatmentPlanScreen() {
                 />
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center justify-between gap-1 mb-0.5">
-                    <span className="text-xs font-bold text-[#131b2e]">Sec 9 Odontogram</span>
+                    <span className="text-xs font-bold text-[#131b2e]">Odontogram Findings</span>
                     <span className="font-mono text-[10px] bg-[#eaedff] text-[#3f4850] px-1.5 py-0.5 rounded font-semibold">
                       ICDAS 3/4
                     </span>
@@ -213,7 +213,7 @@ export function CreateTreatmentPlanScreen() {
                 />
                 <div className="min-w-0 flex-1">
                   <div className="flex items-center justify-between gap-1 mb-0.5">
-                    <span className="text-xs font-bold text-[#131b2e]">Sec 11 Digital Radiograph</span>
+                    <span className="text-xs font-bold text-[#131b2e]">Digital Radiograph Record</span>
                     <span className="font-mono text-[10px] bg-[#eaedff] text-[#3f4850] px-1.5 py-0.5 rounded font-semibold">
                       BW-R-1048
                     </span>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '../../design/Primitives';
+import { QuickLinks } from '../../design/QuickLinks';
 
 export const OperationalReportsDashboardScreen: React.FC = () => {
   const navigate = useNavigate();
@@ -41,8 +42,6 @@ export const OperationalReportsDashboardScreen: React.FC = () => {
             <div className="flex flex-col min-w-0">
               <div className="flex items-center gap-2">
                 <span className="text-[11px] font-semibold text-[#707881] uppercase tracking-wider">Executive Intelligence</span>
-                <span className="text-[11px] text-[#707881]">•</span>
-                <span className="text-[11px] font-medium text-[#006194]">Section 16.36</span>
               </div>
               <h1 className="font-['Plus_Jakarta_Sans',sans-serif] text-base md:text-lg font-bold text-[#131b2e] truncate">
                 Operational Reports Dashboard
@@ -610,6 +609,16 @@ export const OperationalReportsDashboardScreen: React.FC = () => {
             <span>Schedule Automated Weekly Dispatch</span>
           </button>
         </section>
+      <QuickLinks
+        title="All Reports"
+        links={[
+          { to: '/clinic-operations/appointment-attendance-reports', label: 'Attendance Reports', icon: 'event_available' },
+          { to: '/clinic-operations/patient-activity-reports', label: 'Patient Activity Reports', icon: 'person_search' },
+          { to: '/clinic-operations/clinical-operations-reports', label: 'Clinical Operations Reports', icon: 'dentistry' },
+          { to: '/clinic-operations/financial-reports', label: 'Financial Reports', icon: 'account_balance_wallet' },
+          { to: '/clinic-operations/branch-comparison-reports', label: 'Branch Comparison', icon: 'hub' },
+        ]}
+      />
       </main>
     </div>
   );

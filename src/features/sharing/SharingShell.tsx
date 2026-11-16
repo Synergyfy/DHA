@@ -17,7 +17,7 @@ const SHARING_SUBNAV = [
   { to: '/patient-dashboard/sharing/access-requests', label: 'Requests', icon: 'mark_email_unread', code: '7.4' },
   { to: '/patient-dashboard/sharing/manage-access', label: 'Manage Access', icon: 'vpn_key', code: '7.5' },
   { to: '/patient-dashboard/sharing/referrals', label: 'Referrals', icon: 'send_and_archive', code: '7.6' },
-  { to: '/patient-dashboard/sharing/referral-details', label: 'Referral Details', icon: 'timeline', code: '7.7' },
+  // Referral Details is a dependent page — it opens from a referral row, not from the sub-nav.
   { to: '/patient-dashboard/sharing/history', label: 'History & Audit', icon: 'history', code: '7.8' },
 ];
 

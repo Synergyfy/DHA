@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '../../design/Primitives';
+import { QuickLinks } from '../../design/QuickLinks';
 
 type RoleCategory = 'all' | 'dentists' | 'nurses' | 'hygienists' | 'admin';
 
@@ -861,6 +862,15 @@ export const StaffOperationsOverviewScreen: React.FC = () => {
           </button>
         </div>
       </nav>
+
+      <QuickLinks
+        title="Staff & Teams"
+        links={[
+          { to: '/clinic-operations/shift-timetable', label: 'Shift Timetable', icon: 'schedule' },
+          { to: '/clinic-operations/tasks', label: 'Clinic Tasks', icon: 'assignment' },
+          { to: '/staff-management/dashboard', label: 'Staff Management Portal', icon: 'groups' },
+        ]}
+      />
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import { InvestigationShell } from './InvestigationShell';
+import { QuickLinks } from '../../design/QuickLinks';
 import { Icon } from '../../design/Primitives';
 
 export function InvestigationRequestDetailsScreen() {
@@ -413,6 +414,14 @@ export function InvestigationRequestDetailsScreen() {
           </div>
         </div>
       </div>
+      <QuickLinks
+        title="Request Lifecycle"
+        links={[
+          { to: '/investigations/confirmation', label: 'Order Pass', icon: 'qr_code_2' },
+          { to: '/investigations/queue', label: 'Patient Queue', icon: 'safety_check' },
+          { to: '/investigations/awaiting-results', label: 'Awaiting Results', icon: 'hourglass_top' },
+        ]}
+      />
     </InvestigationShell>
   );
 }

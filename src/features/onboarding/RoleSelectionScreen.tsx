@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import { Button } from '../../design/Button';
 import { ScreenHeader } from '../../design/ScreenHeader';
 import { Icon } from '../../design/Primitives';
-import { useToast } from '../../design/Toast';
 
 interface RoleDefinition {
   id: 'clinician' | 'screener' | 'partner';
@@ -71,24 +70,18 @@ const ROLES: RoleDefinition[] = [
   },
 ];
 
-const ROLE_TOAST: Record<RoleDefinition['id'], string> = {
-  clinician: 'Clinician portal is not part of this patient-facing release',
-  screener: 'Screener portal is not part of this patient-facing release',
-  partner: 'Clinic partner portal is not part of this patient-facing release',
-};
-
-/**
- * Select Your Role — healthcare & partner portals.
- * Route: `/join-role`
- *
- * Entry point only. Parts B/C/D of the platform (clinical, clinic and
- * administration portals) are outside the current patient-facing scope, so
- * selecting a role explains that rather than simulating a portal it must not
- * invent.
- */
 export function RoleSelectionScreen() {
   const navigate = useNavigate();
-  const { showToast } = useToast();
+
+  const handleSelectRole = (roleId: RoleDefinition['id']) => {
+    if (roleId === 'clinician') {
+      navigate('/onboarding/clinician');
+    } else if (roleId === 'screener') {
+      navigate('/onboarding/screener');
+    } else if (roleId === 'partner') {
+      navigate('/clinic-onboarding/intro');
+    }
+  };
 
   return (
     <div className="min-h-dvh bg-surface pb-safe">
@@ -97,13 +90,7 @@ export function RoleSelectionScreen() {
       <main className="mx-auto flex w-full max-w-content flex-col pt-header md:px-gutter-tablet lg:px-gutter-desktop xl:max-w-[80rem]">
         {/* Intro */}
         <div className="flex max-w-3xl flex-col gap-space-xs px-margin pb-space-lg pt-space-md md:px-0">
-          <span className="inline-flex items-center gap-space-2xs self-start rounded-full bg-secondary-container px-space-sm py-space-2xs">
-            <Icon name="verified" className="text-[14px]" />
-            <span className="font-label-sm text-label-sm uppercase tracking-wider text-on-secondary-container">
-              DHA Health Network &bull; Professional Portals
-            </span>
-          </span>
-          <div className="mt-space-2xs">
+          <div>
             <h2 className="font-headline-md text-headline-md text-on-surface">
               Select Your Professional Role
             </h2>
@@ -173,7 +160,7 @@ export function RoleSelectionScreen() {
               <div className="mt-auto pt-space-md">
                 <Button
                   size="lg"
-                  onClick={() => showToast(ROLE_TOAST[role.id])}
+                  onClick={() => handleSelectRole(role.id)}
                   className={role.ctaClass}
                   icon={<Icon name="arrow_forward" className="text-[18px]" />}
                 >

@@ -90,7 +90,7 @@ export function PlanPatientSelectionScreen() {
           <div className="flex items-center gap-2 text-[#006194] mb-1">
             <Icon name="folder_shared" className="text-[18px]" />
             <span className="text-xs font-bold uppercase tracking-wider">
-              DHA Section 13 • Clinical Workflow
+              Treatment Planning Suite • Clinical Workflow
             </span>
           </div>
           <h1 className="text-xl sm:text-2xl font-extrabold text-[#131b2e]">
@@ -325,7 +325,7 @@ export function PlanPatientSelectionScreen() {
               </div>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-bold text-[#131b2e]">Section 9 • Clinical Odontogram</span>
+                  <span className="text-sm font-bold text-[#131b2e]">Clinical Odontogram Chart</span>
                   <span className="text-xs text-[#707881]">12 Oct 2026</span>
                 </div>
                 <p className="text-xs text-[#3f4850] mt-0.5">
@@ -344,7 +344,7 @@ export function PlanPatientSelectionScreen() {
               </div>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-bold text-[#131b2e]">Section 10 • Comprehensive Exam</span>
+                  <span className="text-sm font-bold text-[#131b2e]">Comprehensive Clinical Exam</span>
                   <span className="text-xs text-[#707881]">Today 10:30 AM</span>
                 </div>
                 <p className="text-xs text-[#3f4850] mt-0.5">
@@ -360,7 +360,7 @@ export function PlanPatientSelectionScreen() {
               </div>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-bold text-[#131b2e]">Section 11 • Digital Radiography</span>
+                  <span className="text-sm font-bold text-[#131b2e]">Digital Radiography Records</span>
                   <span className="text-xs font-semibold text-[#006a61]">Verified Bitewing</span>
                 </div>
                 <p className="text-xs text-[#3f4850] mt-0.5">
@@ -376,7 +376,7 @@ export function PlanPatientSelectionScreen() {
               </div>
               <div className="min-w-0 flex-1">
                 <div className="flex items-center justify-between">
-                  <span className="text-sm font-bold text-[#006194]">Section 12 • AI Diagnostic Ingestion</span>
+                  <span className="text-sm font-bold text-[#006194]">AI Diagnostic Ingestion</span>
                   <span className="text-xs font-bold px-2 py-0.5 rounded bg-[#89f5e7] text-[#00201d]">
                     Doctor Approved
                   </span>

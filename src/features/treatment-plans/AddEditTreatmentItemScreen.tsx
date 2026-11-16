@@ -364,7 +364,7 @@ export function AddEditTreatmentItemScreen() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             <div className="p-3 rounded-xl bg-[#f2f3ff] space-y-1">
               <div className="flex items-center justify-between">
-                <span className="text-[11px] font-bold text-[#707881]">Section 9 • Odontogram Finding</span>
+                <span className="text-[11px] font-bold text-[#707881]">Odontogram Finding</span>
                 <span className="text-[10px] font-semibold text-[#006a61] bg-[#89f5e7]/40 px-1.5 rounded">12 Oct 2026</span>
               </div>
               <p className="text-xs font-bold text-[#131b2e]">Mesio-occlusal cavitated dentin caries (ICDAS 3/4)</p>
@@ -372,7 +372,7 @@ export function AddEditTreatmentItemScreen() {
 
             <div className="p-3 rounded-xl bg-[#f2f3ff] space-y-1">
               <div className="flex items-center justify-between">
-                <span className="text-[11px] font-bold text-[#707881]">Section 10 • Clinical Examination</span>
+                <span className="text-[11px] font-bold text-[#707881]">Clinical Examination</span>
                 <span className="text-[10px] font-semibold text-[#006194] bg-[#cce5ff] px-1.5 rounded">Vital Pulp</span>
               </div>
               <p className="text-xs font-bold text-[#131b2e]">Cold sensitivity &lt; 5s, percussion negative, no mobility</p>
@@ -380,7 +380,7 @@ export function AddEditTreatmentItemScreen() {
 
             <div className="p-3 rounded-xl bg-[#f2f3ff] space-y-1">
               <div className="flex items-center justify-between">
-                <span className="text-[11px] font-bold text-[#707881]">Section 11 • Imaging</span>
+                <span className="text-[11px] font-bold text-[#707881]">Digital Imaging</span>
                 <span className="text-[10px] font-semibold text-[#006194] bg-[#cce5ff] px-1.5 rounded">BW-R Bitewing</span>
               </div>
               <p className="text-xs font-bold text-[#131b2e]">Bitewing BW-R: 2.1mm coronal dentin buffer intact</p>
@@ -388,7 +388,7 @@ export function AddEditTreatmentItemScreen() {
 
             <div className="p-3 rounded-xl bg-[#89f5e7]/20 border border-[#006a61]/20 space-y-1">
               <div className="flex items-center justify-between">
-                <span className="text-[11px] font-bold text-[#006a61]">Section 12 • AI Biomimetic Engine</span>
+                <span className="text-[11px] font-bold text-[#006a61]">AI Biomimetic Diagnostic</span>
                 <span className="text-[10px] font-bold text-[#006a61] bg-white px-1.5 py-0.5 rounded shadow-xs">98.4% Match</span>
               </div>
               <p className="text-xs font-bold text-[#131b2e]">#DHA-CS-9842 (Approved by Dr. Daniel James)</p>

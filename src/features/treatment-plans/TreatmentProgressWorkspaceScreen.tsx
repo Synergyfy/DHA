@@ -293,7 +293,7 @@ export function TreatmentProgressWorkspaceScreen() {
                 activeTab === 'sec12' ? 'bg-white text-[#006194] shadow-xs' : 'text-slate-600 hover:text-slate-900'
               }`}
             >
-              Sec 12 Summary
+              AI Synopsis
             </button>
           </div>
 
@@ -357,10 +357,10 @@ export function TreatmentProgressWorkspaceScreen() {
             </div>
           )}
 
-          {/* Tab 3: Section 12 Summary */}
+          {/* Tab 3: AI Diagnostic Summary */}
           {activeTab === 'sec12' && (
             <div className="bg-white rounded-2xl p-5 shadow-sm border border-[#eaedff] space-y-2 text-xs">
-              <span className="font-bold text-slate-900 block">Section 12 Diagnostic Synopsis</span>
+              <span className="font-bold text-slate-900 block">AI Diagnostic Synopsis</span>
               <div className="bg-[#faf8ff] rounded-xl p-3 border border-[#eaedff] space-y-1">
                 <p className="text-slate-800 leading-relaxed">
                   <strong>Initial Diagnostic:</strong> Reversible pulpitis secondary to class II mesial caries on #16. EPT responsive within normal limits (22/80). Cold sensitivity lingering &lt; 3 seconds.

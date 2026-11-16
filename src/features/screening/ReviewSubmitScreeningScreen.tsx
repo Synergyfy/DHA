@@ -253,7 +253,7 @@ export function ReviewSubmitScreeningScreen() {
             </div>
             <p>
               Cryptographic ledger digest generated: <span className="font-mono font-bold">{submittedHash}</span>.
-              Direct electronic referral queued for guardian Sarah Al-Mansoor via Section 7 gateway.
+              Direct electronic referral queued for guardian Sarah Al-Mansoor via Referral gateway.
             </p>
           </div>
         )}

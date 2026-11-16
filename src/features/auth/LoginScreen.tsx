@@ -24,6 +24,22 @@ export function LoginScreen() {
   const [error, setError] = useState('');
   const [sheetOpen, setSheetOpen] = useState(false);
 
+  const handleQuickDemo = (role: 'patient' | 'dentist' | 'clinic' | 'screener') => {
+    if (role === 'patient') {
+      showToast('Signed in as Patient (Demo)');
+      navigate('/patient-dashboard');
+    } else if (role === 'dentist') {
+      showToast('Signed in as Dr. Michael Adeyemi (Dentist)');
+      navigate('/dentist/dashboard');
+    } else if (role === 'clinic') {
+      showToast('Signed in as Clinic Operations Manager');
+      navigate('/clinic-operations/dashboard');
+    } else if (role === 'screener') {
+      showToast('Signed in as Community Outreach Screener');
+      navigate('/screening/dashboard');
+    }
+  };
+
   const submit = (event: FormEvent) => {
     event.preventDefault();
     if (!identifier.trim()) {
@@ -74,22 +90,94 @@ export function LoginScreen() {
             <Icon name="dentistry" filled className="text-[22px]" />
           </span>
           <div>
-            <span className="font-label-sm font-semibold uppercase tracking-wider text-secondary">
-              Verified patient portal
-            </span>
             <h1 className="font-headline-lg-mobile text-headline-lg-mobile font-bold tracking-tight">
-              Welcome Back
+              Sign In to DHA
             </h1>
           </div>
         </div>
         <p className="relative z-10 mt-space-sm font-body-md leading-relaxed text-on-surface-variant">
-          Sign in to access your oral health records, Lifecode and screening history.
+          Access your personalized oral health records, clinician workspace, or practice management portal.
         </p>
-        <div className="relative z-10 mt-space-md flex items-center gap-space-xs pt-space-xs">
-          <span className="h-2 w-2 rounded-full bg-secondary" aria-hidden="true" />
-          <span className="font-label-sm text-on-secondary-container">
-            Frontend demo — no credentials are checked or stored
+      </section>
+
+      {/* Instant Demo Role Quick Login */}
+      <section className="flex flex-col gap-2 p-4 rounded-2xl bg-white border border-[#eaedff] shadow-xs">
+        <div className="flex items-center justify-between mb-1">
+          <span className="text-xs font-bold text-[#131b2e] font-['Plus_Jakarta_Sans']">
+            Demo Dashboards (Instant 1-Click Access)
           </span>
+          <span className="text-[10px] font-semibold text-[#006a61] bg-[#86f2e4]/30 px-2 py-0.5 rounded-full">
+            Testing Ready
+          </span>
+        </div>
+        <div className="grid grid-cols-2 gap-2.5">
+          {/* Patient Demo */}
+          <button
+            type="button"
+            onClick={() => handleQuickDemo('patient')}
+            className="p-3 rounded-xl bg-[#f2f3ff] hover:bg-[#cce5ff]/50 border border-transparent hover:border-[#006194]/30 text-left transition-all group flex flex-col justify-between"
+          >
+            <div className="flex items-center gap-2">
+              <span className="w-7 h-7 rounded-lg bg-[#006194] text-white flex items-center justify-center text-[16px] shrink-0">
+                <Icon name="person" className="text-[16px]" />
+              </span>
+              <span className="text-xs font-bold text-[#131b2e] group-hover:text-[#006194] truncate">
+                Patient Portal
+              </span>
+            </div>
+            <span className="text-[10px] text-[#707881] mt-1.5 line-clamp-1">Lifecode &amp; records</span>
+          </button>
+
+          {/* Dentist Demo */}
+          <button
+            type="button"
+            onClick={() => handleQuickDemo('dentist')}
+            className="p-3 rounded-xl bg-[#f2f3ff] hover:bg-[#cce5ff]/50 border border-transparent hover:border-[#006194]/30 text-left transition-all group flex flex-col justify-between"
+          >
+            <div className="flex items-center gap-2">
+              <span className="w-7 h-7 rounded-lg bg-[#006194] text-white flex items-center justify-center text-[16px] shrink-0">
+                <Icon name="dentistry" className="text-[16px]" />
+              </span>
+              <span className="text-xs font-bold text-[#131b2e] group-hover:text-[#006194] truncate">
+                Dentist / Clinician
+              </span>
+            </div>
+            <span className="text-[10px] text-[#707881] mt-1.5 line-clamp-1">Odontogram &amp; care plans</span>
+          </button>
+
+          {/* Clinic Admin Demo */}
+          <button
+            type="button"
+            onClick={() => handleQuickDemo('clinic')}
+            className="p-3 rounded-xl bg-[#f2f3ff] hover:bg-[#86f2e4]/30 border border-transparent hover:border-[#006a61]/30 text-left transition-all group flex flex-col justify-between"
+          >
+            <div className="flex items-center gap-2">
+              <span className="w-7 h-7 rounded-lg bg-[#006a61] text-white flex items-center justify-center text-[16px] shrink-0">
+                <Icon name="domain" className="text-[16px]" />
+              </span>
+              <span className="text-xs font-bold text-[#131b2e] group-hover:text-[#006a61] truncate">
+                Clinic Admin
+              </span>
+            </div>
+            <span className="text-[10px] text-[#707881] mt-1.5 line-clamp-1">Multi-branch &amp; staff</span>
+          </button>
+
+          {/* Screener Demo */}
+          <button
+            type="button"
+            onClick={() => handleQuickDemo('screener')}
+            className="p-3 rounded-xl bg-[#f2f3ff] hover:bg-[#86f2e4]/30 border border-transparent hover:border-[#006a61]/30 text-left transition-all group flex flex-col justify-between"
+          >
+            <div className="flex items-center gap-2">
+              <span className="w-7 h-7 rounded-lg bg-[#006a61] text-white flex items-center justify-center text-[16px] shrink-0">
+                <Icon name="fact_check" className="text-[16px]" />
+              </span>
+              <span className="text-xs font-bold text-[#131b2e] group-hover:text-[#006a61] truncate">
+                School Screener
+              </span>
+            </div>
+            <span className="text-[10px] text-[#707881] mt-1.5 line-clamp-1">Batch field exams</span>
+          </button>
         </div>
       </section>
 
@@ -200,13 +288,11 @@ export function LoginScreen() {
           </p>
           <button
             type="button"
-            onClick={() =>
-              showToast('Role-specific portals are not part of this patient-facing release.')
-            }
+            onClick={() => navigate('/join-role')}
             className="mt-space-2xs inline-flex items-center gap-1 self-start font-label-md font-semibold text-primary hover:underline"
           >
-            <span>Open the role workspace</span>
-            <Icon name="open_in_new" className="text-[14px]" />
+            <span>Open the professional role selector &amp; onboarding</span>
+            <Icon name="arrow_forward" className="text-[14px]" />
           </button>
         </div>
       </section>

@@ -4,7 +4,6 @@ import { LandingPage } from './features/landing/LandingPage';
 import { LifecodeScreen } from './features/onboarding/LifecodeScreen';
 import { GetStartedScreen } from './features/onboarding/GetStartedScreen';
 import { RoleSelectionScreen } from './features/onboarding/RoleSelectionScreen';
-import { AboutDhaScreen } from './features/onboarding/AboutDhaScreen';
 import { PlaceholderScreen } from './features/onboarding/PlaceholderScreen';
 import { RegisterEntryScreen } from './features/registration/RegisterEntryScreen';
 import { ContactDetailsScreen } from './features/registration/ContactDetailsScreen';
@@ -201,6 +200,8 @@ import { TreatmentAnalyticsDashboardScreen } from './features/treatment-plans/Tr
 
 // Section 14 — Dentist / Professional Workspace & Appointment Management (14.1 - 14.24)
 import { ProfessionalDashboardScreen } from './features/clinical-workspace/ProfessionalDashboardScreen';
+import { ClinicalWorkspaceLauncherScreen } from './features/clinical-workspace/ClinicalWorkspaceLauncherScreen';
+import { ProfessionalSettingsScreen } from './features/clinical-workspace/ProfessionalSettingsScreen';
 import { DashboardCustomisationScreen } from './features/clinical-workspace/DashboardCustomisationScreen';
 import { AppointmentsCalendarScreen } from './features/clinical-workspace/AppointmentsCalendarScreen';
 import { AppointmentsListScreen } from './features/clinical-workspace/AppointmentsListScreen';
@@ -352,6 +353,11 @@ import CommunityPartnersScreen from './features/portal/CommunityPartnersScreen';
 import { GettingStartedStepsScreen } from './features/portal/GettingStartedStepsScreen';
 import { EducationGuidesPortalScreen } from './features/portal/EducationGuidesPortalScreen';
 import TrustPrivacyScreen from './features/portal/TrustPrivacyScreen';
+import { AboutDHAScreen } from './features/portal/AboutDHAScreen';
+import { ForProfessionalsScreen } from './features/portal/ForProfessionalsScreen';
+import { OralHealthGuidesScreen } from './features/portal/OralHealthGuidesScreen';
+import { ClinicianOnboardingScreen } from './features/onboarding/ClinicianOnboardingScreen';
+import { ScreenerOnboardingScreen } from './features/onboarding/ScreenerOnboardingScreen';
 
 // Section 0B — Professional & Organisations Suite
 import { ProfessionalHeroScreen } from './features/professional/ProfessionalHeroScreen';
@@ -388,8 +394,18 @@ export default function App() {
         <Route path="/" element={<LandingPage />} />
         <Route path="/onboarding/lifecode" element={<LifecodeScreen />} />
         <Route path="/onboarding/get-started" element={<GetStartedScreen />} />
+        <Route path="/onboarding/clinician" element={<ClinicianOnboardingScreen />} />
+        <Route path="/onboarding/screener" element={<ScreenerOnboardingScreen />} />
         <Route path="/join-role" element={<RoleSelectionScreen />} />
-        <Route path="/about" element={<AboutDhaScreen />} />
+        <Route path="/about" element={<AboutDHAScreen />} />
+        <Route path="/about-dha" element={<AboutDHAScreen />} />
+        <Route path="/for-professionals" element={<ForProfessionalsScreen />} />
+        <Route path="/oral-health-guides" element={<OralHealthGuidesScreen />} />
+        <Route path="/clinician-onboarding" element={<Navigate to="/onboarding/clinician" replace />} />
+        <Route path="/screener-onboarding" element={<Navigate to="/onboarding/screener" replace />} />
+        <Route path="/professionals" element={<Navigate to="/for-professionals" replace />} />
+        <Route path="/dental-care" element={<Navigate to="/for-professionals" replace />} />
+        <Route path="/guides" element={<Navigate to="/oral-health-guides" replace />} />
 
         {/* Section 0 — Onboarding & Public Portal Suite (0.1 - 0.9) */}
         <Route path="/portal" element={<PortalHeroScreen />} />
@@ -807,6 +823,8 @@ export default function App() {
         {/* Section 14 — Dentist / Professional Workspace & Appointment Management (14.1 - 14.18) */}
         <Route path="/dentist" element={<Navigate to="/dentist/dashboard" replace />} />
         <Route path="/dentist/dashboard" element={<ProfessionalDashboardScreen />} />
+        <Route path="/dentist/clinical-workspace" element={<ClinicalWorkspaceLauncherScreen />} />
+        <Route path="/dentist/settings" element={<ProfessionalSettingsScreen />} />
         <Route path="/dentist/customisation" element={<DashboardCustomisationScreen />} />
         <Route path="/dentist/calendar" element={<AppointmentsCalendarScreen />} />
         <Route path="/dentist/appointments-list" element={<AppointmentsListScreen />} />

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '../../design/Primitives';
 import { SummaryShell } from './SummaryShell';
+import { QuickLinks } from '../../design/QuickLinks';
 
 type TabKey = 'organise' | 'highlight' | 'assist';
 
@@ -481,6 +482,13 @@ export function AIClinicalInterpretationScreen() {
           </button>
         </div>
       </div>
+      <QuickLinks
+        title="Next Steps"
+        links={[
+          { to: '/summaries/treatment-recommendations', label: 'Treatment Recommendations', icon: 'recommend' },
+          { to: '/summaries/edit-output', label: 'Edit AI Output', icon: 'edit_note' },
+        ]}
+      />
     </SummaryShell>
   );
 }
