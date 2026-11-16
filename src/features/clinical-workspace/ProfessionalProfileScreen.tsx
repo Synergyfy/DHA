@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '../../design/Primitives';
 import { ClinicalWorkspaceShell } from './ClinicalWorkspaceShell';
+import { QuickLinks } from '../../design/QuickLinks';
 
 export function ProfessionalProfileScreen() {
   const navigate = useNavigate();
@@ -523,6 +524,15 @@ export function ProfessionalProfileScreen() {
           </div>
         )}
       </div>
+
+      <QuickLinks
+        title="Profile Sections"
+        links={[
+          { to: '/dentist/profile/edit', label: 'Edit Profile', icon: 'edit' },
+          { to: '/dentist/verification', label: 'Verification Status', icon: 'verified_user' },
+          { to: '/dentist/branch-switcher', label: 'Clinic & Branch Affiliations', icon: 'domain' },
+        ]}
+      />
     </ClinicalWorkspaceShell>
   );
 }

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '../../design/Primitives';
+import { QuickLinks } from '../../design/QuickLinks';
 
 interface ClinicalMetric {
   id: string;
@@ -18,7 +19,7 @@ interface ClinicalMetric {
 const CLINICAL_METRICS: ClinicalMetric[] = [
   {
     id: 'm-1',
-    secNumber: 'Sec 8',
+    secNumber: 'Screening',
     title: 'Screenings',
     count: 8,
     statusLabel: '8 Done',
@@ -28,7 +29,7 @@ const CLINICAL_METRICS: ClinicalMetric[] = [
   },
   {
     id: 'm-2',
-    secNumber: 'Sec 10',
+    secNumber: 'Exams',
     title: 'Exams',
     count: 14,
     statusLabel: '14 Completed',
@@ -38,7 +39,7 @@ const CLINICAL_METRICS: ClinicalMetric[] = [
   },
   {
     id: 'm-3',
-    secNumber: 'Sec 9',
+    secNumber: 'Charting',
     title: 'Odontograms',
     count: 12,
     statusLabel: '12 Active',
@@ -48,7 +49,7 @@ const CLINICAL_METRICS: ClinicalMetric[] = [
   },
   {
     id: 'm-4',
-    secNumber: 'Sec 11',
+    secNumber: 'Imaging',
     title: 'Lab/X-Rays',
     count: 5,
     statusLabel: '5 Pending',
@@ -58,7 +59,7 @@ const CLINICAL_METRICS: ClinicalMetric[] = [
   },
   {
     id: 'm-5',
-    secNumber: 'Sec 12',
+    secNumber: 'Summaries',
     title: 'Summaries',
     count: 3,
     statusLabel: '3 in Queue',
@@ -67,7 +68,7 @@ const CLINICAL_METRICS: ClinicalMetric[] = [
   },
   {
     id: 'm-6',
-    secNumber: 'Sec 13',
+    secNumber: 'Treatment',
     title: 'Tx Plans',
     count: 4,
     statusLabel: '4 Drafts',
@@ -86,7 +87,7 @@ const CLINICAL_METRICS: ClinicalMetric[] = [
   },
   {
     id: 'm-8',
-    secNumber: 'Sec 13',
+    secNumber: 'Recare',
     title: 'Follow-ups',
     count: 18,
     statusLabel: 'Due Week',
@@ -95,7 +96,7 @@ const CLINICAL_METRICS: ClinicalMetric[] = [
   },
   {
     id: 'm-9',
-    secNumber: 'Sec 20',
+    secNumber: 'Referrals',
     title: 'Referrals',
     count: 2,
     statusLabel: '2 Pending',
@@ -472,7 +473,7 @@ export const ClinicalOperationsOverviewScreen: React.FC = () => {
             </span>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
-              {/* Odontogram (Sec 9) */}
+              {/* Odontogram */}
               <div
                 onClick={() => navigate('/clinical/examination/charting')}
                 className="bg-white rounded-2xl p-4 shadow-sm border border-[#dae2fd]/70 flex items-center justify-between hover:bg-[#faf8ff] active:scale-[0.99] transition-all cursor-pointer"
@@ -483,7 +484,7 @@ export const ClinicalOperationsOverviewScreen: React.FC = () => {
                   </div>
                   <div>
                     <span className="font-semibold text-sm md:text-base text-[#131b2e] block font-['Plus_Jakarta_Sans',sans-serif]">
-                      Open Odontogram (Sec 9)
+                      Open Odontogram
                     </span>
                     <span className="text-xs text-[#3f4850]">Interactive 32-tooth notation chart</span>
                   </div>
@@ -491,7 +492,7 @@ export const ClinicalOperationsOverviewScreen: React.FC = () => {
                 <Icon name="chevron_right" className="text-[#707881] text-[22px] shrink-0" />
               </div>
 
-              {/* Treatment Plans (Sec 13) */}
+              {/* Treatment Plans */}
               <div
                 onClick={() => navigate('/treatment-planning')}
                 className="bg-white rounded-2xl p-4 shadow-sm border border-[#dae2fd]/70 flex items-center justify-between hover:bg-[#faf8ff] active:scale-[0.99] transition-all cursor-pointer"
@@ -502,7 +503,7 @@ export const ClinicalOperationsOverviewScreen: React.FC = () => {
                   </div>
                   <div>
                     <span className="font-semibold text-sm md:text-base text-[#131b2e] block font-['Plus_Jakarta_Sans',sans-serif]">
-                      Treatment Plans (Sec 13)
+                      Treatment Plans
                     </span>
                     <span className="text-xs text-[#3f4850]">4 pending supervisor sign-offs</span>
                   </div>
@@ -510,7 +511,7 @@ export const ClinicalOperationsOverviewScreen: React.FC = () => {
                 <Icon name="chevron_right" className="text-[#707881] text-[22px] shrink-0" />
               </div>
 
-              {/* Lab Results (Sec 11) */}
+              {/* Lab Results */}
               <div
                 onClick={() => navigate('/investigations')}
                 className="bg-white rounded-2xl p-4 shadow-sm border border-[#dae2fd]/70 flex items-center justify-between hover:bg-[#faf8ff] active:scale-[0.99] transition-all cursor-pointer"
@@ -521,7 +522,7 @@ export const ClinicalOperationsOverviewScreen: React.FC = () => {
                   </div>
                   <div>
                     <span className="font-semibold text-sm md:text-base text-[#131b2e] block font-['Plus_Jakarta_Sans',sans-serif]">
-                      Review Lab Results (Sec 11)
+                      Review Lab Results
                     </span>
                     <span className="text-xs text-[#ba1a1a] font-medium">5 Urgent CBCT & biopsy awaiting</span>
                   </div>
@@ -552,6 +553,14 @@ export const ClinicalOperationsOverviewScreen: React.FC = () => {
           </div>
         </div>
       </main>
+      <QuickLinks
+        title="Clinical Operations"
+        links={[
+          { to: '/clinic-operations/workflow-monitoring', label: 'Workflow Monitoring', icon: 'monitoring' },
+          { to: '/clinic-operations/clinical-activity-details', label: 'Clinical Activity Details', icon: 'clinical_notes' },
+          { to: '/clinic-operations/referrals', label: 'Referral Operations', icon: 'send_and_archive' },
+        ]}
+      />
     </div>
   );
 };

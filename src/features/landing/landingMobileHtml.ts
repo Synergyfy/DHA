@@ -9,13 +9,8 @@ export const landingMobileHtml = `
 <header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container shadow-[0_2px_4px_rgba(0,97,148,0.15)]"><span class="material-symbols-outlined text-[20px]">dentistry</span></div><div class="flex flex-col"><div class="flex items-center gap-1"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">DHA</span><span class="font-label-sm text-label-sm uppercase px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">Health</span></div></div></div><div class="flex items-center gap-space-xs"><a class="hidden sm:inline-flex items-center justify-center h-11 px-space-md rounded-lg bg-primary text-on-primary font-title-sm text-title-sm shadow-sm hover:bg-primary-container transition-colors" data-path="get-started" href="#">Get Started</a><button aria-label="Open Menu" class="w-11 h-11 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="sr-only">Public Landing Page</div><div class="flex flex-col w-full text-on-surface">
 <!-- 1. HERO SECTION -->
 <section class="flex flex-col px-margin pt-space-md pb-space-xl">
-<!-- Badge Pill -->
-<div class="inline-flex items-center gap-1.5 self-start px-space-sm py-1 rounded-full bg-surface-container-high text-primary font-label-sm text-label-sm tracking-wide">
-<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-<span>Connected Nigerian Oral Health Portal • Unified Healthcare Ecosystem</span>
-</div>
 <!-- Main Headline -->
-<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold tracking-tight mt-space-md">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface font-bold tracking-tight">
       Your Oral Health, <span class="text-primary">All in One Place.</span>
 </h1>
 <!-- Supporting Copy -->

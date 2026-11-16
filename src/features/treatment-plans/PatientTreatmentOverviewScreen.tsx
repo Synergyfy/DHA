@@ -324,7 +324,7 @@ export function PatientTreatmentOverviewScreen() {
               <div className="flex items-center justify-between bg-white p-2.5 rounded-xl border border-[#eaedff] text-xs">
                 <div className="flex items-center gap-2 min-w-0">
                   <Icon name="grid_view" className="text-[18px] text-[#006194] shrink-0" />
-                  <span className="truncate">Sec 9 Odontogram: FDI #16 MO</span>
+                  <span className="truncate">Odontogram: FDI #16 MO</span>
                 </div>
                 <span className="font-semibold text-[#006194]">Verified</span>
               </div>
@@ -332,7 +332,7 @@ export function PatientTreatmentOverviewScreen() {
               <div className="flex items-center justify-between bg-white p-2.5 rounded-xl border border-[#eaedff] text-xs">
                 <div className="flex items-center gap-2 min-w-0">
                   <Icon name="radiology" className="text-[18px] text-[#006a61] shrink-0" />
-                  <span className="truncate">Sec 11 Bitewing: 2.1mm Buffer</span>
+                  <span className="truncate">Bitewing: 2.1mm Buffer</span>
                 </div>
                 <span className="font-semibold text-[#006a61]">Clear</span>
               </div>
@@ -340,7 +340,7 @@ export function PatientTreatmentOverviewScreen() {
               <div className="flex items-center justify-between bg-white p-2.5 rounded-xl border border-[#eaedff] text-xs">
                 <div className="flex items-center gap-2 min-w-0">
                   <Icon name="auto_awesome" className="text-[18px] text-[#006194] shrink-0" />
-                  <span className="truncate">Sec 12 AI Summary #9842</span>
+                  <span className="truncate">AI Summary #9842</span>
                 </div>
                 <span className="font-semibold text-[#006194]">Signed</span>
               </div>
@@ -442,7 +442,7 @@ export function PatientTreatmentOverviewScreen() {
           </div>
 
           <p className="text-xs text-[#707881] text-center">
-            Tap a tooth node to cross-reference tooth status in Section 9 Clinical Odontogram.
+            Tap a tooth node to cross-reference tooth status in Clinical Odontogram Chart.
           </p>
         </div>
       </div>

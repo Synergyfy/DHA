@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '../../design/Primitives';
 import { SummaryShell } from './SummaryShell';
+import { QuickLinks } from '../../design/QuickLinks';
 
 interface DataSourceItem {
   id: string;
@@ -79,7 +80,7 @@ const mockDataSources: DataSourceItem[] = [
     id: 'src-c2',
     category: 'C',
     title: 'Historical Panoramic OPG',
-    sectionCode: 'Section 11',
+    sectionCode: 'Radiology',
     date: '14 Oct 2024',
     author: 'External Diagnostic Center',
     isVerified: false,
@@ -92,7 +93,7 @@ const mockDataSources: DataSourceItem[] = [
     id: 'src-d1',
     category: 'D',
     title: 'Pre-Op Coagulation & Salivary Flow Panel',
-    sectionCode: 'Section 11',
+    sectionCode: 'Laboratory',
     date: '14 Oct 2026',
     author: 'Al Barsha Diagnostic Lab',
     isVerified: true,
@@ -109,7 +110,7 @@ const mockDataSources: DataSourceItem[] = [
     id: 'src-e1',
     category: 'E',
     title: 'General Medical Profile',
-    sectionCode: 'Sections 1–8',
+    sectionCode: 'Medical Dossier',
     date: 'Updated Oct 2026',
     author: 'Patient Attested',
     isVerified: true,
@@ -311,7 +312,7 @@ export function SummaryDataSourceSelectionScreen() {
                   Category A · Odontogram &amp; Findings
                 </h4>
               </div>
-              <span className="text-xs text-[#707881]">Section 9</span>
+              <span className="text-xs text-[#707881]">Odontogram Chart</span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -385,7 +386,7 @@ export function SummaryDataSourceSelectionScreen() {
                   Category B · Detailed Clinical Examination
                 </h4>
               </div>
-              <span className="text-xs text-[#707881]">Section 10</span>
+              <span className="text-xs text-[#707881]">Clinical Exam</span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -453,7 +454,7 @@ export function SummaryDataSourceSelectionScreen() {
                   Category C · Radiographic Imaging
                 </h4>
               </div>
-              <span className="text-xs text-[#707881]">Section 11</span>
+              <span className="text-xs text-[#707881]">Radiology & Imaging</span>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -684,6 +685,13 @@ export function SummaryDataSourceSelectionScreen() {
           </button>
         </div>
       </div>
+      <QuickLinks
+        title="Data Ingestion"
+        links={[
+          { to: '/summaries/odontogram', label: 'Odontogram Ingestion', icon: 'dentistry' },
+          { to: '/summaries/investigations', label: 'Investigations Data', icon: 'radiology' },
+        ]}
+      />
     </SummaryShell>
   );
 }

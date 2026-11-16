@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '../../design/Primitives';
 import { ClinicalWorkspaceShell } from './ClinicalWorkspaceShell';
+import { QuickLinks } from '../../design/QuickLinks';
 
 /* ─── Types ────────────────────────────────────────────────────── */
 
@@ -486,6 +487,15 @@ export function MyPatientsScreen() {
           New patient intake workflow opening...
         </div>
       )}
+
+      <QuickLinks
+        title="Inside My Patients"
+        links={[
+          { to: '/dentist/patient-search', label: 'Search & Select Patient', icon: 'person_search' },
+          { to: '/dentist/patient-overview', label: 'Patient Professional Overview', icon: 'badge' },
+          { to: '/dentist/calendar', label: 'Appointment Calendar', icon: 'calendar_month' },
+        ]}
+      />
     </ClinicalWorkspaceShell>
   );
 }

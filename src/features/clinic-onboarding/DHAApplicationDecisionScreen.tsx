@@ -49,7 +49,7 @@ export function DHAApplicationDecisionScreen() {
             </button>
             <div className="flex flex-col">
               <span className="text-[10px] font-bold text-[#707881] uppercase tracking-wider">
-                Section 15 • Review
+                DHA Registry • Review
               </span>
               <h1 className="text-base sm:text-lg font-bold text-[#131b2e] tracking-tight">
                 DHA Application Decision

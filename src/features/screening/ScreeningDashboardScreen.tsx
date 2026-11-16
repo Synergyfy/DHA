@@ -10,7 +10,6 @@ export function ScreeningDashboardScreen() {
   return (
     <ScreeningShell
       pageTitle="Screening Operations Desk"
-      badgeCode="8.1"
       badgeLabel="KHDA/DHA Outreach"
     >
       <div className="space-y-6 sm:space-y-8 max-w-6xl mx-auto">

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ExaminationShell } from './ExaminationShell';
+import { QuickLinks } from '../../design/QuickLinks';
 import { Icon } from '../../design/Primitives';
 
 interface HistoricalExam {
@@ -406,6 +407,14 @@ export function ExaminationHistoryScreen() {
           </button>
         </div>
       </div>
+      <QuickLinks
+        title="History Actions"
+        links={[
+          { to: '/examination/amendment', label: 'Addendum Amendment', icon: 'security_update_good' },
+          { to: '/examination/patient-summary', label: 'Patient Summary', icon: 'preview' },
+          { to: '/examination/recommendations', label: 'Follow-up Recommendations', icon: 'playlist_add_check' },
+        ]}
+      />
     </ExaminationShell>
   );
 }

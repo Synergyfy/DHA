@@ -88,7 +88,7 @@ export function OperatingHoursScreen() {
           <div>
             <div className="flex items-center gap-2 mb-1">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-xs font-bold uppercase tracking-wider text-primary">DHA Sec 15.9 &bull; Operating Hours</span>
+              <span className="text-xs font-bold uppercase tracking-wider text-primary">Operating Hours</span>
             </div>
             <h2 className="text-lg sm:text-xl font-heading font-extrabold text-on-surface">
               Primary Branch Practice Timetable

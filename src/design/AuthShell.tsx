@@ -29,18 +29,20 @@ interface AuthShellProps {
  */
 export function AuthShell({ title, step, stepCaption, onBack, aside, children }: AuthShellProps) {
   return (
-    <div className="min-h-dvh bg-surface pb-safe lg:grid lg:grid-cols-[minmax(0,1fr)_minmax(0,34rem)] xl:grid-cols-[minmax(0,1fr)_minmax(0,36rem)]">
+    <div className="min-h-dvh bg-surface pb-safe lg:grid lg:grid-cols-[minmax(0,24rem)_minmax(0,1fr)] xl:grid-cols-[minmax(0,26rem)_minmax(0,1fr)]">
       {/* Desktop context panel — sticky, exactly one viewport tall */}
       <div className="hidden lg:sticky lg:top-0 lg:block lg:h-dvh lg:self-start lg:overflow-hidden">
         {aside}
       </div>
 
       {/* Form rail */}
-      <div className="flex min-w-0 flex-col lg:min-h-dvh lg:border-l lg:border-outline-variant/40">
+      <div className="flex min-w-0 flex-col lg:min-h-dvh lg:border-l lg:border-outline-variant/40 bg-surface">
         <ScreenHeader title={title} onBack={onBack} trailing={<PortalPill />} position="sticky" />
-        <main className="flex w-full flex-1 flex-col gap-space-lg px-gutter pb-space-xl pt-header md:px-gutter-tablet lg:px-gutter-desktop lg:pt-space-xl">
-          {step ? <StepProgress step={step} caption={stepCaption} /> : null}
-          {children}
+        <main className="flex w-full flex-1 flex-col gap-space-lg px-gutter pb-space-xl pt-header md:px-gutter-tablet lg:px-12 xl:px-16 lg:pt-space-xl">
+          <div className="w-full max-w-2xl xl:max-w-3xl mx-auto flex flex-col gap-space-lg">
+            {step ? <StepProgress step={step} caption={stepCaption} /> : null}
+            {children}
+          </div>
         </main>
       </div>
     </div>
@@ -93,30 +95,30 @@ export function AuthAside({ heading, points }: AuthAsideProps) {
         className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_18%_-10%,rgba(255,255,255,0.18),transparent_45%)]"
       />
 
-      <div className="relative mx-auto flex h-full w-full max-w-[38rem] flex-col gap-space-xl overflow-y-auto px-space-xl py-space-xl md:px-space-2xl">
+      <div className="relative mx-auto flex h-full w-full max-w-[28rem] flex-col gap-space-lg overflow-y-auto px-6 py-8 xl:px-8 xl:py-10">
         <LogoBadge variant="stacked" className="self-start" />
 
-        <div className="flex flex-col gap-space-sm">
-          <h2 className="font-headline-lg text-headline-lg font-bold tracking-tight text-white lg:text-display-lg">
+        <div className="flex flex-col gap-space-xs">
+          <h2 className="font-headline-md text-headline-md font-bold tracking-tight text-white lg:text-headline-lg">
             {heading}
           </h2>
-          <p className="max-w-md font-body-md text-body-md leading-relaxed text-white/75">
+          <p className="font-body-sm text-body-sm leading-relaxed text-white/75">
             Your oral health history, your Lifecode and your sharing choices — kept together in one
             record you control.
           </p>
         </div>
 
-        <ul className="flex flex-col gap-space-md">
+        <ul className="flex flex-col gap-space-sm">
           {points.map((point) => (
             <li key={point.title} className="flex items-start gap-space-sm">
-              <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl bg-white/15 text-secondary-fixed shadow-sm backdrop-blur-sm">
-                <Icon name={point.icon} className="text-[20px]" />
+              <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-white/15 text-secondary-fixed shadow-sm backdrop-blur-sm">
+                <Icon name={point.icon} className="text-[18px]" />
               </span>
               <span className="flex min-w-0 flex-col gap-0.5">
                 <span className="font-title-sm text-title-sm font-semibold text-white">
                   {point.title}
                 </span>
-                <span className="font-body-sm leading-relaxed text-white/70">{point.text}</span>
+                <span className="font-body-sm text-xs leading-relaxed text-white/70">{point.text}</span>
               </span>
             </li>
           ))}

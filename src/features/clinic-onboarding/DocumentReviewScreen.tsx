@@ -110,7 +110,7 @@ export function DocumentReviewScreen() {
             <div>
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary mb-1">
                 <Icon name="verified_user" className="text-sm" />
-                <span>DHA Registry Audit SEC 15.11</span>
+                <span>DHA Registry Audit</span>
               </div>
               <h2 className="text-xl sm:text-2xl font-heading font-extrabold text-on-surface">
                 Greenfield Dental Clinic Ltd

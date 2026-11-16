@@ -102,15 +102,15 @@ export function DashboardShell({
           })}
         </nav>
 
-        {/* Sidebar bottom: View Pass button */}
+        {/* Sidebar bottom: Sign Out button */}
         <div className="px-3 py-3 border-t border-outline-variant/20 shrink-0">
           <button
             type="button"
-            onClick={() => setQrModalOpen(true)}
-            className="w-full px-3 py-2.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary text-[13px] font-semibold flex items-center justify-center gap-2 shadow-sm active:scale-[0.97] transition-all"
+            onClick={() => navigate('/login')}
+            className="w-full px-3 py-2.5 rounded-xl bg-surface-container hover:bg-error-container/40 text-error hover:text-on-error-container text-[13px] font-semibold flex items-center justify-center gap-2 shadow-xs active:scale-[0.97] transition-all"
           >
-            <Icon name="qr_code_scanner" className="text-[18px]" />
-            <span>View Pass</span>
+            <Icon name="logout" className="text-[18px]" />
+            <span>Sign Out</span>
           </button>
         </div>
       </aside>
@@ -190,14 +190,15 @@ export function DashboardShell({
                   />
                 </button>
 
-                {/* Dropdown Menu */}
+                {/* Dropdown Menu (Desktop Floating Dropdown + Mobile Bottom Sheet Popup) */}
                 {profileDropdownOpen && (
                   <>
+                    {/* Desktop Dropdown */}
                     <div
-                      className="fixed inset-0 z-30"
+                      className="hidden md:block fixed inset-0 z-30"
                       onClick={() => setProfileDropdownOpen(false)}
                     />
-                    <div className="absolute right-0 mt-2 w-72 bg-surface-container-lowest rounded-2xl shadow-xl border border-outline-variant/30 p-2 z-40 animate-in fade-in slide-in-from-top-2 duration-150">
+                    <div className="hidden md:block absolute right-0 mt-2 w-72 bg-surface-container-lowest rounded-2xl shadow-xl border border-outline-variant/30 p-2 z-40 animate-in fade-in slide-in-from-top-2 duration-150">
                       <div className="px-3 py-2 border-b border-outline-variant/20 mb-1">
                         <p className="text-[10px] uppercase tracking-wider text-on-surface-variant font-semibold">
                           Switch Patient Chart
@@ -244,15 +245,109 @@ export function DashboardShell({
                         ))}
                       </div>
 
-                      <div className="mt-2 pt-2 border-t border-outline-variant/20">
+                      <div className="mt-2 pt-2 border-t border-outline-variant/20 space-y-1.5">
                         <NavLink
                           to="/patient-dashboard/guardian"
                           onClick={() => setProfileDropdownOpen(false)}
-                          className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary text-sm font-semibold transition-colors"
+                          className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary text-xs font-semibold transition-colors"
                         >
-                          <Icon name="manage_accounts" className="text-[18px]" />
+                          <Icon name="manage_accounts" className="text-[16px]" />
                           <span>Manage All Profiles & Dependents</span>
                         </NavLink>
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setProfileDropdownOpen(false);
+                            navigate('/login');
+                          }}
+                          className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl hover:bg-error-container/40 text-error text-xs font-semibold transition-colors"
+                        >
+                          <Icon name="logout" className="text-[16px]" />
+                          <span>Sign Out</span>
+                        </button>
+                      </div>
+                    </div>
+
+                    {/* Mobile Bottom Popup: Switch Patient Profile */}
+                    <div className="md:hidden fixed inset-0 z-50 flex items-end justify-center">
+                      <div
+                        className="fixed inset-0 bg-black/40 backdrop-blur-xs animate-in fade-in"
+                        onClick={() => setProfileDropdownOpen(false)}
+                      />
+                      <div className="relative w-full max-h-[85vh] bg-surface-container-lowest rounded-t-3xl p-5 shadow-2xl z-10 animate-in slide-in-from-bottom duration-200 pb-safe overflow-y-auto">
+                        <div className="w-10 h-1 bg-outline-variant/40 rounded-full mx-auto mb-4" />
+                        <div className="flex items-center justify-between mb-3 px-1">
+                          <div>
+                            <h3 className="text-sm font-bold text-on-surface">Switch Patient Chart</h3>
+                            <p className="text-[11px] text-on-surface-variant">Select active clinical record</p>
+                          </div>
+                          <button
+                            type="button"
+                            onClick={() => setProfileDropdownOpen(false)}
+                            className="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant"
+                          >
+                            <Icon name="close" className="text-[16px]" />
+                          </button>
+                        </div>
+
+                        <div className="space-y-1.5 mb-4">
+                          {Object.values(PROFILES).map((p) => (
+                            <button
+                              key={p.id}
+                              type="button"
+                              onClick={() => {
+                                setActiveProfile(p.id);
+                                setProfileDropdownOpen(false);
+                              }}
+                              className={`w-full flex items-center justify-between p-3 rounded-2xl text-left border transition-all ${
+                                activeProfileId === p.id
+                                  ? 'border-primary bg-primary-fixed/30 text-on-primary-fixed font-semibold'
+                                  : 'border-outline-variant/20 hover:bg-surface-container-low text-on-surface'
+                              }`}
+                            >
+                              <div className="flex items-center gap-3 min-w-0">
+                                <div
+                                  className={`w-9 h-9 rounded-full ${p.avatarBg} ${p.avatarColor} flex items-center justify-center text-xs font-bold shrink-0 shadow-2xs`}
+                                >
+                                  {p.initials}
+                                </div>
+                                <div className="truncate">
+                                  <p className="text-sm font-bold truncate leading-tight">
+                                    {p.name}
+                                  </p>
+                                  <p className="text-[11px] text-on-surface-variant truncate">
+                                    {p.lifecode} • {p.role}
+                                  </p>
+                                </div>
+                              </div>
+                              {activeProfileId === p.id && (
+                                <Icon name="check_circle" className="text-primary text-[20px] shrink-0" />
+                              )}
+                            </button>
+                          ))}
+                        </div>
+
+                        <div className="pt-2 border-t border-outline-variant/20 space-y-2">
+                          <NavLink
+                            to="/patient-dashboard/guardian"
+                            onClick={() => setProfileDropdownOpen(false)}
+                            className="w-full py-2.5 px-3 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary text-xs font-semibold flex items-center justify-center gap-1.5 transition-colors"
+                          >
+                            <Icon name="manage_accounts" className="text-[16px]" />
+                            <span>Manage All Profiles & Dependents</span>
+                          </NavLink>
+                          <button
+                            type="button"
+                            onClick={() => {
+                              setProfileDropdownOpen(false);
+                              navigate('/login');
+                            }}
+                            className="w-full py-2.5 px-3 rounded-xl bg-error-container/40 hover:bg-error-container text-error text-xs font-bold flex items-center justify-center gap-2 transition-colors"
+                          >
+                            <Icon name="logout" className="text-[16px]" />
+                            <span>Sign Out</span>
+                          </button>
+                        </div>
                       </div>
                     </div>
                   </>
@@ -419,11 +514,11 @@ export function DashboardShell({
       {/* ════════════ Global Interactive QR Pass Modal ════════════ */}
       {qrModalOpen && (
         <div
-          className="fixed inset-0 z-50 bg-inverse-surface/50 backdrop-blur-sm flex items-center justify-center p-4 transition-opacity animate-in fade-in duration-200"
+          className="fixed inset-0 z-50 bg-inverse-surface/50 backdrop-blur-sm flex items-end sm:items-center justify-center p-0 sm:p-4 transition-opacity animate-in fade-in duration-200"
           onClick={() => setQrModalOpen(false)}
         >
           <div
-            className="bg-surface-container-lowest rounded-2xl w-full max-w-sm sm:max-w-md p-5 sm:p-6 shadow-2xl flex flex-col items-center text-center animate-in zoom-in-95 duration-200"
+            className="bg-surface-container-lowest rounded-t-3xl sm:rounded-2xl w-full max-w-sm sm:max-w-md p-5 sm:p-6 shadow-2xl flex flex-col items-center text-center animate-in slide-in-from-bottom sm:zoom-in-95 duration-200 pb-safe"
             onClick={(e) => e.stopPropagation()}
           >
             <div className="w-10 h-1 bg-surface-variant rounded-full mb-3"></div>

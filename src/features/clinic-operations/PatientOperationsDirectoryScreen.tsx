@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '../../design/Primitives';
+import { QuickLinks } from '../../design/QuickLinks';
 
 type DirectoryFilter = 'all' | 'today' | 'recent' | 'pending' | 'vip';
 
@@ -497,6 +498,15 @@ export const PatientOperationsDirectoryScreen: React.FC = () => {
           </button>
         </div>
       </nav>
+
+      <QuickLinks
+        title="Front Desk"
+        links={[
+          { to: '/clinic-operations/reception-desk', label: 'Reception Check-In', icon: 'how_to_reg' },
+          { to: '/clinic-operations/waiting-queue', label: 'Waiting Room Queue', icon: 'hourglass_empty' },
+          { to: '/clinic-operations/walk-in-queue', label: 'Walk-In Management', icon: 'directions_walk' },
+        ]}
+      />
     </div>
   );
 };

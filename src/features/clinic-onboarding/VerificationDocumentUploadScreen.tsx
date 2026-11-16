@@ -37,7 +37,7 @@ export function VerificationDocumentUploadScreen() {
         <div>
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary mb-1">
             <Icon name="verified_user" className="text-sm" />
-            <span>DHA SEC 15.10 &bull; Statutory Compliance Uploads</span>
+            <span>Statutory Compliance Uploads</span>
           </div>
           <h2 className="text-xl sm:text-2xl font-heading font-extrabold text-on-surface">
             Legal &amp; Regulatory Accreditation Dossier

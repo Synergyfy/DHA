@@ -169,7 +169,7 @@ export function ScreeningOutcomeScreen() {
                       Queue for Direct DHA Clinic Referral
                     </span>
                     <span className="text-[11px] text-on-surface-variant">
-                      Sends electronic referral token to guardian via Section 7 gateway.
+                      Sends electronic referral token to guardian via Referral gateway.
                     </span>
                   </div>
                   <input

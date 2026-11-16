@@ -13,28 +13,13 @@ interface ExaminationShellProps {
   ageGender?: string;
 }
 
-const section10NavItems = [
-  { to: '/examination/confirmation', label: 'Patient Confirm', icon: 'person_search', code: '10.2' },
-  { to: '/examination/templates', label: 'Template Matrix', icon: 'rule_folder', code: '10.3' },
-  { to: '/examination/workspace', label: 'Workspace Overview', icon: 'dashboard_customize', code: '10.4' },
-  { to: '/examination/history-complaint', label: 'History & Complaint', icon: 'clinical_notes', code: '10.5' },
-  { to: '/examination/extraoral', label: 'Extraoral Exam', icon: 'face', code: '10.6' },
-  { to: '/examination/soft-tissue', label: 'Soft Tissue Exam', icon: 'dentistry', code: '10.7' },
-  { to: '/examination/periodontal', label: 'Periodontal Exam', icon: 'straighten', code: '10.8' },
-  { to: '/examination/occlusion', label: 'Occlusion & TMJ', icon: 'sync_alt', code: '10.9' },
-  { to: '/examination/odontogram-integration', label: 'Odontogram', icon: 'grid_view', code: '10.10' },
-  { to: '/examination/investigations', label: 'Investigations', icon: 'radiology', code: '10.11' },
-  { to: '/examination/assessment', label: 'Assessment & Dx', icon: 'assignment_turned_in', code: '10.12' },
-  { to: '/examination/attachments', label: 'Dossier Files', icon: 'attach_file', code: '10.13' },
-  { to: '/examination/review', label: 'Review & Validate', icon: 'verified', code: '10.14' },
-  { to: '/examination/patient-summary', label: 'Patient Summary', icon: 'preview', code: '10.17' },
-  { to: '/examination/history', label: 'Exam History', icon: 'history', code: '10.18' },
-  { to: '/examination/amendment', label: 'Addendum Amendment', icon: 'security_update_good', code: '10.19' },
-  { to: '/examination/recommendations', label: 'Follow-up Recs', icon: 'playlist_add_check', code: '10.20' },
-  { to: '/examination/templates/library', label: 'Template Library', icon: 'library_books', code: '10.21' },
-  { to: '/examination/templates/create', label: 'Create Template', icon: 'edit_note', code: '10.22' },
-  { to: '/examination/templates/preview', label: 'Template Preview', icon: 'visibility', code: '10.23' },
-  { to: '/examination/templates/permissions', label: 'Template Access', icon: 'admin_panel_settings', code: '10.24' },
+/* Sidebar shows module-level destinations only. Exam stages (confirmation → review),
+   outputs (summary, amendment, recs) and template sub-pages are nested inside
+   the workspace, history and templates pages. */
+const examinationNavItems = [
+  { to: '/examination/workspace', label: 'Exam Workspace', icon: 'dashboard_customize' },
+  { to: '/examination/history', label: 'Exam History', icon: 'history' },
+  { to: '/examination/templates', label: 'Templates', icon: 'rule_folder' },
 ];
 
 export function ExaminationShell({
@@ -49,126 +34,149 @@ export function ExaminationShell({
 }: ExaminationShellProps) {
   const navigate = useNavigate();
   const location = useLocation();
-  const [navMenuOpen, setNavMenuOpen] = useState(false);
+  const [mobileMoreOpen, setMobileMoreOpen] = useState(false);
+  const [mobileProfileOpen, setMobileProfileOpen] = useState(false);
+  const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
+
+  const handleSignOut = () => {
+    navigate('/login');
+  };
 
   return (
-    <div className="min-h-screen bg-surface font-body-md text-on-surface flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-container">
-      {/* Top Application Header */}
-      <header className="sticky top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+    <div className="min-h-screen bg-[#faf8ff] text-[#131b2e] flex flex-col font-sans selection:bg-[#cce5ff] selection:text-[#001d31]">
+      {/* DESKTOP FIXED SIDEBAR */}
+      <aside className="hidden md:flex flex-col fixed inset-y-0 left-0 w-60 lg:w-64 bg-white border-r border-[#eaedff] z-40">
+        {/* Brand Header */}
+        <div className="p-4 border-b border-[#eaedff] flex items-center gap-3">
+          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#006194] to-[#007bb9] text-white flex items-center justify-center shadow-sm shrink-0">
+            <Icon name="dentistry" className="text-[22px]" />
+          </div>
+          <div className="min-w-0 flex-1">
+            <span className="text-[10px] font-bold uppercase tracking-wider text-[#006194] block">
+              Clinical Diagnostic
+            </span>
+            <h2 className="text-sm font-bold text-[#131b2e] truncate">
+              Examination Suite
+            </h2>
+          </div>
+        </div>
+
+        {/* Active Patient Capsule */}
+        <div className="p-3 bg-[#f2f3ff] border-b border-[#eaedff]">
+          <div className="flex items-center gap-2.5">
+            <div className="w-8 h-8 rounded-full bg-[#006194] text-white flex items-center justify-center font-bold text-xs shrink-0">
+              CO
+            </div>
+            <div className="min-w-0 flex-1">
+              <div className="flex items-center justify-between">
+                <span className="text-xs font-bold text-[#131b2e] truncate">{patientName}</span>
+                <span className="text-[9px] px-1.5 py-0.2 rounded bg-[#86f2e4] text-[#006f66] font-semibold">
+                  Verified
+                </span>
+              </div>
+              <span className="text-[11px] text-[#707881] font-mono">{dhaId} • {ageGender}</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Navigation Items */}
+        <div className="flex-1 overflow-y-auto p-3 space-y-1">
+          <div className="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#707881]">
+            Examination Workflow
+          </div>
+          {examinationNavItems.map((item) => {
+            const isActive = location.pathname.startsWith(item.to);
+            return (
+              <NavLink
+                key={item.to}
+                to={item.to}
+                className={`flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-medium transition-all ${
+                  isActive
+                    ? 'bg-[#006194] text-white font-semibold shadow-xs'
+                    : 'text-[#3f4850] hover:bg-[#f2f3ff] hover:text-[#131b2e]'
+                }`}
+              >
+                <Icon name={item.icon} className="text-[17px] shrink-0" />
+                <span className="truncate">{item.label}</span>
+              </NavLink>
+            );
+          })}
+
+          <div className="pt-3 mt-3 border-t border-[#eaedff]">
+            <div className="px-2.5 py-1 text-[10px] font-bold uppercase tracking-wider text-[#707881]">
+              Connected Suites
+            </div>
+            <NavLink
+              to="/clinical/workspace"
+              className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs text-[#3f4850] hover:bg-[#f2f3ff] hover:text-[#131b2e]"
+            >
+              <Icon name="space_dashboard" className="text-[17px] text-[#006194]" />
+              <span className="truncate">Dentist Workspace</span>
+            </NavLink>
+            <NavLink
+              to="/odontogram/overview"
+              className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs text-[#3f4850] hover:bg-[#f2f3ff] hover:text-[#131b2e]"
+            >
+              <Icon name="dentistry" className="text-[17px] text-[#006194]" />
+              <span className="truncate">Odontogram Chart</span>
+            </NavLink>
+            <NavLink
+              to="/investigations/dashboard"
+              className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs text-[#3f4850] hover:bg-[#f2f3ff] hover:text-[#131b2e]"
+            >
+              <Icon name="radiology" className="text-[17px] text-[#006194]" />
+              <span className="truncate">Digital Radiography</span>
+            </NavLink>
+            <NavLink
+              to="/summaries/dashboard"
+              className="flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs text-[#3f4850] hover:bg-[#f2f3ff] hover:text-[#131b2e]"
+            >
+              <Icon name="auto_awesome" className="text-[17px] text-[#006194]" />
+              <span className="truncate">AI Diagnostic Summaries</span>
+            </NavLink>
+          </div>
+        </div>
+
+        {/* Sidebar Footer with Sign Out */}
+        <div className="p-3 border-t border-[#eaedff] bg-[#faf8ff] space-y-1">
+          <button
+            type="button"
+            onClick={handleSignOut}
+            className="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-rose-600 hover:bg-rose-50 transition-colors"
+          >
+            <Icon name="logout" className="text-[18px]" />
+            <span>Sign Out</span>
+          </button>
+        </div>
+      </aside>
+
+      {/* TOP HEADER */}
+      <header className="sticky top-0 z-30 bg-white/90 backdrop-blur-xl border-b border-[#eaedff] shadow-[0_1px_8px_rgba(0,0,0,0.03)] md:pl-60 lg:pl-64">
         {/* Clinician Operator Credentials Bar */}
-        <div className="bg-surface-container-low px-4 sm:px-6 lg:px-8 py-2 border-b border-outline-variant/20 flex items-center justify-between gap-3 text-xs">
+        <div className="bg-[#f2f3ff] px-4 sm:px-6 lg:px-8 py-1.5 border-b border-[#eaedff] flex items-center justify-between gap-3 text-xs">
           <div className="flex items-center gap-2 min-w-0">
-            <span className="w-2 h-2 rounded-full bg-secondary animate-pulse shrink-0" />
-            <span className="font-semibold text-on-surface truncate">
+            <span className="w-2 h-2 rounded-full bg-[#006a61] animate-pulse shrink-0" />
+            <span className="font-semibold text-[#131b2e] truncate">
               Dr. Daniel James
             </span>
-            <span className="text-on-surface-variant font-mono text-[11px] hidden sm:inline">
+            <span className="text-[#707881] font-mono text-[11px] hidden sm:inline">
               (#DEN-48912)
             </span>
-            <span className="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[10px] font-bold uppercase tracking-wider hidden xs:inline">
+            <span className="px-2 py-0.5 rounded-full bg-[#89f5e7]/40 text-[#006a61] text-[10px] font-bold uppercase tracking-wider hidden xs:inline">
               LIVE CLINICAL
             </span>
           </div>
 
           <div className="flex items-center gap-2">
-            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-mono text-[10px] font-bold">
-              <Icon name="verified" className="text-[13px] text-secondary" />
-              <span>DHA Sec 10 Clinical Protocol</span>
+            <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-white text-[#006194] border border-[#eaedff] font-mono text-[10px] font-bold">
+              <Icon name="verified" className="text-[13px] text-[#006a61]" />
+              <span>DHA Protocol Active</span>
             </span>
             {badgeCode && (
-              <span className="font-mono text-[11px] font-bold bg-surface-container px-2 py-0.5 rounded text-primary">
+              <span className="font-mono text-[11px] font-bold bg-[#eaedff] px-2 py-0.5 rounded text-[#006194]">
                 {badgeCode}
               </span>
             )}
-          </div>
-        </div>
-
-        {/* Patient Identity Quick Bar */}
-        <div className="bg-surface-container-lowest px-4 sm:px-6 lg:px-8 py-2 border-b border-outline-variant/20 flex items-center justify-between gap-3 text-xs">
-          <div className="flex items-center gap-2.5 min-w-0">
-            <div className="w-8 h-8 rounded-xl bg-surface-variant text-primary font-bold flex items-center justify-center shrink-0">
-              CO
-            </div>
-            <div className="flex items-center gap-2 min-w-0 flex-wrap">
-              <span className="font-title-sm text-xs font-bold text-on-surface truncate">
-                {patientName}
-              </span>
-              <span className="px-1.5 py-0.2 rounded bg-surface-container text-primary font-mono text-[11px] font-bold">
-                {dhaId}
-              </span>
-              <span className="text-on-surface-variant text-[11px] hidden sm:inline">
-                {ageGender}
-              </span>
-              <span className="hidden md:inline-flex items-center gap-1 text-[11px] text-secondary font-medium">
-                <Icon name="location_on" className="text-[12px]" />
-                <span>Central Branch</span>
-              </span>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2 shrink-0">
-            {/* Quick Section Jump Dropdown */}
-            <div className="relative">
-              <button
-                type="button"
-                onClick={() => setNavMenuOpen(!navMenuOpen)}
-                className="px-2.5 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-semibold flex items-center gap-1.5 transition-colors border border-outline-variant/30"
-              >
-                <Icon name="swap_horiz" className="text-sm text-primary" />
-                <span className="hidden sm:inline">Section 10 Modules</span>
-                <span className="sm:hidden">Jump</span>
-                <Icon name="expand_more" className={`text-xs transition-transform ${navMenuOpen ? 'rotate-180' : ''}`} />
-              </button>
-
-              {navMenuOpen && (
-                <div className="absolute right-0 mt-2 w-64 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-xl py-2 z-50">
-                  <div className="px-3 py-1.5 text-[10px] font-bold uppercase tracking-wider text-on-surface-variant border-b border-outline-variant/20 mb-1">
-                    Section 10 Clinical Examination
-                  </div>
-                  {section10NavItems.map((item) => (
-                    <NavLink
-                      key={item.to}
-                      to={item.to}
-                      onClick={() => setNavMenuOpen(false)}
-                      className={({ isActive }) =>
-                        `flex items-center justify-between px-3 py-2 text-xs transition-colors ${
-                          isActive
-                            ? 'bg-primary/10 text-primary font-bold'
-                            : 'text-on-surface hover:bg-surface-container-low'
-                        }`
-                      }
-                    >
-                      <div className="flex items-center gap-2">
-                        <Icon name={item.icon} className="text-base" />
-                        <span>{item.label}</span>
-                      </div>
-                      <span className="font-mono text-[10px] opacity-70">{item.code}</span>
-                    </NavLink>
-                  ))}
-                  <div className="border-t border-outline-variant/20 my-1 pt-1">
-                    <NavLink
-                      to="/odontogram/overview"
-                      onClick={() => setNavMenuOpen(false)}
-                      className="flex items-center justify-between px-3 py-2 text-xs text-primary font-semibold hover:bg-primary/5"
-                    >
-                      <div className="flex items-center gap-2">
-                        <Icon name="open_in_new" className="text-base" />
-                        <span>Open Section 9 Odontogram</span>
-                      </div>
-                      <span className="font-mono text-[10px]">Sec 9</span>
-                    </NavLink>
-                  </div>
-                </div>
-              )}
-            </div>
-
-            <NavLink
-              to="/odontogram/overview"
-              className="hidden lg:inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-primary-container text-on-primary-container text-xs font-semibold hover:opacity-90 transition-opacity"
-            >
-              <Icon name="dentistry" className="text-[14px]" />
-              <span>Odontogram</span>
-            </NavLink>
           </div>
         </div>
 
@@ -179,136 +187,345 @@ export function ExaminationShell({
               type="button"
               onClick={() => navigate(-1)}
               aria-label="Back"
-              className="w-9 h-9 flex items-center justify-center rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors shrink-0"
+              className="w-9 h-9 flex items-center justify-center rounded-xl bg-[#f2f3ff] hover:bg-[#eaedff] text-[#131b2e] transition-colors shrink-0"
             >
               <Icon name="arrow_back_ios_new" className="text-[16px]" />
             </button>
 
             <div className="flex flex-col min-w-0">
               <div className="flex items-center gap-2">
-                <h1 className="text-base sm:text-lg font-bold text-on-surface truncate">
+                <h1 className="text-base sm:text-lg font-bold text-[#131b2e] truncate">
                   {pageTitle}
                 </h1>
                 {badgeLabel && (
-                  <span className="hidden sm:inline-block px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-semibold">
+                  <span className="hidden sm:inline-block px-2 py-0.5 rounded-full bg-[#e2e7ff] text-[#006194] text-[11px] font-semibold">
                     {badgeLabel}
                   </span>
                 )}
               </div>
               {currentStep && (
-                <span className="text-[11px] text-on-surface-variant font-medium">
+                <span className="text-[11px] text-[#707881] font-medium">
                   {currentStep}
                 </span>
               )}
             </div>
           </div>
 
-          {/* Quick Actions */}
+          {/* Quick Actions & Profile */}
           <div className="flex items-center gap-2 shrink-0">
             <NavLink
               to="/examination/workspace"
-              className="px-3 py-1.5 rounded-xl bg-surface-container-low hover:bg-surface-container text-on-surface text-xs font-semibold transition-colors inline-flex items-center gap-1.5"
+              className="px-3 py-1.5 rounded-xl bg-[#006194] text-white hover:bg-[#007bb9] text-xs font-semibold shadow-xs transition-colors inline-flex items-center gap-1.5"
             >
-              <Icon name="dashboard" className="text-sm text-primary" />
+              <Icon name="dashboard" className="text-sm" />
               <span className="hidden sm:inline">Workspace</span>
             </NavLink>
-          </div>
-        </div>
 
-        {/* Desktop Horizontal Category Navigation Strip */}
-        <div className="hidden md:block bg-surface-container-low/60 border-t border-outline-variant/20 px-4 sm:px-6 lg:px-8 py-1.5 overflow-x-auto">
-          <div className="max-w-7xl mx-auto flex items-center gap-1 text-xs whitespace-nowrap">
-            {section10NavItems.map((item) => {
-              const isActive = location.pathname.startsWith(item.to);
-              return (
-                <NavLink
-                  key={item.to}
-                  to={item.to}
-                  className={`px-3 py-1 rounded-lg font-semibold flex items-center gap-1.5 transition-all ${
-                    isActive
-                      ? 'bg-primary text-on-primary shadow-sm'
-                      : 'text-on-surface-variant hover:text-on-surface hover:bg-surface-container'
-                  }`}
-                >
-                  <Icon name={item.icon} className="text-sm" />
-                  <span>{item.label}</span>
-                  <span className={`text-[10px] px-1 rounded font-mono ${isActive ? 'bg-white/20' : 'bg-surface-container-high'}`}>
-                    {item.code}
-                  </span>
-                </NavLink>
-              );
-            })}
+            {/* Desktop Profile Dropdown */}
+            <div className="relative hidden md:block">
+              <button
+                type="button"
+                onClick={() => setProfileDropdownOpen(!profileDropdownOpen)}
+                className="flex items-center gap-2 p-1 rounded-xl hover:bg-[#f2f3ff] transition-colors"
+              >
+                <div className="w-8 h-8 rounded-full bg-[#006194] text-white flex items-center justify-center font-bold text-xs">
+                  DJ
+                </div>
+                <Icon name="expand_more" className="text-[16px] text-slate-400" />
+              </button>
+
+              {profileDropdownOpen && (
+                <>
+                  <div
+                    className="fixed inset-0 z-30"
+                    onClick={() => setProfileDropdownOpen(false)}
+                  />
+                  <div className="absolute right-0 mt-2 w-56 bg-white rounded-2xl shadow-xl border border-slate-200 py-2 z-40">
+                    <div className="px-4 py-2 border-b border-slate-100">
+                      <p className="text-xs font-bold text-slate-900">Dr. Daniel James</p>
+                      <p className="text-[11px] text-slate-500 font-mono">#DEN-48912 • MDCN Verified</p>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setProfileDropdownOpen(false);
+                        navigate('/clinical/workspace');
+                      }}
+                      className="w-full text-left px-4 py-2.5 text-xs text-slate-700 hover:bg-slate-50 flex items-center gap-2"
+                    >
+                      <Icon name="space_dashboard" className="text-[16px] text-[#006194]" />
+                      <span>Switch to Clinical Workspace</span>
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => {
+                        setProfileDropdownOpen(false);
+                        navigate('/patient-dashboard');
+                      }}
+                      className="w-full text-left px-4 py-2.5 text-xs text-slate-700 hover:bg-slate-50 flex items-center gap-2"
+                    >
+                      <Icon name="switch_account" className="text-[16px] text-[#006194]" />
+                      <span>Switch to Patient Portal</span>
+                    </button>
+                    <div className="my-1 border-t border-slate-100" />
+                    <button
+                      type="button"
+                      onClick={handleSignOut}
+                      className="w-full text-left px-4 py-2.5 text-xs text-rose-600 hover:bg-rose-50 flex items-center gap-2 font-semibold"
+                    >
+                      <Icon name="logout" className="text-[16px]" />
+                      <span>Sign Out</span>
+                    </button>
+                  </div>
+                </>
+              )}
+            </div>
+
+            {/* Mobile Profile Trigger */}
+            <button
+              type="button"
+              onClick={() => setMobileProfileOpen(true)}
+              className="md:hidden w-8 h-8 rounded-full bg-[#006194] text-white flex items-center justify-center font-bold text-xs"
+              aria-label="Clinician Profile"
+            >
+              DJ
+            </button>
           </div>
         </div>
       </header>
 
-      {/* Main Content Area */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 pb-24 md:pb-12">
+      {/* MAIN CONTENT AREA */}
+      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 pb-24 md:pb-12 md:pl-60 lg:pl-64">
         {children}
       </main>
 
-      {/* Mobile Bottom Navigation Bar */}
-      <nav className="md:hidden fixed bottom-0 w-full z-40 bg-surface/95 backdrop-blur-xl border-t border-outline-variant/30 shadow-[0_-2px_12px_rgba(0,0,0,0.06)] px-2 py-1">
-        <div className="flex items-center justify-around text-center">
-          <NavLink
-            to="/examination/confirmation"
-            className={({ isActive }) =>
-              `flex flex-col items-center py-1 px-2 rounded-lg text-[10px] font-semibold transition-colors ${
-                isActive ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
-              }`
-            }
-          >
-            <Icon name="person" className="text-[20px]" />
-            <span className="truncate">Confirm</span>
-          </NavLink>
+      {/* MOBILE STICKY BOTTOM NAVIGATION DOCK */}
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white/95 backdrop-blur-xl border-t border-[#eaedff] shadow-[0_-2px_12px_rgba(0,0,0,0.06)] px-2 py-1.5 pb-safe">
+        <div className="flex justify-around items-center">
           <NavLink
             to="/examination/workspace"
             className={({ isActive }) =>
-              `flex flex-col items-center py-1 px-2 rounded-lg text-[10px] font-semibold transition-colors ${
-                isActive ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
+              `flex flex-col items-center justify-center py-1 px-2 rounded-xl transition-all ${
+                isActive ? 'text-[#006194] font-bold scale-105' : 'text-[#707881] hover:text-[#131b2e]'
               }`
             }
           >
-            <Icon name="dashboard" className="text-[20px]" />
-            <span className="truncate">Workspace</span>
+            <Icon name="dashboard_customize" className="text-[20px]" />
+            <span className="text-[10px] mt-0.5">Workspace</span>
           </NavLink>
+
           <NavLink
-            to="/examination/history-complaint"
+            to="/examination/history"
             className={({ isActive }) =>
-              `flex flex-col items-center py-1 px-2 rounded-lg text-[10px] font-semibold transition-colors ${
-                isActive ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
+              `flex flex-col items-center justify-center py-1 px-2 rounded-xl transition-all ${
+                isActive ? 'text-[#006194] font-bold scale-105' : 'text-[#707881] hover:text-[#131b2e]'
               }`
             }
           >
-            <Icon name="clinical_notes" className="text-[20px]" />
-            <span className="truncate">Complaint</span>
+            <Icon name="history" className="text-[20px]" />
+            <span className="text-[10px] mt-0.5">History</span>
           </NavLink>
+
           <NavLink
-            to="/examination/soft-tissue"
+            to="/examination/templates"
             className={({ isActive }) =>
-              `flex flex-col items-center py-1 px-2 rounded-lg text-[10px] font-semibold transition-colors ${
-                isActive ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
+              `flex flex-col items-center justify-center py-1 px-2 rounded-xl transition-all ${
+                isActive ? 'text-[#006194] font-bold scale-105' : 'text-[#707881] hover:text-[#131b2e]'
               }`
             }
           >
-            <Icon name="dentistry" className="text-[20px]" />
-            <span className="truncate">Soft Tissue</span>
+            <Icon name="rule_folder" className="text-[20px]" />
+            <span className="text-[10px] mt-0.5">Templates</span>
           </NavLink>
-          <NavLink
-            to="/examination/periodontal"
-            className={({ isActive }) =>
-              `flex flex-col items-center py-1 px-2 rounded-lg text-[10px] font-semibold transition-colors ${
-                isActive ? 'text-primary' : 'text-on-surface-variant hover:text-on-surface'
-              }`
-            }
+
+          {/* MORE BUTTON */}
+          <button
+            type="button"
+            onClick={() => setMobileMoreOpen(true)}
+            className="flex flex-col items-center justify-center py-1 px-2 rounded-xl text-[#707881] hover:text-[#131b2e]"
           >
-            <Icon name="straighten" className="text-[20px]" />
-            <span className="truncate">Perio</span>
-          </NavLink>
+            <Icon name="more_horiz" className="text-[20px]" />
+            <span className="text-[10px] mt-0.5">More</span>
+          </button>
         </div>
       </nav>
+
+      {/* MOBILE "MORE" BOTTOM SHEET POPUP */}
+      {mobileMoreOpen && (
+        <div className="md:hidden fixed inset-0 z-50 flex items-end">
+          <div
+            className="fixed inset-0 bg-black/40 backdrop-blur-xs animate-in fade-in"
+            onClick={() => setMobileMoreOpen(false)}
+          />
+          <div className="relative w-full max-h-[85vh] bg-white rounded-t-3xl shadow-2xl flex flex-col z-10 animate-in slide-in-from-bottom duration-200 pb-safe">
+            <div className="pt-3 pb-1 flex justify-center">
+              <div className="w-10 h-1 bg-slate-300 rounded-full" />
+            </div>
+
+            <div className="p-4 border-b border-[#eaedff] flex items-center justify-between">
+              <div className="flex items-center gap-2.5">
+                <div className="w-9 h-9 rounded-xl bg-[#006194] text-white flex items-center justify-center">
+                  <Icon name="dentistry" className="text-[20px]" />
+                </div>
+                <div>
+                  <h3 className="text-sm font-bold text-slate-900">Clinical Examination Pages</h3>
+                  <p className="text-[11px] text-slate-500">Full diagnostic tools & tests</p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setMobileMoreOpen(false)}
+                className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500"
+              >
+                <Icon name="close" className="text-[18px]" />
+              </button>
+            </div>
+
+            <div className="flex-1 overflow-y-auto p-4 space-y-1">
+              <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-3 py-1">
+                Diagnostic Sequence
+              </p>
+              {examinationNavItems.map((item) => {
+                const isActive = location.pathname.startsWith(item.to);
+                return (
+                  <NavLink
+                    key={item.to}
+                    to={item.to}
+                    onClick={() => setMobileMoreOpen(false)}
+                    className={`flex items-center justify-between px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-colors ${
+                      isActive
+                        ? 'bg-[#006194] text-white'
+                        : 'text-slate-700 hover:bg-slate-100'
+                    }`}
+                  >
+                    <div className="flex items-center gap-3">
+                      <Icon name={item.icon} className="text-[18px]" />
+                      <span>{item.label}</span>
+                    </div>
+                    {isActive && <Icon name="check" className="text-[16px]" />}
+                  </NavLink>
+                );
+              })}
+
+              <div className="pt-3 mt-3 border-t border-slate-100">
+                <p className="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-3 py-1">
+                  Connected Suites
+                </p>
+                <NavLink
+                  to="/clinical/workspace"
+                  onClick={() => setMobileMoreOpen(false)}
+                  className="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs text-slate-700 hover:bg-slate-100 font-medium"
+                >
+                  <Icon name="space_dashboard" className="text-[18px] text-[#006194]" />
+                  <span>Dentist Workspace</span>
+                </NavLink>
+                <NavLink
+                  to="/odontogram/overview"
+                  onClick={() => setMobileMoreOpen(false)}
+                  className="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs text-slate-700 hover:bg-slate-100 font-medium"
+                >
+                  <Icon name="dentistry" className="text-[18px] text-[#006194]" />
+                  <span>Odontogram Chart</span>
+                </NavLink>
+                <NavLink
+                  to="/investigations/dashboard"
+                  onClick={() => setMobileMoreOpen(false)}
+                  className="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs text-slate-700 hover:bg-slate-100 font-medium"
+                >
+                  <Icon name="radiology" className="text-[18px] text-[#006194]" />
+                  <span>Digital Radiography</span>
+                </NavLink>
+                <NavLink
+                  to="/summaries/dashboard"
+                  onClick={() => setMobileMoreOpen(false)}
+                  className="flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs text-slate-700 hover:bg-slate-100 font-medium"
+                >
+                  <Icon name="auto_awesome" className="text-[18px] text-[#006194]" />
+                  <span>AI Diagnostic Summaries</span>
+                </NavLink>
+              </div>
+
+              {/* Sign Out */}
+              <div className="pt-3 mt-3 border-t border-slate-100">
+                <button
+                  type="button"
+                  onClick={handleSignOut}
+                  className="w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-bold text-rose-600 hover:bg-rose-50"
+                >
+                  <Icon name="logout" className="text-[18px]" />
+                  <span>Sign Out</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* MOBILE PROFILE BOTTOM SHEET POPUP */}
+      {mobileProfileOpen && (
+        <div className="md:hidden fixed inset-0 z-50 flex items-end">
+          <div
+            className="fixed inset-0 bg-black/40 backdrop-blur-xs animate-in fade-in"
+            onClick={() => setMobileProfileOpen(false)}
+          />
+          <div className="relative w-full bg-white rounded-t-3xl shadow-2xl flex flex-col z-10 animate-in slide-in-from-bottom duration-200 pb-safe">
+            <div className="pt-3 pb-1 flex justify-center">
+              <div className="w-10 h-1 bg-slate-300 rounded-full" />
+            </div>
+            <div className="p-4 border-b border-slate-100 flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-[#006194] text-white flex items-center justify-center font-bold text-sm">
+                  DJ
+                </div>
+                <div>
+                  <h3 className="text-sm font-bold text-slate-900">Dr. Daniel James</h3>
+                  <p className="text-[11px] text-slate-500 font-mono">#DEN-48912 • MDCN Verified</p>
+                </div>
+              </div>
+              <button
+                type="button"
+                onClick={() => setMobileProfileOpen(false)}
+                className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500"
+              >
+                <Icon name="close" className="text-[18px]" />
+              </button>
+            </div>
+            <div className="p-4 space-y-2">
+              <button
+                type="button"
+                onClick={() => {
+                  setMobileProfileOpen(false);
+                  navigate('/clinical/workspace');
+                }}
+                className="w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-50 hover:bg-slate-100 text-xs font-semibold text-slate-800"
+              >
+                <Icon name="space_dashboard" className="text-[18px] text-[#006194]" />
+                <span>Switch to Clinical Workspace</span>
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setMobileProfileOpen(false);
+                  navigate('/patient-dashboard');
+                }}
+                className="w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-slate-50 hover:bg-slate-100 text-xs font-semibold text-slate-800"
+              >
+                <Icon name="switch_account" className="text-[18px] text-[#006194]" />
+                <span>Switch to Patient Portal</span>
+              </button>
+              <button
+                type="button"
+                onClick={handleSignOut}
+                className="w-full flex items-center gap-3 px-4 py-3 rounded-xl bg-rose-50 hover:bg-rose-100 text-xs font-bold text-rose-600"
+              >
+                <Icon name="logout" className="text-[18px]" />
+                <span>Sign Out</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
 export default ExaminationShell;
-

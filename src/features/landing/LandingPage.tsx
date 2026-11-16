@@ -19,8 +19,12 @@ const DESKTOP_QUERY = '(min-width: 768px)';
 const PATH_ROUTES: Record<string, string> = {
   home: '/',
   'about-dha': '/about',
+  'for-professionals': '/for-professionals',
+  'dental-care': '/for-professionals',
+  'oral-health-guides': '/oral-health-guides',
   login: '/login',
   'get-started': '/onboarding/get-started',
+  'for-patients': '/onboarding/get-started',
 };
 
 function subscribeToBreakpoint(onChange: () => void) {

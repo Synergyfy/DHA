@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '../../design/Primitives';
+import { QuickLinks } from '../../design/QuickLinks';
 
 type EquipmentCategory = 'all' | 'chair' | 'imaging' | 'sterilisation' | 'diagnostics';
 
@@ -625,6 +626,14 @@ export const EquipmentRegisterScreen: React.FC = () => {
           </div>
         </div>
       )}
+      <QuickLinks
+        title="Facilities"
+        links={[
+          { to: '/clinic-operations/supplies-overview', label: 'Supplies & Inventory', icon: 'inventory_2' },
+          { to: '/clinic-operations/equipment-maintenance', label: 'Equipment Maintenance', icon: 'build' },
+          { to: '/clinic-operations/equipment-details', label: 'Equipment Details', icon: 'info' },
+        ]}
+      />
     </div>
   );
 };

@@ -84,14 +84,14 @@ export function ProfessionalDashboardScreen() {
   ];
 
   const quickActions = [
-    { label: 'Screening', code: 'Sec 8', icon: 'screen_search_desktop', to: '/screening/adult/step1', color: 'text-[#006194]', bg: 'bg-[#cce5ff]/40' },
-    { label: 'New Exam', code: 'Sec 10', icon: 'clinical_notes', to: '/examination/wizard/step1', color: 'text-[#006a61]', bg: 'bg-[#86f2e4]/30' },
-    { label: 'Odontogram', code: 'Sec 9', icon: 'dentistry', to: '/odontogram/interactive', color: 'text-[#006194]', bg: 'bg-[#f2f3ff]' },
-    { label: 'Dexis X-Ray', code: 'Sec 11', icon: 'radiology', to: '/investigations/dashboard', color: 'text-[#3f4850]', bg: 'bg-[#eaedff]' },
-    { label: 'AI Summary', code: 'Sec 12', icon: 'neurology', to: '/summaries/workspace', color: 'text-[#006194]', bg: 'bg-[#cce5ff]/30' },
-    { label: 'Tx Plans', code: 'Sec 13', icon: 'format_list_bulleted_add', to: '/treatment-plans/dashboard', color: 'text-[#006a61]', bg: 'bg-[#86f2e4]/30' },
-    { label: 'Referrals', code: 'Sec 20', icon: 'share_location', to: '/dentist/patients', color: 'text-[#3f4850]', bg: 'bg-[#f2f3ff]' },
-    { label: 'Find Patient', code: 'Lookup', icon: 'person_search', to: '/dentist/patients', color: 'text-[#006194]', bg: 'bg-[#e2e7ff]' },
+    { label: 'Screening', hint: 'Outreach', icon: 'screen_search_desktop', to: '/screening/identification', color: 'text-[#006194]', bg: 'bg-[#cce5ff]/40' },
+    { label: 'New Exam', hint: 'Clinical', icon: 'clinical_notes', to: '/dentist/patient-overview', color: 'text-[#006a61]', bg: 'bg-[#86f2e4]/30' },
+    { label: 'Odontogram', hint: 'Charting', icon: 'dentistry', to: '/dentist/patient-overview', color: 'text-[#006194]', bg: 'bg-[#f2f3ff]' },
+    { label: 'Dexis X-Ray', hint: 'Imaging', icon: 'radiology', to: '/dentist/patient-overview', color: 'text-[#3f4850]', bg: 'bg-[#eaedff]' },
+    { label: 'AI Summary', hint: 'Insights', icon: 'neurology', to: '/dentist/activity-overview', color: 'text-[#006194]', bg: 'bg-[#cce5ff]/30' },
+    { label: 'Tx Plans', hint: 'Planning', icon: 'format_list_bulleted_add', to: '/dentist/patient-overview', color: 'text-[#006a61]', bg: 'bg-[#86f2e4]/30' },
+    { label: 'Referrals', hint: 'Network', icon: 'share_location', to: '/dentist/patients', color: 'text-[#3f4850]', bg: 'bg-[#f2f3ff]' },
+    { label: 'Find Patient', hint: 'Lookup', icon: 'person_search', to: '/dentist/patient-search', color: 'text-[#006194]', bg: 'bg-[#e2e7ff]' },
   ];
 
   const appointments = [
@@ -311,7 +311,7 @@ export function ProfessionalDashboardScreen() {
                 <span className="text-xs font-bold text-[#131b2e] leading-tight mt-0.5">
                   {qa.label}
                 </span>
-                <span className="text-[10px] text-[#707881] font-mono">{qa.code}</span>
+                <span className="text-[10px] text-[#707881] font-medium">{qa.hint}</span>
               </button>
             ))}
           </div>
@@ -477,7 +477,7 @@ export function ProfessionalDashboardScreen() {
                         Approve Plan #TP-2026-089
                       </p>
                       <p className="text-[11px] text-[#707881] truncate">
-                        Amara Okafor • Section 13
+                        Amara Okafor • Treatment Planning
                       </p>
                       <div className="flex items-center gap-2 mt-1">
                         <span className="text-[#ba1a1a] text-[10px] font-bold">Urgent (&lt; 7d)</span>
@@ -505,7 +505,7 @@ export function ProfessionalDashboardScreen() {
                         Review Bitewing Dexis BW-R-1048
                       </p>
                       <p className="text-[11px] text-[#707881] truncate">
-                        Interproximal Caries Audit • Section 11
+                        Interproximal Caries Audit • Investigations
                       </p>
                       <span className="text-[#006194] text-[10px] font-bold block mt-1">
                         High Priority

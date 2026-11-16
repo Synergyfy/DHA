@@ -25,7 +25,7 @@ export function BranchManagementScreen() {
             <div>
               <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-primary mb-1">
                 <Icon name="domain_verification" className="text-sm" />
-                <span>DHA SEC 15.14 &bull; Facility Branch Directory</span>
+                <span>Facility Branch Directory</span>
               </div>
               <h2 className="text-xl sm:text-2xl font-heading font-extrabold text-on-surface">
                 Greenfield Dental Group
