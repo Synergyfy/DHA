@@ -69,7 +69,7 @@ export function PatientInvestigationRequestsQueueScreen() {
     },
     {
       id: 'PT-REQ-8850',
-      patient: 'Layla Al-Mansoor',
+      patient: 'Aisha Okoye',
       dhaId: 'DHA-07119',
       ageGender: '27y F',
       modality: 'Intraoral Radiographs',

@@ -8,7 +8,7 @@ export function InvestigationAppointmentSchedulingScreen() {
   const [selectedDate, setSelectedDate] = useState('2026-11-13');
   const [selectedSlot, setSelectedSlot] = useState('10:00 AM');
   const [selectedFacility, setSelectedFacility] = useState('Al Zahra Diagnostic Wing (Suite 2)');
-  const [selectedTech, setSelectedTech] = useState('Humaid Al-Zaabi (#RAD-3091)');
+  const [selectedTech, setSelectedTech] = useState('Humaid Musa (#RAD-3091)');
   const [sendSms, setSendSms] = useState(true);
   const [sendWhatsapp, setSendWhatsapp] = useState(true);
   const [portalSync, setPortalSync] = useState(true);
@@ -50,7 +50,7 @@ export function InvestigationAppointmentSchedulingScreen() {
       badgeCode="11.5"
       badgeLabel="Intake Scheduling"
       currentStep="Slot Allocation"
-      patientName="Fatima Al-Zahra"
+      patientName="Fatima Bello"
       dhaId="DHA-08921"
       orderRef="REQ-2025-0902"
     >
@@ -83,7 +83,7 @@ export function InvestigationAppointmentSchedulingScreen() {
                 Full Maxillary Arch CBCT (FOV 8x8 cm)
               </h2>
               <div className="flex items-center gap-2 text-xs text-on-surface-variant mt-0.5 flex-wrap">
-                <span>Patient: <strong>Fatima Al-Zahra (DHA-08921)</strong></span>
+                <span>Patient: <strong>Fatima Bello (DHA-08921)</strong></span>
                 <span>•</span>
                 <span>29y • Female</span>
                 <span>•</span>
@@ -113,14 +113,14 @@ export function InvestigationAppointmentSchedulingScreen() {
                 {selectedSlot} on {selectedDate}
               </h3>
               <p className="text-xs text-emerald-800 mt-1 max-w-md mx-auto">
-                Patient <strong>Fatima Al-Zahra</strong> has been booked at <strong>{selectedFacility}</strong> with Radiographer <strong>{selectedTech}</strong>.
+                Patient <strong>Fatima Bello</strong> has been booked at <strong>{selectedFacility}</strong> with Radiographer <strong>{selectedTech}</strong>.
               </p>
             </div>
 
             <div className="p-3 bg-white/80 rounded-xl max-w-sm mx-auto text-xs text-slate-700 space-y-1 text-left border border-emerald-200">
               <div className="flex items-center justify-between">
                 <span>SMS Notification:</span>
-                <span className="font-semibold text-emerald-700">Sent (+971 50 *** 4821)</span>
+                <span className="font-semibold text-emerald-700">Sent (+234 803 *** 4821)</span>
               </div>
               <div className="flex items-center justify-between">
                 <span>WhatsApp Instructions:</span>
@@ -273,7 +273,7 @@ export function InvestigationAppointmentSchedulingScreen() {
                   >
                     <option value="Al Zahra Diagnostic Wing (Suite 2)">Al Zahra Diagnostic Wing (Suite 2 - Morita X800)</option>
                     <option value="DHA Central Radiology Dept (Suite 1)">DHA Central Radiology Dept (Suite 1)</option>
-                    <option value="Dubai Hospital Maxillofacial Lab">Dubai Hospital Maxillofacial Lab</option>
+                    <option value="Lagos Hospital Maxillofacial Lab">Lagos Hospital Maxillofacial Lab</option>
                   </select>
                 </div>
 
@@ -287,7 +287,7 @@ export function InvestigationAppointmentSchedulingScreen() {
                     onChange={(e) => setSelectedTech(e.target.value)}
                     className="w-full px-3 py-2 text-xs rounded-xl border border-outline-variant/40 bg-surface text-on-surface focus:outline-none"
                   >
-                    <option value="Humaid Al-Zaabi (#RAD-3091)">Humaid Al-Zaabi (#RAD-3091, Senior CBCT Tech)</option>
+                    <option value="Humaid Musa (#RAD-3091)">Humaid Musa (#RAD-3091, Senior CBCT Tech)</option>
                     <option value="Sarah Jenkins (#RAD-2041)">Sarah Jenkins (#RAD-2041, Lead Radiographer)</option>
                     <option value="Zainab Tariq (#RAD-1982)">Zainab Tariq (#RAD-1982, Imaging Specialist)</option>
                   </select>
@@ -336,7 +336,7 @@ export function InvestigationAppointmentSchedulingScreen() {
                 <label className="flex items-center justify-between p-2 rounded-lg bg-surface-container-low cursor-pointer">
                   <span className="flex items-center gap-2">
                     <Icon name="sms" className="text-sm text-outline" />
-                    SMS Dispatch (+971 50 *** 4821)
+                    SMS Dispatch (+234 803 *** 4821)
                   </span>
                   <input
                     type="checkbox"

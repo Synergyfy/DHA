@@ -73,7 +73,7 @@ export function PlanVersionComparisonScreen() {
                 <span className="px-2 py-0.5 rounded bg-slate-100 text-slate-600 font-mono text-xs font-bold">v1.0</span>
               </div>
               <p className="font-bold text-sm text-slate-900">Initial Ingested Draft</p>
-              <p className="text-xs text-slate-500">12 Oct 2026 • 10:15 GST</p>
+              <p className="text-xs text-slate-500">12 Oct 2026 • 10:15 WAT</p>
               <div className="pt-1 text-[11px] text-slate-500 flex items-center gap-1">
                 <Icon name="smart_toy" className="text-slate-400 text-sm" />
                 <span>Sec. 12 Auto Ingestion</span>
@@ -87,7 +87,7 @@ export function PlanVersionComparisonScreen() {
                 <span className="px-2 py-0.5 rounded bg-[#cce5ff] text-[#001d31] font-mono text-xs font-bold">v1.1</span>
               </div>
               <p className="font-bold text-sm text-slate-900">Clinician Certified</p>
-              <p className="text-xs text-slate-500">14 Oct 2026 • 11:15 GST</p>
+              <p className="text-xs text-slate-500">14 Oct 2026 • 11:15 WAT</p>
               <div className="pt-1 text-[11px] text-[#006a61] flex items-center gap-1 font-semibold">
                 <Icon name="stethoscope" className="text-[#006a61] text-sm" />
                 <span>Dr. Daniel James (#DEN-48912)</span>
@@ -102,8 +102,8 @@ export function PlanVersionComparisonScreen() {
               <span>Overall Tariff Delta:</span>
             </div>
             <div className="text-right">
-              <span className="font-bold text-[#006a61]">+AED 800 Gross</span>
-              <span className="text-slate-500"> (+AED 90 Patient Copay)</span>
+              <span className="font-bold text-[#006a61]">+NGN 800 Gross</span>
+              <span className="text-slate-500"> (+NGN 90 Patient Copay)</span>
             </div>
           </div>
         </div>
@@ -202,7 +202,7 @@ export function PlanVersionComparisonScreen() {
             <div className="p-3.5 rounded-xl bg-slate-50 border border-slate-200 space-y-1.5 opacity-80">
               <div className="flex justify-between items-center">
                 <span className="font-mono text-slate-400 font-bold uppercase text-[10px]">v1.0 Specification</span>
-                <span className="text-slate-400 line-through font-bold">AED 650</span>
+                <span className="text-slate-400 line-through font-bold">NGN 650</span>
               </div>
               <p className="font-semibold text-slate-700 line-through">Standard Micro-hybrid Composite</p>
               <div className="flex items-center gap-2 text-[10px] text-slate-500">
@@ -214,7 +214,7 @@ export function PlanVersionComparisonScreen() {
             <div className="p-3.5 rounded-xl bg-teal-50/60 border border-teal-200 space-y-1.5">
               <div className="flex justify-between items-center">
                 <span className="font-mono text-[#006a61] font-bold uppercase text-[10px]">v1.1 Clinically Amended</span>
-                <span className="font-bold text-[#006a61]">AED 850 (+AED 200)</span>
+                <span className="font-bold text-[#006a61]">NGN 850 (+NGN 200)</span>
               </div>
               <p className="font-bold text-slate-900">Direct Biomimetic Resin Composite</p>
               <div className="flex items-center gap-2 text-[10px]">
@@ -222,7 +222,7 @@ export function PlanVersionComparisonScreen() {
                 <span className="bg-blue-100 text-[#006194] px-1.5 py-0.5 rounded">DHA-RES-2S</span>
               </div>
               <div className="pt-1 text-[11px] font-semibold text-[#006194]">
-                Patient Co-Pay Adjustment: AED 130 → AED 170 (+AED 40)
+                Patient Co-Pay Adjustment: NGN 130 → NGN 170 (+NGN 40)
               </div>
             </div>
           </div>
@@ -252,16 +252,16 @@ export function PlanVersionComparisonScreen() {
             <div className="p-3.5 rounded-xl bg-blue-50/70 border border-blue-200 space-y-2">
               <div className="flex justify-between items-center">
                 <span className="font-mono text-[#006194] font-bold uppercase text-[10px]">v1.1 Phase 2 Additions</span>
-                <span className="font-bold text-[#006194]">+AED 600 Gross</span>
+                <span className="font-bold text-[#006194]">+NGN 600 Gross</span>
               </div>
               <div className="space-y-1.5">
                 <div className="p-2 rounded bg-white border border-blue-100 flex items-center justify-between">
                   <span>Topical Fluoride Remineralization (#15)</span>
-                  <span className="font-bold text-slate-900">AED 250</span>
+                  <span className="font-bold text-slate-900">NGN 250</span>
                 </div>
                 <div className="p-2 rounded bg-white border border-blue-100 flex items-center justify-between">
                   <span>Full Mouth Periodontal Recare &amp; Scaling</span>
-                  <span className="font-bold text-slate-900">AED 350</span>
+                  <span className="font-bold text-slate-900">NGN 350</span>
                 </div>
               </div>
             </div>
@@ -281,7 +281,7 @@ export function PlanVersionComparisonScreen() {
               <span>Renewed Consent Obtained</span>
             </div>
             <p className="text-slate-700 leading-relaxed">
-              Material treatment scope change verified under DHA Article 14. Amara Okafor completed biometric digital endorsement on <strong>14 Oct 2026, 11:28 GST</strong>.
+              Material treatment scope change verified under DHA Article 14. Amara Okafor completed biometric digital endorsement on <strong>14 Oct 2026, 11:28 WAT</strong>.
             </p>
             <span className="font-mono text-[11px] text-[#006a61] font-semibold block pt-1">
               SIGNATURE-ID: #DHA-SIG-991204

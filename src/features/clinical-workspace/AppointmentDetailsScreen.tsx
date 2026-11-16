@@ -223,14 +223,14 @@ export function AppointmentDetailsScreen() {
                   <div className="flex flex-wrap items-center gap-2">
                     <span className="inline-flex items-center gap-1 rounded-full bg-emerald-100 text-emerald-700 px-2.5 py-0.5 text-xs font-semibold">
                       <Icon name="verified" className="text-sm" />
-                      UAE Pass L3 Verified
+                      NIN biometric verification Verified
                     </span>
                   </div>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-1 text-sm text-slate-600 pt-1">
-                    <p><span className="font-medium text-slate-500">Emirates ID:</span> AE-990-281-DXB</p>
+                    <p><span className="font-medium text-slate-500">National Identification Number (NIN):</span> NG-990-281-LAG</p>
                     <p><span className="font-medium text-slate-500">DHA Record:</span> DHA-2026-00451</p>
                     <p className="sm:col-span-2">
-                      <span className="font-medium text-slate-500">Insurance:</span> Daman National Health
+                      <span className="font-medium text-slate-500">Insurance:</span> National Health Insurance Authority (NHIA)
                       <span className="ml-1.5 inline-flex items-center gap-0.5 rounded-full bg-emerald-100 text-emerald-700 px-2 py-0.5 text-xs font-semibold">Active</span>
                     </p>
                   </div>
@@ -383,15 +383,15 @@ export function AppointmentDetailsScreen() {
               <div className="space-y-3">
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-slate-500">Gross</span>
-                  <span className="text-sm font-semibold text-slate-900">AED 850.00</span>
+                  <span className="text-sm font-semibold text-slate-900">NGN 850.00</span>
                 </div>
                 <div className="flex items-center justify-between">
-                  <span className="text-sm text-slate-500">Daman Coverage (80%)</span>
-                  <span className="text-sm font-medium text-slate-700">AED 680.00</span>
+                  <span className="text-sm text-slate-500">NHIA Coverage (80%)</span>
+                  <span className="text-sm font-medium text-slate-700">NGN 680.00</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-slate-500">Patient Copay (20%)</span>
-                  <span className="text-sm font-medium text-slate-700">AED 170.00</span>
+                  <span className="text-sm font-medium text-slate-700">NGN 170.00</span>
                 </div>
                 <hr className="border-slate-100" />
                 <div className="flex items-center justify-between">
@@ -407,7 +407,7 @@ export function AppointmentDetailsScreen() {
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-slate-500">Pre-Auth</span>
-                  <span className="text-sm font-mono text-slate-700">PA-2026-DXB-00451</span>
+                  <span className="text-sm font-mono text-slate-700">PA-2026-LAG-00451</span>
                 </div>
               </div>
             </div>

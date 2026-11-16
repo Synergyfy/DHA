@@ -35,7 +35,7 @@ export function InvestigationProviderDirectoryScreen() {
   // New partner state
   const [newCenterName, setNewCenterName] = useState<string>('');
   const [newCenterCategory, setNewCenterCategory] = useState<string>('imaging');
-  const [newCenterLocation, setNewCenterLocation] = useState<string>('Al Barsha');
+  const [newCenterLocation, setNewCenterLocation] = useState<string>('Surulere');
 
   const providers: ProviderCard[] = [
     {
@@ -45,21 +45,21 @@ export function InvestigationProviderDirectoryScreen() {
       categoryLabel: 'Advanced 3D & Panoramic Imaging',
       badge: 'DHA Verified • JCI Accredited',
       accreditation: 'jci',
-      location: 'Al Barsha 1',
+      location: 'Surulere 1',
       distance: '1.8 km',
       specs: ['Morita Veraview X800 3D', '80μm High-Res CBCT', 'Orthopantomograph (OPG)', 'Lateral Ceph'],
       slaText: '< 4 Hours for Stat CBCT',
-      contactText: '+971 4 378 6000',
+      contactText: '+234 1 378 6000',
       contactIcon: 'call',
     },
     {
       id: 'prov-2',
-      name: 'Al Barsha Diagnostic Laboratory',
+      name: 'Surulere Diagnostic Laboratory',
       category: 'pathology',
       categoryLabel: 'Clinical Pathology & Hematology',
       badge: 'DHA Verified • CAP ISO-15189',
       accreditation: 'cap',
-      location: 'Al Barsha 2',
+      location: 'Surulere 2',
       distance: '2.4 km',
       specs: ['Pre-op Coagulation (PT/INR)', 'Full Blood Count', 'HbA1c Chairside', 'Salivary Cortisol'],
       slaText: 'Same-Day Results (Avg 3.5h)',
@@ -90,11 +90,11 @@ export function InvestigationProviderDirectoryScreen() {
       categoryLabel: 'Specialized Maxillofacial Radiology',
       badge: 'Verification Pending (Annual Re-audit)',
       accreditation: 'jci',
-      location: 'Jumeirah Healthcare Zone',
+      location: 'Victoria Island Healthcare Zone',
       distance: 'Umm Suqeim St',
       specs: ['Dual-Energy CBCT', 'TMJ Dynamic Protocol', 'Stereolithographic DICOM'],
       slaText: '24 Hours for Reconstruction',
-      contactText: '+971 4 445 5000',
+      contactText: '+234 1 445 5000',
       contactIcon: 'call',
       advisory: 'Referral requests currently require secondary clinic director endorsement prior to study upload.',
     },
@@ -222,10 +222,10 @@ export function InvestigationProviderDirectoryScreen() {
                 onChange={(e) => setLocationFilter(e.target.value)}
                 className="h-11 bg-surface text-on-surface text-xs font-medium px-3 rounded-xl border border-outline-variant/40 focus:outline-none focus:ring-2 focus:ring-primary/40"
               >
-                <option value="">Location (All Dubai)</option>
-                <option value="al barsha">Al Barsha (1 & 2)</option>
+                <option value="">Location (All Lagos)</option>
+                <option value="Surulere">Surulere (1 & 2)</option>
                 <option value="main campus">DHA Main Campus</option>
-                <option value="jumeirah">Jumeirah Zone</option>
+                <option value="Victoria Island">Victoria Island Zone</option>
               </select>
             </div>
           </div>
@@ -453,7 +453,7 @@ export function InvestigationProviderDirectoryScreen() {
                     required
                     value={newCenterName}
                     onChange={(e) => setNewCenterName(e.target.value)}
-                    placeholder="e.g. Dubai Marina Radiology Center"
+                    placeholder="e.g. Lekki Phase 1 Radiology Center"
                     className="w-full rounded-xl border border-outline-variant/40 bg-surface px-3 py-2 text-on-surface"
                   />
                 </div>
@@ -473,13 +473,13 @@ export function InvestigationProviderDirectoryScreen() {
                   </div>
 
                   <div>
-                    <label className="font-semibold text-on-surface block mb-1">Dubai District:</label>
+                    <label className="font-semibold text-on-surface block mb-1">Lagos District:</label>
                     <input
                       type="text"
                       required
                       value={newCenterLocation}
                       onChange={(e) => setNewCenterLocation(e.target.value)}
-                      placeholder="e.g. Jumeirah 1"
+                      placeholder="e.g. Victoria Island 1"
                       className="w-full rounded-xl border border-outline-variant/40 bg-surface px-3 py-2 text-on-surface"
                     />
                   </div>

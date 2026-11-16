@@ -56,7 +56,7 @@ const INITIAL_HABITS: HabitItem[] = [
   {
     id: 'habit-3',
     title: 'Fluoride Rinse (5000 ppm)',
-    subtitle: 'Prescribed by Dr. Farouk Al-Mansoori • Dec 12, 2024',
+    subtitle: 'Prescribed by Dr. Chinedu Okafor • Dec 12, 2024',
     categoryBadge: 'Rx Protocol',
     icon: 'medication',
     iconBg: 'bg-secondary-container',
@@ -67,7 +67,7 @@ const INITIAL_HABITS: HabitItem[] = [
     active: true,
     completed: false,
     rxProtocol: true,
-    prescribedBy: 'Dr. Farouk Al-Mansoori',
+    prescribedBy: 'Dr. Chinedu Okafor',
     guidanceNote: 'Patient controlled cadence derived from clinical remineralization prescription. Do not ingest liquids for 30 minutes post-rinse.',
     dosage: '10 mL dose',
   },
@@ -391,7 +391,7 @@ export function DailyCareRemindersScreen() {
               Daily Oral Care Habits
             </h1>
             <p className="font-body-md text-body-md text-on-surface-variant">
-              Personal preventive regimen, brushing techniques &amp; cadence control for Sarah Al-Mansoor
+              Personal preventive regimen, brushing techniques &amp; cadence control for Ngozi Eze
             </p>
           </div>
 

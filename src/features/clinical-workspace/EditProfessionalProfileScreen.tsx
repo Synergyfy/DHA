@@ -24,7 +24,7 @@ export function EditProfessionalProfileScreen() {
   const [bio, setBio] = useState(
     'Specializing in complex fixed prosthodontics, adhesive conservative restorations, and digital smile design workflows. Dr. James prioritizes tooth structure preservation through minimally invasive biometric techniques and advanced composite layering protocols.'
   );
-  const [languages, setLanguages] = useState(['English', 'Yoruba', 'Arabic']);
+  const [languages, setLanguages] = useState(['English', 'Yoruba', 'Hausa']);
   const [newLanguageInput, setNewLanguageInput] = useState('');
   const [selectedFocus, setSelectedFocus] = useState<string[]>([
     'Digital Smile Design (DSD)',
@@ -33,7 +33,7 @@ export function EditProfessionalProfileScreen() {
     'Ceramic Veneers & Onlays',
   ]);
   const [email, setEmail] = useState('dr.djames@harmonydental.ae');
-  const [phone, setPhone] = useState('+971 50 892 4410');
+  const [phone, setPhone] = useState('+234 803 892 4410');
   const [smsAlerts, setSmsAlerts] = useState(true);
 
   // Amendment modal
@@ -135,7 +135,7 @@ export function EditProfessionalProfileScreen() {
             <p className="text-[#004b74]/90 mt-1 leading-relaxed">
               Biographical data, patient communications, and clinical interests update instantly. Changes to
               official licensing numbers, certified titles, or primary facility affiliations are statutory
-              fields and require secondary sign-off by the Dubai Health Authority Credentialing Board.
+              fields and require secondary sign-off by the Nigeria Dental Health Authority Credentialing Board.
             </p>
           </div>
         </div>
@@ -274,7 +274,7 @@ export function EditProfessionalProfileScreen() {
                       handleAddLanguage();
                     }
                   }}
-                  placeholder="Add another language (e.g. French, Hindi)..."
+                  placeholder="Add another language (e.g. Igbo, Yoruba)..."
                   className="flex-1 px-3 py-1.5 bg-white border border-[#eaedff] rounded-xl text-xs text-[#131b2e] placeholder-[#707881] focus:outline-none focus:border-[#006194]"
                 />
                 <button

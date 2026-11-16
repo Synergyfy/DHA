@@ -7,11 +7,11 @@ const CLINICIANS_LIST = [
   {
     name: 'Dr. Sameer Malik',
     creds: 'DDS, MSc Prostho • Medical Director',
-    clinic: 'Harmony Jumeirah Clinic',
+    clinic: 'Harmony Victoria Island Clinic',
     initials: 'SM',
   },
   {
-    name: 'Dr. Laila Al-Mansoor',
+    name: 'Dr. Laila Okoye',
     creds: 'BDS, PhD Endodontics • Clinical Lead',
     clinic: 'Harmony Downtown Center',
     initials: 'LM',
@@ -40,7 +40,7 @@ interface QueueCase {
 const QUEUE_CASES: QueueCase[] = [
   {
     id: 'REQ-2026-904',
-    patientName: 'Tariq Al-Mansoor',
+    patientName: 'Tariq Okoye',
     ageGender: '42y M',
     code: 'DHA-P-9021',
     priority: 'expedited',
@@ -49,11 +49,11 @@ const QUEUE_CASES: QueueCase[] = [
     inquiry:
       '"Tooth #21 severe localized vertical bone loss after trauma. Assessing immediate surgical extraction vs crown-lengthening and ferrule restoration."',
     tags: ['CBCT Volumetric 3D', 'Periapical Paired', 'Trauma Assessment'],
-    receivedTime: 'Today 08:30 GST',
+    receivedTime: 'Today 08:30 WAT',
   },
   {
     id: 'REQ-2026-881',
-    patientName: 'Fatima Al-Zahra',
+    patientName: 'Fatima Bello',
     ageGender: '29y F',
     code: 'DHA-P-4412',
     priority: 'standard',
@@ -62,7 +62,7 @@ const QUEUE_CASES: QueueCase[] = [
     inquiry:
       '"Evaluation of full arch digital impression for monolithic zirconia bridge spanning #44-#47 with high occlusal load indices."',
     tags: ['Digital Scan Mesh', 'Occlusal Heatmap'],
-    receivedTime: 'Yesterday 16:15 GST',
+    receivedTime: 'Yesterday 16:15 WAT',
   },
   {
     id: 'REQ-2026-843',
@@ -71,7 +71,7 @@ const QUEUE_CASES: QueueCase[] = [
     code: 'DHA-P-3390',
     priority: 'standard',
     timeLeft: 'Standard SLA (48h Window)',
-    referrer: 'Dr. Reem Al-Nuaimi (Endodontic Resident)',
+    referrer: 'Dr. Reem Nwosu (Endodontic Resident)',
     inquiry:
       '"Tooth #36 separated rotary file instrument in mesiobuccal apical third. Reviewing ultrasonic retrieval feasibility vs intentional replantation."',
     tags: ['Endo Micro Radiograph', 'Apex Locator Log'],
@@ -130,7 +130,7 @@ export function ClinicalReviewSecondOpinionScreen() {
       id: `REQ-2026-${Math.floor(1000 + Math.random() * 9000)}`,
       patientName: 'Amara Okafor',
       ageGender: '34y F',
-      code: 'AE-990-281-DXB',
+      code: 'NG-990-281-LAG',
       priority: priorityLevel === 'expedited' ? 'expedited' : 'standard',
       timeLeft: priorityLevel === 'expedited' ? 'Expedited SLA (<24h)' : 'Standard SLA (48-72h)',
       referrer: 'Dr. Daniel James, DDS (#DEN-48912)',
@@ -280,7 +280,7 @@ export function ClinicalReviewSecondOpinionScreen() {
                       <span className="font-mono text-xs text-[#707881]">34y • Female</span>
                     </div>
                     <p className="text-xs text-[#006194] font-mono mt-0.5 font-bold">
-                      LifeCode: AE-990-281-DXB
+                      LifeCode: NG-990-281-LAG
                     </p>
                     <div className="flex items-center gap-2 flex-wrap pt-1.5">
                       <span className="px-2 py-0.5 rounded-md bg-[#ffdad6] text-[#ba1a1a] text-[10px] font-bold flex items-center gap-1">
@@ -288,7 +288,7 @@ export function ClinicalReviewSecondOpinionScreen() {
                         <span>Penicillin Allergy (High Risk)</span>
                       </span>
                       <span className="px-2 py-0.5 rounded-md bg-[#f2f3ff] text-[#707881] text-[10px] font-semibold">
-                        Primary: Dubai Hills
+                        Primary: Lagos Hills
                       </span>
                     </div>
                   </div>
@@ -328,7 +328,7 @@ export function ClinicalReviewSecondOpinionScreen() {
                 <option>Orthodontic Clearance &amp; Root Resorption Check</option>
               </select>
               <p className="text-[10px] text-[#707881]">
-                Designates formal statutory specialty field according to Dubai Health Authority clinical licensing frameworks.
+                Designates formal statutory specialty field according to Nigeria Dental Health Authority clinical licensing frameworks.
               </p>
             </div>
 
@@ -543,12 +543,12 @@ export function ClinicalReviewSecondOpinionScreen() {
                   Statutory Patient Authorization Verified
                 </h4>
                 <p className="text-[#005049]/90 mt-0.5 leading-relaxed">
-                  Patient biometric authorization confirmed for encrypted specialist peer review under UAE Federal Medical Liability Law No. 4 (2016) and DHA Clinical Governance Directive.
+                  Patient biometric authorization confirmed for encrypted specialist peer review under Nigeria Federal Medical Liability Law No. 4 (2016) and DHA Clinical Governance Directive.
                 </p>
                 <div className="flex items-center gap-3 mt-2 text-[10px] font-mono text-[#005049]">
                   <span>Biometric Hash: 0x9B...44D</span>
                   <span>•</span>
-                  <span>Timestamp: 14:08 GST</span>
+                  <span>Timestamp: 14:08 WAT</span>
                 </div>
               </div>
             </div>

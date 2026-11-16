@@ -163,7 +163,7 @@ export function TreatmentAppointmentDetailsScreen() {
           {/* Location */}
           <div className="flex items-center gap-2 text-xs text-slate-600 pt-1 border-t border-slate-100">
             <Icon name="location_on" className="text-[#006194] text-base shrink-0" />
-            <span>DHA Primary Dental Clinic (Al Wasl) • <strong className="text-slate-900">Operatory 02 (Restorative Suite)</strong></span>
+            <span>DHA Primary Dental Clinic, Lekki • <strong className="text-slate-900">Operatory 02 (Restorative Suite)</strong></span>
           </div>
         </div>
 
@@ -249,21 +249,21 @@ export function TreatmentAppointmentDetailsScreen() {
           <div className="flex items-center justify-between">
             <span className="font-bold text-sm text-slate-900">Financial &amp; Tariff Summary</span>
             <span className="text-xs bg-[#cce5ff] text-[#001d31] font-bold px-2.5 py-0.5 rounded-full">
-              Daman Enaya Validated
+              NHIA Validated
             </span>
           </div>
 
           <div className="space-y-2 pt-1 text-xs">
             <div className="flex items-center justify-between text-slate-600">
               <span>Standard Statutory Tariff (CDT D2392)</span>
-              <span>AED 850.00</span>
+              <span>NGN 850.00</span>
             </div>
             <div className="flex items-center justify-between text-[#006a61] font-semibold">
               <span className="flex items-center gap-1">
                 <Icon name="verified_user" className="text-sm" />
                 Insurance Pre-Approval Coverage (80%)
               </span>
-              <span>- AED 680.00</span>
+              <span>- NGN 680.00</span>
             </div>
             <div className="h-px bg-slate-100 my-1" />
             <div className="flex items-center justify-between">
@@ -271,7 +271,7 @@ export function TreatmentAppointmentDetailsScreen() {
                 <span className="font-bold text-slate-900 text-sm block">Patient Copay Due</span>
                 <span className="text-slate-400 text-[11px]">Collect at reception check-in</span>
               </div>
-              <span className="text-xl font-extrabold text-[#006194]">AED 170.00</span>
+              <span className="text-xl font-extrabold text-[#006194]">NGN 170.00</span>
             </div>
           </div>
         </div>

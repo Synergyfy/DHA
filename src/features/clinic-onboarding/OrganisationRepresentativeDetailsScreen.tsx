@@ -83,7 +83,7 @@ export function OrganisationRepresentativeDetailsScreen() {
           <div className="mt-4 pt-3 border-t border-outline-variant/30 flex items-center justify-between text-xs">
             <div className="flex items-center gap-2 text-on-surface-variant">
               <Icon name="domain" className="text-base text-primary" />
-              <span>Affiliated Facility: <strong className="text-on-surface">Greenfield Dental Clinic Ltd</strong> (#DXB-9021)</span>
+              <span>Affiliated Facility: <strong className="text-on-surface">Greenfield Dental Clinic Ltd</strong> (#LAG-9021)</span>
             </div>
             <span className="text-[11px] font-semibold text-secondary flex items-center gap-1">
               <Icon name="check_circle" className="text-xs" /> Active Good Standing
@@ -155,7 +155,7 @@ export function OrganisationRepresentativeDetailsScreen() {
           )}
         </div>
 
-        {/* Card: Digital Identity Attestation (UAE PASS / NIN Token) */}
+        {/* Card: Digital Identity Attestation (National Identification Number (NIN) verification / NIN Token) */}
         <div className="p-5 sm:p-6 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm space-y-3">
           <h3 className="text-sm font-heading font-bold text-on-surface flex items-center gap-2">
             <Icon name="fingerprint" className="text-primary text-base" />

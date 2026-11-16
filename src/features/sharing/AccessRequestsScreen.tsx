@@ -73,7 +73,7 @@ export function AccessRequestsScreen() {
             </div>
             <div>
               <h2 className="font-title-md text-base sm:text-lg font-bold text-on-surface">
-                Sarah Al-Mansoor
+                Ngozi Eze
               </h2>
               <div className="text-xs text-on-surface-variant font-mono mt-0.5">
                 DHA ID: 984-2041-889
@@ -114,7 +114,7 @@ export function AccessRequestsScreen() {
 
         {/* Request Cards Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          {/* 4. Card 1: Dr. Reem Al-Nuaimi — Pending (High Priority) */}
+          {/* 4. Card 1: Dr. Reem Nwosu — Pending (High Priority) */}
           {showCard1 && (
             <div className="p-5 rounded-2xl bg-surface-container-lowest border-l-4 border-l-primary border border-outline-variant/30 shadow-sm space-y-4 md:col-span-2">
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3">
@@ -122,14 +122,14 @@ export function AccessRequestsScreen() {
                   <div className="w-12 h-12 rounded-2xl bg-surface-container-high overflow-hidden shrink-0">
                     <img
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNIudSoAbUfFy7bCZiaruoZf_1F1eTKy5JsB5SOY3rVZC2w7FYbzAnIogis0t4YOp5dHtgNx1IxEGdzD0YQP-FPwkE3d7mh46fnY-lMIkzV5zrUqkYxbtkHIcJiCWIkpDAQRedtXBw_vNsRucK8P22kBk2xcoCBCNO4CYNKvBzuerd6fMqa4QlOdHEVJfJvBQwvPVzlzh_irzICpnvp4mJSfMWPXAx9bQvmfcHmuZj"
-                      alt="Dr. Reem Al-Nuaimi"
+                      alt="Dr. Reem Nwosu"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div>
                     <div className="flex items-center gap-1.5">
                       <span className="font-title-sm text-base font-bold text-on-surface">
-                        Dr. Reem Al-Nuaimi
+                        Dr. Reem Nwosu
                       </span>
                       <Icon name="verified" className="text-secondary text-[16px]" />
                       <span className="px-2 py-0.5 rounded-full bg-primary-fixed text-primary text-[10px] font-bold">
@@ -206,7 +206,7 @@ export function AccessRequestsScreen() {
             </div>
           )}
 
-          {/* 5. Card 2: Al Zahra Dental Hub — Pending */}
+          {/* 5. Card 2: Lagos Smile Dental Centre — Pending */}
           {showCard2 && (
             <div className="p-5 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm space-y-4">
               <div className="flex items-start justify-between gap-3">
@@ -215,7 +215,7 @@ export function AccessRequestsScreen() {
                     <Icon name="domain" className="text-[20px]" />
                   </div>
                   <div>
-                    <div className="font-bold text-sm text-on-surface">Al Zahra Dental Hub</div>
+                    <div className="font-bold text-sm text-on-surface">Lagos Smile Dental Centre</div>
                     <div className="text-xs text-on-surface-variant">Institutional Facility</div>
                   </div>
                 </div>
@@ -269,7 +269,7 @@ export function AccessRequestsScreen() {
                   </div>
                   <div>
                     <div className="font-bold text-sm text-on-surface">Dr. Tariq Mansoor</div>
-                    <div className="text-xs text-on-surface-variant">Jumeirah Dental Care</div>
+                    <div className="text-xs text-on-surface-variant">Victoria Island Dental Care</div>
                   </div>
                 </div>
                 <span className="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-bold">

@@ -87,7 +87,7 @@ export function ClinicTemplatePermissionsScreen() {
     {
       id: 'staff-4',
       initials: 'SA',
-      name: 'Sarah Al-Nuaimi',
+      name: 'Sarah Nwosu',
       role: 'Clinic Operations Manager',
       license: 'Central Ops Unit',
       badgeLabel: 'Administrative Audit',
@@ -146,7 +146,7 @@ export function ClinicTemplatePermissionsScreen() {
               Separation of Concerns Mandate
             </span>
             <p className="text-on-surface-variant leading-relaxed">
-              Authoring templates does not grant clinical examination permissions. Only verified licensed dentists can sign examinations regardless of template administration roles under UAE Federal Health Law.
+              Authoring templates does not grant clinical examination permissions. Only verified licensed dentists can sign examinations regardless of template administration roles under Nigeria Federal Health Law.
             </p>
           </div>
         </section>

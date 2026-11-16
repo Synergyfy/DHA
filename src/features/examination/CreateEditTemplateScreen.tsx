@@ -220,7 +220,7 @@ export function CreateEditTemplateScreen() {
               onChange={(e) => setTemplateName(e.target.value)}
               className="w-full h-11 px-3.5 rounded-xl bg-surface-container-low text-xs text-on-surface border border-outline-variant/30 focus:outline-none focus:border-primary shadow-sm"
             />
-            <span className="text-[11px] text-on-surface-variant">Visible across DHA Al Barsha and Central Branch registries</span>
+            <span className="text-[11px] text-on-surface-variant">Visible across DHA Surulere and Central Branch registries</span>
           </div>
 
           {/* Clinical Intent & Protocol Summary */}
@@ -411,7 +411,7 @@ export function CreateEditTemplateScreen() {
             <div className="space-y-0.5 text-xs">
               <span className="font-bold text-primary block">Non-Bypassable Safeguards</span>
               <p className="text-on-surface leading-relaxed">
-                Regulatory protocols forbid removing Patient Consent, Clinician Identity Attribution, or silent auto-filling of unassessed fields under UAE Federal Health Directives.
+                Regulatory protocols forbid removing Patient Consent, Clinician Identity Attribution, or silent auto-filling of unassessed fields under Nigeria Federal Health Directives.
               </p>
             </div>
           </div>
@@ -436,7 +436,7 @@ export function CreateEditTemplateScreen() {
           {/* Governance Toggle 2 */}
           <div className="flex items-center justify-between gap-3 p-3.5 rounded-xl bg-surface-container-low border border-outline-variant/20">
             <div className="min-w-0 text-xs">
-              <span className="font-bold text-on-surface block">Require Biometric / UAE PASS Re-auth</span>
+              <span className="font-bold text-on-surface block">Require Biometric / National Identification Number (NIN) verification Re-auth</span>
               <span className="text-on-surface-variant">Cryptographic key re-authentication before template lock and release</span>
             </div>
             <label className="relative inline-flex items-center cursor-pointer shrink-0">

@@ -124,11 +124,11 @@ export function TreatmentCostEstimateScreen() {
                 </span>
                 <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold bg-[#86f2e4]/30 text-[#006f66] border border-[#86f2e4]/50">
                   <Icon name="verified" className="text-[13px] mr-1 text-[#006a61]" />
-                  Daman Thiqa 80% Direct Pay
+                  NHIA 80% Direct Pay
                 </span>
               </div>
               <p className="font-mono text-xs text-[#707881] mt-0.5">
-                AE-990-281-DXB • DHA-2026-00451 • Plan #TP-2026-089
+                NG-990-281-LAG • DHA-2026-00451 • Plan #TP-2026-089
               </p>
               <div className="flex items-center gap-3 text-xs text-[#707881] mt-1.5 flex-wrap">
                 <span className="text-[#131b2e] font-medium flex items-center gap-1">
@@ -190,7 +190,7 @@ export function TreatmentCostEstimateScreen() {
               1. Estimated Tariff
             </span>
             <span className="text-sm font-bold text-[#131b2e] block mt-0.5">UCC Reference Base</span>
-            <span className="text-[11px] text-[#707881] block mt-1">Pre-Claim Gross Calc (AED 1,450)</span>
+            <span className="text-[11px] text-[#707881] block mt-1">Pre-Claim Gross Calc (NGN 1,450)</span>
           </button>
 
           <button
@@ -206,7 +206,7 @@ export function TreatmentCostEstimateScreen() {
               2. Locked Quote
             </span>
             <span className="text-sm font-bold text-[#006194] block mt-0.5">Auth #89-v1.1 (Patient Approved)</span>
-            <span className="text-[11px] text-[#004b73] block mt-1">Net Copay Cap: AED 290.00</span>
+            <span className="text-[11px] text-[#004b73] block mt-1">Net Copay Cap: NGN 290.00</span>
           </button>
 
           <button
@@ -221,8 +221,8 @@ export function TreatmentCostEstimateScreen() {
             <span className="text-[11px] font-bold text-[#005049] uppercase tracking-wider block">
               3. Settled Chairside
             </span>
-            <span className="text-sm font-bold text-[#006a61] block mt-0.5">AED 170.00 Cleared</span>
-            <span className="text-[11px] text-[#005049] block mt-1">Phase 1 Complete • Balance Due AED 120</span>
+            <span className="text-sm font-bold text-[#006a61] block mt-0.5">NGN 170.00 Cleared</span>
+            <span className="text-[11px] text-[#005049] block mt-1">Phase 1 Complete • Balance Due NGN 120</span>
           </button>
         </div>
 
@@ -250,7 +250,7 @@ export function TreatmentCostEstimateScreen() {
                 <div className="p-4 rounded-xl bg-[#f2f3ff] border border-[#eaedff] space-y-1">
                   <span className="text-xs text-[#3f4850] font-medium">Gross Estimated Protocol</span>
                   <div className="text-2xl font-bold text-[#131b2e]">
-                    AED 1,450<span className="text-sm font-normal text-[#707881]">.00</span>
+                    NGN 1,450<span className="text-sm font-normal text-[#707881]">.00</span>
                   </div>
                   <span className="font-mono text-[11px] text-[#707881] block">
                     100% DHA Reference Tariff
@@ -260,10 +260,10 @@ export function TreatmentCostEstimateScreen() {
                 <div className="p-4 rounded-xl bg-[#cce5ff]/40 border border-[#93ccff]/40 space-y-1">
                   <span className="text-xs text-[#004b73] font-medium">Insurance Approved (80%)</span>
                   <div className="text-2xl font-bold text-[#006194]">
-                    AED 1,160<span className="text-sm font-normal text-[#006194]/70">.00</span>
+                    NGN 1,160<span className="text-sm font-normal text-[#006194]/70">.00</span>
                   </div>
                   <span className="font-mono text-[11px] text-[#004b73] block">
-                    Daman Thiqa Direct Pay E-Gate
+                    NHIA Direct Pay E-Gate
                   </span>
                 </div>
               </div>
@@ -272,7 +272,7 @@ export function TreatmentCostEstimateScreen() {
               <div className="p-4 rounded-xl bg-[#faf8ff] border border-[#eaedff] space-y-3">
                 <div className="flex items-center justify-between text-sm">
                   <span className="font-semibold text-[#131b2e]">Patient Quoted Copay (20%)</span>
-                  <span className="text-lg font-bold text-[#006194]">AED 290.00</span>
+                  <span className="text-lg font-bold text-[#006194]">NGN 290.00</span>
                 </div>
                 <div className="space-y-1.5">
                   <div className="h-3.5 w-full bg-[#eaedff] rounded-full overflow-hidden relative">
@@ -284,10 +284,10 @@ export function TreatmentCostEstimateScreen() {
                   <div className="flex justify-between items-center text-xs text-[#707881] pt-1">
                     <span className="text-[#006a61] font-bold flex items-center gap-1">
                       <Icon name="payments" className="text-[14px]" />
-                      Settled: AED 170.00 (58.6%)
+                      Settled: NGN 170.00 (58.6%)
                     </span>
                     <span className="text-[#ba1a1a] font-bold flex items-center gap-1">
-                      Due: AED 120.00 (Phase 2)
+                      Due: NGN 120.00 (Phase 2)
                       <Icon name="pending_actions" className="text-[14px]" />
                     </span>
                   </div>
@@ -302,7 +302,7 @@ export function TreatmentCostEstimateScreen() {
                   </div>
                   <div>
                     <span className="text-xs text-[#707881] block">Total Paid to Date</span>
-                    <span className="text-base font-bold text-[#131b2e]">AED 170.00</span>
+                    <span className="text-base font-bold text-[#131b2e]">NGN 170.00</span>
                   </div>
                 </div>
 
@@ -312,7 +312,7 @@ export function TreatmentCostEstimateScreen() {
                   </div>
                   <div>
                     <span className="text-xs text-[#707881] block">Outstanding (Phase 2 Visit)</span>
-                    <span className="text-base font-bold text-[#131b2e]">AED 120.00</span>
+                    <span className="text-base font-bold text-[#131b2e]">NGN 120.00</span>
                   </div>
                 </div>
               </div>
@@ -390,13 +390,13 @@ export function TreatmentCostEstimateScreen() {
                         <div>
                           <span className="text-[11px] text-[#707881] block">Gross Tariff</span>
                           <span className="text-sm font-bold text-[#131b2e]">
-                            AED {item.grossTariff}
+                            NGN {item.grossTariff}
                           </span>
                         </div>
                         <div>
-                          <span className="text-[11px] text-[#707881] block">Daman 80%</span>
+                          <span className="text-[11px] text-[#707881] block">NHIA 80%</span>
                           <span className="text-sm font-bold text-[#006194]">
-                            AED {item.insuranceShare}
+                            NGN {item.insuranceShare}
                           </span>
                         </div>
                         <div>
@@ -406,7 +406,7 @@ export function TreatmentCostEstimateScreen() {
                               item.settled ? 'text-[#006a61]' : 'text-[#ba1a1a]'
                             }`}
                           >
-                            AED {item.copayShare}
+                            NGN {item.copayShare}
                           </span>
                         </div>
                       </div>
@@ -473,7 +473,7 @@ export function TreatmentCostEstimateScreen() {
                 </div>
                 <div className="p-2.5 rounded-lg bg-white text-xs text-[#3f4850] flex items-center gap-2 border border-[#eaedff]">
                   <Icon name="notifications_active" className="text-[16px] text-[#006194] shrink-0" />
-                  <span>Patient sees "AED 120 copay due at next chairside check-in (02 Nov)".</span>
+                  <span>Patient sees "NGN 120 copay due at next chairside check-in (02 Nov)".</span>
                 </div>
               </div>
             </div>

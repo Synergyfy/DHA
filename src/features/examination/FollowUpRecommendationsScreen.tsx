@@ -106,7 +106,7 @@ export function FollowUpRecommendationsScreen() {
     setTimeout(() => {
       setIsDispatching(false);
       setIsDispatched(true);
-      showToast('All recommendations dispatched successfully to NABIDH & integrated clinical modules!');
+      showToast('All recommendations dispatched successfully to Nigeria Health Information Exchange & integrated clinical modules!');
     }, 1100);
   };
 
@@ -359,7 +359,7 @@ export function FollowUpRecommendationsScreen() {
           <div className="space-y-0.5">
             <span className="font-bold text-on-surface block">Clinician Sign-Off Ready</span>
             <p className="text-on-surface-variant leading-relaxed">
-              Recommendations will automatically sync with the Dubai Health Authority NABIDH exchange and generate clinical task items upon dispatch.
+              Recommendations will automatically sync with the Nigeria Dental Health Authority Nigeria Health Information Exchange exchange and generate clinical task items upon dispatch.
             </p>
           </div>
         </section>
@@ -379,7 +379,7 @@ export function FollowUpRecommendationsScreen() {
             {isDispatching ? (
               <>
                 <Icon name="progress_activity" className="text-base animate-spin" />
-                <span>Dispatching to DHA Modules & NABIDH...</span>
+                <span>Dispatching to DHA Modules & Nigeria Health Information Exchange...</span>
               </>
             ) : isDispatched ? (
               <>

@@ -259,7 +259,7 @@ export function ApplicationReviewSubmitScreen() {
                 Greenfield Dental Clinic Limited
               </h2>
               <p className="text-sm text-teal-100/90 max-w-2xl leading-relaxed">
-                Application Dossier for Private Specialist Outpatient Facility Registration with the Dubai Health Authority (DHA) &amp; FCT Health Services Management Board.
+                Application Dossier for Private Specialist Outpatient Facility Registration with the Nigeria Dental Health Authority (DHA) &amp; FCT Health Services Management Board.
               </p>
             </div>
 
@@ -408,7 +408,7 @@ export function ApplicationReviewSubmitScreen() {
                 Statutory Solemn Declaration &amp; Legal Undertaking
               </h3>
               <p className="text-xs text-slate-600 leading-relaxed">
-                In accordance with Dubai Health Authority (DHA) Licensing Regulations 2026 and Nigerian Healthcare Facilities Monitoring &amp; Accreditation Act, making false declarations or submitting forged credentials constitutes a federal offence punishable by licence revocation and criminal prosecution.
+                In accordance with Nigeria Dental Health Authority (DHA) Licensing Regulations 2026 and Nigerian Healthcare Facilities Monitoring &amp; Accreditation Act, making false declarations or submitting forged credentials constitutes a federal offence punishable by licence revocation and criminal prosecution.
               </p>
             </div>
           </div>

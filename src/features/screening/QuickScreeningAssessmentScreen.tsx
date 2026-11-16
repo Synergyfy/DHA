@@ -74,7 +74,7 @@ export function QuickScreeningAssessmentScreen() {
                 ZA
               </div>
               <div>
-                <span className="font-bold text-on-surface block">Zayd Al-Mansoori (9y)</span>
+                <span className="font-bold text-on-surface block">Zayd Okafor (9y)</span>
                 <span className="text-error font-medium flex items-center gap-1">
                   <Icon name="emergency" className="text-[12px]" />
                   <span>Reported Toothache & Bleeding</span>

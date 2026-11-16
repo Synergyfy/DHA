@@ -21,13 +21,13 @@ export function TaskDetailsAssignmentScreen() {
     {
       id: 'n-1',
       author: 'Dr. Daniel James (DDS)',
-      timestamp: '14 Oct 2026, 11:20 GST',
+      timestamp: '14 Oct 2026, 11:20 WAT',
       text: 'Drafted following Dexis bitewing review. Patient requested morning appointments for Phase 2 due to school pickup schedules.',
     },
     {
       id: 'n-2',
       author: 'Clinical Coordinator System',
-      timestamp: '14 Oct 2026, 09:15 GST',
+      timestamp: '14 Oct 2026, 09:15 WAT',
       text: 'Safety checks 6/6 satisfied automatically via EHR integration (Sensitivities verified against Master Index).',
     },
   ]);
@@ -107,7 +107,7 @@ export function TaskDetailsAssignmentScreen() {
             <div className="flex items-center gap-2 mt-2 text-xs text-slate-500">
               <Icon name="schedule" className="text-sm text-slate-400" />
               <span>
-                Due: <strong className="text-slate-900 dark:text-white font-semibold">18 Oct 2026, 17:00 GST</strong>
+                Due: <strong className="text-slate-900 dark:text-white font-semibold">18 Oct 2026, 17:00 WAT</strong>
               </span>
               <span>•</span>
               <span>Created 14 Oct</span>
@@ -284,7 +284,7 @@ export function TaskDetailsAssignmentScreen() {
                 className="w-full h-11 pl-3 pr-10 rounded-xl bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-600 text-slate-900 dark:text-white text-xs font-medium focus:outline-none focus:ring-2 focus:ring-teal-500 appearance-none"
               >
                 <option value="james">Dr. Daniel James — Lead Restorative (Attending DDS)</option>
-                <option value="mansoor">Dr. K. Al-Mansoor — Orthodontist &amp; Implantologist (#DEN-38291)</option>
+                <option value="mansoor">Dr. K. Okoye — Orthodontist &amp; Implantologist (#DEN-38291)</option>
                 <option value="tariq">Nurse Zainab Tariq — Chairside RN (#RN-9428) [Scope Restricted]</option>
                 <option value="noor">Fatima Noor — Dental Hygienist &amp; Recare (#DH-5102) [Scope Restricted]</option>
               </select>

@@ -59,7 +59,7 @@ export const PaymentHistoryReceiptsScreen: React.FC = () => {
       amount: 9000,
       patientName: 'Amara Okafor',
       demographics: '34y F',
-      lifeCode: 'AE-990-281-DXB',
+      lifeCode: 'NG-990-281-LAG',
       methodType: 'pos',
       methodLabel: 'Mastercard **4102 • Auth #78912',
       officer: 'Esther John',

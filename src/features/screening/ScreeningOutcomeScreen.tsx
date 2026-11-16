@@ -40,7 +40,7 @@ export function ScreeningOutcomeScreen() {
                 <Icon name="badge" className="text-[18px]" />
               </div>
               <div>
-                <span className="font-bold text-on-surface block">Zayd Tariq Al-Mansoori (9y)</span>
+                <span className="font-bold text-on-surface block">Zayd Tariq Okafor (9y)</span>
                 <span className="text-on-surface-variant font-mono">
                   Observed: <strong className="text-error font-medium">Suspected decay #54</strong>, Gum redness
                 </span>

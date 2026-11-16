@@ -1,144 +1,15 @@
 import React, { useState, useMemo } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Icon } from '../../design/Primitives';
-
-interface GuideItem {
-  id: string;
-  category: 'daily-care' | 'kids' | 'treatments' | 'emergency';
-  categoryLabel: string;
-  title: string;
-  readTime: string;
-  summary: string;
-  icon: string;
-  content: string[];
-  tips: string[];
-}
-
-const GUIDES: GuideItem[] = [
-  {
-    id: 'guide-1',
-    category: 'daily-care',
-    categoryLabel: 'Daily Care',
-    title: 'The Modified Bass Brushing Technique',
-    readTime: '4 min read',
-    summary: 'The clinically recommended technique for removing subgingival plaque without abrading tooth enamel.',
-    icon: 'dentistry',
-    content: [
-      'Position the brush bristles at a 45-degree angle pointing toward your gum line.',
-      'Apply gentle, vibratory back-and-forth strokes across 2-3 teeth at a time, followed by a gentle sweep away from the gum margin.',
-      'Spend at least two full minutes brushing twice daily: in the morning after breakfast and before bedtime.',
-      'Use a fluoridated toothpaste (at least 1,000–1,450 ppm fluoride) and spit without rinsing with water immediately afterward to keep protective fluoride on tooth enamel.',
-    ],
-    tips: [
-      'Replace your toothbrush every 3 months or sooner if bristles flare.',
-      'Avoid hard-bristle brushes as they cause gingival recession and cervical wear.',
-    ],
-  },
-  {
-    id: 'guide-2',
-    category: 'daily-care',
-    categoryLabel: 'Daily Care',
-    title: 'Effective Interdental Flossing',
-    readTime: '3 min read',
-    summary: 'How to clean the 40% of tooth surfaces that standard toothbrush bristles cannot reach.',
-    icon: 'clean_hands',
-    content: [
-      'Take approximately 45 cm (18 inches) of dental floss and wind most of it around your middle fingers.',
-      'Gently guide the floss between teeth using a gentle rubbing motion. Never snap floss into the gums.',
-      'Curve the floss into a C-shape against the side of each tooth and gently slide it beneath the gumline.',
-      'Clean both adjacent tooth surfaces before moving to the next interproximal space.',
-    ],
-    tips: [
-      'Bleeding during initial flossing is common; it usually resolves within 7–10 days as inflammation subsides.',
-      'Consider interdental brushes or water flossers if you have wide spaces or orthodontic appliances.',
-    ],
-  },
-  {
-    id: 'guide-3',
-    category: 'kids',
-    categoryLabel: 'Kids & Pediatric',
-    title: 'Child Dental Care: Teething to Permanent Teeth',
-    readTime: '5 min read',
-    summary: 'Protecting developing dentition, preventing early childhood caries, and pit-and-fissure sealants.',
-    icon: 'child_care',
-    content: [
-      'Begin oral hygiene before the first tooth erupts by wiping infant gums with a clean, damp washcloth after feedings.',
-      'Schedule your baby’s first dental visit when the first tooth appears, or by their first birthday.',
-      'Use a tiny smear of fluoride toothpaste (rice-grain size) up to age 3, increasing to a pea-sized amount from ages 3 to 6.',
-      'Never put babies to bed with a bottle containing milk, formula, juice, or sweetened liquids to prevent Early Childhood Caries (ECC).',
-    ],
-    tips: [
-      'Ask your dentist about pit-and-fissure sealants on permanent first molars (erupting around age 6).',
-      'Supervise child brushing until at least age 7 or 8 until they demonstrate good manual dexterity.',
-    ],
-  },
-  {
-    id: 'guide-4',
-    category: 'emergency',
-    categoryLabel: 'Emergency First-Aid',
-    title: 'What to Do During a Dental Emergency',
-    readTime: '3 min read',
-    summary: 'Critical steps for saving an avulsed (knocked-out) permanent tooth, severe toothaches, and fractures.',
-    icon: 'health_and_safety',
-    content: [
-      'For a knocked-out permanent tooth: Pick up the tooth by the crown (top), NEVER by the root.',
-      'If dirty, rinse briefly with cold water for 10 seconds. Do not scrub or sterilize with alcohol.',
-      'Gently place the tooth back in the socket if possible, or immediately store it in cold milk or saliva inside the cheek.',
-      'Reach an accredited dental clinic within 30 to 60 minutes for the highest chance of successful replantation.',
-      'For severe toothache: Rinse mouth with warm salt water and take paracetamol/ibuprofen as directed. Do not place aspirin directly on gum tissue.',
-    ],
-    tips: [
-      'Never attempt to replant a primary (baby) tooth as it can damage the developing adult tooth underneath.',
-      'Use cold compress on the outside of the cheek for swelling; seek emergency clinical attention immediately.',
-    ],
-  },
-  {
-    id: 'guide-5',
-    category: 'treatments',
-    categoryLabel: 'Dental Treatments',
-    title: 'Understanding Caries & Enamel Remineralization',
-    readTime: '5 min read',
-    summary: 'The science of demineralization, acid attacks, and how early enamel lesions can be reversed without drilling.',
-    icon: 'coronavirus',
-    content: [
-      'Dental caries is an active chemical process caused by bacteria (Streptococcus mutans) fermenting dietary carbohydrates into lactic acid.',
-      'Acid dissolves calcium and phosphate minerals from tooth enamel whenever pH drops below 5.5.',
-      'In early white-spot lesion stages, fluoride applications and saliva calcium ions can rebuild the crystal lattice through remineralization.',
-      'Once a physical cavity (hole) forms into dentin, professional restorative excavation and filling is required.',
-    ],
-    tips: [
-      'Limit sugary snack frequency between meals; snacking keeps oral pH in the danger zone for hours.',
-      'Drink plenty of water throughout the day to support healthy saliva flow and natural buffering.',
-    ],
-  },
-  {
-    id: 'guide-6',
-    category: 'treatments',
-    categoryLabel: 'Dental Treatments',
-    title: 'Periodontal Health: Gingivitis vs Periodontitis',
-    readTime: '4 min read',
-    summary: 'Recognizing early gum disease and preventing irreversible alveolar bone loss around teeth.',
-    icon: 'healing',
-    content: [
-      'Gingivitis is the early, reversible inflammation of the gums characterized by redness, swelling, and bleeding on brushing.',
-      'Untreated gingivitis can advance to periodontitis, where bacterial infection attacks the alveolar bone and periodontal ligament supporting teeth.',
-      'Warning signs include persistent bad breath (halitosis), receding gums, loose teeth, and changes in bite alignment.',
-      'Professional scaling and root planing by a dental hygienist or periodontist removes hardened calculus (tartar) that brushing cannot eliminate.',
-    ],
-    tips: [
-      'Healthy gums do not bleed when brushed or flossed gently.',
-      'Annual or bi-annual professional prophylaxis scaling is essential for long-term tooth preservation.',
-    ],
-  },
-];
+import { GUIDES, type GuideItem } from './oralHealthGuides';
+import { PublicSiteHeader } from './PublicSiteHeader';
 
 export const OralHealthGuidesScreen: React.FC = () => {
   const navigate = useNavigate();
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const [searchQuery, setSearchQuery] = useState<string>('');
-  const [activeGuide, setActiveGuide] = useState<GuideItem | null>(null);
 
-  const filteredGuides = useMemo(() => {
+  const filteredGuides = useMemo<GuideItem[]>(() => {
     return GUIDES.filter((guide) => {
       const matchesCategory = selectedCategory === 'all' || guide.category === selectedCategory;
       const q = searchQuery.toLowerCase().trim();
@@ -153,62 +24,8 @@ export const OralHealthGuidesScreen: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#faf8ff] text-[#131b2e] font-['Inter'] flex flex-col antialiased">
-      {/* Top Header */}
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-[#eaedff] shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate('/')}>
-            <div className="w-10 h-10 rounded-xl bg-[#006194] flex items-center justify-center text-white shadow-sm">
-              <Icon name="dentistry" className="text-[24px]" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-base font-bold font-['Plus_Jakarta_Sans'] text-[#131b2e] leading-tight">DHA</span>
-              <span className="text-[10px] text-[#707881] uppercase tracking-wider font-semibold">Dental Health</span>
-            </div>
-          </div>
-
-          <nav className="hidden md:flex items-center gap-1 lg:gap-2">
-            <button
-              onClick={() => navigate('/')}
-              className="px-3 py-1.5 rounded-lg text-xs font-semibold text-[#3f4850] hover:text-[#131b2e] hover:bg-[#f2f3ff] transition-colors"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => navigate('/about')}
-              className="px-3 py-1.5 rounded-lg text-xs font-semibold text-[#3f4850] hover:text-[#131b2e] hover:bg-[#f2f3ff] transition-colors"
-            >
-              About DHA
-            </button>
-            <button
-              onClick={() => navigate('/for-professionals')}
-              className="px-3 py-1.5 rounded-lg text-xs font-semibold text-[#3f4850] hover:text-[#131b2e] hover:bg-[#f2f3ff] transition-colors"
-            >
-              For Professionals
-            </button>
-            <button
-              onClick={() => navigate('/oral-health-guides')}
-              className="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[#cce5ff] text-[#001d31] transition-colors"
-            >
-              Oral Health Guides
-            </button>
-          </nav>
-
-          <div className="flex items-center gap-3">
-            <button
-              onClick={() => navigate('/login')}
-              className="text-xs font-semibold text-[#3f4850] hover:text-[#006194] px-3 py-2 transition-colors"
-            >
-              Log In
-            </button>
-            <button
-              onClick={() => navigate('/onboarding/get-started')}
-              className="h-10 px-4 rounded-xl bg-[#006194] text-white text-xs font-semibold hover:bg-[#007bb9] shadow-sm transition-all active:scale-[0.98]"
-            >
-              Get Started
-            </button>
-          </div>
-        </div>
-      </header>
+      {/* Top Header — shared public-site header */}
+      <PublicSiteHeader />
 
       {/* Main Container */}
       <main className="flex-1 w-full pb-16">
@@ -281,8 +98,7 @@ export const OralHealthGuidesScreen: React.FC = () => {
               {filteredGuides.map((guide) => (
                 <article
                   key={guide.id}
-                  onClick={() => setActiveGuide(guide)}
-                  className="group rounded-2xl bg-white border border-[#eaedff] p-5 sm:p-6 shadow-sm hover:shadow-md hover:border-[#006194]/40 cursor-pointer transition-all flex flex-col justify-between"
+                  className="group rounded-2xl bg-white border border-[#eaedff] p-5 sm:p-6 shadow-sm hover:shadow-md hover:border-[#006194]/40 transition-all flex flex-col justify-between"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4">
@@ -303,10 +119,13 @@ export const OralHealthGuidesScreen: React.FC = () => {
                     <p className="text-xs text-[#3f4850] mt-2 leading-relaxed line-clamp-3">{guide.summary}</p>
                   </div>
 
-                  <div className="pt-4 border-t border-[#eaedff]/60 mt-4 flex items-center justify-between text-xs font-semibold text-[#006194]">
+                  <Link
+                    to={`/oral-health-guides/${guide.id}`}
+                    className="pt-4 border-t border-[#eaedff]/60 mt-4 flex items-center justify-between text-xs font-semibold text-[#006194]"
+                  >
                     <span>Read Full Guide</span>
                     <Icon name="arrow_forward" className="text-[16px] group-hover:translate-x-1 transition-transform" />
-                  </div>
+                  </Link>
                 </article>
               ))}
             </div>
@@ -345,7 +164,7 @@ export const OralHealthGuidesScreen: React.FC = () => {
               </div>
             </div>
             <button
-              onClick={() => navigate('/patient-dashboard/discovery')}
+              onClick={() => navigate('/portal/find-care')}
               className="h-11 px-5 rounded-xl bg-[#006194] text-white text-xs font-semibold hover:bg-[#007bb9] shrink-0"
             >
               Find Clinics Near Me
@@ -353,79 +172,6 @@ export const OralHealthGuidesScreen: React.FC = () => {
           </div>
         </section>
       </main>
-
-      {/* Guide Detail Modal */}
-      {activeGuide && (
-        <div className="fixed inset-0 z-50 bg-black/40 backdrop-blur-sm flex items-center justify-center p-4">
-          <div className="w-full max-w-2xl bg-white rounded-3xl shadow-2xl border border-[#eaedff] p-6 sm:p-8 space-y-5 max-h-[90vh] overflow-y-auto">
-            <div className="flex items-start justify-between gap-4">
-              <div className="flex items-center gap-3">
-                <span className="w-10 h-10 rounded-xl bg-[#eaedff] flex items-center justify-center text-[#006194] shrink-0">
-                  <Icon name={activeGuide.icon} className="text-[22px]" />
-                </span>
-                <div>
-                  <span className="text-[11px] font-semibold text-[#006a61] uppercase tracking-wider">
-                    {activeGuide.categoryLabel} &bull; {activeGuide.readTime}
-                  </span>
-                  <h2 className="text-xl font-bold font-['Plus_Jakarta_Sans'] text-[#131b2e] leading-snug">
-                    {activeGuide.title}
-                  </h2>
-                </div>
-              </div>
-              <button
-                onClick={() => setActiveGuide(null)}
-                className="w-8 h-8 rounded-full hover:bg-[#f2f3ff] flex items-center justify-center text-[#707881] shrink-0"
-              >
-                <Icon name="close" className="text-[20px]" />
-              </button>
-            </div>
-
-            <p className="text-xs sm:text-sm text-[#3f4850] italic border-l-2 border-[#006194] pl-3 py-1 bg-[#f2f3ff]/50 rounded-r-lg">
-              {activeGuide.summary}
-            </p>
-
-            {/* Step-by-Step Instructions */}
-            <div className="space-y-3">
-              <h3 className="text-xs font-bold uppercase tracking-wider text-[#131b2e]">Clinical Step-by-Step</h3>
-              <ol className="space-y-2.5">
-                {activeGuide.content.map((step, idx) => (
-                  <li key={idx} className="flex items-start gap-3 text-xs sm:text-sm text-[#3f4850]">
-                    <span className="w-5 h-5 rounded-full bg-[#cce5ff] text-[#001d31] text-[11px] font-bold flex items-center justify-center shrink-0 mt-0.5">
-                      {idx + 1}
-                    </span>
-                    <span className="leading-relaxed">{step}</span>
-                  </li>
-                ))}
-              </ol>
-            </div>
-
-            {/* Clinical Tips */}
-            <div className="p-4 rounded-2xl bg-[#86f2e4]/20 border border-[#86f2e4]/40 space-y-2">
-              <div className="flex items-center gap-2 text-[#005049] text-xs font-bold uppercase tracking-wider">
-                <Icon name="lightbulb" className="text-[16px] text-[#006a61]" filled={true} />
-                <span>Dentist Practical Tips</span>
-              </div>
-              <ul className="space-y-1.5">
-                {activeGuide.tips.map((tip, idx) => (
-                  <li key={idx} className="text-xs text-[#005049] flex items-start gap-2">
-                    <span className="text-[#006a61] mt-0.5">&bull;</span>
-                    <span>{tip}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="flex justify-end pt-2">
-              <button
-                onClick={() => setActiveGuide(null)}
-                className="px-6 py-2.5 rounded-xl bg-[#006194] text-white text-xs font-semibold hover:bg-[#007bb9]"
-              >
-                Close Guide
-              </button>
-            </div>
-          </div>
-        </div>
-      )}
 
       {/* Footer */}
       <footer className="w-full bg-[#f2f3ff] border-t border-[#eaedff] py-10 mt-auto">

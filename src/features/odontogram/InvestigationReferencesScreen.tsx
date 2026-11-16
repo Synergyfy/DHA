@@ -116,7 +116,7 @@ export function InvestigationReferencesScreen() {
                 </div>
 
                 <span className="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-bold shrink-0">
-                  NABIDH Linked
+                  Nigeria Health Information Exchange Linked
                 </span>
               </div>
 
@@ -224,7 +224,7 @@ export function InvestigationReferencesScreen() {
                       Panoramic Radiograph (Full OPG)
                     </h3>
                     <p className="text-xs text-on-surface-variant">
-                      Arch Overview · NABIDH Import · 14 Oct 2024
+                      Arch Overview · Nigeria Health Information Exchange Import · 14 Oct 2024
                     </p>
                   </div>
                 </div>

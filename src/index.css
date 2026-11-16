@@ -106,4 +106,10 @@
   .landing-page main > :last-child {
     margin-bottom: 0 !important;
   }
+
+  /* In-page landing anchors (#how-it-works, #manage-section) must clear the
+     fixed landing header (80px desktop / 64px mobile + safe-area inset). */
+  .landing-page section[id] {
+    scroll-margin-top: calc(5.5rem + env(safe-area-inset-top, 0px));
+  }
 }

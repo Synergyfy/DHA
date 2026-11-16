@@ -85,7 +85,7 @@ export function AppointmentRemindersScreen() {
                 <div className="flex flex-col gap-1 text-on-surface-variant font-body-sm text-body-sm">
                   <p>
                     You are requesting a time modification for{' '}
-                    <strong className="text-on-surface">Enamel Fluoride Touchup &amp; Prophylaxis</strong> with Dr. Farouk Al-Mansoori at Al Zahra Dental Hub.
+                    <strong className="text-on-surface">Enamel Fluoride Touchup &amp; Prophylaxis</strong> with Dr. Chinedu Okafor at Lagos Smile Dental Centre.
                   </p>
                   <div className="bg-secondary-container/30 p-3 rounded-xl text-on-secondary-container mt-1 border border-secondary/20">
                     <span className="font-label-sm text-label-sm font-bold block mb-0.5">DHA Booking Policy</span>
@@ -166,7 +166,7 @@ export function AppointmentRemindersScreen() {
               Appointment Reminders
             </h1>
             <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-              Confirmed clinical visits, clinic digital entry passes &amp; verified pre-treatment instructions for Sarah Al-Mansoor.
+              Confirmed clinical visits, clinic digital entry passes &amp; verified pre-treatment instructions for Ngozi Eze.
             </p>
           </div>
 
@@ -242,7 +242,7 @@ export function AppointmentRemindersScreen() {
                         Enamel Fluoride Touchup &amp; Prophylaxis
                       </h2>
                       <span className="font-body-sm text-body-sm text-tertiary-fixed font-medium mt-0.5">
-                        Primary Care • Sarah Al-Mansoor
+                        Primary Care • Ngozi Eze
                       </span>
                     </div>
 
@@ -284,7 +284,7 @@ export function AppointmentRemindersScreen() {
                     <div className="flex flex-col min-w-0">
                       <div className="flex items-center gap-2 flex-wrap">
                         <span className="font-title-md text-title-md text-on-surface font-bold">
-                          Dr. Farouk Al-Mansoori
+                          Dr. Chinedu Okafor
                         </span>
                         <span className="px-2 py-0.5 rounded bg-surface-container text-on-surface-variant font-label-sm text-[11px]">
                           DHA Lic #48912
@@ -302,15 +302,15 @@ export function AppointmentRemindersScreen() {
                       <div className="flex items-center gap-1.5 min-w-0">
                         <Icon name="location_on" className="text-primary text-[20px]" />
                         <span className="font-title-sm text-title-sm text-on-surface font-semibold truncate">
-                          Al Zahra Dental Hub
+                          Lagos Smile Dental Centre
                         </span>
                       </div>
                       <span className="font-label-sm text-[10px] uppercase font-bold text-on-secondary-container bg-secondary-container px-2 py-0.5 rounded-md">
-                        Oud Metha
+                        Ikeja
                       </span>
                     </div>
                     <p className="font-body-sm text-body-sm text-on-surface-variant pl-7">
-                      Suite #402, 4th Floor, Oud Metha Medical Zone, Dubai Healthcare District
+                      Suite #402, 4th Floor, Ikeja Medical Zone, Nigeria Dental Healthcare District
                     </p>
                   </div>
 
@@ -428,7 +428,7 @@ export function AppointmentRemindersScreen() {
                     </div>
                     <div className="flex items-center gap-2">
                       <Icon name="storefront" className="text-[18px] text-primary" />
-                      <span className="truncate">Dubai London Clinic, Festival City Mall Wing</span>
+                      <span className="truncate">Lagos Island Dental Centre, Ikeja City Mall Wing</span>
                     </div>
                   </div>
 
@@ -442,7 +442,7 @@ export function AppointmentRemindersScreen() {
                     </NavLink>
                     <button
                       type="button"
-                      onClick={() => showToast('Opening Dubai London Clinic route directions...')}
+                      onClick={() => showToast('Opening Lagos Island Dental Centre route directions...')}
                       className="h-10 rounded-xl bg-surface-container text-on-surface font-title-sm text-title-sm font-medium flex items-center justify-center gap-1.5 transition-colors hover:bg-surface-container-high"
                     >
                       <Icon name="directions" className="text-[18px]" />
@@ -478,7 +478,7 @@ export function AppointmentRemindersScreen() {
                   </div>
 
                   <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                    Al Zahra Dental Hub • Performed by Dr. Farouk Al-Mansoori. Clean bill of health with composite restoration completed on tooth #16.
+                    Lagos Smile Dental Centre • Performed by Dr. Chinedu Okafor. Clean bill of health with composite restoration completed on tooth #16.
                   </p>
 
                   <div className="mt-1 flex items-center justify-between bg-surface-container-low px-4 py-2.5 rounded-xl border border-outline-variant/20">
@@ -516,7 +516,7 @@ export function AppointmentRemindersScreen() {
                 </div>
               </div>
               <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                Acute toothache, trauma, or post-surgical bleeding? Connect with licensed Dubai Health triage specialists immediately.
+                Acute toothache, trauma, or post-surgical bleeding? Connect with licensed Nigeria Dental Health triage specialists immediately.
               </p>
               <a
                 href="tel:800342"

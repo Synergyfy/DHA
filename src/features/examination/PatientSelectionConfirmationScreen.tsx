@@ -120,7 +120,7 @@ export function PatientSelectionConfirmationScreen() {
             className="w-full bg-secondary-fixed text-on-secondary-fixed rounded-xl py-3 px-4 flex items-center justify-center gap-2 text-xs sm:text-sm font-bold shadow-sm hover:opacity-95 transition-opacity"
           >
             <Icon name={isScanning ? 'sync' : 'qr_code_scanner'} className={`text-lg ${isScanning ? 'animate-spin' : ''}`} />
-            <span>{isScanning ? 'Scanning Emirates ID / Lifecode...' : 'Scan DHA Lifecode / Digital Emirates ID'}</span>
+            <span>{isScanning ? 'Scanning National Identification Number (NIN) / Lifecode...' : 'Scan DHA Lifecode / Digital National Identification Number (NIN)'}</span>
           </button>
         </section>
 
@@ -164,7 +164,7 @@ export function PatientSelectionConfirmationScreen() {
                 </div>
                 <div className="flex items-center gap-1.5 mt-1 text-xs text-on-surface-variant">
                   <Icon name="call" className="text-sm text-outline" />
-                  <span>+971 50 234 8921</span>
+                  <span>+234 803 234 8921</span>
                 </div>
               </div>
             </div>
@@ -307,7 +307,7 @@ export function PatientSelectionConfirmationScreen() {
             </span>
             <h4 className="font-bold text-on-surface">Dentist Self-Recording Safeguard Active</h4>
             <p className="text-on-surface-variant mt-0.5 leading-relaxed">
-              Dr. Daniel James is authenticated. Clinicians cannot conduct or record self-examinations under UAE federal clinical safety governance protocols.
+              Dr. Daniel James is authenticated. Clinicians cannot conduct or record self-examinations under Nigeria federal clinical safety governance protocols.
             </p>
           </div>
         </section>

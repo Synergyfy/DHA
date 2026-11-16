@@ -332,7 +332,7 @@ export function ExaminationReviewValidationScreen() {
               <span className="text-on-surface font-medium">Mandatory clinical fields (100%) verified by Dr. Daniel James (#DEN-48912).</span>
             </div>
             <p className="text-[11px] text-outline leading-relaxed pt-1">
-              Upon proceeding, this examination record will be cryptographically locked into the DHA Unified Health Registry. Silent overwriting is prohibited under UAE Federal Health Law.
+              Upon proceeding, this examination record will be cryptographically locked into the DHA Unified Health Registry. Silent overwriting is prohibited under Nigeria Federal Health Law.
             </p>
           </div>
         </section>

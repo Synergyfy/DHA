@@ -35,7 +35,7 @@ const INITIAL_NOTIFICATIONS: NotificationItem[] = [
     actionLabel: 'Review Plan',
     actionRoute: '/treatment-plans/dentist-approval',
     tag: 'Section 13 • Tx Plan',
-    details: 'Phase 2: Ceramic abutment placement tooth #14, #16, #24. Total tariff: AED 14,800. Prior approval granted by Daman Health.',
+    details: 'Phase 2: Ceramic abutment placement tooth #14, #16, #24. Total tariff: NGN 14,800. Prior approval granted by NHIA Health.',
   },
   {
     id: 'notif-2',
@@ -58,7 +58,7 @@ const INITIAL_NOTIFICATIONS: NotificationItem[] = [
     category: 'appointments',
     urgency: 'high',
     title: 'Patient Checked In & Seated in Operatory 02',
-    patientName: 'Fatima Al-Zahra',
+    patientName: 'Fatima Bello',
     patientId: 'DHA-P-90812',
     summary: 'Arrived on schedule for Crown Preparation (#21). Vital signs stable: BP 118/76, pulse 72 bpm.',
     timestamp: '32 min ago (09:28)',
@@ -76,7 +76,7 @@ const INITIAL_NOTIFICATIONS: NotificationItem[] = [
     title: 'Second Opinion Clinical Request',
     patientName: 'Marcus Vance',
     patientId: 'DHA-P-88421',
-    summary: 'Dr. Karim Al-Mansoor requested restorative consult for Tooth #22 implant abutment torque validation.',
+    summary: 'Dr. Karim Okoye requested restorative consult for Tooth #22 implant abutment torque validation.',
     timestamp: '3 hours ago (07:15)',
     timeGroup: 'today',
     isRead: false,
@@ -122,7 +122,7 @@ const INITIAL_NOTIFICATIONS: NotificationItem[] = [
     category: 'statutory',
     urgency: 'normal',
     title: 'Annual CME Cycle Milestone Achieved: 38/40 Hours',
-    summary: 'Dubai Health Authority CPD records updated. 2 remaining credit hours needed prior to 24 Oct 2027.',
+    summary: 'Nigeria Dental Health Authority CPD records updated. 2 remaining credit hours needed prior to 24 Oct 2027.',
     timestamp: '3 days ago (11 Nov)',
     timeGroup: 'earlier',
     isRead: true,
@@ -147,10 +147,10 @@ const INITIAL_NOTIFICATIONS: NotificationItem[] = [
     id: 'notif-9',
     category: 'approvals',
     urgency: 'low',
-    title: 'Daman Pre-Authorisation Approved',
+    title: 'NHIA Pre-Authorisation Approved',
     patientName: 'Elena Rostova',
     patientId: 'DHA-P-77610',
-    summary: 'Authorization granted for Ceramic Onlay tooth #36 (Code D7210). Insurer pays 80%, patient copay AED 240.',
+    summary: 'Authorization granted for Ceramic Onlay tooth #36 (Code D7210). Insurer pays 80%, patient copay NGN 240.',
     timestamp: '5 days ago (09 Nov)',
     timeGroup: 'earlier',
     isRead: true,
@@ -256,7 +256,7 @@ export function NotificationsCentreScreen() {
                 )}
               </div>
               <p className="text-xs sm:text-sm text-[#707881] mt-1">
-                Synchronized live with DHA Malaffi/NABIDH gateways, Dexis Imaging, and Operatory 02 chairside telemetry.
+                Synchronized live with DHA Malaffi/Nigeria Health Information Exchange gateways, Dexis Imaging, and Operatory 02 chairside telemetry.
               </p>
             </div>
           </div>
@@ -593,10 +593,10 @@ export function NotificationsCentreScreen() {
                 <div className="p-3 rounded-xl bg-[#cce5ff]/40 border border-[#93ccff]/40 text-xs text-[#004b74] space-y-1">
                   <div className="font-bold flex items-center gap-1.5">
                     <Icon name="lock" className="text-[14px]" />
-                    <span>NABIDH Compliance Rule</span>
+                    <span>Nigeria Health Information Exchange Compliance Rule</span>
                   </div>
                   <p className="text-[11px] leading-tight text-[#004b74]/90">
-                    Statutory alerts cannot be muted per UAE Federal Health Data Law No. 2 of 2019.
+                    Statutory alerts cannot be muted per Nigeria Data Protection Act 2023.
                   </p>
                 </div>
               </div>

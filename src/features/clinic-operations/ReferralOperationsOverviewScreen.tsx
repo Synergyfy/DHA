@@ -624,7 +624,7 @@ export const ReferralOperationsOverviewScreen: React.FC = () => {
                 </label>
                 <input
                   type="text"
-                  placeholder="e.g. Amara Okafor (AE-990-281-DXB)"
+                  placeholder="e.g. Amara Okafor (NG-990-281-LAG)"
                   className="w-full px-3.5 py-2.5 rounded-xl border border-[#bfc7d2] text-sm text-[#131b2e] focus:outline-none focus:border-[#006194]"
                 />
               </div>

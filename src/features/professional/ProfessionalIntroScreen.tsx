@@ -171,7 +171,7 @@ export function ProfessionalIntroScreen() {
             </div>
             <div className="flex items-center gap-2 text-xs text-secondary font-semibold">
               <span className="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse" />
-              <span>Continuously Synchronised with NABIDH</span>
+              <span>Continuously Synchronised with Nigeria Health Information Exchange</span>
             </div>
           </div>
 

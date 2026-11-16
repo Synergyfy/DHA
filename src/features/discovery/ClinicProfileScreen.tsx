@@ -14,7 +14,7 @@ export function ClinicProfileScreen() {
   const staffDoctors = [
     {
       id: 'farouk',
-      name: 'Dr. Farouk Al-Mansoori',
+      name: 'Dr. Chinedu Okafor',
       title: 'Consultant Prosthodontist',
       license: 'DHA-D-48912',
       rating: 4.9,
@@ -25,7 +25,7 @@ export function ClinicProfileScreen() {
     },
     {
       id: 'mariam',
-      name: 'Dr. Mariam Al-Husseini',
+      name: 'Dr. Amina Bello',
       title: 'Specialist Paediatric Dentist',
       license: 'DHA-D-51204',
       rating: 4.9,
@@ -36,7 +36,7 @@ export function ClinicProfileScreen() {
     },
     {
       id: 'tariq',
-      name: 'Dr. Tariq Al-Nuaimi',
+      name: 'Dr. Ifeanyi Nwosu',
       title: 'Consultant Orthodontist',
       license: 'DHA-D-39180',
       rating: 4.8,
@@ -48,7 +48,7 @@ export function ClinicProfileScreen() {
   ];
 
   return (
-    <DashboardShell pageTitle="Clinic Profile — Al Zahra Dental Hub" showBack>
+    <DashboardShell pageTitle="Clinic Profile — Lagos Smile Dental Centre" showBack>
       <DiscoverySubNav />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-8">
@@ -58,7 +58,7 @@ export function ClinicProfileScreen() {
           <div className="relative h-56 sm:h-72 w-full overflow-hidden bg-surface-container">
             <img
               src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=1400&q=80"
-              alt="Al Zahra Dental Hub"
+              alt="Lagos Smile Dental Centre"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-black/30"></div>
@@ -82,7 +82,7 @@ export function ClinicProfileScreen() {
             <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
               <div className="space-y-1.5">
                 <h1 className="font-headline-lg text-headline-lg font-bold text-on-surface">
-                  Al Zahra Dental Hub
+                  Lagos Smile Dental Centre
                 </h1>
                 <p className="font-title-md text-title-md text-on-surface-variant">
                   Comprehensive Multi-Speciality Dental Center &amp; Implantology Institute
@@ -91,7 +91,7 @@ export function ClinicProfileScreen() {
                 <div className="flex flex-wrap items-center gap-3 text-body-sm text-on-surface-variant pt-1">
                   <div className="flex items-center gap-1">
                     <Icon name="location_on" className="text-secondary text-[18px]" />
-                    <span className="text-on-surface font-semibold">Oud Metha Medical Zone, Dubai</span>
+                    <span className="text-on-surface font-semibold">Ikeja Medical Zone, Lagos</span>
                   </div>
                   <div className="flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded-lg">
                     <Icon name="star" className="text-amber-500 text-[16px] fill-current" />
@@ -108,7 +108,7 @@ export function ClinicProfileScreen() {
               {/* Quick Action Buttons */}
               <div className="flex flex-wrap items-center gap-2 w-full md:w-auto">
                 <a
-                  href="tel:+97143366666"
+                  href="tel:+2348030000001"
                   className="px-4 py-3 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-2xl font-title-sm font-semibold flex items-center gap-1.5 transition-colors"
                 >
                   <Icon name="call" className="text-[18px] text-primary" />
@@ -144,7 +144,7 @@ export function ClinicProfileScreen() {
                     Earliest Available Slot
                   </span>
                   <span className="font-title-sm text-on-surface font-semibold">
-                    Today at 3:15 PM with Dr. Farouk Al-Mansoori (Prosthodontics)
+                    Today at 3:15 PM with Dr. Chinedu Okafor (Prosthodontics)
                   </span>
                 </div>
               </div>
@@ -170,7 +170,7 @@ export function ClinicProfileScreen() {
                   }`}
                 >
                   <Icon name="apartment" className="text-[18px]" />
-                  <span>Oud Metha (Main Campus)</span>
+                  <span>Ikeja (Main Campus)</span>
                 </button>
                 <button
                   type="button"
@@ -182,7 +182,7 @@ export function ClinicProfileScreen() {
                   }`}
                 >
                   <Icon name="domain" className="text-[18px]" />
-                  <span>Al Barsha Branch</span>
+                  <span>Surulere Branch</span>
                 </button>
               </div>
 
@@ -197,8 +197,8 @@ export function ClinicProfileScreen() {
                       <Icon name="pin_drop" className="text-secondary text-[18px] shrink-0 mt-0.5" />
                       <span>
                         {selectedBranch === 'oud-metha'
-                          ? 'Building 34, 19th Street, Oud Metha Medical Zone, Dubai, UAE'
-                          : 'Barsha Heights Dental Wing, Al Barsha 1, Dubai, UAE'}
+                          ? 'Building 34, 19th Street, Ikeja Medical Zone, Lagos, Nigeria'
+                          : 'Barsha Heights Dental Wing, Surulere 1, Lagos, Nigeria'}
                       </span>
                     </div>
                     <div className="flex items-center gap-2">
@@ -209,8 +209,8 @@ export function ClinicProfileScreen() {
                       <Icon name="subway" className="text-primary text-[18px] shrink-0" />
                       <span>
                         {selectedBranch === 'oud-metha'
-                          ? '400m from Oud Metha Metro Station (Green Line)'
-                          : '600m from Dubai Internet City Metro Station'}
+                          ? '400m from Ikeja Metro Station (Green Line)'
+                          : '600m from Lagos Internet City Metro Station'}
                       </span>
                     </div>
                   </div>
@@ -248,7 +248,7 @@ export function ClinicProfileScreen() {
                 DHA Dentists &amp; Specialists on Staff
               </h2>
               <p className="font-body-sm text-body-sm text-on-surface-variant">
-                Consultant and specialist doctors licensed under Al Zahra Dental Hub
+                Consultant and specialist doctors licensed under Lagos Smile Dental Centre
               </p>
             </div>
           </div>
@@ -323,7 +323,7 @@ export function ClinicProfileScreen() {
             <span>Facility Equipment &amp; Campus Amenities</span>
           </h2>
           <p className="font-body-md text-body-md text-on-surface-variant">
-            Al Zahra Dental Hub maintains state-of-the-art diagnostic and surgical equipment adhering to European &amp; DHA Grade-A criteria.
+            Lagos Smile Dental Centre maintains state-of-the-art diagnostic and surgical equipment adhering to Nigerian &amp; DHA Grade-A criteria.
           </p>
 
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 pt-2">
@@ -364,9 +364,9 @@ export function ClinicProfileScreen() {
           </div>
           <div className="flex flex-wrap gap-2.5 pt-1">
             {[
-              'Daman National',
-              'NextCare (All Tiers)',
-              'AXA / GIG Gulf',
+              'NHIA National',
+              'NHIA (All Tiers)',
+              'NHIA / GIG Gulf',
               'Mednet Global',
               'MetLife Dental',
               'Cigna Global Health',
@@ -398,10 +398,10 @@ export function ClinicProfileScreen() {
                 <Icon name="calendar_month" className="text-[36px]" />
               </div>
               <h3 className="font-headline-sm text-headline-sm font-bold text-on-surface">
-                Book at Al Zahra Dental Hub
+                Book at Lagos Smile Dental Centre
               </h3>
               <p className="font-body-md text-body-md text-on-surface-variant">
-                Would you like to book an appointment with our available specialist <span className="font-semibold text-on-surface">Dr. Farouk Al-Mansoori</span> or speak with clinic reception?
+                Would you like to book an appointment with our available specialist <span className="font-semibold text-on-surface">Dr. Chinedu Okafor</span> or speak with clinic reception?
               </p>
               <div className="space-y-2 pt-2">
                 <button
@@ -415,11 +415,11 @@ export function ClinicProfileScreen() {
                   View Dr. Farouk's Available Slots
                 </button>
                 <a
-                  href="tel:+97143366666"
+                  href="tel:+2348030000001"
                   className="w-full py-3 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-xl font-title-sm font-semibold transition-colors flex items-center justify-center gap-2"
                 >
                   <Icon name="call" className="text-[18px] text-primary" />
-                  <span>Call Reception (+971 4 336 6666)</span>
+                  <span>Call Reception (+234 803 000 0001)</span>
                 </a>
               </div>
             </div>

@@ -12,7 +12,7 @@ export function SearchResultsScreen() {
   const [searchParams] = useSearchParams();
 
   const initialQuery = searchParams.get('q') || 'Orthodontist';
-  const initialLoc = searchParams.get('loc') || 'Oud Metha & Jumeirah';
+  const initialLoc = searchParams.get('loc') || 'Ikeja & Victoria Island';
 
   const [query, setQuery] = useState(initialQuery);
   const [providerType, setProviderType] = useState<ProviderTypeFilter>('all');
@@ -270,7 +270,7 @@ export function SearchResultsScreen() {
                     </div>
 
                     <h3 className="font-headline-sm text-headline-sm font-bold text-on-surface">
-                      Dr. Tariq Al-Nuaimi
+                      Dr. Ifeanyi Nwosu
                     </h3>
                     <p className="font-body-md text-body-md text-on-surface-variant">
                       Consultant Orthodontist • 14 Years Experience
@@ -279,11 +279,11 @@ export function SearchResultsScreen() {
                     <div className="flex flex-wrap items-center gap-3 text-body-sm text-on-surface-variant pt-1">
                       <div className="flex items-center gap-1">
                         <Icon name="apartment" className="text-[16px] text-primary" />
-                        <span className="font-medium text-on-surface">Emirates Orthodontics &amp; Studio</span>
+                        <span className="font-medium text-on-surface">Lagos Orthodontics &amp; Studio</span>
                       </div>
                       <div className="flex items-center gap-1">
                         <Icon name="location_on" className="text-[16px] text-secondary" />
-                        <span>Oud Metha (1.8 km)</span>
+                        <span>Ikeja (1.8 km)</span>
                       </div>
                       <div className="flex items-center gap-1">
                         <Icon name="star" className="text-amber-500 text-[16px] fill-current" />
@@ -297,7 +297,7 @@ export function SearchResultsScreen() {
                 <div className="flex flex-col sm:flex-row md:flex-col items-end justify-between gap-3 w-full md:w-auto shrink-0 pt-4 md:pt-0 border-t md:border-t-0 border-outline-variant/30">
                   <div className="text-left sm:text-right md:text-right w-full sm:w-auto">
                     <span className="font-label-sm text-on-surface-variant block">Consultation Fee</span>
-                    <span className="font-title-md font-bold text-primary">AED 350</span>
+                    <span className="font-title-md font-bold text-primary">NGN 350</span>
                     <span className="font-label-sm text-secondary font-medium block mt-0.5">
                       Next Slot: Today at 4:30 PM
                     </span>
@@ -341,7 +341,7 @@ export function SearchResultsScreen() {
                     </div>
 
                     <h3 className="font-headline-sm text-headline-sm font-bold text-on-surface">
-                      Emirates Orthodontics &amp; Studio
+                      Lagos Orthodontics &amp; Studio
                     </h3>
                     <p className="font-body-md text-body-md text-on-surface-variant">
                       Multi-Speciality Dental Center • 4 DHA Specialists on Staff
@@ -350,7 +350,7 @@ export function SearchResultsScreen() {
                     <div className="flex flex-wrap items-center gap-3 text-body-sm text-on-surface-variant pt-1">
                       <div className="flex items-center gap-1">
                         <Icon name="location_on" className="text-[16px] text-secondary" />
-                        <span>Oud Metha, Medical Zone (1.8 km)</span>
+                        <span>Ikeja, Medical Zone (1.8 km)</span>
                       </div>
                       <div className="flex items-center gap-1">
                         <Icon name="star" className="text-amber-500 text-[16px] fill-current" />
@@ -368,7 +368,7 @@ export function SearchResultsScreen() {
                 <div className="flex flex-col sm:flex-row md:flex-col items-end justify-between gap-3 w-full md:w-auto shrink-0 pt-4 md:pt-0 border-t md:border-t-0 border-outline-variant/30">
                   <div className="text-left sm:text-right md:text-right w-full sm:w-auto">
                     <span className="font-label-sm text-on-surface-variant block">Insurance In-Network</span>
-                    <span className="font-title-sm font-bold text-on-surface">NextCare, AXA, Daman</span>
+                    <span className="font-title-sm font-bold text-on-surface">NHIA, NHIA, NHIA</span>
                     <span className="font-label-sm text-secondary font-medium block mt-0.5">
                       Next Slot: Tomorrow at 10:00 AM
                     </span>
@@ -412,10 +412,10 @@ export function SearchResultsScreen() {
                     </div>
 
                     <h3 className="font-headline-sm text-headline-sm font-bold text-on-surface">
-                      Dr. Sara Al-Haddad
+                      Dr. Funmi Adebayo
                     </h3>
                     <p className="font-body-md text-body-md text-on-surface-variant">
-                      Specialist Endodontist • Al Zahra Dental Care
+                      Specialist Endodontist • Lagos Smile Dental Care
                     </p>
 
                     <div className="p-3 bg-surface-container rounded-xl text-body-sm text-on-surface-variant mt-2 max-w-xl">
@@ -429,7 +429,7 @@ export function SearchResultsScreen() {
                 <div className="flex items-center gap-2 w-full md:w-auto shrink-0 pt-4 md:pt-0 border-t md:border-t-0 border-outline-variant/30">
                   <button
                     type="button"
-                    onClick={() => alert('Direct enquiries for Dr. Sara Al-Haddad are routed through Al Zahra Dental Care reception.')}
+                    onClick={() => alert('Direct enquiries for Dr. Funmi Adebayo are routed through Lagos Smile Dental Care reception.')}
                     className="w-full md:w-auto px-5 py-2.5 bg-surface-container hover:bg-surface-container-high text-on-surface rounded-xl font-title-sm font-semibold transition-colors flex items-center justify-center gap-1.5"
                   >
                     <Icon name="call" className="text-[17px]" />
@@ -458,7 +458,7 @@ export function SearchResultsScreen() {
                       Prime Oral Wellness Pavilion
                     </h3>
                     <p className="font-body-md text-body-md text-on-surface-variant">
-                      Deira Sector • Not Certified for DHA Digital Lifecode Sync
+                      Lagos Island Sector • Not Certified for DHA Digital Lifecode Sync
                     </p>
 
                     <p className="font-body-sm text-error font-medium mt-1">

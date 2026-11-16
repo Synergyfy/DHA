@@ -100,7 +100,7 @@ export function SharePatientRecordsScreen() {
                 <div className="min-w-0">
                   <div className="font-bold text-sm text-on-surface truncate">Dr. Tariq Mansoor</div>
                   <div className="text-[11px] font-mono text-primary font-bold">DHA #48912</div>
-                  <div className="text-xs text-on-surface-variant truncate">Jumeirah Dental Care</div>
+                  <div className="text-xs text-on-surface-variant truncate">Victoria Island Dental Care</div>
                 </div>
               </div>
               <div className="flex items-center justify-between text-xs text-secondary font-semibold">
@@ -121,12 +121,12 @@ export function SharePatientRecordsScreen() {
                 <div className="w-12 h-12 rounded-2xl overflow-hidden shrink-0 bg-surface-container">
                   <img
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCT29w4UPCEdUb025eB_vRAldTwQ7Pj2XD6567lus6vU0yyUw-Un9eoQITxeZVKwi5FINkFp_PRaVRNFpqz2yqNOYAIyDX5uGtwAUbKih4aIjz-TAVGmOhDTtRY-ggY0EOG-lKhE1lizGGf0JbkIELquqyR3MHA1jqFW6b5_ojEPnz85tMc5vj6aXqUC0oWdnAa5SaBY3yo0Q0TAmX16Qf4EuQL0C63BuwJM6BNKpfl"
-                    alt="Dr. Reem Al-Nuaimi"
+                    alt="Dr. Reem Nwosu"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div className="min-w-0">
-                  <div className="font-bold text-sm text-on-surface truncate">Dr. Reem Al-Nuaimi</div>
+                  <div className="font-bold text-sm text-on-surface truncate">Dr. Reem Nwosu</div>
                   <div className="text-[11px] font-mono text-primary font-bold">DHA #51204</div>
                   <div className="text-xs text-on-surface-variant truncate">Downtown Specialists</div>
                 </div>
@@ -138,9 +138,9 @@ export function SharePatientRecordsScreen() {
             </label>
 
             <label
-              onClick={() => setSelectedProvider('al-zahra')}
+              onClick={() => setSelectedProvider('Bello')}
               className={`p-4 rounded-2xl border transition-all cursor-pointer flex flex-col justify-between ${
-                selectedProvider === 'al-zahra'
+                selectedProvider === 'Bello'
                   ? 'bg-primary-fixed/20 border-primary shadow-sm'
                   : 'bg-surface-container-low border-outline-variant/30 hover:bg-surface-container'
               }`}
@@ -150,14 +150,14 @@ export function SharePatientRecordsScreen() {
                   <Icon name="local_hospital" className="text-[26px]" />
                 </div>
                 <div className="min-w-0">
-                  <div className="font-bold text-sm text-on-surface truncate">Al Zahra Dental Hub</div>
+                  <div className="font-bold text-sm text-on-surface truncate">Lagos Smile Dental Centre</div>
                   <div className="text-[11px] font-mono text-primary font-bold">Facility #CL-8849</div>
-                  <div className="text-xs text-on-surface-variant truncate">Al Barsha Branch</div>
+                  <div className="text-xs text-on-surface-variant truncate">Surulere Branch</div>
                 </div>
               </div>
               <div className="flex items-center justify-between text-xs text-secondary font-semibold">
                 <span>Multi-Chair Polyclinic</span>
-                <Icon name={selectedProvider === 'al-zahra' ? 'check_circle' : 'radio_button_unchecked'} />
+                <Icon name={selectedProvider === 'Bello' ? 'check_circle' : 'radio_button_unchecked'} />
               </div>
             </label>
           </div>
@@ -173,7 +173,7 @@ export function SharePatientRecordsScreen() {
           </div>
 
           <p className="text-xs text-on-surface-variant">
-            Dubai Health Authority regulations mandate documenting specific purpose for audit trails and clinical consent.
+            Nigeria Dental Health Authority regulations mandate documenting specific purpose for audit trails and clinical consent.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">

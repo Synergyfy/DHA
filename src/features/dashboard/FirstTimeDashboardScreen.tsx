@@ -70,7 +70,7 @@ export function FirstTimeDashboardScreen() {
 
                   <div className="pt-1">
                     <p className="font-label-sm text-label-sm text-tertiary-fixed opacity-90 font-medium">
-                      Dubai Health Authority Lifecode
+                      Nigeria Dental Health Authority Lifecode
                     </p>
                     <p className="font-headline-md text-headline-md tracking-wider font-bold text-on-primary font-mono">
                       {activeProfile.lifecode}
@@ -280,7 +280,7 @@ export function FirstTimeDashboardScreen() {
                       Find an Accredited DHA Clinic
                     </h3>
                     <p className="font-body-sm text-body-sm text-on-surface-variant truncate">
-                      Search 120+ verified community clinics in Dubai and book online.
+                      Search 120+ verified community clinics in Lagos and book online.
                     </p>
                   </div>
                   <Icon name="chevron_right" className="text-on-surface-variant text-[22px] shrink-0" />
@@ -362,7 +362,7 @@ export function FirstTimeDashboardScreen() {
                   <div className="relative h-32 w-full bg-surface-container-high overflow-hidden">
                     <img
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQlMJ-pf6vuRERuiaXJYCdViLqJ7qK2floavl9HVyIOgzQ7GIVwRa-nMpBgpY-MEjl4GQpJs_66YDnW93ev2qjJ-WXQiAT3lL46lmg1GGwlCow8CvINHcC2jhTMKF3Xqc-GPbvVLo9HACmYxmt4XVmleacEcoZhGHXkcVuS8-qxmkSqxcUm8CpicDMqDHXLqCRKKEZzHPhhJwUYn6JvosoQjgwXXkSXn30xPwA-y3w"
-                      alt="DHA Community Dental Clinic Oud Metha"
+                      alt="DHA Community Dental Clinic Ikeja"
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center gap-1 shadow-xs">
@@ -384,7 +384,7 @@ export function FirstTimeDashboardScreen() {
                         </h3>
                         <p className="font-body-sm text-[12px] text-on-surface-variant mt-0.5 flex items-center gap-1">
                           <Icon name="location_on" className="text-[14px] text-tertiary" />
-                          <span>Oud Metha Health Complex, Block B</span>
+                          <span>Ikeja Health Complex, Block B</span>
                         </p>
                       </div>
                       <div className="flex items-center gap-1 bg-surface-container-low px-2 py-0.5 rounded-lg shrink-0">
@@ -400,7 +400,7 @@ export function FirstTimeDashboardScreen() {
                       </div>
                       <button
                         type="button"
-                        onClick={() => handleBooking('DHA Community Clinic Oud Metha')}
+                        onClick={() => handleBooking('DHA Community Clinic Ikeja')}
                         className="px-3.5 py-1.5 bg-primary hover:bg-primary-container text-on-primary rounded-xl font-title-sm text-[13px] font-semibold shadow-xs transition-colors"
                       >
                         Book Visit
@@ -414,7 +414,7 @@ export function FirstTimeDashboardScreen() {
                   <div className="relative h-32 w-full bg-surface-container-high overflow-hidden">
                     <img
                       src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMAeP_viz_ckZC8s0rvTVU4vBqIhAv0VvF6accM4xuiStYymvlPSXjMkDSveUN002kbkqki9lEenj8pFEIPm1Qkuh6aRtvaT8hjKRhggaYBUdmUcp38PxS6dArstBXAlEwXrYx_8BcZQzSvX_hq3psqEZCyI3Wd84CO5XsggKM07iJBVu7NveMGZQAQdKP2qRaTkmVcyyEhCV-zCMyweRI3buMAgYgU2Tc9NY0Ft3F"
-                      alt="Emirates Family Dental Hub"
+                      alt="Nigerian Family Dental Hub"
                       className="w-full h-full object-cover"
                     />
                     <div className="absolute top-2.5 left-2.5 px-2.5 py-0.5 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center gap-1 shadow-xs">
@@ -432,7 +432,7 @@ export function FirstTimeDashboardScreen() {
                     <div className="flex justify-between items-start">
                       <div className="min-w-0 pr-2">
                         <h3 className="font-title-sm text-title-sm text-on-surface font-bold truncate">
-                          Emirates Family Dental Hub
+                          Nigerian Family Dental Hub
                         </h3>
                         <p className="font-body-sm text-[12px] text-on-surface-variant mt-0.5 flex items-center gap-1">
                           <Icon name="location_on" className="text-[14px] text-tertiary" />
@@ -452,7 +452,7 @@ export function FirstTimeDashboardScreen() {
                       </div>
                       <button
                         type="button"
-                        onClick={() => handleBooking('Emirates Family Dental Hub')}
+                        onClick={() => handleBooking('Nigerian Family Dental Hub')}
                         className="px-3.5 py-1.5 bg-primary hover:bg-primary-container text-on-primary rounded-xl font-title-sm text-[13px] font-semibold shadow-xs transition-colors"
                       >
                         Book Visit

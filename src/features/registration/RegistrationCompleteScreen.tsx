@@ -5,6 +5,7 @@ import { Button } from '../../design/Button';
 import { Icon } from '../../design/Primitives';
 import { useToast } from '../../design/Toast';
 import { useRegistrationDraft } from '../../store/registrationDraft';
+import { useAuthStore } from '../../store/authStore';
 import {
   GENDER_OPTIONS,
   ageFrom,
@@ -103,6 +104,7 @@ function SummaryCard({
 export function RegistrationCompleteScreen() {
   const navigate = useNavigate();
   const { showToast } = useToast();
+  const signIn = useAuthStore((state) => state.signIn);
   const draft = useRegistrationDraft(
     useShallow((s) => ({
       method: s.method,
@@ -384,7 +386,12 @@ export function RegistrationCompleteScreen() {
         <Button
           id="go-dashboard-btn"
           size="lg"
-          onClick={() => navigate('/patient-dashboard')}
+          onClick={() => {
+            // Registration completes the account — start its demo session.
+            const fullName = [draft.firstName, draft.lastName].filter(Boolean).join(' ').trim();
+            signIn(fullName ? { name: fullName } : undefined);
+            navigate('/patient-dashboard');
+          }}
           icon={<Icon name="arrow_forward" className="text-[18px]" />}
         >
           Go to Patient Dashboard
