@@ -20,7 +20,7 @@ export function CreateEditProcedureScreen() {
     'Licensed General Dentist (#DEN) or Prosthodontist'
   );
   const [branchWuse, setBranchWuse] = useState(true);
-  const [branchJumeirah, setBranchJumeirah] = useState(true);
+  const [branchLekki, setBranchLekki] = useState(true);
   const [isActive, setIsActive] = useState(true);
   const [showDeactivationWarning, setShowDeactivationWarning] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
@@ -198,7 +198,7 @@ export function CreateEditProcedureScreen() {
                   className="w-full p-3.5 bg-[#faf8ff] text-[#131b2e] rounded-xl border border-[#bfc7d2] text-xs leading-relaxed focus:outline-none focus:ring-2 focus:ring-[#006194] resize-none"
                 />
                 <span className="text-[11px] text-[#707881]">
-                  Mandatory documentation criteria under UAE medical records charter.
+                  Mandatory documentation criteria under Nigeria medical records charter.
                 </span>
               </div>
             </div>
@@ -333,7 +333,7 @@ export function CreateEditProcedureScreen() {
                 </label>
                 <div className="relative">
                   <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-sm font-bold text-[#006194]">
-                    AED
+                    NGN
                   </div>
                   <input
                     id="clinicFee"
@@ -367,7 +367,7 @@ export function CreateEditProcedureScreen() {
                 <div className="flex items-center gap-2.5">
                   <Icon name="account_balance" className="text-[#006194] text-[20px]" />
                   <div>
-                    <span className="text-xs font-bold text-[#131b2e] block">UAE VAT Zero-Rated</span>
+                    <span className="text-xs font-bold text-[#131b2e] block">Nigeria VAT Zero-Rated</span>
                     <span className="text-[11px] text-[#707881]">Statutory qualified medical care exemption</span>
                   </div>
                 </div>
@@ -414,13 +414,13 @@ export function CreateEditProcedureScreen() {
                     <div className="flex items-center gap-2.5">
                       <Icon name="location_on" className="text-[#006194] text-[18px]" />
                       <span className="text-xs font-semibold text-[#131b2e]">
-                        Harmony Dental — Jumeirah Branch
+                        Harmony Dental — Victoria Island Branch
                       </span>
                     </div>
                     <input
                       type="checkbox"
-                      checked={branchJumeirah}
-                      onChange={(e) => setBranchJumeirah(e.target.checked)}
+                      checked={branchLekki}
+                      onChange={(e) => setBranchLekki(e.target.checked)}
                       className="w-4 h-4 rounded text-[#006194] focus:ring-[#006194]"
                     />
                   </label>

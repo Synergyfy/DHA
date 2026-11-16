@@ -28,10 +28,10 @@ export function TreatmentPlanHistoryScreen() {
       date: '14 Oct 2026',
       progressText: '1 of 3 Procedures (33%)',
       progressPercent: 33,
-      grossTotal: 'AED 1,450',
-      patientCopay: 'AED 290',
-      settled: 'AED 170',
-      pending: 'AED 120',
+      grossTotal: 'NGN 1,450',
+      patientCopay: 'NGN 290',
+      settled: 'NGN 170',
+      pending: 'NGN 120',
       isActive: true,
     },
     {
@@ -44,7 +44,7 @@ export function TreatmentPlanHistoryScreen() {
       date: '18 Nov 2025 – 20 Nov 2025',
       scope: '2 Procedures (Full mouth scaling + ultrasonic polishing)',
       outcome: 'Healthy periodontium, PSR Score 1',
-      financial: 'AED 650 (100% Settled, Daman Thiqa Direct)',
+      financial: 'NGN 650 (100% Settled, NHIA Direct)',
     },
     {
       id: 'TP-2024-019',
@@ -52,7 +52,7 @@ export function TreatmentPlanHistoryScreen() {
       badge: 'Superseded v1.0',
       badgeColor: 'bg-slate-100 text-slate-700 border-slate-200',
       title: 'Initial Diagnostic Caries Stabilization Assessment',
-      doctor: 'Dr. K. Al-Mansoor',
+      doctor: 'Dr. K. Okoye',
       date: '10 Sep 2024',
       supersededReason: 'Replaced by Comprehensive AI-Assisted Protocol (Section 12 handoff).',
     },
@@ -92,10 +92,10 @@ export function TreatmentPlanHistoryScreen() {
                 <div className="flex items-center gap-2">
                   <h2 className="text-base font-bold text-slate-900 truncate">Amara Okafor</h2>
                   <span className="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-medium">34y Female</span>
-                  <span className="text-[11px] bg-blue-100 text-[#006194] px-2 py-0.5 rounded-full font-bold">UAE Resident</span>
+                  <span className="text-[11px] bg-blue-100 text-[#006194] px-2 py-0.5 rounded-full font-bold">Nigeria Resident</span>
                 </div>
                 <p className="font-mono text-xs text-slate-500 mt-0.5">
-                  DHA-2026-00451 • LifeCode: <strong className="text-[#006194]">AE-990-281-DXB</strong>
+                  DHA-2026-00451 • LifeCode: <strong className="text-[#006194]">NG-990-281-LAG</strong>
                 </p>
                 <div className="flex items-center gap-1.5 mt-2 text-xs text-slate-600">
                   <Icon name="history_edu" className="text-[#006a61] text-sm" />
@@ -322,7 +322,7 @@ export function TreatmentPlanHistoryScreen() {
         <div className="bg-[#f2f3ff] rounded-2xl p-4 border border-[#eaedff] flex items-start gap-3 text-xs">
           <Icon name="policy" className="text-[#006194] text-lg mt-0.5 shrink-0" />
           <div className="text-slate-600 leading-relaxed">
-            <strong className="text-slate-900 font-bold">UAE NABIDH Immutable Record Notice:</strong> Historical treatment plans are permanently preserved under DHA health informatics governance. No historical plan or executed procedure can be purged or overwritten.
+            <strong className="text-slate-900 font-bold">Nigeria Nigeria Health Information Exchange Immutable Record Notice:</strong> Historical treatment plans are permanently preserved under DHA health informatics governance. No historical plan or executed procedure can be purged or overwritten.
           </div>
         </div>
 

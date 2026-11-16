@@ -16,7 +16,7 @@ const PAST_TICKETS: TicketHistory[] = [
     id: '#DHA-SUP-9021',
     title: 'Licensure Renewal Certificate Sync',
     status: 'resolved',
-    date: 'Resolved on 14 Oct 2026 • 11:24 GST',
+    date: 'Resolved on 14 Oct 2026 • 11:24 WAT',
     summary:
       'DHA Medical Board public key refreshed. Operatory workstations renewed with active credentials till Oct 2027.',
   },
@@ -24,7 +24,7 @@ const PAST_TICKETS: TicketHistory[] = [
     id: '#DHA-SUP-8840',
     title: 'Add Operatory 03 to Schedule Roster',
     status: 'closed',
-    date: 'Closed on 08 Oct 2026 • 17:40 GST',
+    date: 'Closed on 08 Oct 2026 • 17:40 WAT',
     summary:
       'New dental hygienist bay calibrated with local radiograph server and digital sensor docking port.',
   },
@@ -35,7 +35,7 @@ export function ProfessionalHelpSupportScreen() {
 
   // Ticket Form State
   const [issueCategory, setIssueCategory] = useState(
-    'NABIDH Clinical Record Synchronization Issue'
+    'Nigeria Health Information Exchange Clinical Record Synchronization Issue'
   );
   const [severity, setSeverity] = useState<'Critical' | 'High' | 'Normal'>('High');
   const [subject, setSubject] = useState(
@@ -133,7 +133,7 @@ export function ProfessionalHelpSupportScreen() {
             DHA Professional Support &amp; Engineering Concierge
           </h1>
           <p className="text-xs sm:text-sm text-[#707881] leading-relaxed max-w-3xl">
-            Rapid technical dispatch, compliance resolution, and chairside operatory telemetry support for licensed dental practitioners and attending specialists across the UAE.
+            Rapid technical dispatch, compliance resolution, and chairside operatory telemetry support for licensed dental practitioners and attending specialists across the Nigeria.
           </p>
 
           {/* SLA Pill Alert */}
@@ -147,7 +147,7 @@ export function ProfessionalHelpSupportScreen() {
                 <span className="w-2 h-2 rounded-full bg-[#006a61] animate-pulse"></span>
               </div>
               <p className="text-[#005049]/90 mt-0.5">
-                Average Response Time: <strong>&lt; 15 mins</strong> during clinical operating hours (07:00 – 22:00 GST).
+                Average Response Time: <strong>&lt; 15 mins</strong> during clinical operating hours (07:00 – 22:00 WAT).
               </p>
             </div>
           </div>
@@ -170,7 +170,7 @@ export function ProfessionalHelpSupportScreen() {
           </div>
 
           <a
-            href="tel:+97142198888"
+            href="tel:+2348030000001"
             className="px-5 py-3 rounded-2xl bg-white hover:bg-[#faf8ff] text-[#131b2e] border border-[#eaedff] shadow-sm flex items-center gap-3 shrink-0 active:scale-[0.99] transition-transform"
           >
             <div className="w-9 h-9 rounded-xl bg-[#ffdad6] text-[#ba1a1a] flex items-center justify-center shrink-0">
@@ -180,7 +180,7 @@ export function ProfessionalHelpSupportScreen() {
               <div className="text-[10px] uppercase font-bold text-[#707881]">
                 Direct Chairside Operations Desk
               </div>
-              <div className="font-mono font-bold text-sm text-[#ba1a1a]">+971 4 219 8888 (Option 1)</div>
+              <div className="font-mono font-bold text-sm text-[#ba1a1a]">+234 803 000 0001 (Option 1)</div>
             </div>
           </a>
         </div>
@@ -204,8 +204,8 @@ export function ProfessionalHelpSupportScreen() {
                 color: 'bg-[#cce5ff]/50 text-[#006194]',
               },
               {
-                title: 'NABIDH Sync & Licensure Support',
-                category: 'NABIDH Clinical Record Synchronization Issue',
+                title: 'Nigeria Health Information Exchange Sync & Licensure Support',
+                category: 'Nigeria Health Information Exchange Clinical Record Synchronization Issue',
                 desc: 'Credential attestation, DHA medical license renewal, token key resets, Malaffi sync.',
                 icon: 'verified_user',
                 color: 'bg-[#86f2e4]/30 text-[#006f66]',
@@ -220,7 +220,7 @@ export function ProfessionalHelpSupportScreen() {
               {
                 title: 'Billing, Tariff & Insurance Pre-Auth',
                 category: 'Billing, Tariff & Insurance Pre-Auth',
-                desc: 'Unified Clinical Coding (UCC), Daman Thiqa pre-authorizations, and co-pay rejections.',
+                desc: 'Unified Clinical Coding (UCC), NHIA pre-authorizations, and co-pay rejections.',
                 icon: 'receipt_long',
                 color: 'bg-[#faf8ff] text-[#131b2e]',
               },
@@ -277,7 +277,7 @@ export function ProfessionalHelpSupportScreen() {
                 onChange={(e) => setIssueCategory(e.target.value)}
                 className="w-full px-3.5 py-2.5 bg-white border border-[#eaedff] rounded-xl text-xs text-[#131b2e] focus:outline-none focus:border-[#006194]"
               >
-                <option>NABIDH Clinical Record Synchronization Issue</option>
+                <option>Nigeria Health Information Exchange Clinical Record Synchronization Issue</option>
                 <option>Operatory Calendar Conflict</option>
                 <option>Patient LifeCode Merge Inquiry</option>
                 <option>Biometric Signature Terminal Error</option>

@@ -125,7 +125,7 @@ export function ProfessionalDashboardScreen() {
       id: 'apt-3',
       time: '11:30 AM',
       period: 'morning',
-      patient: 'Fatima Al-Zahra',
+      patient: 'Fatima Bello',
       demographics: '28y F',
       dhaId: 'DHA-08921',
       status: 'Confirmed',

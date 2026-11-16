@@ -478,18 +478,18 @@ export function AddEditTreatmentItemScreen() {
               <h3 className="text-sm font-bold text-[#131b2e]">5. Cost &amp; Insurance Coverage</h3>
             </div>
             <span className="text-xs font-semibold px-2.5 py-0.5 rounded-full bg-[#89f5e7]/40 text-[#006a61]">
-              Thiqa / Daman Tier 1
+              NHIA Tier 1
             </span>
           </div>
 
           <div className="p-4 rounded-xl bg-[#f2f3ff] space-y-2.5 text-xs">
             <div className="flex items-center justify-between text-[#3f4850]">
               <span>Gross Procedure Fee</span>
-              <span className="font-bold text-[#131b2e]">AED {grossFee}.00</span>
+              <span className="font-bold text-[#131b2e]">NGN {grossFee}.00</span>
             </div>
             <div className="flex items-center justify-between text-[#006a61]">
               <span>Approved Benefit Coverage (80%)</span>
-              <span className="font-bold">- AED {coverage80}.00</span>
+              <span className="font-bold">- NGN {coverage80}.00</span>
             </div>
             <div className="h-px bg-[#eaedff] my-1"></div>
             <div className="flex items-center justify-between pt-1">
@@ -497,7 +497,7 @@ export function AddEditTreatmentItemScreen() {
                 <span className="text-sm font-bold text-[#131b2e] block">Patient Estimated Copay (20%)</span>
                 <span className="text-[11px] text-[#707881]">Collected at clinical checkout</span>
               </div>
-              <span className="text-xl font-extrabold text-[#006194]">AED {copay20}.00</span>
+              <span className="text-xl font-extrabold text-[#006194]">NGN {copay20}.00</span>
             </div>
           </div>
         </div>

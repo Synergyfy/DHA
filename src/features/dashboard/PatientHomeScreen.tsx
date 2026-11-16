@@ -4,6 +4,20 @@ import { DashboardShell } from './DashboardShell';
 import { usePatientStore } from '../../store/patientStore';
 import { Icon } from '../../design/Primitives';
 
+const getNextFriday = () => {
+  const date = new Date();
+  const daysUntilFriday = (5 - date.getDay() + 7) % 7 || 7;
+  date.setDate(date.getDate() + daysUntilFriday);
+  return `${date.getFullYear()}-${String(date.getMonth() + 1).padStart(2, '0')}-${String(date.getDate()).padStart(2, '0')}`;
+};
+
+const createAppointmentDate = (date: string, hour: number, minute: number) => {
+  const [year, month, day] = date.split('-').map(Number);
+  return new Date(Date.UTC(year, month - 1, day, hour - 1, minute));
+};
+
+const formatCalendarDate = (date: Date) => date.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}Z$/, 'Z');
+
 export function PatientHomeScreen() {
   const navigate = useNavigate();
   const {
@@ -18,10 +32,55 @@ export function PatientHomeScreen() {
   void navigate; // used for programmatic navigation below
 
   const [bookingToast, setBookingToast] = useState<string | null>(null);
+  const [calendarOpen, setCalendarOpen] = useState(false);
+  const [calendarAdded, setCalendarAdded] = useState(false);
+  const [appointmentDate, setAppointmentDate] = useState(getNextFriday);
+  const appointmentStart = createAppointmentDate(appointmentDate, 10, 30);
+  const appointmentEnd = new Date(appointmentStart.getTime() + 45 * 60 * 1000);
+  const formattedAppointmentDate = new Date(`${appointmentDate}T12:00:00`);
+  const appointmentMonth = formattedAppointmentDate.toLocaleString('en-NG', { month: 'short' }).toUpperCase();
+  const appointmentDay = formattedAppointmentDate.getDate();
+  const appointmentWeekday = formattedAppointmentDate.toLocaleString('en-NG', { weekday: 'short' }).toUpperCase();
+  const appointmentTitle = 'Enamel Fluoride Touchup & Scaling';
+  const appointmentLocation = 'Lagos Island Dental Centre, Lagos, Nigeria';
+  const googleCalendarUrl = `https://calendar.google.com/calendar/render?action=TEMPLATE&text=${encodeURIComponent(appointmentTitle)}&dates=${formatCalendarDate(appointmentStart)}/${formatCalendarDate(appointmentEnd)}&details=${encodeURIComponent('Dental appointment with Dr. Chinedu Okafor')}&location=${encodeURIComponent(appointmentLocation)}`;
 
   const handleBooking = (clinicName: string) => {
     setBookingToast(`Booking request initiated for ${clinicName}. Opening scheduling modal...`);
     setTimeout(() => setBookingToast(null), 4000);
+  };
+
+  const addToDeviceCalendar = () => {
+    const escapeCalendarText = (value: string) => value
+      .replace(/\\/g, '\\\\')
+      .replace(/\n/g, '\\n')
+      .replace(/,/g, '\\,')
+      .replace(/;/g, '\\;');
+    const calendarContent = [
+      'BEGIN:VCALENDAR',
+      'VERSION:2.0',
+      'PRODID:-//DHA//Patient Appointment//EN',
+      'CALSCALE:GREGORIAN',
+      'BEGIN:VEVENT',
+      `UID:dha-appointment-${Date.now()}@dha.ng`,
+      `DTSTAMP:${formatCalendarDate(new Date())}`,
+      `DTSTART:${formatCalendarDate(appointmentStart)}`,
+      `DTEND:${formatCalendarDate(appointmentEnd)}`,
+      `SUMMARY:${escapeCalendarText(appointmentTitle)}`,
+      `LOCATION:${escapeCalendarText(appointmentLocation)}`,
+      `DESCRIPTION:${escapeCalendarText('Dental appointment with Dr. Chinedu Okafor')}`,
+      'END:VEVENT',
+      'END:VCALENDAR',
+    ].join('\r\n');
+    const calendarUrl = URL.createObjectURL(new Blob([calendarContent], { type: 'text/calendar;charset=utf-8' }));
+    const downloadLink = document.createElement('a');
+    downloadLink.href = calendarUrl;
+    downloadLink.download = 'dha-appointment.ics';
+    document.body.appendChild(downloadLink);
+    downloadLink.click();
+    downloadLink.remove();
+    window.setTimeout(() => URL.revokeObjectURL(calendarUrl), 1000);
+    setCalendarAdded(true);
   };
 
   return (
@@ -153,7 +212,7 @@ export function PatientHomeScreen() {
                 </div>
 
                 <p className="text-[11px] sm:text-xs text-on-primary/90 leading-relaxed max-w-xl">
-                  Scan for express touchless check-in at all DHA kiosks, hospital wings, and partner dental facilities across the UAE.
+                  Scan for express touchless check-in at all DHA kiosks, hospital wings, and partner dental facilities across the Nigeria.
                 </p>
 
                 <div className="flex items-center gap-2 pt-0.5 flex-wrap">
@@ -218,7 +277,7 @@ export function PatientHomeScreen() {
                   </div>
                   <div className="truncate">
                     <p className="text-xs sm:text-sm font-semibold text-on-surface truncate">
-                      Dr. Farouk Al-Mansoori
+                      Dr. Chinedu Okafor
                     </p>
                     <p className="text-[10px] sm:text-xs text-on-surface-variant truncate">
                       Consultant Periodontist • DHA #D-3309
@@ -356,14 +415,14 @@ export function PatientHomeScreen() {
 
               <div className="flex flex-col sm:flex-row items-start gap-3">
                 <div className="w-12 h-14 sm:w-14 sm:h-16 rounded-xl sm:rounded-2xl bg-primary-fixed flex flex-col items-center justify-center text-primary shrink-0 shadow-2xs">
-                  <span className="text-[9px] sm:text-[11px] font-bold uppercase leading-none">JAN</span>
-                  <span className="text-base sm:text-lg font-bold leading-tight mt-0.5">24</span>
-                  <span className="text-[8px] sm:text-[10px] text-on-primary-fixed-variant leading-none">FRI</span>
+                  <span className="text-[9px] sm:text-[11px] font-bold uppercase leading-none">{appointmentMonth}</span>
+                  <span className="text-base sm:text-lg font-bold leading-tight mt-0.5">{appointmentDay}</span>
+                  <span className="text-[8px] sm:text-[10px] text-on-primary-fixed-variant leading-none">{appointmentWeekday}</span>
                 </div>
 
                 <div className="min-w-0 flex-1 space-y-0.5">
                   <p className="text-xs sm:text-sm font-bold text-on-surface">
-                    Enamel Fluoride Touchup &amp; Scaling
+                    {appointmentTitle}
                   </p>
                   <p className="text-[11px] sm:text-xs text-on-surface-variant flex items-center gap-1">
                     <Icon name="schedule" className="text-[14px] text-primary" />
@@ -371,7 +430,7 @@ export function PatientHomeScreen() {
                   </p>
                   <p className="text-[11px] sm:text-xs text-on-surface-variant flex items-center gap-1">
                     <Icon name="location_on" className="text-[14px] text-secondary" />
-                    <span>Dr. Farouk Al-Mansoori • Suite 402, Oud Metha</span>
+                    <span>Dr. Chinedu Okafor • Lagos Island Dental Centre, Lagos</span>
                   </p>
                 </div>
               </div>
@@ -379,7 +438,10 @@ export function PatientHomeScreen() {
               <div className="flex items-center gap-2 pt-1 flex-wrap">
                 <button
                   type="button"
-                  onClick={() => alert('Appointment synced to your device calendar.')}
+                  onClick={() => {
+                    setCalendarAdded(false);
+                    setCalendarOpen(true);
+                  }}
                   className="flex-1 min-h-[38px] sm:min-h-[42px] px-3 py-1.5 rounded-lg sm:rounded-xl bg-primary hover:bg-primary-container text-on-primary text-xs sm:text-sm font-semibold flex items-center justify-center gap-1.5 shadow-sm active:scale-95 transition-all"
                 >
                   <Icon name="calendar_add_on" className="text-[16px]" />
@@ -579,7 +641,7 @@ export function PatientHomeScreen() {
                     Nearby Clinics
                   </h2>
                   <p className="text-[10px] sm:text-[11px] text-on-surface-variant">
-                    Accredited network in Dubai
+                    Accredited network in Lagos
                   </p>
                 </div>
                 <button
@@ -598,14 +660,14 @@ export function PatientHomeScreen() {
                   <div className="min-w-0">
                     <div className="flex items-center gap-1.5 flex-wrap">
                       <h3 className="text-xs sm:text-sm font-bold text-on-surface truncate">
-                        Al Zahra Dental Hub
+                        Lagos Smile Dental Centre
                       </h3>
                       <span className="inline-flex items-center gap-0.5 px-1.5 py-0.2 rounded bg-secondary-container text-on-secondary-container text-[9px] font-bold">
                         VERIFIED
                       </span>
                     </div>
                     <p className="text-[10px] sm:text-[11px] text-on-surface-variant mt-0.5">
-                      Oud Metha, Dubai • 1.2 km away
+                      Ikeja, Lagos • 1.2 km away
                     </p>
                   </div>
                   <div className="flex items-center gap-0.5 bg-surface-container-lowest px-1.5 py-0.5 rounded-lg shrink-0 shadow-2xs">
@@ -620,7 +682,7 @@ export function PatientHomeScreen() {
                   </span>
                   <button
                     type="button"
-                    onClick={() => handleBooking('Al Zahra Dental Hub')}
+                    onClick={() => handleBooking('Lagos Smile Dental Centre')}
                     className="px-2.5 py-1 rounded-lg bg-primary hover:bg-primary-container text-on-primary text-xs font-semibold active:scale-95 transition-all shadow-xs"
                   >
                     Book Visit
@@ -634,14 +696,14 @@ export function PatientHomeScreen() {
                   <div className="min-w-0">
                     <div className="flex items-center gap-1.5 flex-wrap">
                       <h3 className="text-xs sm:text-sm font-bold text-on-surface truncate">
-                        Dubai Smile Pediatric &amp; Family
+                        Lagos Smile Pediatric &amp; Family
                       </h3>
                       <span className="inline-flex items-center gap-0.5 px-1.5 py-0.2 rounded bg-secondary-container text-on-secondary-container text-[9px] font-bold">
                         VERIFIED
                       </span>
                     </div>
                     <p className="text-[10px] sm:text-[11px] text-on-surface-variant mt-0.5">
-                      Al Barsha 2, Dubai • 2.8 km away
+                      Surulere 2, Lagos • 2.8 km away
                     </p>
                   </div>
                   <div className="flex items-center gap-0.5 bg-surface-container-lowest px-1.5 py-0.5 rounded-lg shrink-0 shadow-2xs">
@@ -656,7 +718,7 @@ export function PatientHomeScreen() {
                   </span>
                   <button
                     type="button"
-                    onClick={() => alert('Viewing Dubai Smile Pediatric & Family facilities')}
+                    onClick={() => alert('Viewing Lagos Smile Pediatric & Family facilities')}
                     className="px-2.5 py-1 rounded-lg bg-surface-container hover:bg-surface-container-high text-primary text-xs font-semibold active:scale-95 transition-all"
                   >
                     Details
@@ -693,6 +755,72 @@ export function PatientHomeScreen() {
           </div>
         </div>
       </div>
+
+      {calendarOpen && (
+        <div
+          className="fixed inset-0 z-[70] bg-scrim/50 flex items-center justify-center p-4"
+          onClick={() => setCalendarOpen(false)}
+        >
+          <section
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="calendar-dialog-title"
+            className="w-full max-w-md rounded-2xl bg-surface-container-lowest p-5 sm:p-6 shadow-xl space-y-4"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="flex items-start justify-between gap-4">
+              <div>
+                <h2 id="calendar-dialog-title" className="text-lg font-bold text-on-surface">Add appointment to calendar</h2>
+                <p className="text-sm text-on-surface-variant mt-1">{appointmentTitle} at 10:30 AM</p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setCalendarOpen(false)}
+                aria-label="Close calendar options"
+                className="w-9 h-9 rounded-lg hover:bg-surface-container flex items-center justify-center text-on-surface-variant"
+              >
+                <Icon name="close" className="text-[20px]" />
+              </button>
+            </div>
+
+            <label htmlFor="appointment-calendar-date" className="block text-sm font-semibold text-on-surface">
+              Appointment date
+            </label>
+            <input
+              id="appointment-calendar-date"
+              type="date"
+              min={getNextFriday()}
+              value={appointmentDate}
+              onChange={(event) => {
+                setAppointmentDate(event.target.value);
+                setCalendarAdded(false);
+              }}
+              className="w-full h-11 rounded-xl border border-outline-variant bg-surface px-3 text-sm text-on-surface"
+            />
+
+            <a
+              href={googleCalendarUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full min-h-11 rounded-xl bg-primary text-on-primary text-sm font-semibold flex items-center justify-center gap-2 hover:bg-primary-container"
+            >
+              <Icon name="event" className="text-[18px]" />
+              Open Google Calendar
+            </a>
+            <button
+              type="button"
+              onClick={addToDeviceCalendar}
+              className="w-full min-h-11 rounded-xl bg-surface-container text-on-surface text-sm font-semibold flex items-center justify-center gap-2 hover:bg-surface-container-high"
+            >
+              <Icon name={calendarAdded ? 'check_circle' : 'download'} className="text-[18px]" />
+              {calendarAdded ? 'Calendar file downloaded' : 'Download calendar file (.ics)'}
+            </button>
+            <p className="text-xs text-on-surface-variant">
+              The calendar file can be opened with your device’s calendar app.
+            </p>
+          </section>
+        </div>
+      )}
     </DashboardShell>
   );
 }

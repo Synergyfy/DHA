@@ -46,7 +46,7 @@ export function ReviewSubmitScreeningScreen() {
             <div>
               <div className="flex items-center gap-2">
                 <h2 className="font-title-md text-base sm:text-lg font-bold text-on-surface">
-                  Zayd Tariq Al-Mansoori
+                  Zayd Tariq Okafor
                 </h2>
                 <Icon name="verified" className="text-secondary text-[16px]" />
               </div>
@@ -165,10 +165,10 @@ export function ReviewSubmitScreeningScreen() {
               </NavLink>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-on-surface-variant">
-              <div>Programme: <strong className="text-on-surface">Al Wasl Model Girls School – Grade 4 Outreach</strong></div>
+              <div>Programme: <strong className="text-on-surface">Lagos Mainland Community School – Grade 4 Outreach</strong></div>
               <div>Station: <strong className="text-on-surface">Room 12, School Clinic</strong></div>
-              <div>Licensed Screener: <strong className="text-on-surface">Dr. Sarah Al-Mansoor (#SC-8921)</strong></div>
-              <div>Timestamp: <strong className="text-on-surface">16 Feb 2025, 10:45 AM GST</strong></div>
+              <div>Licensed Screener: <strong className="text-on-surface">Dr. Ngozi Eze (#SC-8921)</strong></div>
+              <div>Timestamp: <strong className="text-on-surface">16 Feb 2025, 10:45 AM WAT</strong></div>
             </div>
           </div>
 
@@ -253,7 +253,7 @@ export function ReviewSubmitScreeningScreen() {
             </div>
             <p>
               Cryptographic ledger digest generated: <span className="font-mono font-bold">{submittedHash}</span>.
-              Direct electronic referral queued for guardian Sarah Al-Mansoor via Referral gateway.
+              Direct electronic referral queued for guardian Ngozi Eze via Referral gateway.
             </p>
           </div>
         )}
@@ -280,7 +280,7 @@ export function ReviewSubmitScreeningScreen() {
             <Icon name={isSubmitting ? 'sync' : 'lock'} className={`text-[18px] ${isSubmitting ? 'animate-spin' : ''}`} />
             <span>
               {isSubmitting
-                ? 'Committing to DHA Nabidh...'
+                ? 'Committing to DHA Nigeria Health Information Exchange...'
                 : simState === 'offline'
                 ? 'Save Encrypted Offline Record'
                 : 'Submit Official Screening'}

@@ -1,68 +1,15 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '../../design/Primitives';
+import { PublicSiteHeader } from './PublicSiteHeader';
 
 export const AboutDHAScreen: React.FC = () => {
   const navigate = useNavigate();
 
   return (
     <div className="min-h-screen bg-[#faf8ff] text-[#131b2e] font-['Inter'] flex flex-col antialiased">
-      {/* Top Navigation Bar */}
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-[#eaedff] shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate('/')}>
-            <div className="w-10 h-10 rounded-xl bg-[#006194] flex items-center justify-center text-white shadow-sm">
-              <Icon name="dentistry" className="text-[24px]" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-base font-bold font-['Plus_Jakarta_Sans'] text-[#131b2e] leading-tight">DHA</span>
-              <span className="text-[10px] text-[#707881] uppercase tracking-wider font-semibold">Dental Health</span>
-            </div>
-          </div>
-
-          <nav className="hidden md:flex items-center gap-1 lg:gap-2">
-            <button
-              onClick={() => navigate('/')}
-              className="px-3 py-1.5 rounded-lg text-xs font-semibold text-[#3f4850] hover:text-[#131b2e] hover:bg-[#f2f3ff] transition-colors"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => navigate('/about')}
-              className="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[#cce5ff] text-[#001d31] transition-colors"
-            >
-              About DHA
-            </button>
-            <button
-              onClick={() => navigate('/for-professionals')}
-              className="px-3 py-1.5 rounded-lg text-xs font-semibold text-[#3f4850] hover:text-[#131b2e] hover:bg-[#f2f3ff] transition-colors"
-            >
-              For Professionals
-            </button>
-            <button
-              onClick={() => navigate('/oral-health-guides')}
-              className="px-3 py-1.5 rounded-lg text-xs font-semibold text-[#3f4850] hover:text-[#131b2e] hover:bg-[#f2f3ff] transition-colors"
-            >
-              Oral Health Guides
-            </button>
-          </nav>
-
-          <div className="flex items-center gap-3">
-            <button
-              onClick={() => navigate('/login')}
-              className="text-xs font-semibold text-[#3f4850] hover:text-[#006194] px-3 py-2 transition-colors"
-            >
-              Log In
-            </button>
-            <button
-              onClick={() => navigate('/onboarding/get-started')}
-              className="h-10 px-4 rounded-xl bg-[#006194] text-white text-xs font-semibold hover:bg-[#007bb9] shadow-sm transition-all active:scale-[0.98]"
-            >
-              Get Started
-            </button>
-          </div>
-        </div>
-      </header>
+      {/* Top Navigation Bar — shared public-site header */}
+      <PublicSiteHeader />
 
       {/* Main Content */}
       <main className="flex-1 w-full">

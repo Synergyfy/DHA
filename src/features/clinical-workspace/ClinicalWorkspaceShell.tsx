@@ -1,5 +1,6 @@
 import { useState, type ReactNode } from 'react';
 import { NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { useAuthStore } from '../../store/authStore';
 import { Icon } from '../../design/Primitives';
 
 interface ClinicalWorkspaceShellProps {
@@ -191,7 +192,7 @@ export function ClinicalWorkspaceShell({
           </NavLink>
           <button
             type="button"
-            onClick={() => navigate('/login')}
+            onClick={() => { useAuthStore.getState().signOut(); navigate('/login'); }}
             className="w-full px-3 py-2 rounded-xl bg-[#ffdad6]/40 hover:bg-[#ffdad6]/70 text-[#ba1a1a] text-xs font-bold flex items-center justify-center gap-2 shadow-xs transition-colors"
           >
             <Icon name="logout" className="text-[16px]" />
@@ -228,7 +229,7 @@ export function ClinicalWorkspaceShell({
                 {/* Desktop dropdown */}
                 {branchDropdownOpen && (
                   <div className="hidden md:block absolute left-0 mt-1 w-56 bg-white rounded-xl shadow-lg border border-[#eaedff] py-1 z-50 animate-in fade-in zoom-in-95 duration-100">
-                    {['Harmony Wuse 2', 'Harmony Jumeirah Branch', 'Dubai Healthcare City Suite'].map((b) => (
+                    {['Harmony Wuse 2', 'Harmony Victoria Island Branch', 'Lagos Dental District Suite'].map((b) => (
                       <button
                         key={b}
                         type="button"
@@ -344,7 +345,7 @@ export function ClinicalWorkspaceShell({
                       type="button"
                       onClick={() => {
                         setProfileDropdownOpen(false);
-                        navigate('/login');
+                        useAuthStore.getState().signOut(); navigate('/login');
                       }}
                       className="w-full px-3 py-2 text-left text-xs text-[#ba1a1a] font-semibold hover:bg-[#ffdad6]/30 flex items-center gap-2"
                     >
@@ -378,7 +379,7 @@ export function ClinicalWorkspaceShell({
                 </button>
               </div>
               <div className="space-y-1.5 mb-3">
-                {['Harmony Wuse 2', 'Harmony Jumeirah Branch', 'Dubai Healthcare City Suite'].map((b) => (
+                {['Harmony Wuse 2', 'Harmony Victoria Island Branch', 'Lagos Dental District Suite'].map((b) => (
                   <button
                     key={b}
                     type="button"
@@ -470,7 +471,7 @@ export function ClinicalWorkspaceShell({
                 type="button"
                 onClick={() => {
                   setProfileDropdownOpen(false);
-                  navigate('/login');
+                  useAuthStore.getState().signOut(); navigate('/login');
                 }}
                 className="w-full py-3 rounded-2xl bg-[#ffdad6] text-[#ba1a1a] text-xs font-bold flex items-center justify-center gap-2 shadow-xs"
               >
@@ -561,7 +562,7 @@ export function ClinicalWorkspaceShell({
                     type="button"
                     onClick={() => {
                       setMobileMoreOpen(false);
-                      navigate('/login');
+                      useAuthStore.getState().signOut(); navigate('/login');
                     }}
                     className="w-full py-2.5 rounded-xl bg-[#ffdad6]/50 hover:bg-[#ffdad6] text-[#ba1a1a] text-xs font-bold flex items-center justify-center gap-2 transition-colors"
                   >

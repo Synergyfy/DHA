@@ -107,7 +107,7 @@ export function DentalExaminationScreen() {
                 <div className="relative shrink-0">
                   <img
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTSc2-SpG7LrwydoUYR97wyft0cq0CXPTWj3INlL0JY1TDOlRYfUU8mE3MZFyqwjYmg79ZSSeT7AkSWV-8u7OTyjoAcimRRwyxnOIVd4ImWOaRCqgGj3dXVU_8SnNAmQY1neqaw6Xg3p7XxNVaMWy3XmX7MuRaXI7G5ug69mRewrXrn_q3t-z8NuxizGycXcqZsnwzRa5tWozwJ33xtjKIQVW-xY0rYGVBpM8s5pSw"
-                    alt="Dr. Farouk Al-Mansoori"
+                    alt="Dr. Chinedu Okafor"
                     className="w-16 h-16 rounded-2xl object-cover shadow-sm"
                   />
                   <div className="absolute -bottom-1 -right-1 w-6 h-6 bg-secondary text-on-secondary rounded-full flex items-center justify-center shadow-xs">
@@ -118,7 +118,7 @@ export function DentalExaminationScreen() {
                 <div className="flex flex-col min-w-0 flex-1">
                   <div className="flex items-center justify-between gap-2 flex-wrap">
                     <h2 className="font-headline-sm text-headline-sm text-on-surface font-bold truncate">
-                      Dr. Farouk Al-Mansoori
+                      Dr. Chinedu Okafor
                     </h2>
                     <span className="font-label-code text-label-code text-primary font-bold font-mono">
                       DHA-D-48912
@@ -140,10 +140,10 @@ export function DentalExaminationScreen() {
                   <div className="truncate">
                     <span className="font-label-sm text-[11px] text-on-surface-variant block">Facility</span>
                     <span className="font-title-sm text-title-sm text-on-surface font-semibold truncate block">
-                      Al Zahra Dental Hub
+                      Lagos Smile Dental Centre
                     </span>
                     <span className="font-body-sm text-[11px] text-on-surface-variant truncate block">
-                      Oud Metha, Dubai
+                      Ikeja, Lagos
                     </span>
                   </div>
                 </div>
@@ -541,7 +541,7 @@ export function DentalExaminationScreen() {
             <section className="bg-surface-container-high rounded-2xl p-4 sm:p-5 border border-outline-variant/30 flex items-start gap-3 text-on-surface-variant">
               <Icon name="policy" className="text-[20px] text-primary shrink-0 mt-0.5" />
               <p className="font-body-sm text-body-sm leading-relaxed">
-                This is an official patient record. Clinical notes are digitally signed and finalized under Dubai Health Authority governance. Contact Al Zahra Dental Hub directly for official clinical amendments or hospital referral letters.
+                This is an official patient record. Clinical notes are digitally signed and finalized under Nigeria Dental Health Authority governance. Contact Lagos Smile Dental Centre directly for official clinical amendments or hospital referral letters.
               </p>
             </section>
           </div>

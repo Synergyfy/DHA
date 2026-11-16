@@ -85,7 +85,7 @@ export function AppointmentsCalendarScreen() {
       time: '11:45',
       duration: '45m',
       type: 'waiting',
-      patient: 'Fatima Al-Zahra',
+      patient: 'Fatima Bello',
       demographics: '28y F',
       dhaId: 'DHA-08921',
       title: 'GBR Bone Regeneration Audit (Tooth #14)',
@@ -569,7 +569,7 @@ export function AppointmentsCalendarScreen() {
                   <select className="w-full h-10 px-3 rounded-lg border border-[#bfc7d2] bg-[#faf8ff] text-[#131b2e] focus:outline-none focus:ring-2 focus:ring-[#006194]">
                     <option>Amara Okafor (DHA-2026-00451)</option>
                     <option>Chinedu Okafor (DHA-10482)</option>
-                    <option>Fatima Al-Zahra (DHA-08921)</option>
+                    <option>Fatima Bello (DHA-08921)</option>
                     <option>Marcus Vance (DHA-00412)</option>
                   </select>
                 </div>

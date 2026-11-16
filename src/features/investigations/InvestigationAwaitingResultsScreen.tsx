@@ -35,7 +35,7 @@ export function InvestigationAwaitingResultsScreen() {
   const [orders, setOrders] = useState<PendingOrder[]>([
     {
       ref: 'REQ-2025-0914',
-      patient: 'Fatima Al-Zahra',
+      patient: 'Fatima Bello',
       ageGender: '29y Female',
       dhaId: 'DHA-08921',
       priority: 'Urgent',
@@ -81,7 +81,7 @@ export function InvestigationAwaitingResultsScreen() {
       status: 'In Lab • Est 16:00',
       modality: 'Full Blood Count & Serum Ferritin',
       spec: 'Gingival bleeding workup panel',
-      facility: 'Al Barsha Medical Diagnostic Laboratory',
+      facility: 'Surulere Medical Diagnostic Laboratory',
       category: 'pathology',
     },
   ]);
@@ -352,7 +352,7 @@ export function InvestigationAwaitingResultsScreen() {
                         <span>Upload Result (11.9)</span>
                       </button>
                       <a
-                        href="tel:+97143786000"
+                        href="tel:+23443786000"
                         onClick={() => showToast(`Calling ${o.facility}...`)}
                         className="p-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors"
                         title="Contact Facility"

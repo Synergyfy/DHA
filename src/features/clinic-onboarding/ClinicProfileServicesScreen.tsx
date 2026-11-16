@@ -23,7 +23,7 @@ const ALL_EQUIPMENT = [
   { id: 'opg', name: 'Digital Panoramic OPG', icon: 'perm_media', desc: 'Full-arch diagnostic orthopantomograph' },
   { id: 'scanner', name: 'Intraoral 3D Digital Scanner', icon: 'camera_indoor', desc: 'Optical impressions without putty' },
   { id: 'cadcam', name: 'CAD/CAM Chairside Milling', icon: 'precision_manufacturing', desc: 'Same-day crowns & ceramic restorations' },
-  { id: 'autoclave', name: 'Class B Vacuum Autoclave', icon: 'sanitizer', desc: 'Hospital-grade European EN13060 standard' },
+  { id: 'autoclave', name: 'Class B Vacuum Autoclave', icon: 'sanitizer', desc: 'Hospital-grade International EN13060 standard' },
   { id: 'microscope', name: 'Dental Operating Microscope', icon: 'search', desc: 'High magnification root canal navigation' },
   { id: 'laser', name: 'Soft-Tissue Surgical Laser', icon: 'flare', desc: 'Bloodless gingival recontouring' },
   { id: 'rvg', name: 'Digital Intraoral RVG Sensors', icon: 'scanner', desc: 'Instant low-dose localized periapical X-rays' },

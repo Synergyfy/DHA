@@ -103,7 +103,7 @@ export function SubmissionConfirmationScreen() {
               </div>
               <div>
                 <span className="text-slate-400 block text-[10px] uppercase font-semibold">Timestamp</span>
-                <span className="font-semibold text-slate-900 dark:text-white">16 Feb 2025 10:45 GST</span>
+                <span className="font-semibold text-slate-900 dark:text-white">16 Feb 2025 10:45 WAT</span>
               </div>
               <div>
                 <span className="text-slate-400 block text-[10px] uppercase font-semibold">Attending Doctor</span>
@@ -124,7 +124,7 @@ export function SubmissionConfirmationScreen() {
                 <span>DHA Compliance Verified</span>
               </div>
               <p className="text-xs text-slate-600 dark:text-slate-300 leading-relaxed">
-                This record is now locked against unilateral modification in accordance with UAE Federal Health Law No. 2/2019. Any changes require a documented addendum.
+                This record is now locked against unilateral modification in accordance with Nigeria Federal Health Law No. 2/2019. Any changes require a documented addendum.
               </p>
             </div>
 

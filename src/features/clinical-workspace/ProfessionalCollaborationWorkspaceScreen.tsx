@@ -40,17 +40,17 @@ const COLLAB_CASES: CollabCase[] = [
   {
     id: 'case-1',
     type: 'urgent',
-    lifeCode: 'AE-990-112-DXB',
+    lifeCode: 'NG-990-112-LAG',
     patientName: 'Marcus Vance',
     patientAgeGender: '28y M',
     toothNumber: 'Tooth #14',
     title: 'Severe Subgingival Caries vs Biologic Width Encroachment',
     specialtyTag: 'Restorative Consultation',
     statusText: 'Urgent Action Required',
-    dueDate: 'Due Today, 17:00 GST',
+    dueDate: 'Due Today, 17:00 WAT',
     isDueToday: true,
     requester: {
-      name: 'Dr. Kawthar Al-Mansoor',
+      name: 'Dr. Nneka Okoye',
       role: 'Consultant Endodontist • Asks for Perio / Crown Lengthening',
       verified: true,
       initials: 'KM',
@@ -84,7 +84,7 @@ const COLLAB_CASES: CollabCase[] = [
   {
     id: 'case-2',
     type: 'second-opinion',
-    lifeCode: 'AE-990-281-DXB',
+    lifeCode: 'NG-990-281-LAG',
     patientName: 'Amara Okafor',
     patientAgeGender: '34y F',
     toothNumber: 'Tooth #16',
@@ -121,15 +121,15 @@ const COLLAB_CASES: CollabCase[] = [
   {
     id: 'case-3',
     type: 'mdt',
-    lifeCode: 'AE-990-414-DXB',
-    patientName: 'Fatima Al-Zahra',
+    lifeCode: 'NG-990-414-LAG',
+    patientName: 'Fatima Bello',
     patientAgeGender: '28y F',
     toothNumber: 'Quad 2 GBR',
     title: 'Guided Bone Regeneration Healing Matrix (#14)',
     specialtyTag: 'GBR Protocol Consensus',
     statusText: 'Consensus Reached & Archived',
     requester: {
-      name: 'Dr. Tariq Al-Hashimi',
+      name: 'Dr. Tunde Balogun',
       role: 'Consultant Oral & Maxillofacial Surgeon',
       verified: true,
       initials: 'TA',
@@ -251,7 +251,7 @@ export function ProfessionalCollaborationWorkspaceScreen() {
           </div>
         </div>
 
-        {/* Statutory Guardrail Banner (NABIDH Compliant) */}
+        {/* Statutory Guardrail Banner (Nigeria Health Information Exchange Compliant) */}
         <div className="p-4 sm:p-5 rounded-2xl bg-[#cce5ff]/30 border border-[#93ccff]/50 flex items-start gap-3.5">
           <div className="w-10 h-10 rounded-xl bg-[#006a61] text-white flex items-center justify-center shrink-0 shadow-xs">
             <Icon name="verified_user" className="text-[20px]" />
@@ -259,14 +259,14 @@ export function ProfessionalCollaborationWorkspaceScreen() {
           <div className="flex-1 text-xs">
             <div className="flex items-center gap-2 flex-wrap">
               <h4 className="font-bold text-[#004b74] text-sm">
-                NABIDH Privacy Guardrail Active (Zero Full-Record Leak)
+                Nigeria Health Information Exchange Privacy Guardrail Active (Zero Full-Record Leak)
               </h4>
               <span className="px-2 py-0.5 rounded-full bg-[#006a61]/15 text-[#006a61] text-[10px] font-bold">
-                UAE LifeCode Protocol
+                Nigeria LifeCode Protocol
               </span>
             </div>
             <p className="text-[#004b74]/90 mt-1 leading-relaxed">
-              Case collaboration shares strictly diagnostic extractions (Dexis radiographs, odontogram slices, verified summaries). Patient identifiers are pseudonymized with cryptographic UAE LifeCode tokens in compliance with Dubai Health Data Regulations.
+              Case collaboration shares strictly diagnostic extractions (Dexis radiographs, odontogram slices, verified summaries). Patient identifiers are pseudonymized with cryptographic Nigeria LifeCode tokens in compliance with Nigeria Data Protection Act.
             </p>
           </div>
         </div>
@@ -429,7 +429,7 @@ export function ProfessionalCollaborationWorkspaceScreen() {
                   <div className="pt-3 border-t border-[#eaedff] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
                     <div className="flex items-center gap-2 text-xs text-[#707881]">
                       <Icon name="lock" className="text-[14px] text-[#006a61]" />
-                      <span>Encrypted DHA-EHR Channel (UAE LifeCode Encrypted)</span>
+                      <span>Encrypted DHA-EHR Channel (Nigeria LifeCode Encrypted)</span>
                     </div>
 
                     <div className="flex items-center gap-2 flex-wrap">

@@ -43,7 +43,7 @@ export function PatientIdentificationScreen() {
                 Assigned Programme
               </span>
               <span className="font-bold text-on-surface">
-                Al Wasl Model Girls School (Cohort 4B Outreach)
+                Lagos Mainland Community School (Cohort 4B Outreach)
               </span>
             </div>
           </div>
@@ -227,7 +227,7 @@ export function PatientIdentificationScreen() {
                   </div>
                   <div>
                     <h3 className="font-title-sm text-base font-bold text-on-surface">
-                      Zayd Tariq Al-Mansoori
+                      Zayd Tariq Okafor
                     </h3>
                     <p className="text-xs text-on-surface-variant">
                       9 yrs (DOB: 14 Aug 2015) • Grade 4B • Male
@@ -238,7 +238,7 @@ export function PatientIdentificationScreen() {
                 <div className="p-3 bg-surface-container-lowest rounded-xl flex items-center gap-2 text-xs text-on-surface-variant">
                   <Icon name="verified_user" className="text-secondary text-[16px]" />
                   <span>
-                    Linked Guardian: <strong className="text-on-surface">Sarah Al-Mansoor</strong> (Mother • UAE PASS Verified)
+                    Linked Guardian: <strong className="text-on-surface">Ngozi Eze</strong> (Mother • National Identification Number (NIN) verification Verified)
                   </span>
                 </div>
 
@@ -320,7 +320,7 @@ export function PatientIdentificationScreen() {
                   </div>
                   <div>
                     <h3 className="font-title-sm text-sm font-bold text-on-surface">
-                      Zayd Tariq Al-Mansoori
+                      Zayd Tariq Okafor
                     </h3>
                     <div className="flex items-center gap-2 text-xs text-on-surface-variant">
                       <span className="font-mono text-primary font-bold">DHA-P-49102</span>
@@ -376,7 +376,7 @@ export function PatientIdentificationScreen() {
               </div>
 
               <p className="text-xs text-on-surface-variant">
-                Enrolled at Dubai Modern Academy (Out-of-cohort guest screening).
+                Enrolled at Lagos Modern Academy (Out-of-cohort guest screening).
               </p>
             </div>
           </section>
@@ -415,7 +415,7 @@ export function PatientIdentificationScreen() {
                   </label>
                   <input
                     type="text"
-                    defaultValue="Al-Mansoori"
+                    defaultValue="Okafor"
                     className="w-full px-3 py-2 bg-surface-container-low rounded-xl text-xs text-on-surface border border-outline-variant/30 focus:outline-none focus:ring-2 focus:ring-primary"
                   />
                 </div>
@@ -450,7 +450,7 @@ export function PatientIdentificationScreen() {
                 </label>
                 <input
                   type="text"
-                  defaultValue="Sarah Al-Mansoor"
+                  defaultValue="Ngozi Eze"
                   className="w-full px-3 py-2 bg-surface-container-low rounded-xl text-xs text-on-surface border border-outline-variant/30 focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
@@ -461,7 +461,7 @@ export function PatientIdentificationScreen() {
                 </label>
                 <input
                   type="tel"
-                  defaultValue="+971 50 123 4567"
+                  defaultValue="+234 803 123 4567"
                   className="w-full px-3 py-2 bg-surface-container-low rounded-xl text-xs text-on-surface border border-outline-variant/30 focus:outline-none focus:ring-2 focus:ring-primary"
                 />
                 <span className="text-[11px] text-on-surface-variant mt-1 block">

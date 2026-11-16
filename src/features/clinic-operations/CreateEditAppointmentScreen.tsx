@@ -148,7 +148,7 @@ export const CreateEditAppointmentScreen: React.FC = () => {
                 </div>
                 <p className="text-xs text-[#3f4850] truncate mt-0.5">
                   34y Female • LifeCode:{' '}
-                  <span className="font-mono font-semibold text-[#006194]">AE-990-281-DXB</span>
+                  <span className="font-mono font-semibold text-[#006194]">NG-990-281-LAG</span>
                 </p>
                 <p className="text-xs text-[#3f4850]">
                   MRN: <span className="font-mono text-[#131b2e]">DHA-2026-00451</span>

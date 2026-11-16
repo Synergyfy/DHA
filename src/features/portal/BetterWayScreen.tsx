@@ -26,7 +26,7 @@ export default function BetterWayScreen() {
           <div className="relative z-10 max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-primary-500/20 text-primary-200 border border-primary-400/30 text-xs font-semibold uppercase tracking-wider mb-4">
               <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
-              Dubai Health Authority Digital Standard
+              Nigeria Dental Health Authority Digital Standard
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-4 leading-tight font-display">
@@ -45,7 +45,7 @@ export default function BetterWayScreen() {
             <div className="mt-8 pt-8 border-t border-white/10 grid grid-cols-2 sm:grid-cols-4 gap-4">
               <div>
                 <div className="text-2xl sm:text-3xl font-extrabold text-white">100%</div>
-                <div className="text-xs text-slate-400 mt-0.5">NABIDH Interoperable</div>
+                <div className="text-xs text-slate-400 mt-0.5">Nigeria Health Information Exchange Interoperable</div>
               </div>
               <div>
                 <div className="text-2xl sm:text-3xl font-extrabold text-teal-300">0 min</div>
@@ -57,13 +57,13 @@ export default function BetterWayScreen() {
               </div>
               <div>
                 <div className="text-2xl sm:text-3xl font-extrabold text-amber-300">Instant</div>
-                <div className="text-xs text-slate-400 mt-0.5">UAE PASS Verification</div>
+                <div className="text-xs text-slate-400 mt-0.5">National Identification Number (NIN) verification Verification</div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Live NABIDH Interoperability Showcase */}
+        {/* Live Nigeria Health Information Exchange Interoperability Showcase */}
         <section className="bg-white rounded-3xl p-6 sm:p-8 border border-slate-200 shadow-sm">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-6 border-b border-slate-100">
             <div>
@@ -71,7 +71,7 @@ export default function BetterWayScreen() {
                 Ecosystem Integration
               </span>
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mt-2">
-                Live NABIDH Synchronisation Network
+                Live Nigeria Health Information Exchange Synchronisation Network
               </h2>
               <p className="text-sm text-slate-600 mt-1">
                 Records from public hospitals and licensed private dental clinics automatically sync to your passport.
@@ -97,7 +97,7 @@ export default function BetterWayScreen() {
               </div>
               <div>
                 <div className="text-xs font-semibold text-slate-500 uppercase tracking-wide">Source Facility</div>
-                <div className="font-bold text-slate-900 text-sm mt-0.5">Al Barsha Health Center</div>
+                <div className="font-bold text-slate-900 text-sm mt-0.5">Surulere Health Center</div>
                 <div className="text-xs text-emerald-600 font-medium flex items-center gap-1 mt-1">
                   <span className="w-1.5 h-1.5 rounded-full bg-emerald-500"></span>
                   Verified DHA Facility
@@ -112,7 +112,7 @@ export default function BetterWayScreen() {
               <div>
                 <div className="text-xs font-semibold text-slate-500 uppercase tracking-wide">Security & Audit</div>
                 <div className="font-bold text-slate-900 text-sm mt-0.5">AES-256 GCM Encryption</div>
-                <div className="text-xs text-slate-500 mt-1">Patient consent validated via UAE PASS</div>
+                <div className="text-xs text-slate-500 mt-1">Patient consent validated via National Identification Number (NIN) verification</div>
               </div>
             </div>
 
@@ -122,7 +122,7 @@ export default function BetterWayScreen() {
               </div>
               <div>
                 <div className="text-xs font-semibold text-slate-500 uppercase tracking-wide">Central Record</div>
-                <div className="font-bold text-slate-900 text-sm mt-0.5">DHA Passport #784-****-901</div>
+                <div className="font-bold text-slate-900 text-sm mt-0.5">NIN #12345-****-901</div>
                 <div className="text-xs text-slate-500 mt-1">Synchronised 2 mins ago</div>
               </div>
             </div>
@@ -189,7 +189,7 @@ export default function BetterWayScreen() {
 
                 <div className="mt-8 pt-4">
                   <Link
-                    to="/patient-dashboard/records"
+                    to="/portal/journey"
                     className="inline-flex items-center gap-2 text-sm font-bold text-primary-600 hover:text-primary-800 transition"
                   >
                     <span>View Patient Records</span>
@@ -230,7 +230,7 @@ export default function BetterWayScreen() {
 
                 <div className="mt-8 pt-4">
                   <Link
-                    to="/patient-dashboard/appointments"
+                    to="/portal/find-care"
                     className="inline-flex items-center gap-2 text-sm font-bold text-teal-700 hover:text-teal-900 transition"
                   >
                     <span>Manage Appointments</span>
@@ -271,7 +271,7 @@ export default function BetterWayScreen() {
 
                 <div className="mt-8 pt-4">
                   <Link
-                    to="/patient-dashboard/guides"
+                    to="/oral-health-guides"
                     className="inline-flex items-center gap-2 text-sm font-bold text-sky-700 hover:text-sky-900 transition"
                   >
                     <span>Browse Education Hub</span>
@@ -300,7 +300,7 @@ export default function BetterWayScreen() {
             <div className="mt-6 flex flex-wrap gap-3">
               <Link
                 to="/portal/family-care"
-                className="px-5 py-2.5 rounded-xl bg-primary-600 hover:bg-primary-700 text-white font-bold text-sm shadow-md transition"
+                className="px-5 py-2.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-bold text-sm shadow-md transition"
               >
                 Explore Family Care Hub
               </Link>

@@ -33,7 +33,7 @@ export function CbctViewerScreen() {
       pageTitle="CBCT Imaging Viewer"
       badgeCode="11.17"
       badgeLabel="3D Volumetric MPR"
-      patientName="Fatima Al-Zahra"
+      patientName="Fatima Bello"
       dhaId="DHA-08921"
       orderRef="CBCT-2025-0902"
     >
@@ -52,7 +52,7 @@ export function CbctViewerScreen() {
             <div className="flex flex-col min-w-0">
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="font-bold text-on-surface text-base sm:text-lg truncate">
-                  Fatima Al-Zahra
+                  Fatima Bello
                 </span>
                 <span className="text-xs text-secondary font-bold uppercase bg-secondary-fixed/30 px-2.5 py-0.5 rounded-full">
                   29y F • DHA-08921
@@ -401,7 +401,7 @@ export function CbctViewerScreen() {
               <span className="flex-1">
                 Simulated MPR Planning verified by <strong className="text-on-surface">Dr. Tariq Mansoor</strong> (#DEN-19402)
               </span>
-              <span className="font-mono text-[11px] text-outline">14:22 GST</span>
+              <span className="font-mono text-[11px] text-outline">14:22 WAT</span>
             </div>
 
             {/* Actions */}
