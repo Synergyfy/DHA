@@ -50,7 +50,7 @@ export function EducationHomeScreen() {
               Learn how to keep your smile healthy.
             </h1>
             <p className="font-body-lg text-on-primary/90">
-              Evidence-based oral healthcare insights reviewed and accredited by Dubai Health Authority dental boards.
+              Evidence-based oral healthcare insights reviewed and accredited by Nigeria Dental Health Authority dental boards.
             </p>
 
             {/* Search Input Bar */}
@@ -85,7 +85,7 @@ export function EducationHomeScreen() {
           <Icon name="shield_person" className="text-secondary text-[22px] shrink-0" />
           <div className="flex-1 min-w-0">
             <p className="font-body-sm text-body-sm text-on-surface leading-snug">
-              Personalized recommendations active for <strong className="font-title-sm text-on-surface">Sarah Al-Mansoor</strong> (Primary Account). Browse all clinical guides freely.
+              Personalized recommendations active for <strong className="font-title-sm text-on-surface">Ngozi Eze</strong> (Primary Account). Browse all clinical guides freely.
             </p>
           </div>
           <button
@@ -248,7 +248,7 @@ export function EducationHomeScreen() {
               <div className="pt-3 border-t border-outline-variant/30 flex items-center justify-between text-body-sm">
                 <div className="flex items-center gap-2 text-on-surface-variant">
                   <Icon name="stethoscope" className="text-[17px] text-primary" />
-                  <span>Dr. Farouk Al-Mansoori • 4 min read</span>
+                  <span>Dr. Chinedu Okafor • 4 min read</span>
                 </div>
                 <button
                   type="button"
@@ -406,7 +406,7 @@ export function EducationHomeScreen() {
                   Demonstrating the Modified Bass Brushing Technique
                 </h3>
                 <span className="font-body-sm text-on-surface-variant block">
-                  Dr. Mariam Al-Husseini • DHA Dental Hygienist Specialist
+                  Dr. Amina Bello • DHA Dental Hygienist Specialist
                 </span>
               </div>
             </div>

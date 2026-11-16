@@ -433,7 +433,7 @@ export function CombinedOralHealthSummaryScreen() {
                     Generated
                   </td>
                   <td className="py-3 text-sm text-[#131b2e]">
-                    13 Oct 2026, 10:14 AM GST
+                    13 Oct 2026, 10:14 AM WAT
                   </td>
                 </tr>
                 <tr>

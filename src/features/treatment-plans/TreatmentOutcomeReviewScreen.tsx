@@ -16,7 +16,7 @@ export function TreatmentOutcomeReviewScreen() {
 
   const handleFinalize = () => {
     setIsFinalized(true);
-    showToast('Longitudinal Chart Synchronized: Tooth #16 MO Composite officially committed to NABIDH.');
+    showToast('Longitudinal Chart Synchronized: Tooth #16 MO Composite officially committed to Nigeria Health Information Exchange.');
   };
 
   return (
@@ -40,7 +40,7 @@ export function TreatmentOutcomeReviewScreen() {
           <div className="flex items-center justify-between gap-3 flex-wrap">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-teal-50 text-[#006a61] border border-teal-200">
               <Icon name="check_circle" className="text-sm" />
-              <span className="text-xs font-bold uppercase tracking-wider">NABIDH Verified Sync</span>
+              <span className="text-xs font-bold uppercase tracking-wider">Nigeria Health Information Exchange Verified Sync</span>
             </div>
             <span className="font-mono text-xs font-bold text-slate-500">#ENC-2026-1048</span>
           </div>
@@ -49,7 +49,7 @@ export function TreatmentOutcomeReviewScreen() {
             <h2 className="text-xl font-bold text-slate-900">Post-Operative Clinical Evaluation</h2>
             <p className="text-xs text-slate-500 flex items-center gap-1.5 mt-1">
               <Icon name="calendar_today" className="text-sm text-[#006194]" />
-              <span>Completed 18 Oct 2026 • 11:42 GST • Operatory 02</span>
+              <span>Completed 18 Oct 2026 • 11:42 WAT • Operatory 02</span>
             </p>
           </div>
 
@@ -64,7 +64,7 @@ export function TreatmentOutcomeReviewScreen() {
                   <span className="font-bold text-slate-900 text-sm">Amara Okafor</span>
                   <span className="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">34y Female</span>
                 </div>
-                <p className="font-mono text-xs text-slate-500 mt-0.5">LifeCode: AE-990-281-DXB • Plan #TP-2026-089</p>
+                <p className="font-mono text-xs text-slate-500 mt-0.5">LifeCode: NG-990-281-LAG • Plan #TP-2026-089</p>
               </div>
             </div>
             <Icon name="badge" className="text-[#006194] text-2xl shrink-0" />
@@ -275,7 +275,7 @@ export function TreatmentOutcomeReviewScreen() {
         <div className="bg-[#f2f3ff] rounded-2xl p-4 border border-[#eaedff] flex items-start gap-3 text-xs">
           <Icon name="gavel" className="text-[#006a61] text-lg mt-0.5 shrink-0" />
           <div className="text-slate-600 leading-relaxed">
-            <strong className="text-slate-900 font-bold">Statutory Clinical Attestation:</strong> Recorded &amp; digitally signed by <strong>Dr. Daniel James</strong> (#DEN-48912). Certified under DHA Health Data Standards. Cryptographically pushed to UAE NABIDH Health Information Exchange.
+            <strong className="text-slate-900 font-bold">Statutory Clinical Attestation:</strong> Recorded &amp; digitally signed by <strong>Dr. Daniel James</strong> (#DEN-48912). Certified under DHA Health Data Standards. Cryptographically pushed to Nigeria Nigeria Health Information Exchange Health Information Exchange.
           </div>
         </div>
 
@@ -292,7 +292,7 @@ export function TreatmentOutcomeReviewScreen() {
             }`}
           >
             <Icon name="assignment_turned_in" className="text-lg" />
-            <span>{isFinalized ? 'Review Complete & Synchronized to NABIDH' : 'Mark Review Complete & Update Longitudinal History'}</span>
+            <span>{isFinalized ? 'Review Complete & Synchronized to Nigeria Health Information Exchange' : 'Mark Review Complete & Update Longitudinal History'}</span>
           </button>
 
           <div className="grid grid-cols-2 gap-3">

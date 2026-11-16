@@ -370,7 +370,7 @@ export function InvestigationCreateTemplateScreen() {
                 4. Radiation Safety Governance
               </h3>
               <span className="text-[11px] text-secondary font-semibold uppercase tracking-wider">
-                UAE FANR Regulatory Mandate
+                Nigeria FANR Regulatory Mandate
               </span>
             </div>
           </div>

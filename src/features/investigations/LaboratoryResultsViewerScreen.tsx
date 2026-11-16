@@ -109,7 +109,7 @@ export function LaboratoryResultsViewerScreen() {
                   DHA-00245
                 </span>
               </div>
-              <p className="text-xs text-on-surface-variant mt-1">28y F • DOB: 14/05/1996 • UAE Resident</p>
+              <p className="text-xs text-on-surface-variant mt-1">28y F • DOB: 14/05/1996 • Nigeria Resident</p>
             </div>
 
             <div className="flex sm:flex-col items-center sm:items-end justify-between sm:justify-start gap-1 shrink-0 border-t sm:border-t-0 pt-2 sm:pt-0 border-outline-variant/20">
@@ -121,13 +121,13 @@ export function LaboratoryResultsViewerScreen() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-3 border-t border-outline-variant/20 bg-surface-container-low rounded-xl p-3 text-xs">
             <div className="flex flex-col">
               <span className="text-[11px] text-outline font-semibold uppercase tracking-wider">Facility</span>
-              <span className="font-semibold text-on-surface truncate mt-0.5">Al Barsha Diagnostic Laboratory</span>
+              <span className="font-semibold text-on-surface truncate mt-0.5">Surulere Diagnostic Laboratory</span>
               <span className="text-secondary font-medium">DHA Accredited #LAB-401 • CAP Certified</span>
             </div>
             <div className="flex flex-col">
               <span className="text-[11px] text-outline font-semibold uppercase tracking-wider">Timeline</span>
-              <span className="font-semibold text-on-surface truncate mt-0.5">Collected: 14 Feb, 08:30 GST</span>
-              <span className="text-on-surface-variant">Authorized: 14 Feb, 14:15 GST</span>
+              <span className="font-semibold text-on-surface truncate mt-0.5">Collected: 14 Feb, 08:30 WAT</span>
+              <span className="text-on-surface-variant">Authorized: 14 Feb, 14:15 WAT</span>
             </div>
           </div>
         </section>
@@ -391,7 +391,7 @@ export function LaboratoryResultsViewerScreen() {
         <div className="bg-surface-container-low border border-outline-variant/20 rounded-xl p-3.5 flex items-start gap-2.5 text-xs text-on-surface-variant">
           <Icon name="verified" className="text-secondary text-base shrink-0 mt-0.5" />
           <p className="leading-tight">
-            Reference ranges sourced from accredited UAE CAP/ISO-15189 laboratory standards. AI extraction pre-verified
+            Reference ranges sourced from accredited Nigeria CAP/ISO-15189 laboratory standards. AI extraction pre-verified
             by licensed laboratory technician before clinician presentation.
           </p>
         </div>
@@ -439,7 +439,7 @@ export function LaboratoryResultsViewerScreen() {
               <div className="flex items-center justify-between pb-3 border-b border-outline-variant/20">
                 <div className="flex items-center gap-2">
                   <Icon name="picture_as_pdf" className="text-primary text-xl" />
-                  <h3 className="font-bold text-on-surface text-base">Al Barsha Diagnostic Laboratory — Official Slip</h3>
+                  <h3 className="font-bold text-on-surface text-base">Surulere Diagnostic Laboratory — Official Slip</h3>
                 </div>
                 <button
                   type="button"
@@ -453,8 +453,8 @@ export function LaboratoryResultsViewerScreen() {
               <div className="bg-white text-slate-800 p-6 rounded-xl border border-slate-300 font-sans text-xs space-y-4 shadow-inner">
                 <div className="flex justify-between border-b pb-3">
                   <div>
-                    <div className="font-bold text-sm text-primary">AL BARSHA DIAGNOSTIC CENTER LLC</div>
-                    <div className="text-[11px] text-slate-500">DHA Health Facility Lic: #LAB-401 • Dubai, UAE</div>
+                    <div className="font-bold text-sm text-primary">Surulere DIAGNOSTIC CENTER LLC</div>
+                    <div className="text-[11px] text-slate-500">DHA Health Facility Lic: #LAB-401 • Lagos, Nigeria</div>
                   </div>
                   <div className="text-right">
                     <div className="font-mono text-xs font-bold">ABL-2025-99214</div>
@@ -466,7 +466,7 @@ export function LaboratoryResultsViewerScreen() {
                   <div>Patient: <strong>YUSUF, AMINA</strong></div>
                   <div>DHA ID: <strong>DHA-00245</strong></div>
                   <div>Sample: EDTA + Plasma</div>
-                  <div>Authorized: 14-Feb-2025 14:15 GST</div>
+                  <div>Authorized: 14-Feb-2025 14:15 WAT</div>
                 </div>
 
                 <div className="space-y-1 pt-1 font-mono text-[11px]">
@@ -499,7 +499,7 @@ export function LaboratoryResultsViewerScreen() {
 
                 <div className="border-t pt-2 flex justify-between items-center text-[10px] text-slate-500">
                   <span>Digitally Signed: Dr. Samira K., FRCPath</span>
-                  <span>Direct LIS-NABIDH Certified</span>
+                  <span>Direct LIS-Nigeria Health Information Exchange Certified</span>
                 </div>
               </div>
 

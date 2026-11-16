@@ -19,7 +19,7 @@ export default function CommunityPartnersScreen() {
           <div className="relative z-10 max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-500/20 text-teal-300 border border-teal-400/30 text-xs font-semibold uppercase tracking-wider mb-4">
               <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
-              NABIDH Ecosystem Live v4.2
+              Nigeria Health Information Exchange Ecosystem Live v4.2
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-4 leading-tight font-display">
@@ -30,7 +30,7 @@ export default function CommunityPartnersScreen() {
             </h1>
 
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
-              Connect your practice, clinic, or school health department into Dubai’s unified dental health network. 
+              Connect your practice, clinic, or school health department into Lagos’s unified dental health network. 
               Submit screening findings, manage electronic referrals, and comply seamlessly with DHA standards.
             </p>
 
@@ -86,7 +86,7 @@ export default function CommunityPartnersScreen() {
                 <div className="text-xs font-bold uppercase tracking-wider text-primary-700">For Clinicians</div>
                 <h3 className="text-xl font-bold text-slate-900 mt-1 mb-3">Dentists & Specialists</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  Fast diagnosis recording, standardized odontogram markup, digital prescription issuing, and direct NABIDH clinical submission.
+                  Fast diagnosis recording, standardized odontogram markup, digital prescription issuing, and direct Nigeria Health Information Exchange clinical submission.
                 </p>
 
                 <div className="mt-6 space-y-2.5 text-xs text-slate-600 border-t border-slate-100 pt-5">
@@ -128,7 +128,7 @@ export default function CommunityPartnersScreen() {
                 <div className="text-xs font-bold uppercase tracking-wider text-teal-700">For Dental Centers</div>
                 <h3 className="text-xl font-bold text-slate-900 mt-1 mb-3">Dental Clinics & Centers</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">
-                  Manage facility scheduling, chair capacity, insurance pre-authorizations, and aggregate NABIDH quality compliance metrics.
+                  Manage facility scheduling, chair capacity, insurance pre-authorizations, and aggregate Nigeria Health Information Exchange quality compliance metrics.
                 </p>
 
                 <div className="mt-6 space-y-2.5 text-xs text-slate-600 border-t border-slate-100 pt-5">
@@ -207,10 +207,10 @@ export default function CommunityPartnersScreen() {
           <div className="max-w-2xl">
             <span className="text-xs font-bold uppercase tracking-wider text-slate-500">Architecture & Standards</span>
             <h3 className="text-xl sm:text-2xl font-bold text-slate-900 mt-1">
-              HL7 FHIR & NABIDH Compliant Interoperability
+              HL7 FHIR & Nigeria Health Information Exchange Compliant Interoperability
             </h3>
             <p className="text-sm text-slate-600 mt-2 leading-relaxed">
-              DHA Oral Health platform adheres to UAE National Health Data Law and international HL7 FHIR standards for dental findings, ensuring seamless synchronization between your Electronic Health Record (EHR) and the central gateway.
+              DHA Oral Health platform adheres to Nigeria National Health Data Law and international HL7 FHIR standards for dental findings, ensuring seamless synchronization between your Electronic Health Record (EHR) and the central gateway.
             </p>
           </div>
 
@@ -221,11 +221,11 @@ export default function CommunityPartnersScreen() {
             </div>
             <div className="bg-white p-4 rounded-2xl border border-slate-200">
               <div className="text-xs font-bold text-slate-400">AUTHENTICATION</div>
-              <div className="font-extrabold text-slate-900 mt-1 text-base">OAuth 2.0 / UAE PASS</div>
+              <div className="font-extrabold text-slate-900 mt-1 text-base">OAuth 2.0 / National Identification Number (NIN) verification</div>
             </div>
             <div className="bg-white p-4 rounded-2xl border border-slate-200">
               <div className="text-xs font-bold text-slate-400">DATA STORAGE</div>
-              <div className="font-extrabold text-slate-900 mt-1 text-base">In-Country UAE Cloud</div>
+              <div className="font-extrabold text-slate-900 mt-1 text-base">In-Country Nigeria Cloud</div>
             </div>
             <div className="bg-white p-4 rounded-2xl border border-slate-200">
               <div className="text-xs font-bold text-slate-400">AUDIT PROTOCOL</div>

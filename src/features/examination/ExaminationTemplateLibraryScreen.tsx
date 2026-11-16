@@ -17,7 +17,7 @@ interface TemplateItem {
   author?: string;
   approver?: string;
   isMandatory?: boolean;
-  nabidhReady?: boolean;
+  nhieReady?: boolean;
 }
 
 export function ExaminationTemplateLibraryScreen() {
@@ -41,11 +41,11 @@ export function ExaminationTemplateLibraryScreen() {
       version: 'v1.0 • Mandatory Core',
       badgeLabel: 'DHA Approved Standard',
       description:
-        'Complete 8-module clinical charting baseline compliant with Dubai Health Authority regulatory mandate and e-claim requirements.',
+        'Complete 8-module clinical charting baseline compliant with Nigeria Dental Health Authority regulatory mandate and e-claim requirements.',
       modulesCount: 8,
       duration: '25–40 mins',
       isMandatory: true,
-      nabidhReady: true,
+      nhieReady: true,
       modules: [
         '1. Medical & Dental History',
         '2. Extraoral & TMJ Scan',
@@ -104,7 +104,7 @@ export function ExaminationTemplateLibraryScreen() {
       modulesCount: 7,
       duration: '30–45 mins',
       author: 'Dr. Daniel James',
-      approver: 'Dr. K. Al-Falasi (Clinical Dir.)',
+      approver: 'Dr. K. Okafor (Clinical Dir.)',
       modules: [
         '1. Restorative Intake',
         '2. OVD & Free-way Space',
@@ -172,7 +172,7 @@ export function ExaminationTemplateLibraryScreen() {
       modulesCount: 6,
       duration: '25–35 mins',
       author: 'Dr. Tariq Mansoor',
-      approver: 'Dr. K. Al-Falasi',
+      approver: 'Dr. K. Okafor',
       modules: [
         '1. Facial Profile & Aesthetics',
         '2. Angle Class & Overjet/Overbite',
@@ -333,9 +333,9 @@ export function ExaminationTemplateLibraryScreen() {
           <div className="p-4 rounded-2xl bg-secondary-container/40 flex items-start gap-3 shadow-sm border border-secondary/20">
             <Icon name="security" className="text-secondary text-2xl shrink-0 mt-0.5" />
             <div className="space-y-0.5 text-xs">
-              <span className="font-bold text-on-secondary-container block">Statutory DHA Protocols (NABIDH Compliant)</span>
+              <span className="font-bold text-on-secondary-container block">Statutory DHA Protocols (Nigeria Health Information Exchange Compliant)</span>
               <p className="text-on-surface-variant leading-relaxed">
-                Locked official baselines audited for clinical licensing compliance across the Emirate of Dubai. Cannot be altered directly; duplicate to clinic custom to modify.
+                Locked official baselines audited for clinical licensing compliance across the Emirate of Lagos. Cannot be altered directly; duplicate to clinic custom to modify.
               </p>
             </div>
           </div>

@@ -250,7 +250,7 @@ export function ClinicalSummaryScreen() {
                   <input
                     type="text"
                     required
-                    placeholder="e.g. dr.khalid@dubaihealth.ae or FAC-8821"
+                    placeholder="e.g. dr.khalid@Lagoshealth.ae or FAC-8821"
                     value={shareRecipient}
                     onChange={(e) => setShareRecipient(e.target.value)}
                     className="w-full px-3.5 py-2.5 rounded-xl bg-surface-container-low border border-outline-variant text-on-surface text-body-md focus:outline-none focus:ring-2 focus:ring-primary"
@@ -259,7 +259,7 @@ export function ClinicalSummaryScreen() {
                 <div className="bg-surface-container-low p-3 rounded-xl flex items-start gap-2.5 text-on-surface-variant">
                   <Icon name="lock" className="text-[18px] text-secondary shrink-0 mt-0.5" />
                   <span className="font-label-code text-[11px] leading-relaxed">
-                    DHA Tele-Dental Standard: HIPAA & UAE Federal Health Data Law compliant. Record payload is end-to-end encrypted with DHA E-Health Vault.
+                    DHA Tele-Dental Standard: HIPAA & Nigeria Data Protection Act compliant. Record payload is end-to-end encrypted with DHA E-Health Vault.
                   </span>
                 </div>
                 <div className="flex justify-end gap-2 pt-2">
@@ -340,12 +340,12 @@ export function ClinicalSummaryScreen() {
             <p className="font-body-md text-body-md text-on-surface-variant">
               Reviewed &amp; approved by{' '}
               <span className="font-title-sm text-title-sm text-on-surface font-semibold">
-                Dr. Farouk Al-Mansoori
+                Dr. Chinedu Okafor
               </span>{' '}
               • Dec 12, 2024
             </p>
             <span className="font-label-code text-label-code text-secondary font-semibold">
-              Licence DHA-DNT-88419 • Al Barsha Clinical Center
+              Licence DHA-DNT-88419 • Surulere Clinical Center
             </span>
           </div>
         </div>

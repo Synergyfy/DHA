@@ -141,7 +141,7 @@ export function TreatmentPhaseManagementScreen() {
       assignedItems: 'Perio Probing, Bitewing Audit',
       dependency: 'Requires Phase 2 Done',
       statusLabel: 'Scheduled Maintenance',
-      clinician: 'Dr. Sarah Al-Mansoori',
+      clinician: 'Dr. Ngozi Eze',
       sequence: `Visit ${phases.length + 1} of ${phases.length + 1}`,
       durationMins: 30,
     };
@@ -432,7 +432,7 @@ export function TreatmentPhaseManagementScreen() {
                   className="w-full h-11 px-3 rounded-xl bg-[#f2f3ff] text-sm text-[#131b2e] focus:outline-none focus:ring-2 focus:ring-[#006194]"
                 >
                   <option value="Dr. Daniel James">Dr. Daniel James (Restorative Lead)</option>
-                  <option value="Dr. Sarah Al-Mansoori">Dr. Sarah Al-Mansoori (Periodontist)</option>
+                  <option value="Dr. Ngozi Eze">Dr. Ngozi Eze (Periodontist)</option>
                   <option value="Dr. Tariq Vance">Dr. Tariq Vance (Endodontics)</option>
                 </select>
               </div>

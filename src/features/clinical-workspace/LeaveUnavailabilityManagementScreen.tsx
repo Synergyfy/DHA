@@ -20,7 +20,7 @@ const PAST_LEAVE: LeaveHistoryItem[] = [
     dates: '28 Nov – 03 Dec 2026',
     daysCount: 6,
     status: 'pending',
-    coveringDoctor: 'Dr. Karim Al-Mansoor (DDS)',
+    coveringDoctor: 'Dr. Karim Okoye (DDS)',
     reason: 'Greater New York Dental Meeting (GNYDM) 2026 - Speaker & Hands-on Workshop attendee.',
   },
   {
@@ -29,7 +29,7 @@ const PAST_LEAVE: LeaveHistoryItem[] = [
     dates: '14 Aug – 22 Aug 2026',
     daysCount: 8,
     status: 'completed',
-    coveringDoctor: 'Dr. Sarah Al-Hashimi (BDS)',
+    coveringDoctor: 'Dr. Adaeze Okafor (BDS)',
     reason: 'Summer family recess. Handover completed and patient follow-ups cleared.',
   },
   {
@@ -38,8 +38,8 @@ const PAST_LEAVE: LeaveHistoryItem[] = [
     dates: '12 Mar – 14 Mar 2026',
     daysCount: 3,
     status: 'completed',
-    coveringDoctor: 'Dr. Karim Al-Mansoor (DDS)',
-    reason: 'UAE International Dental Conference & Arab Dental Exhibition (AEEDC Dubai).',
+    coveringDoctor: 'Dr. Karim Okoye (DDS)',
+    reason: 'Nigerian Dental Association Conference.',
   },
 ];
 
@@ -50,13 +50,13 @@ export function LeaveUnavailabilityManagementScreen() {
   const [leaveType, setLeaveType] = useState('Annual Vacation');
   const [startDate, setStartDate] = useState('2026-12-20');
   const [endDate, setEndDate] = useState('2026-12-28');
-  const [coveringClinician, setCoveringClinician] = useState('Dr. Karim Al-Mansoor (DDS, Prosthodontics)');
+  const [coveringClinician, setCoveringClinician] = useState('Dr. Karim Okoye (DDS, Prosthodontics)');
   const [handoffNotes, setHandoffNotes] = useState(
     'All active restorative cases reviewed. Emergency crown recementations and post-op checks designated to covering clinician.'
   );
   const [selectedClinics, setSelectedClinics] = useState<string[]>([
     'Harmony Dental Clinic (Wuse 2)',
-    'Harmony Specialists Clinic (Jumeirah)',
+    'Harmony Specialists Clinic (Victoria Island)',
   ]);
 
   // Request Submission State
@@ -147,7 +147,7 @@ export function LeaveUnavailabilityManagementScreen() {
           <div className="p-4 bg-[#86f2e4]/30 border border-[#86f2e4] text-[#006f66] rounded-2xl flex items-center gap-3 animate-in fade-in">
             <Icon name="check_circle" className="text-[20px]" />
             <span className="text-xs font-bold">
-              Leave request submitted! Appointment conflict resolution plan sent to Medical Director &amp; Dr. Karim Al-Mansoor for endorsement.
+              Leave request submitted! Appointment conflict resolution plan sent to Medical Director &amp; Dr. Karim Okoye for endorsement.
             </span>
           </div>
         )}
@@ -183,7 +183,7 @@ export function LeaveUnavailabilityManagementScreen() {
               Public &amp; Statutory
             </div>
             <div className="text-xl font-bold text-[#131b2e] mt-1">6 Days</div>
-            <div className="text-[10px] text-[#707881] font-medium mt-0.5">UAE Calendar 2026</div>
+            <div className="text-[10px] text-[#707881] font-medium mt-0.5">Nigeria Calendar 2026</div>
           </div>
         </div>
 
@@ -253,7 +253,7 @@ export function LeaveUnavailabilityManagementScreen() {
                   Facilities Covered by Absence
                 </label>
                 <div className="flex items-center gap-2 flex-wrap">
-                  {['Harmony Dental Clinic (Wuse 2)', 'Harmony Specialists Clinic (Jumeirah)'].map(
+                  {['Harmony Dental Clinic (Wuse 2)', 'Harmony Specialists Clinic (Victoria Island)'].map(
                     (clinic) => {
                       const selected = selectedClinics.includes(clinic);
                       return (
@@ -286,8 +286,8 @@ export function LeaveUnavailabilityManagementScreen() {
                   onChange={(e) => setCoveringClinician(e.target.value)}
                   className="w-full px-3.5 py-2.5 bg-white border border-[#eaedff] rounded-xl text-xs text-[#131b2e] focus:outline-none focus:border-[#006194]"
                 >
-                  <option>Dr. Karim Al-Mansoor (DDS, Prosthodontics) • License #DEN-38102</option>
-                  <option>Dr. Sarah Al-Hashimi (BDS, Restorative) • License #DEN-41908</option>
+                  <option>Dr. Karim Okoye (DDS, Prosthodontics) • License #DEN-38102</option>
+                  <option>Dr. Adaeze Okafor (BDS, Restorative) • License #DEN-41908</option>
                   <option>Dr. Tariq Qureshi (BDS, Oral Surgery) • License #DEN-50219</option>
                 </select>
                 <p className="text-[10px] text-[#707881] mt-1">
@@ -351,7 +351,7 @@ export function LeaveUnavailabilityManagementScreen() {
                   {
                     patient: 'Marcus Vance',
                     proc: 'Crown Delivery (#14)',
-                    resolution: 'Transferred to Dr. Karim Al-Mansoor',
+                    resolution: 'Transferred to Dr. Karim Okoye',
                     status: 'Resolved',
                     color: 'text-[#006a61] bg-[#86f2e4]/30',
                   },

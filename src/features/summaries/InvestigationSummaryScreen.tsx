@@ -254,7 +254,7 @@ export function InvestigationSummaryScreen() {
               </div>
 
               <div className="flex items-center justify-between text-xs text-[#707881] bg-[#faf8ff] p-2.5 rounded-xl border border-[#eaedff]">
-                <span>14 Oct 2026 • Al Barsha Diagnostic Lab</span>
+                <span>14 Oct 2026 • Surulere Diagnostic Lab</span>
                 <span>Pathologist: Dr. Samira K.</span>
               </div>
 

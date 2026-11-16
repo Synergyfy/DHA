@@ -6,6 +6,7 @@ import { GoogleGlyph } from '../../design/GoogleGlyph';
 import { PasswordField, TextField } from '../../design/Form';
 import { Icon } from '../../design/Primitives';
 import { useToast } from '../../design/Toast';
+import { useAuthStore } from '../../store/authStore';
 import { ForgotPasswordSheet } from './ForgotPasswordSheet';
 
 /**
@@ -19,6 +20,7 @@ import { ForgotPasswordSheet } from './ForgotPasswordSheet';
 export function LoginScreen() {
   const navigate = useNavigate();
   const { showToast } = useToast();
+  const signIn = useAuthStore((state) => state.signIn);
   const [identifier, setIdentifier] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -26,15 +28,19 @@ export function LoginScreen() {
 
   const handleQuickDemo = (role: 'patient' | 'dentist' | 'clinic' | 'screener') => {
     if (role === 'patient') {
+      signIn({ name: 'Amara Okafor', role: 'Patient account' });
       showToast('Signed in as Patient (Demo)');
       navigate('/patient-dashboard');
     } else if (role === 'dentist') {
+      signIn({ name: 'Dr. Michael Adeyemi', role: 'Dentist account' });
       showToast('Signed in as Dr. Michael Adeyemi (Dentist)');
       navigate('/dentist/dashboard');
     } else if (role === 'clinic') {
+      signIn({ name: 'Clinic Operations Manager', role: 'Clinic account' });
       showToast('Signed in as Clinic Operations Manager');
       navigate('/clinic-operations/dashboard');
     } else if (role === 'screener') {
+      signIn({ name: 'Community Outreach Screener', role: 'Screener account' });
       showToast('Signed in as Community Outreach Screener');
       navigate('/screening/dashboard');
     }
@@ -51,6 +57,7 @@ export function LoginScreen() {
       return;
     }
     setError('');
+    signIn({ name: 'Amara Okafor', role: 'Patient account' });
     showToast('Demo sign-in — credentials are not checked in this build.');
     navigate('/patient-dashboard');
   };

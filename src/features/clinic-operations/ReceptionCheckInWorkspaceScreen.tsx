@@ -318,7 +318,7 @@ export const ReceptionCheckInWorkspaceScreen: React.FC = () => {
                       <span className="text-xs sm:text-sm font-bold text-[#131b2e] block truncate">
                         2. Insurance &amp; Co-Pay Verification
                       </span>
-                      <span className="text-[11px] text-[#005049]">Daman Thiqa Direct • 20% Co-Pay Cleared</span>
+                      <span className="text-[11px] text-[#005049]">NHIA Direct • 20% Co-Pay Cleared</span>
                     </div>
                   </div>
                   <span className="text-xs font-bold text-[#006a61] shrink-0">Cleared</span>

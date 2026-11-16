@@ -100,8 +100,8 @@ export function TreatmentAnalyticsDashboardScreen() {
       subtitle: '14 Plans · 22 Procedures',
       badge: '92% Complete',
       badgeColor: 'bg-[#86f2e4]/30 text-[#006f66]',
-      quoted: 'AED 28,400',
-      copay: 'AED 5,680',
+      quoted: 'NGN 28,400',
+      copay: 'NGN 5,680',
     },
     {
       id: 'dept-2',
@@ -109,8 +109,8 @@ export function TreatmentAnalyticsDashboardScreen() {
       subtitle: '18 Plans · 36 Procedures',
       badge: '96% Complete',
       badgeColor: 'bg-[#86f2e4]/30 text-[#006f66]',
-      quoted: 'AED 16,200',
-      copay: 'AED 3,240',
+      quoted: 'NGN 16,200',
+      copay: 'NGN 3,240',
     },
     {
       id: 'dept-3',
@@ -118,8 +118,8 @@ export function TreatmentAnalyticsDashboardScreen() {
       subtitle: '6 Plans · 8 Procedures',
       badge: '78% Complete',
       badgeColor: 'bg-[#cce5ff]/50 text-[#006194]',
-      quoted: 'AED 19,200',
-      copay: 'AED 3,840',
+      quoted: 'NGN 19,200',
+      copay: 'NGN 3,840',
     },
     {
       id: 'dept-4',
@@ -127,8 +127,8 @@ export function TreatmentAnalyticsDashboardScreen() {
       subtitle: '5 Plans · 9 Procedures',
       badge: '84% Complete',
       badgeColor: 'bg-[#cce5ff]/50 text-[#006194]',
-      quoted: 'AED 20,400',
-      copay: 'AED 2,040',
+      quoted: 'NGN 20,400',
+      copay: 'NGN 2,040',
     },
   ];
 
@@ -156,7 +156,7 @@ export function TreatmentAnalyticsDashboardScreen() {
           <div className="min-w-0 flex-1">
             <div className="flex items-center gap-2 mb-1 flex-wrap">
               <span className="text-xs font-bold uppercase tracking-wider text-[#006194]">
-                Governance & Security • NABIDH Audited
+                Governance & Security • Nigeria Health Information Exchange Audited
               </span>
               <span className="w-1.5 h-1.5 rounded-full bg-[#006a61]"></span>
               <span className="text-xs text-[#707881]">Real-time Clinical Throughput</span>
@@ -228,7 +228,7 @@ export function TreatmentAnalyticsDashboardScreen() {
                   className="w-full text-xs font-bold text-[#131b2e] bg-transparent focus:outline-none"
                 >
                   <option>Harmony Wuse 2</option>
-                  <option>Harmony Jumeirah</option>
+                  <option>Harmony Victoria Island</option>
                   <option>All Branches Combined</option>
                 </select>
               </div>
@@ -242,7 +242,7 @@ export function TreatmentAnalyticsDashboardScreen() {
                 >
                   <option>All Dentists (2)</option>
                   <option>Dr. Daniel James (DDS)</option>
-                  <option>Dr. Sarah Al-Maktoum (BDS)</option>
+                  <option>Dr. Zainab Musa (BDS)</option>
                 </select>
               </div>
             </div>
@@ -305,7 +305,7 @@ export function TreatmentAnalyticsDashboardScreen() {
               </div>
             </div>
             <span className="text-xs font-bold px-2.5 py-1 bg-[#86f2e4]/30 text-[#006f66] rounded-full border border-[#86f2e4]/50">
-              AED Active Ledger
+              NGN Active Ledger
             </span>
           </div>
 
@@ -313,11 +313,11 @@ export function TreatmentAnalyticsDashboardScreen() {
           <div className="bg-[#f2f3ff] rounded-xl p-4 border border-[#eaedff] flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div>
               <span className="text-xs text-[#707881] block">Total Estimated Treatment Value</span>
-              <span className="text-2xl font-bold text-[#131b2e]">AED 84,200</span>
+              <span className="text-2xl font-bold text-[#131b2e]">NGN 84,200</span>
             </div>
             <div className="sm:text-right">
               <span className="text-xs font-bold text-[#006a61] block">81.2% Approved</span>
-              <span className="text-xs text-[#3f4850]">AED 68,400 Quoted</span>
+              <span className="text-xs text-[#3f4850]">NGN 68,400 Quoted</span>
             </div>
           </div>
 
@@ -331,21 +331,21 @@ export function TreatmentAnalyticsDashboardScreen() {
               <div
                 className="h-full bg-[#006194]"
                 style={{ width: '57.2%' }}
-                title="Insurance Disbursed: AED 48,200"
+                title="Insurance Disbursed: NGN 48,200"
               ></div>
               <div
                 className="h-full bg-[#006a61]"
                 style={{ width: '17.6%' }}
-                title="Patient Copays: AED 14,800"
+                title="Patient Copays: NGN 14,800"
               ></div>
               <div
                 className="h-full bg-[#ffdad6]"
                 style={{ width: '6.4%' }}
-                title="Outstanding: AED 5,400"
+                title="Outstanding: NGN 5,400"
               ></div>
               <div
                 className="h-full bg-[#dae2fd] flex-1"
-                title="Unapproved Quotient: AED 15,800"
+                title="Unapproved Quotient: NGN 15,800"
               ></div>
             </div>
           </div>
@@ -357,7 +357,7 @@ export function TreatmentAnalyticsDashboardScreen() {
                 <span className="w-2.5 h-2.5 rounded-full bg-[#006194]"></span>
                 <span className="text-[#131b2e] font-semibold">Insurance Disbursed</span>
               </div>
-              <div className="text-base font-bold text-[#131b2e]">AED 48,200</div>
+              <div className="text-base font-bold text-[#131b2e]">NGN 48,200</div>
               <span className="text-[11px] text-[#707881] block">70.4% settled</span>
             </div>
 
@@ -366,7 +366,7 @@ export function TreatmentAnalyticsDashboardScreen() {
                 <span className="w-2.5 h-2.5 rounded-full bg-[#006a61]"></span>
                 <span className="text-[#131b2e] font-semibold">Patient Copays Collected</span>
               </div>
-              <div className="text-base font-bold text-[#006a61]">AED 14,800</div>
+              <div className="text-base font-bold text-[#006a61]">NGN 14,800</div>
               <span className="text-[11px] text-[#707881] block">Direct POS/Online</span>
             </div>
 
@@ -375,7 +375,7 @@ export function TreatmentAnalyticsDashboardScreen() {
                 <span className="w-2.5 h-2.5 rounded-full bg-[#ba1a1a]"></span>
                 <span className="text-[#93000a] font-semibold">Outstanding Balances Due</span>
               </div>
-              <div className="text-base font-bold text-[#ba1a1a]">AED 5,400</div>
+              <div className="text-base font-bold text-[#ba1a1a]">NGN 5,400</div>
               <span className="text-[11px] text-[#93000a] block">3 claims pending review</span>
             </div>
           </div>
@@ -615,11 +615,11 @@ export function TreatmentAnalyticsDashboardScreen() {
           </button>
           <button
             type="button"
-            onClick={() => showToast('NABIDH clinical compliance XML bundle certified and uploaded.')}
+            onClick={() => showToast('Nigeria Health Information Exchange clinical compliance XML bundle certified and uploaded.')}
             className="h-12 bg-[#f2f3ff] hover:bg-[#eaedff] text-[#006194] rounded-xl text-xs font-bold flex items-center justify-center gap-2 border border-[#eaedff] transition-colors"
           >
             <Icon name="security_update_good" className="text-[20px]" />
-            NABIDH Clinical Activity Compliance Report
+            Nigeria Health Information Exchange Clinical Activity Compliance Report
           </button>
         </div>
       </div>

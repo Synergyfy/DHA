@@ -89,7 +89,7 @@ export function ReminderDetailsScreen() {
                   required
                   value={externalClinicName}
                   onChange={(e) => setExternalClinicName(e.target.value)}
-                  placeholder="e.g. Dubai Marina Dental Clinic"
+                  placeholder="e.g. Lekki Phase 1 Dental Clinic"
                   className="w-full h-11 px-3.5 rounded-xl bg-surface-container-low text-on-surface font-body-md text-body-md border border-outline-variant/30 focus:outline-none focus:ring-2 focus:ring-primary"
                 />
               </div>
@@ -187,7 +187,7 @@ export function ReminderDetailsScreen() {
                     <Icon name="person" className="text-[16px] text-primary" /> Patient Account
                   </span>
                   <p className="font-title-md text-title-md text-on-surface font-bold">
-                    Sarah Al-Mansoor
+                    Ngozi Eze
                   </p>
                   <span className="font-body-sm text-body-sm text-on-surface-variant block">
                     Primary Adult Account • File #DHA-789-2041
@@ -250,10 +250,10 @@ export function ReminderDetailsScreen() {
                     </div>
                     <div>
                       <p className="font-title-sm text-title-sm text-on-surface font-bold leading-tight">
-                        Dr. Farouk Al-Mansoori
+                        Dr. Chinedu Okafor
                       </p>
                       <p className="font-body-sm text-body-sm text-on-surface-variant">
-                        Senior Practitioner • Al Zahra Dental Hub
+                        Senior Practitioner • Lagos Smile Dental Centre
                       </p>
                     </div>
                   </div>
@@ -377,7 +377,7 @@ export function ReminderDetailsScreen() {
                           SMS Digest
                         </span>
                         <span className="font-body-sm text-body-sm text-on-surface-variant">
-                          +971 50 *** 8192
+                          +234 803 *** 8192
                         </span>
                       </div>
                     </label>

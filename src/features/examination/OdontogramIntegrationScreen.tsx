@@ -37,7 +37,7 @@ export function OdontogramIntegrationScreen() {
       surface: 'Mesio-Incisal (MI)',
       statusText: 'Sound Composite Restoration',
       symptoms: 'Asymptomatic • Margins intact, no secondary caries',
-      dateCharted: '05 Aug 2022 • Dr. Sarah Al-Rashid',
+      dateCharted: '05 Aug 2022 • Dr. Sarah Adeyemi',
     },
     '46': {
       fdi: '46',
@@ -109,7 +109,7 @@ export function OdontogramIntegrationScreen() {
               <div className="flex items-center gap-2">
                 <h2 className="text-xs sm:text-sm font-bold text-on-surface">Bidirectional Odontogram Synchronization</h2>
                 <span className="px-1.5 py-0.2 rounded bg-primary/20 text-primary text-[10px] font-mono font-bold">
-                  NABIDH-READY
+                  Nigeria Health Information Exchange-READY
                 </span>
               </div>
               <p className="text-[11px] text-on-surface-variant">

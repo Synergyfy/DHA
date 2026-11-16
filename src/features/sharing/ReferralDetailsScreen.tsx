@@ -64,7 +64,7 @@ export function ReferralDetailsScreen() {
                   Dr. Tariq Mansoor
                 </span>
                 <span className="text-xs text-on-surface-variant">
-                  General Dentistry · Jumeirah Dental Care
+                  General Dentistry · Victoria Island Dental Care
                 </span>
               </div>
             </div>
@@ -84,7 +84,7 @@ export function ReferralDetailsScreen() {
               <div className="w-12 h-12 rounded-2xl bg-surface-container-high overflow-hidden shrink-0">
                 <img
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNIudSoAbUfFy7bCZiaruoZf_1F1eTKy5JsB5SOY3rVZC2w7FYbzAnIogis0t4YOp5dHtgNx1IxEGdzD0YQP-FPwkE3d7mh46fnY-lMIkzV5zrUqkYxbtkHIcJiCWIkpDAQRedtXBw_vNsRucK8P22kBk2xcoCBCNO4CYNKvBzuerd6fMqa4QlOdHEVJfJvBQwvPVzlzh_irzICpnvp4mJSfMWPXAx9bQvmfcHmuZj"
-                  alt="Dr. Reem Al-Nuaimi"
+                  alt="Dr. Reem Nwosu"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -93,7 +93,7 @@ export function ReferralDetailsScreen() {
                   Assigned Specialist
                 </span>
                 <span className="font-title-sm text-sm sm:text-base font-bold text-on-surface block">
-                  Dr. Reem Al-Nuaimi
+                  Dr. Reem Nwosu
                 </span>
                 <span className="text-xs text-on-surface-variant">
                   Consultant Orthodontist · Medcare Clinic
@@ -387,7 +387,7 @@ export function ReferralDetailsScreen() {
               </div>
 
               <p className="text-xs text-on-surface-variant leading-relaxed">
-                Dr. Reem Al-Nuaimi has requested access to your Lateral Cephalometric Radiographs to assess craniofacial jaw structure.
+                Dr. Reem Nwosu has requested access to your Lateral Cephalometric Radiographs to assess craniofacial jaw structure.
               </p>
 
               <div className="p-3 bg-surface-container-low rounded-xl text-xs space-y-1">

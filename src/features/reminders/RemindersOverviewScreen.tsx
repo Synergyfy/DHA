@@ -78,7 +78,7 @@ export function RemindersOverviewScreen() {
                   Tooth #16 • Upper Right Molar (Crown Margin)
                 </span>
                 <span className="font-body-sm text-body-sm text-on-surface-variant">
-                  Prescribed by Dr. Farouk Al-Mansoori (DHA Lic #48912)
+                  Prescribed by Dr. Chinedu Okafor (DHA Lic #48912)
                 </span>
               </div>
 
@@ -116,14 +116,14 @@ export function RemindersOverviewScreen() {
             <div className="flex flex-col min-w-0">
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="font-title-md text-title-md text-on-surface font-bold truncate">
-                  Sarah Al-Mansoor
+                  Ngozi Eze
                 </span>
                 <span className="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">
                   Primary
                 </span>
               </div>
               <span className="font-body-sm text-body-sm text-on-surface-variant truncate">
-                File #DHA-789-2041 • Enrolled Dubai Care
+                File #DHA-789-2041 • Enrolled Lagos Care
               </span>
             </div>
           </div>
@@ -323,7 +323,7 @@ export function RemindersOverviewScreen() {
                         <Icon name="verified_user" className="text-[17px] text-secondary" /> Prescriber:
                       </span>
                       <span className="font-title-sm text-title-sm text-on-surface truncate">
-                        Dr. Farouk Al-Mansoori
+                        Dr. Chinedu Okafor
                       </span>
                     </div>
                     <p className="font-body-sm text-body-sm text-on-surface-variant italic pt-1 border-t border-surface-container">
@@ -534,10 +534,10 @@ export function RemindersOverviewScreen() {
                     </div>
                     <div className="min-w-0 flex-1">
                       <span className="font-title-sm text-title-sm text-on-surface block truncate font-semibold">
-                        Al Zahra Dental Hub • Room 302
+                        Lagos Smile Dental Centre • Room 302
                       </span>
                       <span className="font-body-sm text-body-sm text-on-surface-variant block truncate">
-                        Dr. Farouk Al-Mansoori (Orthodontic &amp; Prophy)
+                        Dr. Chinedu Okafor (Orthodontic &amp; Prophy)
                       </span>
                     </div>
                   </div>

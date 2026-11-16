@@ -356,6 +356,8 @@ import TrustPrivacyScreen from './features/portal/TrustPrivacyScreen';
 import { AboutDHAScreen } from './features/portal/AboutDHAScreen';
 import { ForProfessionalsScreen } from './features/portal/ForProfessionalsScreen';
 import { OralHealthGuidesScreen } from './features/portal/OralHealthGuidesScreen';
+import { OralHealthGuideDetailScreen } from './features/portal/OralHealthGuideDetailScreen';
+import { PublicProviderProfileScreen } from './features/portal/PublicProviderProfileScreen';
 import { ClinicianOnboardingScreen } from './features/onboarding/ClinicianOnboardingScreen';
 import { ScreenerOnboardingScreen } from './features/onboarding/ScreenerOnboardingScreen';
 
@@ -401,6 +403,7 @@ export default function App() {
         <Route path="/about-dha" element={<AboutDHAScreen />} />
         <Route path="/for-professionals" element={<ForProfessionalsScreen />} />
         <Route path="/oral-health-guides" element={<OralHealthGuidesScreen />} />
+        <Route path="/oral-health-guides/:guideId" element={<OralHealthGuideDetailScreen />} />
         <Route path="/clinician-onboarding" element={<Navigate to="/onboarding/clinician" replace />} />
         <Route path="/screener-onboarding" element={<Navigate to="/onboarding/screener" replace />} />
         <Route path="/professionals" element={<Navigate to="/for-professionals" replace />} />
@@ -423,6 +426,20 @@ export default function App() {
         <Route path="/family" element={<Navigate to="/portal/family-care" replace />} />
         <Route path="/family-care" element={<Navigate to="/portal/family-care" replace />} />
         <Route path="/find-care" element={<Navigate to="/portal/find-care" replace />} />
+        {/* Public provider profiles (landing "View Profile" / "View Centre") */}
+        <Route
+          path="/find-care/dentist-profile"
+          element={<Navigate to="/find-care/dentist-profile/nnamdi-obi" replace />}
+        />
+        <Route
+          path="/find-care/clinic-profile"
+          element={<Navigate to="/find-care/clinic-profile/lagos-smile-centre" replace />}
+        />
+        <Route
+          path="/find-care/dentist-profile/:providerId"
+          element={<PublicProviderProfileScreen kind="dentist" />}
+        />
+        <Route path="/find-care/clinic-profile/:providerId" element={<PublicProviderProfileScreen kind="clinic" />} />
         <Route path="/partners" element={<Navigate to="/portal/partners" replace />} />
         <Route path="/privacy" element={<Navigate to="/portal/privacy" replace />} />
         <Route path="/portal-guides" element={<Navigate to="/portal/guides" replace />} />

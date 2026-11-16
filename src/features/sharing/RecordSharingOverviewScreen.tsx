@@ -54,7 +54,7 @@ export function RecordSharingOverviewScreen() {
             <div>
               <div className="flex items-center gap-2">
                 <h2 className="font-title-md text-base sm:text-lg font-bold text-on-surface">
-                  Sarah Al-Mansoor
+                  Ngozi Eze
                 </h2>
                 <span className="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-bold">
                   Primary Profile
@@ -137,13 +137,13 @@ export function RecordSharingOverviewScreen() {
                 <div className="w-12 h-12 rounded-2xl bg-surface-container-high overflow-hidden shrink-0">
                   <img
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuCNIudSoAbUfFy7bCZiaruoZf_1F1eTKy5JsB5SOY3rVZC2w7FYbzAnIogis0t4YOp5dHtgNx1IxEGdzD0YQP-FPwkE3d7mh46fnY-lMIkzV5zrUqkYxbtkHIcJiCWIkpDAQRedtXBw_vNsRucK8P22kBk2xcoCBCNO4CYNKvBzuerd6fMqa4QlOdHEVJfJvBQwvPVzlzh_irzICpnvp4mJSfMWPXAx9bQvmfcHmuZj"
-                    alt="Dr. Reem Al-Nuaimi"
+                    alt="Dr. Reem Nwosu"
                     className="w-full h-full object-cover"
                   />
                 </div>
                 <div>
                   <div className="flex items-center gap-1.5">
-                    <span className="font-title-sm text-base font-bold text-on-surface">Dr. Reem Al-Nuaimi</span>
+                    <span className="font-title-sm text-base font-bold text-on-surface">Dr. Reem Nwosu</span>
                     <Icon name="verified" className="text-secondary text-[16px]" />
                   </div>
                   <span className="text-xs text-on-surface-variant">Consultant Orthodontist · Medcare Clinic</span>
@@ -250,7 +250,7 @@ export function RecordSharingOverviewScreen() {
                       </div>
                       <div>
                         <div className="font-bold text-sm text-on-surface">Dr. Tariq Mansoor</div>
-                        <div className="text-xs text-on-surface-variant">Jumeirah Dental Care</div>
+                        <div className="text-xs text-on-surface-variant">Victoria Island Dental Care</div>
                       </div>
                     </div>
                     <span className="px-2.5 py-0.5 rounded-full bg-surface-container text-primary text-[11px] font-bold">
@@ -287,7 +287,7 @@ export function RecordSharingOverviewScreen() {
                         <Icon name="domain" className="text-[20px]" />
                       </div>
                       <div>
-                        <div className="font-bold text-sm text-on-surface">Al Zahra Dental Hub</div>
+                        <div className="font-bold text-sm text-on-surface">Lagos Smile Dental Centre</div>
                         <div className="text-xs text-on-surface-variant">Institutional Facility</div>
                       </div>
                     </div>
@@ -346,7 +346,7 @@ export function RecordSharingOverviewScreen() {
                       <span className="text-on-surface-variant">Yesterday</span>
                     </div>
                     <p className="text-xs text-on-surface-variant mt-0.5">
-                      Case packet forwarded to Dr. Reem Al-Nuaimi. Status: Awaiting Specialist Intake.
+                      Case packet forwarded to Dr. Reem Nwosu. Status: Awaiting Specialist Intake.
                     </p>
                   </div>
                 </div>
@@ -361,7 +361,7 @@ export function RecordSharingOverviewScreen() {
                       <span className="text-on-surface-variant">3 days ago</span>
                     </div>
                     <p className="text-xs text-on-surface-variant mt-0.5">
-                      Access permissions terminated for Emirates Specialty Dental. Cryptographic token destroyed.
+                      Access permissions terminated for Nigerian Specialty Dental. Cryptographic token destroyed.
                     </p>
                   </div>
                 </div>
@@ -390,7 +390,7 @@ export function RecordSharingOverviewScreen() {
 
               <div className="space-y-3 text-xs text-on-surface-variant leading-relaxed">
                 <p>
-                  <strong className="text-on-surface">Strict DHA Accreditation:</strong> Only licensed healthcare professionals registered within Dubai can request or receive records.
+                  <strong className="text-on-surface">Strict DHA Accreditation:</strong> Only licensed healthcare professionals registered within Lagos can request or receive records.
                 </p>
                 <p>
                   <strong className="text-on-surface">No Blanket Sharing:</strong> Authorizations are item-specific. A dentist asking for X-Rays cannot see your payment ledger or unrelated medical documents.

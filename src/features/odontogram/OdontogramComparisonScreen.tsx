@@ -127,7 +127,7 @@ export function OdontogramComparisonScreen() {
               <div className="flex items-center justify-between">
                 <div>
                   <div className="font-bold text-sm text-slate-900 dark:text-white">14 Oct 2024</div>
-                  <div className="text-xs text-slate-500">Dr. Sarah Al-Maktoum (#DEN-39104)</div>
+                  <div className="text-xs text-slate-500">Dr. Zainab Musa (#DEN-39104)</div>
                 </div>
                 <select
                   value={baselineDate}

@@ -192,7 +192,7 @@ export function DentalVideosScreen() {
                   <div className="min-w-0">
                     <div className="flex items-center gap-1">
                       <span className="font-title-sm font-bold text-on-surface truncate">
-                        Dr. Mariam Al-Husseini
+                        Dr. Amina Bello
                       </span>
                       <Icon name="verified" className="text-secondary text-[16px]" />
                     </div>
@@ -347,7 +347,7 @@ export function DentalVideosScreen() {
                 <Icon name="verified_user" className="text-[20px]" />
               </div>
               <p className="font-body-sm text-on-surface leading-relaxed">
-                <strong className="font-title-sm text-secondary">Clinical Reassurance:</strong> All demonstration videos are produced under Dubai Health Authority clinical guidelines to educate and reassure patients.
+                <strong className="font-title-sm text-secondary">Clinical Reassurance:</strong> All demonstration videos are produced under Nigeria Dental Health Authority clinical guidelines to educate and reassure patients.
               </p>
             </div>
           </div>

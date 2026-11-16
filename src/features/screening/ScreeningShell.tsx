@@ -1,5 +1,6 @@
 import { useState, type ReactNode } from 'react';
 import { NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { useAuthStore } from '../../store/authStore';
 import { Icon } from '../../design/Primitives';
 
 interface ScreeningShellProps {
@@ -68,7 +69,7 @@ export function ScreeningShell({
               SA
             </div>
             <div className="min-w-0 flex-1">
-              <div className="text-xs font-bold text-on-surface truncate">Dr. Sarah Al-Mansoor</div>
+              <div className="text-xs font-bold text-on-surface truncate">Dr. Ngozi Eze</div>
               <div className="text-[10px] text-on-surface-variant font-mono truncate">#SC-8921 • Screener</div>
             </div>
           </div>
@@ -114,7 +115,7 @@ export function ScreeningShell({
           </NavLink>
           <button
             type="button"
-            onClick={() => navigate('/login')}
+            onClick={() => { useAuthStore.getState().signOut(); navigate('/login'); }}
             className="w-full px-3 py-2 rounded-xl bg-error-container/40 hover:bg-error-container/70 text-error text-xs font-bold flex items-center justify-center gap-2 shadow-xs transition-colors"
           >
             <Icon name="logout" className="text-[16px]" />
@@ -132,7 +133,7 @@ export function ScreeningShell({
             <div className="flex items-center gap-2 min-w-0">
               <span className="w-2 h-2 rounded-full bg-secondary animate-pulse shrink-0" />
               <span className="font-semibold text-on-surface truncate">
-                Dr. Sarah Al-Mansoor
+                Dr. Ngozi Eze
               </span>
               <span className="text-on-surface-variant font-mono text-[11px] hidden sm:inline">
                 (MOHAP/DHA #SC-8921)
@@ -145,7 +146,7 @@ export function ScreeningShell({
             <div className="flex items-center gap-2">
               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-container-high text-primary font-mono text-[10px] font-bold">
                 <Icon name="verified_user" className="text-[13px] text-secondary" />
-                <span>Nabidh Sync Active</span>
+                <span>Nigeria Health Information Exchange Sync Active</span>
               </span>
             </div>
           </div>
@@ -218,7 +219,7 @@ export function ScreeningShell({
                 {profileDropdownOpen && (
                   <div className="hidden md:block absolute right-0 mt-2 w-52 bg-surface-container-lowest rounded-xl shadow-xl border border-outline-variant/30 py-1.5 z-50 animate-in fade-in zoom-in-95 duration-100">
                     <div className="px-3 py-2 border-b border-outline-variant/20">
-                      <p className="text-xs font-bold text-on-surface">Dr. Sarah Al-Mansoor</p>
+                      <p className="text-xs font-bold text-on-surface">Dr. Ngozi Eze</p>
                       <p className="text-[11px] text-on-surface-variant">sarah.almansoor@dha.gov.ae</p>
                     </div>
                     <NavLink
@@ -242,7 +243,7 @@ export function ScreeningShell({
                       type="button"
                       onClick={() => {
                         setProfileDropdownOpen(false);
-                        navigate('/login');
+                        useAuthStore.getState().signOut(); navigate('/login');
                       }}
                       className="w-full px-3 py-2 text-left text-xs text-error font-semibold hover:bg-error-container/30 flex items-center gap-2"
                     >
@@ -270,7 +271,7 @@ export function ScreeningShell({
                   SA
                 </div>
                 <div className="min-w-0 flex-1">
-                  <h4 className="text-sm font-bold text-on-surface">Dr. Sarah Al-Mansoor</h4>
+                  <h4 className="text-sm font-bold text-on-surface">Dr. Ngozi Eze</h4>
                   <p className="text-xs text-on-surface-variant">sarah.almansoor@dha.gov.ae</p>
                   <p className="text-[10px] text-secondary font-bold mt-0.5">Clinical Screener • #SC-8921</p>
                 </div>
@@ -303,7 +304,7 @@ export function ScreeningShell({
                 type="button"
                 onClick={() => {
                   setProfileDropdownOpen(false);
-                  navigate('/login');
+                  useAuthStore.getState().signOut(); navigate('/login');
                 }}
                 className="w-full py-3 rounded-2xl bg-error-container text-on-error-container text-xs font-bold flex items-center justify-center gap-2 shadow-xs"
               >
@@ -405,7 +406,7 @@ export function ScreeningShell({
                     type="button"
                     onClick={() => {
                       setMobileMoreOpen(false);
-                      navigate('/login');
+                      useAuthStore.getState().signOut(); navigate('/login');
                     }}
                     className="w-full py-2.5 rounded-xl bg-error-container/40 hover:bg-error-container text-error text-xs font-bold flex items-center justify-center gap-2 transition-colors"
                   >

@@ -28,13 +28,13 @@ export function SharingHistoryScreen() {
       action: 'Record Inspected',
       category: 'access',
       details: 'Accessed Panoramic OPG X-Ray & Bite-wing diagnostic set during scheduled examination.',
-      facility: 'Jumeirah Dental Care',
+      facility: 'Victoria Island Dental Care',
       hash: 'sha256:4f8a...c901',
     },
     {
       id: 'aud-2',
       timestamp: 'Yesterday, 04:30 PM',
-      actor: 'Dr. Reem Al-Nuaimi',
+      actor: 'Dr. Reem Nwosu',
       actorType: 'clinician',
       action: 'Consent Requested',
       category: 'consent',
@@ -50,29 +50,29 @@ export function SharingHistoryScreen() {
       action: 'Specialist Referral Created',
       category: 'referral',
       details: 'Initiated case referral #REF-DHA-2025-0894 for Class II anterior crossbite treatment.',
-      facility: 'Jumeirah Dental Care',
+      facility: 'Victoria Island Dental Care',
       hash: 'sha256:1a9c...d338',
     },
     {
       id: 'aud-4',
       timestamp: '05 Nov 2025, 02:45 PM',
-      actor: 'Sarah Al-Mansoor (Patient)',
+      actor: 'Ngozi Eze (Patient)',
       actorType: 'patient',
       action: 'Permission Revoked',
       category: 'revocation',
-      details: 'Revoked active read permission for Emirates Specialty Dental. Cryptographic token expired immediately.',
+      details: 'Revoked active read permission for Nigerian Specialty Dental. Cryptographic token expired immediately.',
       facility: 'Self-Service via Patient Portal',
       hash: 'sha256:9d01...fa22',
     },
     {
       id: 'aud-5',
       timestamp: '24 Oct 2024, 11:20 AM',
-      actor: 'Al Zahra Dental Hub',
+      actor: 'Lagos Smile Dental Centre',
       actorType: 'facility',
       action: 'Triage Access Granted',
       category: 'consent',
-      details: 'Authorized 60-day institutional access to Zayd Al-Mansoor pediatric preventive screening profile.',
-      facility: 'Al Zahra Hospital Dubai',
+      details: 'Authorized 60-day institutional access to Zayd Okoye pediatric preventive screening profile.',
+      facility: 'Al Zahra Hospital Lagos',
       hash: 'sha256:6e33...88bb',
     },
   ];
@@ -287,7 +287,7 @@ export function SharingHistoryScreen() {
         <section className="p-4 rounded-2xl bg-surface-container-low border border-outline-variant/20 flex items-center justify-between gap-3 text-xs text-on-surface-variant">
           <div className="flex items-center gap-2">
             <Icon name="shield" className="text-secondary text-[18px]" />
-            <span>Compliant with UAE Federal Law No. 2 of 2019 on Health Data & Information.</span>
+            <span>Compliant with Nigeria Federal Law No. 2 of 2019 on Health Data & Information.</span>
           </div>
           <NavLink
             to="/patient-dashboard/sharing/overview"

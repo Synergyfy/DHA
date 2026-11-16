@@ -231,7 +231,7 @@ export const ClinicalActivityDetailsScreen: React.FC = () => {
                       </span>
                     </div>
                     <div className="flex items-center gap-2 mt-0.5 text-xs text-[#707881]">
-                      <span className="font-mono">LifeCode: AE-990-281-DXB</span>
+                      <span className="font-mono">LifeCode: NG-990-281-LAG</span>
                       <button
                         onClick={() => showToast('Patient LifeCode copied!')}
                         className="text-[#006194] hover:underline flex items-center gap-0.5"
@@ -591,7 +591,7 @@ export const ClinicalActivityDetailsScreen: React.FC = () => {
               </p>
             </div>
             <div className="bg-[#f2f3ff] p-3 rounded-xl text-xs space-y-1 font-mono text-[#3f4850]">
-              <div>Patient: Amara Okafor (AE-990-281-DXB)</div>
+              <div>Patient: Amara Okafor (NG-990-281-LAG)</div>
               <div>Clinician: Dr. Daniel Okoro, DDS</div>
               <div>Procedure: MO Direct Composite #16</div>
             </div>

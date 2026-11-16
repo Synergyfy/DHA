@@ -140,7 +140,7 @@ export function PatientFriendlySummaryEditorScreen() {
           </div>
           <div className="shrink-0 flex items-center gap-1.5 bg-[#f2f3ff] px-2.5 py-1 rounded-lg">
             <Icon name="verified_user" className="text-[16px] text-[#006a61]" />
-            <span className="text-xs font-bold text-[#006a61] uppercase">UK/UAE Standard</span>
+            <span className="text-xs font-bold text-[#006a61] uppercase">Nigeria Dental Health Standard</span>
           </div>
         </section>
 

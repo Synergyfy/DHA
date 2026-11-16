@@ -22,7 +22,7 @@ const templates: TemplateOption[] = [
     version: 'v1.0 • Default',
     badge: 'DHA Approved Standard',
     badgeType: 'standard',
-    description: 'Complete multi-phase charting baseline compliant with Dubai Health Authority regulatory mandate.',
+    description: 'Complete multi-phase charting baseline compliant with Nigeria Dental Health Authority regulatory mandate.',
     modulesIncluded: ['Full Periodontal Probing', 'Soft Tissue Screening', 'Section 9 Odontogram Link', 'Radiographic Assessment'],
     lastValidated: 'Oct 2024',
     category: 'dha',
