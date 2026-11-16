@@ -41,7 +41,7 @@ export function InvestigationRequestDetailsScreen() {
 
   const handleSignOff = () => {
     setIsSigned(true);
-    showToast('Radiological interpretation signed and committed to NABIDH!');
+    showToast('Radiological interpretation signed and committed to Nigeria Health Information Exchange!');
   };
 
   return (
@@ -126,7 +126,7 @@ export function InvestigationRequestDetailsScreen() {
             <span className="text-[11px] text-outline block">FANR Level: Class A (Low)</span>
           </div>
           <div>
-            <span className="text-[11px] text-outline block">NABIDH Hash</span>
+            <span className="text-[11px] text-outline block">Nigeria Health Information Exchange Hash</span>
             <span className="font-mono text-[10px] text-on-surface-variant block truncate">SHA-256: 8f9ba12ce4...</span>
             <span className="text-[10px] font-bold text-emerald-700 flex items-center gap-1">
               <Icon name="verified" className="text-xs" />
@@ -306,7 +306,7 @@ export function InvestigationRequestDetailsScreen() {
                   <p className="text-xs text-on-surface-variant">Formal clinician interpretation</p>
                 </div>
                 <span className="text-xs font-mono font-bold text-primary bg-primary/10 px-2 py-0.5 rounded">
-                  NABIDH-11.4
+                  Nigeria Health Information Exchange-11.4
                 </span>
               </div>
 

@@ -419,7 +419,7 @@ export function AIImageReviewScreen() {
             <Icon name="policy" className="text-[20px] text-[#707881] flex-shrink-0 mt-0.5" />
             <div className="space-y-1.5">
               <p className="text-xs text-[#707881] leading-relaxed">
-                This AI image analysis module operates under DHA Clinical AI Governance Policy v2.4 and UAE Federal Law No. 2 of 2019 on Health Information Technology.
+                This AI image analysis module operates under DHA Clinical AI Governance Policy v2.4 and Nigeria Federal Law No. 2 of 2019 on Health Information Technology.
               </p>
               <p className="text-xs text-[#707881] leading-relaxed">
                 All AI annotations are logged with cryptographic provenance for regulatory audit.

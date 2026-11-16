@@ -32,7 +32,7 @@ const APPOINTMENTS: AppointmentRecord[] = [
     period: '00 AM',
     patientName: 'Amara Okafor',
     mrn: 'MRN-00451',
-    lifeCode: 'LifeCode: AE-990-281-DXB',
+    lifeCode: 'LifeCode: NG-990-281-LAG',
     status: 'in-progress',
     statusLabel: 'In Progress',
     procedure: 'Restorative Resin',

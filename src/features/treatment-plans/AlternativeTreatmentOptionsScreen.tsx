@@ -201,11 +201,11 @@ export function AlternativeTreatmentOptionsScreen() {
               <div className="pt-3 border-t border-[#eaedff] flex items-center justify-between">
                 <div>
                   <span className="text-[11px] text-[#707881] block">Total Gross Fee</span>
-                  <span className="text-sm font-bold text-[#131b2e]">AED 850.00</span>
+                  <span className="text-sm font-bold text-[#131b2e]">NGN 850.00</span>
                 </div>
                 <div className="text-right">
                   <span className="text-[11px] text-[#006a61] font-bold block">Patient Copay (20%)</span>
-                  <span className="text-lg font-extrabold text-[#006a61]">AED 170.00</span>
+                  <span className="text-lg font-extrabold text-[#006a61]">NGN 170.00</span>
                 </div>
               </div>
             </div>
@@ -259,11 +259,11 @@ export function AlternativeTreatmentOptionsScreen() {
               <div className="pt-3 border-t border-[#eaedff] flex items-center justify-between">
                 <div>
                   <span className="text-[11px] text-[#707881] block">Total Gross Fee</span>
-                  <span className="text-sm font-bold text-[#131b2e]">AED 2,200.00</span>
+                  <span className="text-sm font-bold text-[#131b2e]">NGN 2,200.00</span>
                 </div>
                 <div className="text-right">
                   <span className="text-[11px] text-[#006194] font-bold block">Estimated Copay</span>
-                  <span className="text-lg font-extrabold text-[#006194]">AED 750.00</span>
+                  <span className="text-lg font-extrabold text-[#006194]">NGN 750.00</span>
                 </div>
               </div>
             </div>
@@ -317,11 +317,11 @@ export function AlternativeTreatmentOptionsScreen() {
               <div className="pt-3 border-t border-[#eaedff] flex items-center justify-between">
                 <div>
                   <span className="text-[11px] text-[#707881] block">Stage 1 Initial Fee</span>
-                  <span className="text-sm font-bold text-[#131b2e]">AED 1,150.00</span>
+                  <span className="text-sm font-bold text-[#131b2e]">NGN 1,150.00</span>
                 </div>
                 <div className="text-right">
                   <span className="text-[11px] text-[#707881] font-bold block">Stage 1 Copay</span>
-                  <span className="text-lg font-extrabold text-[#131b2e]">AED 350.00</span>
+                  <span className="text-lg font-extrabold text-[#131b2e]">NGN 350.00</span>
                 </div>
               </div>
             </div>
@@ -366,9 +366,9 @@ export function AlternativeTreatmentOptionsScreen() {
                 </tr>
                 <tr>
                   <td className="py-2.5 px-3 font-semibold text-[#707881]">Patient Copay</td>
-                  <td className="py-2.5 px-3 font-bold text-[#006a61]">AED 170</td>
-                  <td className="py-2.5 px-3 font-bold text-[#006194]">AED 750</td>
-                  <td className="py-2.5 px-3 font-bold text-[#131b2e]">AED 350</td>
+                  <td className="py-2.5 px-3 font-bold text-[#006a61]">NGN 170</td>
+                  <td className="py-2.5 px-3 font-bold text-[#006194]">NGN 750</td>
+                  <td className="py-2.5 px-3 font-bold text-[#131b2e]">NGN 350</td>
                 </tr>
               </tbody>
             </table>
@@ -393,7 +393,7 @@ export function AlternativeTreatmentOptionsScreen() {
           <div className="flex items-center justify-between text-xs text-[#707881] pt-1">
             <span>Verified Digital Signature Token</span>
             <span className="text-[#006a61] font-semibold flex items-center gap-1">
-              <Icon name="lock" className="text-[14px]" /> 24 Feb 2026, 11:42 GST
+              <Icon name="lock" className="text-[14px]" /> 24 Feb 2026, 11:42 WAT
             </span>
           </div>
         </div>

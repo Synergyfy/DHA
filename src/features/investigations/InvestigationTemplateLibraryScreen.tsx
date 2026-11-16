@@ -349,7 +349,7 @@ export function InvestigationTemplateLibraryScreen() {
             <h4 className="font-bold text-sm text-on-surface">Template Safeguards & Regulatory Governance</h4>
             <p className="text-on-surface-variant leading-relaxed">
               Templates enforce mandatory clinician electronic signatures and ALARA/ALADA radiation justifications.
-              Statutory DHA baseline protocols are locked and verified by the UAE Federal Radiation Board.
+              Statutory DHA baseline protocols are locked and verified by the Nigeria Federal Radiation Board.
             </p>
           </div>
         </section>
@@ -439,7 +439,7 @@ export function InvestigationTemplateLibraryScreen() {
           <div className="flex items-center gap-2">
             <Icon name="verified" className="text-secondary text-base" />
             <span className="font-semibold text-on-surface">Compliance Verified:</span>
-            <span className="text-on-surface-variant">All templates aligned with Dubai Health Authority clinical guidelines.</span>
+            <span className="text-on-surface-variant">All templates aligned with Nigeria Dental Health Authority clinical guidelines.</span>
           </div>
 
           <div className="flex items-center gap-2">

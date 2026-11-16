@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { useAuthStore } from '../../store/authStore';
 import { Icon } from '../../design/Primitives';
 
 interface SummaryShellProps {
@@ -41,7 +42,7 @@ export function SummaryShell({
   const location = useLocation();
 
   const handleSignOut = () => {
-    navigate('/login');
+    useAuthStore.getState().signOut(); navigate('/login');
   };
 
   return (

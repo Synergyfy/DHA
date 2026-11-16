@@ -59,7 +59,7 @@ export function PersonalActivityReportsScreen() {
             </div>
 
             <span className="px-3 py-1 rounded-full bg-teal-100 dark:bg-teal-900/40 text-teal-800 dark:text-teal-300 font-mono text-xs font-bold uppercase tracking-wider">
-              NABIDH TIER 1
+              Nigeria Health Information Exchange TIER 1
             </span>
           </div>
 
@@ -67,9 +67,9 @@ export function PersonalActivityReportsScreen() {
             <Icon name="security" filled className="text-base text-teal-600 dark:text-teal-400 shrink-0" />
             <span className="flex-1 leading-snug">
               <strong className="text-teal-700 dark:text-teal-300 font-semibold">
-                NABIDH &amp; DHA Synchronized Ledger:
+                Nigeria Health Information Exchange &amp; DHA Synchronized Ledger:
               </strong>{' '}
-              Audit cryptographic anchor valid through 23:59 GST.
+              Audit cryptographic anchor valid through 23:59 WAT.
             </span>
             <div className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse shrink-0" />
           </div>
@@ -159,7 +159,7 @@ export function PersonalActivityReportsScreen() {
                 </p>
                 <div className="flex items-center gap-2 mt-2">
                   <span className="font-mono text-[10px] font-bold text-teal-800 dark:text-teal-300 bg-teal-100 dark:bg-teal-900/60 px-2 py-0.5 rounded">
-                    NABIDH-M-01
+                    Nigeria Health Information Exchange-M-01
                   </span>
                   <span className="text-[11px] text-slate-400">Live Synchronized</span>
                 </div>
@@ -232,7 +232,7 @@ export function PersonalActivityReportsScreen() {
               <Icon name="preview" className="text-teal-600 text-base" />
               <h3 className="font-bold text-slate-900 dark:text-white">Simulated Dossier Preview</h3>
             </div>
-            <span className="font-mono text-slate-400">11:45 GST</span>
+            <span className="font-mono text-slate-400">11:45 WAT</span>
           </div>
 
           <div className="bg-white dark:bg-slate-800 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-md overflow-hidden relative">
@@ -250,7 +250,7 @@ export function PersonalActivityReportsScreen() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="font-mono text-[10px] tracking-widest text-teal-700 dark:text-teal-300 font-bold uppercase">
-                    Dubai Health Authority
+                    Nigeria Dental Health Authority
                   </p>
                   <h4 className="text-lg md:text-xl font-bold text-slate-900 dark:text-white">
                     Clinical Activity Dossier
@@ -326,7 +326,7 @@ export function PersonalActivityReportsScreen() {
                       <span className="w-2 h-2 rounded-full bg-blue-400" />
                       <span>Awaiting Seating</span>
                     </div>
-                    <span className="font-semibold text-slate-900 dark:text-white">Fatima Al-Zahra (12:00)</span>
+                    <span className="font-semibold text-slate-900 dark:text-white">Fatima Bello (12:00)</span>
                   </div>
 
                   <div className="flex items-center justify-between pt-2">
@@ -334,7 +334,7 @@ export function PersonalActivityReportsScreen() {
                       <span className="w-2 h-2 rounded-full bg-red-400" />
                       <span>Rescheduled / Cancelled</span>
                     </div>
-                    <span className="font-semibold text-red-600 dark:text-red-400">Sarah Al-Maktoum (11:15)</span>
+                    <span className="font-semibold text-red-600 dark:text-red-400">Zainab Musa (11:15)</span>
                   </div>
                 </div>
               </div>
@@ -345,17 +345,17 @@ export function PersonalActivityReportsScreen() {
                   <span className="font-bold text-slate-700 dark:text-slate-300 uppercase tracking-wider text-[10px]">
                     Clinical Tariffs Summary
                   </span>
-                  <span className="font-mono text-slate-400 text-[10px]">NABIDH Claim Feed</span>
+                  <span className="font-mono text-slate-400 text-[10px]">Nigeria Health Information Exchange Claim Feed</span>
                 </div>
 
                 <div className="grid grid-cols-2 gap-3">
                   <div className="p-3 rounded-lg bg-white dark:bg-slate-800 shadow-xs">
                     <span className="text-slate-400 text-[11px] block">Gross Billed Tariffs</span>
-                    <span className="font-extrabold text-slate-900 dark:text-white text-base">AED 4,250</span>
+                    <span className="font-extrabold text-slate-900 dark:text-white text-base">NGN 4,250</span>
                   </div>
                   <div className="p-3 rounded-lg bg-white dark:bg-slate-800 shadow-xs">
                     <span className="text-slate-400 text-[11px] block">Settled Copays</span>
-                    <span className="font-extrabold text-teal-700 dark:text-teal-300 text-base">AED 610</span>
+                    <span className="font-extrabold text-teal-700 dark:text-teal-300 text-base">NGN 610</span>
                   </div>
                 </div>
               </div>
@@ -364,7 +364,7 @@ export function PersonalActivityReportsScreen() {
               <div className="bg-teal-50 dark:bg-teal-950/40 border border-teal-200 dark:border-teal-900/50 rounded-xl p-3.5 flex items-start gap-3">
                 <Icon name="verified" filled className="text-xl text-teal-600 dark:text-teal-400 shrink-0 mt-0.5" />
                 <div className="text-xs">
-                  <p className="font-bold text-teal-900 dark:text-teal-200">100% NABIDH E-Sign Hash Verified</p>
+                  <p className="font-bold text-teal-900 dark:text-teal-200">100% Nigeria Health Information Exchange E-Sign Hash Verified</p>
                   <p className="text-teal-800 dark:text-teal-300 mt-0.5 leading-snug">
                     All 3 completed encounter records include verified local anesthesia dosages and diagnostic chart
                     sign-offs.
@@ -448,7 +448,7 @@ export function PersonalActivityReportsScreen() {
         <footer className="p-4 bg-slate-50 dark:bg-slate-800/60 rounded-xl flex items-start gap-2.5 text-xs text-slate-500">
           <Icon name="policy" className="text-base text-slate-400 shrink-0 mt-0.5" />
           <p className="leading-relaxed">
-            <strong>Statutory Notice:</strong> Reports contain protected clinical and financial data governed under UAE
+            <strong>Statutory Notice:</strong> Reports contain protected clinical and financial data governed under Nigeria
             Federal Decree-Law No. (4) on Health Data Protection. Any unauthorized transmission outside DHA-certified
             gateways is logged permanently within the practitioner audit history.
           </p>

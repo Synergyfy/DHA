@@ -493,7 +493,7 @@ export const PaymentRecordingScreen: React.FC = () => {
               {selectedMethod === 'hmo' && (
                 <div className="p-4 bg-[#f2f3ff] rounded-xl space-y-2 text-xs text-[#3f4850]">
                   <p className="font-bold text-[#131b2e]">Third-Party Payer Direct Co-Pay</p>
-                  <p>Co-pay amount mapped to pre-authorization code <span className="font-mono font-bold">AUTH-HMO-402</span> under AXA Mansard Dental.</p>
+                  <p>Co-pay amount mapped to pre-authorization code <span className="font-mono font-bold">AUTH-HMO-402</span> under NHIA Mansard Dental.</p>
                 </div>
               )}
 

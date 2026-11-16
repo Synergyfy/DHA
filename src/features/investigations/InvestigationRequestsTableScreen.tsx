@@ -49,7 +49,7 @@ export function InvestigationRequestsTableScreen() {
     },
     {
       id: 'REQ-2025-0902',
-      patient: 'Fatima Al-Zahra',
+      patient: 'Fatima Bello',
       dhaId: 'DHA-08921',
       ageGender: '29y F',
       modality: '3D CBCT',
@@ -91,7 +91,7 @@ export function InvestigationRequestsTableScreen() {
     },
     {
       id: 'REQ-2025-0860',
-      patient: 'Layla Al-Mansoor',
+      patient: 'Aisha Okoye',
       dhaId: 'DHA-07119',
       ageGender: '27y F',
       modality: 'Intraoral X-Ray',
@@ -105,7 +105,7 @@ export function InvestigationRequestsTableScreen() {
     },
     {
       id: 'REQ-2025-0855',
-      patient: 'Tariq Al-Hashimi',
+      patient: 'Tunde Balogun',
       dhaId: 'DHA-03221',
       ageGender: '58y M',
       modality: 'Histopathology',
@@ -115,7 +115,7 @@ export function InvestigationRequestsTableScreen() {
       status: 'Awaiting Result',
       orderingProvider: 'Dr. Daniel James',
       date: '11 Nov 2026',
-      facility: 'Dubai Hospital Pathology Dept',
+      facility: 'Lagos Hospital Pathology Dept',
     },
   ];
 

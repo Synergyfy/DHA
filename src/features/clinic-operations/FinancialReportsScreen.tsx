@@ -366,7 +366,7 @@ export const FinancialReportsScreen: React.FC = () => {
                     <div className="w-3 h-3 rounded-full bg-[#287ab3] shrink-0"></div>
                     <div>
                       <span className="text-xs font-bold text-[#131b2e] block">HMO Direct Payers</span>
-                      <span className="text-[11px] text-[#707881]">Hygeia, AXA Mansard & Leadway</span>
+                      <span className="text-[11px] text-[#707881]">Hygeia, NHIA Mansard & Leadway</span>
                     </div>
                   </div>
                   <div className="text-right">

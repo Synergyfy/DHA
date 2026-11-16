@@ -25,7 +25,7 @@ export function ServicesSpecialitiesScreen() {
       description:
         'Foundational dental health including routine clinical checkups, caries risk assessments, professional scale and polish, remineralization therapies, and diagnostic x-rays.',
       treatments: ['Oral Exams', 'Digital Bitewings', 'Scaling & Polishing', 'Fluoride Application'],
-      feeRange: 'AED 200 – 350',
+      feeRange: 'NGN 200 – 350',
     },
     {
       id: 'pediatric',
@@ -37,7 +37,7 @@ export function ServicesSpecialitiesScreen() {
       description:
         'Dedicated oral healthcare tailored for children and adolescents, focusing on cavity prevention, pit-and-fissure sealants, behavior guidance, and early interceptive orthodontics in sensory-adapted child environments.',
       treatments: ['Baby Teeth Fillings', 'Pit & Fissure Sealants', 'Space Maintainers', 'Nitrous Oxide Sedation'],
-      feeRange: 'AED 250 – 400',
+      feeRange: 'NGN 250 – 400',
       hasHighlightDoctor: true,
     },
     {
@@ -50,7 +50,7 @@ export function ServicesSpecialitiesScreen() {
       description:
         'Diagnosis, prevention, and correction of misaligned teeth and jaw discrepancies using modern clear aligners (Invisalign), self-ligating ceramic braces, lingual appliances, and functional orthopedic expanders.',
       treatments: ['Invisalign Clear Aligners', 'Ceramic Braces', 'Palatal Expanders', 'Retainers'],
-      feeRange: 'AED 12,000 – 24,000 (Full Course)',
+      feeRange: 'NGN 12,000 – 24,000 (Full Course)',
     },
     {
       id: 'endodontics',
@@ -62,7 +62,7 @@ export function ServicesSpecialitiesScreen() {
       description:
         'Microscopic preservation of infected or traumatized teeth through precision rotary root canal treatments, apical microsurgery, internal bleaching, and cracked tooth syndrome management.',
       treatments: ['Microscope Root Canal', 'Endodontic Retreatment', 'Apicoectomy', 'Pulp Capping'],
-      feeRange: 'AED 1,200 – 2,800',
+      feeRange: 'NGN 1,200 – 2,800',
     },
     {
       id: 'surgery',
@@ -74,7 +74,7 @@ export function ServicesSpecialitiesScreen() {
       description:
         'Surgical management of impacted wisdom teeth, advanced bone grafting, sinus floor elevation, corrective orthognathic jaw alignment, dental cyst enucleation, and emergency facial trauma.',
       treatments: ['Impacted Wisdom Teeth Extraction', 'Sinus Lift Surgery', 'Bone Augmentation', 'Biopsy'],
-      feeRange: 'AED 950 – 3,500',
+      feeRange: 'NGN 950 – 3,500',
     },
     {
       id: 'restorative',
@@ -86,7 +86,7 @@ export function ServicesSpecialitiesScreen() {
       description:
         'Comprehensive rehabilitation of missing, broken, or worn teeth with digital zirconia crowns, porcelain veneers, fixed implant bridges, and complete dental reconstruction.',
       treatments: ['Titanium Dental Implants', 'E-max Porcelain Veneers', 'Zirconia Crowns', 'All-on-4 Bridges'],
-      feeRange: 'AED 1,500 – 7,500',
+      feeRange: 'NGN 1,500 – 7,500',
     },
   ];
 
@@ -94,28 +94,28 @@ export function ServicesSpecialitiesScreen() {
     {
       category: 'Diagnostic & Prevention',
       items: [
-        { name: 'Initial Specialist Consultation & Comprehensive Exam', code: 'DHA-010', range: 'AED 200 – 350', ddr: 'Standard' },
-        { name: 'Full-Mouth Ultrasonic Scaling & Plaque Polishing', code: 'DHA-111', range: 'AED 250 – 450', ddr: 'Preventive' },
-        { name: 'Digital Panoramic OPG X-Ray', code: 'DHA-022', range: 'AED 150 – 250', ddr: 'Imaging' },
-        { name: 'Cone Beam 3D Volumetric CT Scan (Single Jaw)', code: 'DHA-026', range: 'AED 450 – 750', ddr: 'Advanced 3D' },
+        { name: 'Initial Specialist Consultation & Comprehensive Exam', code: 'DHA-010', range: 'NGN 200 – 350', ddr: 'Standard' },
+        { name: 'Full-Mouth Ultrasonic Scaling & Plaque Polishing', code: 'DHA-111', range: 'NGN 250 – 450', ddr: 'Preventive' },
+        { name: 'Digital Panoramic OPG X-Ray', code: 'DHA-022', range: 'NGN 150 – 250', ddr: 'Imaging' },
+        { name: 'Cone Beam 3D Volumetric CT Scan (Single Jaw)', code: 'DHA-026', range: 'NGN 450 – 750', ddr: 'Advanced 3D' },
       ],
     },
     {
       category: 'Restorative & Endodontics',
       items: [
-        { name: 'Tooth-Colored Composite Resin Filling (1 Surface)', code: 'DHA-211', range: 'AED 350 – 550', ddr: 'Restorative' },
-        { name: 'Anterior Tooth Root Canal Treatment (Single Canal)', code: 'DHA-331', range: 'AED 1,200 – 1,800', ddr: 'Endodontic' },
-        { name: 'Molar Tooth Microscopic Root Canal (3-4 Canals)', code: 'DHA-333', range: 'AED 1,800 – 2,800', ddr: 'Endodontic' },
-        { name: 'High-Translucency E-max / Zirconia Crown', code: 'DHA-611', range: 'AED 1,500 – 2,500', ddr: 'Prosthetic' },
+        { name: 'Tooth-Colored Composite Resin Filling (1 Surface)', code: 'DHA-211', range: 'NGN 350 – 550', ddr: 'Restorative' },
+        { name: 'Anterior Tooth Root Canal Treatment (Single Canal)', code: 'DHA-331', range: 'NGN 1,200 – 1,800', ddr: 'Endodontic' },
+        { name: 'Molar Tooth Microscopic Root Canal (3-4 Canals)', code: 'DHA-333', range: 'NGN 1,800 – 2,800', ddr: 'Endodontic' },
+        { name: 'High-Translucency E-max / Zirconia Crown', code: 'DHA-611', range: 'NGN 1,500 – 2,500', ddr: 'Prosthetic' },
       ],
     },
     {
       category: 'Surgical & Implantology',
       items: [
-        { name: 'Simple Tooth Extraction with Local Anesthesia', code: 'DHA-711', range: 'AED 300 – 500', ddr: 'Surgical' },
-        { name: 'Surgical Extraction of Impacted Wisdom Tooth', code: 'DHA-722', range: 'AED 950 – 2,200', ddr: 'Surgical' },
-        { name: 'Single Titanium Dental Implant (Fixture + Abutment)', code: 'DHA-681', range: 'AED 4,500 – 7,500', ddr: 'Implantology' },
-        { name: 'Localized Bone Grafting with Collagen Membrane', code: 'DHA-791', range: 'AED 1,200 – 2,400', ddr: 'Augmentation' },
+        { name: 'Simple Tooth Extraction with Local Anesthesia', code: 'DHA-711', range: 'NGN 300 – 500', ddr: 'Surgical' },
+        { name: 'Surgical Extraction of Impacted Wisdom Tooth', code: 'DHA-722', range: 'NGN 950 – 2,200', ddr: 'Surgical' },
+        { name: 'Single Titanium Dental Implant (Fixture + Abutment)', code: 'DHA-681', range: 'NGN 4,500 – 7,500', ddr: 'Implantology' },
+        { name: 'Localized Bone Grafting with Collagen Membrane', code: 'DHA-791', range: 'NGN 1,200 – 2,400', ddr: 'Augmentation' },
       ],
     },
   ];
@@ -134,14 +134,14 @@ export function ServicesSpecialitiesScreen() {
                   <Icon name="verified" className="text-[16px]" />
                 </span>
                 <span className="font-label-sm text-label-sm text-primary uppercase tracking-wider font-bold">
-                  Official Dubai Healthcare Regulations
+                  Official Nigeria Dental Healthcare Regulations
                 </span>
               </div>
               <h1 className="font-headline-lg text-headline-lg font-bold text-on-surface">
                 Dental Services &amp; Specialities Directory
               </h1>
               <p className="font-body-lg text-body-lg text-on-surface-variant">
-                Understand the 6 accredited dental boards recognized by the Dubai Health Authority, compare standardized reference prices, and find qualified specialists.
+                Understand the 6 accredited dental boards recognized by the Nigeria Dental Health Authority, compare standardized reference prices, and find qualified specialists.
               </p>
             </div>
 
@@ -287,7 +287,7 @@ export function ServicesSpecialitiesScreen() {
                             <span className="font-label-sm text-secondary font-semibold block">
                               Tomorrow 10:15 AM
                             </span>
-                            <span className="font-title-sm font-bold text-primary">AED 300</span>
+                            <span className="font-title-sm font-bold text-primary">NGN 300</span>
                           </div>
                         </div>
 
@@ -323,7 +323,7 @@ export function ServicesSpecialitiesScreen() {
             <div className="bg-surface-container-low rounded-2xl p-4 border border-outline-variant/30 flex items-center gap-3">
               <Icon name="info" className="text-secondary text-[22px] shrink-0" />
               <p className="font-body-sm text-on-surface-variant">
-                Prices shown are published reference benchmarks collected from DHA-accredited dental clinics in Dubai. Actual treatment costs depend on clinical complexity and diagnostic imaging findings.
+                Prices shown are published reference benchmarks collected from DHA-accredited dental clinics in Lagos. Actual treatment costs depend on clinical complexity and diagnostic imaging findings.
               </p>
             </div>
 

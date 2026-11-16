@@ -20,12 +20,15 @@ interface ProviderItem {
   isClinic?: boolean;
   location?: string;
   practitionersCount?: number;
+  /** Public profile slug (see `publicProviders.ts`) opened by View Profile / Book Slot. */
+  publicProfileId: string;
 }
 
 const PROVIDERS_DATA: ProviderItem[] = [
   {
     id: 'prov-1',
-    name: 'Dr. Farouk Al-Mansoori',
+    publicProfileId: 'farouk-Okafor',
+    name: 'Dr. Chinedu Okafor',
     role: 'Paediatric & General Specialist',
     category: 'paediatric',
     dhaNumber: 'DHA #48912',
@@ -39,7 +42,8 @@ const PROVIDERS_DATA: ProviderItem[] = [
   },
   {
     id: 'prov-2',
-    name: 'Dr. Reem Al-Nuaimi',
+    publicProfileId: 'reem-Nwosu',
+    name: 'Dr. Reem Nwosu',
     role: 'Consultant Orthodontist',
     category: 'orthodontics',
     dhaNumber: 'DHA #51204',
@@ -53,7 +57,8 @@ const PROVIDERS_DATA: ProviderItem[] = [
   },
   {
     id: 'prov-3',
-    name: 'Al Zahra Dental Hub',
+    publicProfileId: 'Bello-dental-hub',
+    name: 'Lagos Smile Dental Centre',
     role: 'Multi-Speciality Centre (General, Cosmetic, Surgery)',
     category: 'general',
     dhaNumber: 'DHA Facility #9021',
@@ -63,7 +68,7 @@ const PROVIDERS_DATA: ProviderItem[] = [
       'https://lh3.googleusercontent.com/aida-public/AB6AXuA8zADe8I0laqW0tE8uvNrafsAbjbXTBBF2_I3baxK_AImmUeZqpBIodu7j6a7MVN-jZZ6qO5KyK0htQWZnRATNaZF_UNKuk6wTOgGN0-Yb0XYd3cUIAxGCOVc6DziFJJthFZyCN2w8cngdpQ5imMe8wtSGBeZM24m9B7MrvSR5dfluHWBMIHqM7KEUrbUJt2LljHqbXDmm0BpVbczEsMvIMswOzA5_YTE0D_vwV8fE',
     isVerified: true,
     isClinic: true,
-    location: 'Oud Metha, Dubai',
+    location: 'Ikeja, Lagos',
     practitionersCount: 10,
     nextSlot: 'Available Daily',
     slotTag: 'Walk-ins OK',
@@ -74,7 +79,6 @@ export function FindCareScreen() {
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<CategoryFilter>('all');
-  const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   const filteredProviders = PROVIDERS_DATA.filter((p) => {
     const matchesCategory =
@@ -86,21 +90,8 @@ export function FindCareScreen() {
     return matchesCategory && matchesSearch;
   });
 
-  const handleBooking = (name: string) => {
-    setToastMessage(`Booking session initiated with ${name}.`);
-    setTimeout(() => setToastMessage(null), 3000);
-  };
-
   return (
     <PortalShell pageTitle="Find Dental Care">
-      {/* Toast Alert */}
-      {toastMessage && (
-        <div className="fixed top-20 right-4 z-50 bg-secondary text-on-secondary px-4 py-2.5 rounded-xl shadow-lg flex items-center gap-2 animate-in slide-in-from-top-2 duration-200 text-xs font-semibold">
-          <Icon name="check_circle" className="text-[18px]" />
-          <span>{toastMessage}</span>
-        </div>
-      )}
-
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 lg:py-10 space-y-6">
         {/* Top Authority Header & Brand Aura */}
         <div className="space-y-3">
@@ -120,7 +111,7 @@ export function FindCareScreen() {
               Find Dental Care on DHA
             </h1>
             <p className="text-sm sm:text-base text-on-surface-variant mt-1 leading-relaxed">
-              Discover dentists and dental clinics on DHA. Explore their services, specialities, available information and verified appointment options across Dubai.
+              Discover dentists and dental clinics on DHA. Explore their services, specialities, available information and verified appointment options across Lagos.
             </p>
           </div>
 
@@ -332,7 +323,7 @@ export function FindCareScreen() {
                 {/* Action Buttons */}
                 <div className="p-3 bg-surface-container-lowest grid grid-cols-2 gap-2 border-t border-outline-variant/20">
                   <NavLink
-                    to={item.isClinic ? '/patient-dashboard/discovery/clinic' : '/patient-dashboard/discovery/dentist'}
+                    to={`/find-care/${item.isClinic ? 'clinic' : 'dentist'}-profile/${item.publicProfileId}`}
                     className="w-full py-2 px-2.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-semibold transition-colors flex items-center justify-center gap-1"
                   >
                     <Icon name={item.isClinic ? 'medical_services' : 'badge'} className="text-[16px]" />
@@ -340,7 +331,7 @@ export function FindCareScreen() {
                   </NavLink>
                   <button
                     type="button"
-                    onClick={() => handleBooking(item.name)}
+                    onClick={() => navigate(`/find-care/${item.isClinic ? 'clinic' : 'dentist'}-profile/${item.publicProfileId}`)}
                     className="w-full py-2 px-2.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary text-xs font-semibold shadow-xs transition-all flex items-center justify-center gap-1 active:scale-95"
                   >
                     <Icon name="event_available" className="text-[16px]" />
@@ -357,12 +348,12 @@ export function FindCareScreen() {
           <div className="space-y-1 text-center sm:text-left">
             <h3 className="text-base sm:text-lg font-bold">Looking for a clinic in your neighborhood?</h3>
             <p className="text-xs sm:text-sm text-on-primary/90">
-              Browse interactive map coordinates and filter by sub-specialty across Dubai.
+              Browse interactive map coordinates and filter by sub-specialty across Lagos.
             </p>
           </div>
           <button
             type="button"
-            onClick={() => navigate('/patient-dashboard/discovery/map')}
+            onClick={() => navigate('/portal/find-care')}
             className="px-5 py-2.5 rounded-xl bg-surface-container-lowest text-primary text-xs sm:text-sm font-semibold shadow-sm hover:bg-surface-container-low transition-all active:scale-95 flex items-center gap-2 shrink-0"
           >
             <Icon name="explore" className="text-[18px]" />

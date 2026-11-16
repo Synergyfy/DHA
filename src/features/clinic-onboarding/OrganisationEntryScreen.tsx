@@ -31,7 +31,7 @@ export function OrganisationEntryScreen() {
             </div>
             <div>
               <span className="font-heading font-bold text-base tracking-tight text-on-surface">DHA Health Facility Gateway</span>
-              <p className="text-xs text-on-surface-variant">Dubai Health Authority &bull; Facility Statutory Enrollment</p>
+              <p className="text-xs text-on-surface-variant">Nigeria Dental Health Authority &bull; Facility Statutory Enrollment</p>
             </div>
           </div>
 

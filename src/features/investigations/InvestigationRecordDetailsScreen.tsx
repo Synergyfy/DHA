@@ -21,7 +21,7 @@ export function InvestigationRecordDetailsScreen() {
   const handleSignConfirm = () => {
     setSignStatus('signed');
     setSignModalOpen(false);
-    setActionFeedback('Investigation record reviewed, digitally signed & committed to NABIDH.');
+    setActionFeedback('Investigation record reviewed, digitally signed & committed to Nigeria Health Information Exchange.');
     setTimeout(() => setActionFeedback(null), 4000);
   };
 
@@ -78,7 +78,7 @@ export function InvestigationRecordDetailsScreen() {
                   <Icon name="verified" className="text-secondary text-sm shrink-0" />
                 </div>
                 <span className="text-xs text-on-surface-variant truncate">
-                  34y Male • DHA-10482 • Blood: O+ • Emirates ID: 784-1990-2819201-1
+                  34y Male • DHA-10482 • Blood: O+ • National Identification Number (NIN): 12345678901
                 </span>
               </div>
             </div>
@@ -168,7 +168,7 @@ export function InvestigationRecordDetailsScreen() {
                   <div className="p-3 rounded-xl bg-surface-container-low border border-outline-variant/20 flex flex-col">
                     <span className="text-[11px] text-outline font-medium">Acquisition Stamp</span>
                     <span className="text-xs sm:text-sm font-semibold text-on-surface mt-1">16 Feb 2025</span>
-                    <span className="text-xs text-on-surface-variant">09:40 GST</span>
+                    <span className="text-xs text-on-surface-variant">09:40 WAT</span>
                   </div>
                 </div>
 
@@ -432,7 +432,7 @@ export function InvestigationRecordDetailsScreen() {
             )}
           </div>
 
-          {/* Right Column (4 cols on lg): Governance, NABIDH, Audit */}
+          {/* Right Column (4 cols on lg): Governance, Nigeria Health Information Exchange, Audit */}
           <div className="lg:col-span-4 flex flex-col gap-6">
             {/* Section D: Governance & Patient Visibility Flag */}
             <section className="rounded-2xl bg-surface-container-lowest border border-outline-variant/30 p-5 shadow-xs flex flex-col gap-4">
@@ -463,13 +463,13 @@ export function InvestigationRecordDetailsScreen() {
                 </div>
               </div>
 
-              {/* NABIDH Unified Health Exchange Ledger Verification */}
+              {/* Nigeria Health Information Exchange Unified Health Exchange Ledger Verification */}
               <div className="p-3.5 rounded-xl bg-surface-container-low border border-outline-variant/20 flex flex-col gap-2">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-1.5">
                     <Icon name="verified" className="text-secondary text-sm" />
                     <span className="text-xs text-secondary font-bold uppercase tracking-wider">
-                      NABIDH Exchange Hash
+                      Nigeria Health Information Exchange Exchange Hash
                     </span>
                   </div>
                   <span className="text-[11px] text-outline font-medium">Direct Commit</span>
@@ -562,11 +562,11 @@ export function InvestigationRecordDetailsScreen() {
                   <div><strong>Modality:</strong> Dental Radiography (Bitewing / PA)</div>
                   <div><strong>Target:</strong> FDI #16 (MO Caries ICDAS 3/4)</div>
                   <div><strong>Clinician:</strong> Dr. Daniel James (Lic. DHA #DEN-48912)</div>
-                  <div><strong>Timestamp:</strong> 16 Feb 2025, 10:15 GST</div>
+                  <div><strong>Timestamp:</strong> 16 Feb 2025, 10:15 WAT</div>
                 </div>
                 <div className="p-2.5 rounded-lg bg-emerald-50 text-emerald-800 border border-emerald-200 text-[11px] flex items-center gap-2">
                   <Icon name="cloud_done" className="text-base text-emerald-600 shrink-0" />
-                  <span>This approval will automatically commit to the UAE NABIDH Health Ledger.</span>
+                  <span>This approval will automatically commit to the Nigeria Nigeria Health Information Exchange Health Ledger.</span>
                 </div>
               </div>
 

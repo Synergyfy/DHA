@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { useAuthStore } from '../../store/authStore';
 import { Icon } from '../../design/Primitives';
 
 interface ExaminationShellProps {
@@ -39,7 +40,7 @@ export function ExaminationShell({
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
 
   const handleSignOut = () => {
-    navigate('/login');
+    useAuthStore.getState().signOut(); navigate('/login');
   };
 
   return (

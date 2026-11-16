@@ -79,7 +79,7 @@ export function TreatmentSchedulingScreen() {
             <div className="min-w-0">
               <span className="text-[11px] font-bold text-slate-400 uppercase tracking-wider block">Assigned Practice</span>
               <span className="text-sm font-bold text-slate-900 truncate block">
-                DHA Primary Dental Clinic (Al Wasl) • Operatory 02
+                DHA Primary Dental Clinic, Lekki • Operatory 02
               </span>
             </div>
           </div>
@@ -369,7 +369,7 @@ export function TreatmentSchedulingScreen() {
               <Icon name="sms" className="text-[#006194] text-lg shrink-0" />
               <div>
                 <span className="text-[10px] font-bold text-slate-400 uppercase block">Automated Dispatch</span>
-                <span className="font-semibold text-slate-800">SMS &amp; Push to Amara (+971 50 *** 8491)</span>
+                <span className="font-semibold text-slate-800">SMS &amp; Push to Amara (+234 803 *** 8491)</span>
               </div>
             </div>
 
@@ -381,7 +381,7 @@ export function TreatmentSchedulingScreen() {
                   <span className="text-[11px] text-slate-600">Due at chairside checkout</span>
                 </div>
               </div>
-              <span className="text-base font-extrabold text-[#006a61]">AED 170.00</span>
+              <span className="text-base font-extrabold text-[#006a61]">NGN 170.00</span>
             </div>
           </div>
         </div>

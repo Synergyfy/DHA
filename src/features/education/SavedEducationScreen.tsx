@@ -131,7 +131,7 @@ export function SavedEducationScreen() {
                   Guardian Account
                 </span>
                 <span className="font-title-sm font-bold text-on-surface">
-                  Sarah Al-Mansoor • Family Dental Unit
+                  Ngozi Eze • Family Dental Unit
                 </span>
               </div>
             </div>

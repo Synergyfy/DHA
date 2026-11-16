@@ -13,12 +13,12 @@ export function ClinicalReviewInterpretationScreen() {
   const [percussionStatus, setPercussionStatus] = useState<string>('Negative (Non-tender)');
   const [treatmentDirective, setTreatmentDirective] = useState<string>('DHA-RES-2S');
   const [executionWindow, setExecutionWindow] = useState<'urgent_7d' | 'routine_14d' | 'elective_30d'>('urgent_7d');
-  const [languageMode, setLanguageMode] = useState<'en' | 'ar'>('en');
+  const [languageMode, setLanguageMode] = useState<'en' | 'ha'>('en');
   const [summaryEnglish, setSummaryEnglish] = useState<string>(
     'Tooth #16 (upper right back molar) shows active decay extending through the enamel into the outer layer of dentin. Vitality testing confirms the dental pulp is fully alive with mild reversible irritation. Direct tooth-colored composite restoration is strongly recommended within 7 days to seal the tooth and prevent deeper nerve inflammation.'
   );
-  const [summaryArabic, setSummaryArabic] = useState<string>(
-    'يُظهر الضرس العلوي الأيمن (#16) تسوساً نشطاً يمتد عبر طبقة المينا إلى الطبقة الخارجية من العاج. أكدت اختبارات حيوية العصب أن العصب سليم وحي مع التهاب طفيف قابل للشفاء. نوصي بشدة بإجراء حشوة تجميلية مباشرة خلال 7 أيام لإغلاق الضرس ومنع وصول التسوس للعصب.'
+  const [summaryHausa, setSummaryHausa] = useState<string>(
+    'Haƙorin baya na sama a gefen dama (#16) yana da ruɓewar haƙori da ta ratsa enamel zuwa saman dentin. Gwajin jijiyar haƙori ya nuna yana da rai, tare da ɗan kumburi mai sauƙin warkewa. Ana ba da shawarar a cike haƙorin da kayan launin haƙori cikin kwanaki 7 domin hana ruɓewar ta kai ga jijiyar haƙori.'
   );
   const [publishToPortal, setPublishToPortal] = useState<boolean>(true);
   const [statutoryAgreed, setStatutoryAgreed] = useState<boolean>(true);
@@ -63,7 +63,7 @@ export function ClinicalReviewInterpretationScreen() {
       return;
     }
     setIsSealed(true);
-    showToast('Investigation interpretation sealed with SHA-256 and transmitted to NABIDH.');
+    showToast('Investigation interpretation sealed with SHA-256 and transmitted to Nigeria Health Information Exchange.');
   };
 
   return (
@@ -401,12 +401,12 @@ export function ClinicalReviewInterpretationScreen() {
                   </button>
                   <button
                     type="button"
-                    onClick={() => setLanguageMode('ar')}
+                    onClick={() => setLanguageMode('ha')}
                     className={`px-2 py-0.5 rounded font-bold ${
-                      languageMode === 'ar' ? 'bg-primary text-on-primary' : 'text-on-surface-variant hover:text-on-surface'
+                      languageMode === 'ha' ? 'bg-primary text-on-primary' : 'text-on-surface-variant hover:text-on-surface'
                     }`}
                   >
-                    العربية
+                    Hausa
                   </button>
                 </div>
               </div>
@@ -427,9 +427,9 @@ export function ClinicalReviewInterpretationScreen() {
               ) : (
                 <textarea
                   rows={5}
-                  dir="rtl"
-                  value={summaryArabic}
-                  onChange={(e) => setSummaryArabic(e.target.value)}
+                  dir="ltr"
+                  value={summaryHausa}
+                  onChange={(e) => setSummaryHausa(e.target.value)}
                   disabled={isSealed}
                   className="w-full text-xs font-normal rounded-xl border border-outline-variant/40 bg-surface p-3 text-on-surface focus:outline-none focus:ring-2 focus:ring-primary/40 disabled:opacity-60 leading-relaxed"
                 />
@@ -437,7 +437,7 @@ export function ClinicalReviewInterpretationScreen() {
 
               <div className="flex items-center justify-between text-[11px] text-outline">
                 <span>
-                  Characters: {languageMode === 'en' ? summaryEnglish.length : summaryArabic.length} (Max 500)
+                  Characters: {languageMode === 'en' ? summaryEnglish.length : summaryHausa.length} (Max 500)
                 </span>
                 <label className="flex items-center gap-1.5 cursor-pointer text-on-surface select-none">
                   <input
@@ -489,7 +489,7 @@ export function ClinicalReviewInterpretationScreen() {
                     e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                   </div>
                   <p className="text-[11px] text-emerald-800">
-                    Recorded in NABIDH WORM Audit Ledger • Version 1.2 Active
+                    Recorded in Nigeria Health Information Exchange WORM Audit Ledger • Version 1.2 Active
                   </p>
                 </div>
               ) : (

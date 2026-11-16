@@ -24,12 +24,12 @@ const RESOURCES: ResourceItem[] = [
     category: 'circulars',
     title: 'Updated SOP for Biomimetic Composite & C-Factor Stress Relief',
     refCode: 'DHA Circular #2026/R-14',
-    issuer: 'Dubai Health Authority • Dental Regulation Sector',
+    issuer: 'Nigeria Dental Health Authority • Dental Regulation Sector',
     date: '12 October 2026',
     isMandatory: true,
     summary:
-      'New clinical standards mandated for all Class II direct restorations approaching within 2.0mm of pulp ceiling. Incremental oblique layering and rubber dam isolation are mandatory audit criteria for NABIDH clinical submission.',
-    tags: ['Restorative', 'NABIDH Compliance', 'Mandatory'],
+      'New clinical standards mandated for all Class II direct restorations approaching within 2.0mm of pulp ceiling. Incremental oblique layering and rubber dam isolation are mandatory audit criteria for Nigeria Health Information Exchange clinical submission.',
+    tags: ['Restorative', 'Nigeria Health Information Exchange Compliance', 'Mandatory'],
     pdfSize: '1.8 MB',
     isBookmarked: true,
   },
@@ -52,11 +52,11 @@ const RESOURCES: ResourceItem[] = [
     category: 'guidelines',
     title: 'Antibiotic Stewardship in Dental Practice: Penicillin Cross-Reactivity Matrix',
     refCode: 'Safety Alert #2026-08',
-    issuer: 'UAE Medical Liability Committee',
+    issuer: 'Nigeria Medical Liability Committee',
     date: '15 August 2026',
     isMandatory: true,
     summary:
-      'Mandatory allergy cross-matching documentation standards under UAE Medical Liability Law 2026. Focuses on safe alternatives for severe beta-lactam and penicillin anaphylaxis cases.',
+      'Mandatory allergy cross-matching documentation standards under Nigeria National Health Act 2014. Focuses on safe alternatives for severe beta-lactam and penicillin anaphylaxis cases.',
     tags: ['Pharmacology', 'Allergy Safety', 'Legal Compliance'],
     pdfSize: '2.1 MB',
     isBookmarked: false,
@@ -82,8 +82,8 @@ const RESOURCES: ResourceItem[] = [
     issuer: 'Health Information Exchange',
     date: 'Updated Oct 2026',
     summary:
-      'NABIDH formatted standard template including Periodontal Screening & Recording (PSR), ICDAS caries index, and soft-tissue cancer screening logs.',
-    tags: ['NABIDH Standard', 'Clinical Audit'],
+      'Nigeria Health Information Exchange formatted standard template including Periodontal Screening & Recording (PSR), ICDAS caries index, and soft-tissue cancer screening logs.',
+    tags: ['Nigeria Health Information Exchange Standard', 'Clinical Audit'],
     pdfSize: '840 KB',
   },
   {
@@ -94,7 +94,7 @@ const RESOURCES: ResourceItem[] = [
     issuer: 'DHA Legal Counsel',
     date: 'Updated Sep 2026',
     summary:
-      'Official bilingual (Arabic / English) clinical consent document approved for surgical implantology, sinus augmentation, and surgical extractions.',
+      'Official bilingual (Hausa / English) clinical consent document approved for surgical implantology, sinus augmentation, and surgical extractions.',
     tags: ['Bilingual', 'Legal Approved'],
     pdfSize: '1.1 MB',
   },
@@ -263,7 +263,7 @@ export function ProfessionalResourcesAnnouncementsScreen() {
                   <span>12 October 2026</span>
                 </span>
                 <span>•</span>
-                <span className="text-[#86f2e4] font-semibold">Valid for All UAE Dental Facilities</span>
+                <span className="text-[#86f2e4] font-semibold">Valid for All Nigeria Dental Facilities</span>
               </div>
             </div>
 
@@ -271,7 +271,7 @@ export function ProfessionalResourcesAnnouncementsScreen() {
               New clinical standards mandated for all Class II direct restorations approaching within{' '}
               <strong className="text-[#86f2e4]">2.0mm of pulp ceiling</strong>. Incremental oblique layering
               and rubber dam isolation are mandatory audit criteria for{' '}
-              <strong className="text-white">NABIDH clinical submission</strong>.
+              <strong className="text-white">Nigeria Health Information Exchange clinical submission</strong>.
             </p>
 
             <div className="pt-2 flex items-center gap-3 flex-wrap">
@@ -322,7 +322,7 @@ export function ProfessionalResourcesAnnouncementsScreen() {
               </h3>
               <p className="text-xs text-[#707881] flex items-center gap-1">
                 <Icon name="schedule" className="text-[14px] text-[#006194]" />
-                <span>28 Oct 2026 • 19:30 GST (Chairside Broadcast)</span>
+                <span>28 Oct 2026 • 19:30 WAT (Chairside Broadcast)</span>
               </p>
             </div>
           </div>
@@ -351,7 +351,7 @@ export function ProfessionalResourcesAnnouncementsScreen() {
               <Icon name="menu_book" className="text-[18px] text-[#006194]" />
               <span>Clinical Practice Guidelines &amp; Practice Toolkits</span>
             </h3>
-            <span className="text-xs text-[#006194] font-semibold">NABIDH Synced</span>
+            <span className="text-xs text-[#006194] font-semibold">Nigeria Health Information Exchange Synced</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -454,7 +454,7 @@ export function ProfessionalResourcesAnnouncementsScreen() {
                 Clinical Audit Compliance Portal
               </h4>
               <p className="text-xs text-[#707881] mt-0.5">
-                Automated electronic upload bridge for Dubai Health Authority 2026 practice quality assessments.
+                Automated electronic upload bridge for Nigeria Dental Health Authority 2026 practice quality assessments.
               </p>
             </div>
           </div>

@@ -152,7 +152,7 @@ export const AppointmentDetailsScreen: React.FC = () => {
                   </p>
                   <div className="flex flex-wrap items-center gap-2 mt-2">
                     <span className="font-mono text-xs bg-[#f2f3ff] border border-[#dae2fd]/60 px-2.5 py-0.5 rounded-md text-[#3f4850]">
-                      ID: AE-990-281-DXB
+                      ID: NG-990-281-LAG
                     </span>
                     <span className="font-mono text-xs bg-[#f2f3ff] border border-[#dae2fd]/60 px-2.5 py-0.5 rounded-md text-[#3f4850]">
                       MRN: DHA-2026-00451

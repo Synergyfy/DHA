@@ -32,7 +32,7 @@ export function ExaminationHistoryScreen() {
     {
       id: 'exam-1',
       date: '16 Feb 2025',
-      relativeTime: 'Today • 10:47 GST',
+      relativeTime: 'Today • 10:47 WAT',
       type: 'Comprehensive Examination',
       isCurrent: true,
       clinician: 'Dr. Daniel James',
@@ -56,7 +56,7 @@ export function ExaminationHistoryScreen() {
       statusColor: 'bg-primary/15 text-primary',
       summary: 'Baseline comprehensive charting. Full dentition present. Existing amalgam restoration on #46 sound. Baseline panoramic radiograph (OPG) archived.',
       studiesCount: 1,
-      badgeLabel: 'NABIDH BASELINE',
+      badgeLabel: 'Nigeria Health Information Exchange BASELINE',
     },
     {
       id: 'exam-3',
@@ -76,9 +76,9 @@ export function ExaminationHistoryScreen() {
       date: '05 Aug 2022',
       relativeTime: '2.5 years ago',
       type: 'Comprehensive Examination',
-      clinician: 'Dr. Sarah Al-Rashid',
+      clinician: 'Dr. Sarah Adeyemi',
       license: '#DEN-22091',
-      facility: 'Al Barsha Primary Health Centre',
+      facility: 'Surulere Primary Health Centre',
       status: 'Archived',
       statusColor: 'bg-purple-100 dark:bg-purple-950 text-purple-700 dark:text-purple-300',
       summary: 'Initial intake examination. Direct resin composite restoration placed on Tooth #21 Mesio-Incisal (MI) angle following minor incisal trauma.',
@@ -155,7 +155,7 @@ export function ExaminationHistoryScreen() {
           <div className="p-3 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 text-center">
             <span className="text-[11px] text-on-surface-variant block">Total Examinations</span>
             <span className="text-xl font-bold font-mono text-on-surface">4</span>
-            <span className="text-[10px] text-secondary block font-semibold">NABIDH Synchronized</span>
+            <span className="text-[10px] text-secondary block font-semibold">Nigeria Health Information Exchange Synchronized</span>
           </div>
           <div className="p-3 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 text-center">
             <span className="text-[11px] text-on-surface-variant block">Comprehensive</span>

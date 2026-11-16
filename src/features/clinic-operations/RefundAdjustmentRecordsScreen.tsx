@@ -51,7 +51,7 @@ export const RefundAdjustmentRecordsScreen: React.FC = () => {
     initialPaid: 42000,
     authorizedCredit: 12000,
     auditNote:
-      'AXA Mansard retroactive secondary pre-auth approved 80% coverage. Patient eligible for ₦12,000 wallet credit or registered bank account transfer.',
+      'NHIA Mansard retroactive secondary pre-auth approved 80% coverage. Patient eligible for ₦12,000 wallet credit or registered bank account transfer.',
     initiator: 'Grace Ibrahim (Receptionist)',
     directorSigned: true,
     financeSigned: false,

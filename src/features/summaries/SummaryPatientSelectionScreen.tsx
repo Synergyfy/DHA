@@ -359,7 +359,7 @@ export function SummaryPatientSelectionScreen() {
                 </span>
                 <span className="text-[10px] text-[#006a61] font-semibold flex items-center gap-1 mt-0.5">
                   <Icon name="hub" className="text-[11px]" />
-                  NABIDH Synced
+                  Nigeria Health Information Exchange Synced
                 </span>
               </div>
 

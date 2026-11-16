@@ -26,7 +26,7 @@ export function InvestigationReviewConfirmationScreen() {
     setTimeout(() => {
       setIsSubmitting(false);
       setIngestedSuccess(true);
-      showToast('Diagnostic study committed to NABIDH repository #DHA-REC-9014!');
+      showToast('Diagnostic study committed to Nigeria Health Information Exchange repository #DHA-REC-9014!');
     }, 1200);
   };
 
@@ -66,7 +66,7 @@ export function InvestigationReviewConfirmationScreen() {
             <h2 className="text-base sm:text-lg font-bold text-on-surface">Verification & Ingestion</h2>
             <div className="flex items-center gap-1.5 text-secondary text-xs font-bold font-mono">
               <Icon name="verified_user" className="text-sm text-secondary" />
-              <span>NABIDH-READY</span>
+              <span>Nigeria Health Information Exchange-READY</span>
             </div>
           </div>
         </div>
@@ -84,7 +84,7 @@ export function InvestigationReviewConfirmationScreen() {
               </span>
             </div>
             <p className="text-on-surface-variant mt-1 leading-relaxed">
-              No identical DICOM series instance UID exists in the DHA central repository or the NABIDH health exchange network.
+              No identical DICOM series instance UID exists in the DHA central repository or the Nigeria Health Information Exchange health exchange network.
             </p>
           </div>
         </div>
@@ -237,7 +237,7 @@ export function InvestigationReviewConfirmationScreen() {
             </div>
             <div className="flex items-center justify-between p-2.5 rounded-lg bg-surface-container-low">
               <span className="text-on-surface-variant">Capture Timestamp</span>
-              <span className="font-bold text-on-surface font-mono">16 Feb 2025, 09:40 GST</span>
+              <span className="font-bold text-on-surface font-mono">16 Feb 2025, 09:40 WAT</span>
             </div>
           </div>
         </div>
@@ -272,7 +272,7 @@ export function InvestigationReviewConfirmationScreen() {
               />
               <span className="leading-relaxed">
                 I acknowledge that upon ingestion, this record becomes an{' '}
-                <strong>immutable clinical asset</strong> with tamper-evident audit logging transmitted directly to the NABIDH ledger.
+                <strong>immutable clinical asset</strong> with tamper-evident audit logging transmitted directly to the Nigeria Health Information Exchange ledger.
               </span>
             </label>
           </div>
@@ -315,7 +315,7 @@ export function InvestigationReviewConfirmationScreen() {
                 {isSubmitting ? (
                   <>
                     <span className="inline-block w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
-                    <span>Submitting to NABIDH Ledger...</span>
+                    <span>Submitting to Nigeria Health Information Exchange Ledger...</span>
                   </>
                 ) : (
                   <>

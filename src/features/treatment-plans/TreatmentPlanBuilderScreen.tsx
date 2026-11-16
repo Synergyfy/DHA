@@ -177,7 +177,7 @@ export function TreatmentPlanBuilderScreen() {
                 <span className="text-xs text-[#006194] font-semibold">Gross Est.</span>
               </div>
               <span className="text-sm font-extrabold text-[#006194]">
-                AED {totalGross.toLocaleString()}
+                NGN {totalGross.toLocaleString()}
               </span>
             </div>
           </div>
@@ -273,7 +273,7 @@ export function TreatmentPlanBuilderScreen() {
 
                     <div className="text-left sm:text-right">
                       <span className="text-base font-extrabold text-[#131b2e]">
-                        AED {item.amount.toLocaleString()}
+                        NGN {item.amount.toLocaleString()}
                       </span>
                       <p className="text-[11px] text-[#707881]">Draft UCC</p>
                     </div>
@@ -376,7 +376,7 @@ export function TreatmentPlanBuilderScreen() {
 
                     <div className="text-left sm:text-right">
                       <span className="text-base font-extrabold text-[#131b2e]">
-                        AED {item.amount.toLocaleString()}
+                        NGN {item.amount.toLocaleString()}
                       </span>
                       <p className="text-[11px] text-[#707881]">Draft UCC</p>
                     </div>
@@ -441,12 +441,12 @@ export function TreatmentPlanBuilderScreen() {
             <div className="flex items-center justify-between px-3.5 py-1.5 rounded-xl bg-[#f2f3ff] text-xs">
               <div className="flex items-center gap-2">
                 <span className="text-[#707881]">Gross Plan:</span>
-                <span className="font-extrabold text-[#131b2e]">AED {totalGross.toLocaleString()}</span>
+                <span className="font-extrabold text-[#131b2e]">NGN {totalGross.toLocaleString()}</span>
               </div>
               <div className="flex items-center gap-1.5">
                 <Icon name="shield_with_heart" className="text-[16px] text-[#006a61]" />
                 <span className="text-[#707881]">Est. Copay (20%):</span>
-                <span className="font-bold text-[#006a61]">AED {copayEst.toLocaleString()}</span>
+                <span className="font-bold text-[#006a61]">NGN {copayEst.toLocaleString()}</span>
               </div>
             </div>
 
@@ -495,24 +495,24 @@ export function TreatmentPlanBuilderScreen() {
                 <div className="p-3.5 rounded-xl bg-[#f2f3ff] space-y-0.5">
                   <p className="font-bold text-[#707881] uppercase tracking-wider text-[10px]">Patient Profile</p>
                   <p className="font-bold text-[#131b2e] text-sm">Amara Okafor • 34y Female</p>
-                  <p className="text-[#707881]">DHA Identity: 784-1990-2839210-1</p>
+                  <p className="text-[#707881]">DHA Identity: 12345678901</p>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-[#f2f3ff] space-y-2">
                   <p className="font-bold text-[#707881] uppercase tracking-wider text-[10px]">Sequential Schedule</p>
                   <div className="flex items-center justify-between text-xs">
                     <span className="text-[#131b2e]">Phase 1: Acute Intervention</span>
-                    <span className="font-bold text-[#006194]">AED 850</span>
+                    <span className="font-bold text-[#006194]">NGN 850</span>
                   </div>
                   <div className="flex items-center justify-between text-xs">
                     <span className="text-[#131b2e]">Phase 2: Remineralization &amp; Prophy</span>
-                    <span className="font-bold text-[#006194]">AED 600</span>
+                    <span className="font-bold text-[#006194]">NGN 600</span>
                   </div>
                 </div>
 
                 <div className="p-3.5 rounded-xl bg-[#89f5e7]/30 flex items-center justify-between">
                   <span className="font-semibold text-[#006a61]">Patient Portion Payable</span>
-                  <span className="text-base font-extrabold text-[#006a61]">AED {copayEst}.00</span>
+                  <span className="text-base font-extrabold text-[#006a61]">NGN {copayEst}.00</span>
                 </div>
               </div>
 

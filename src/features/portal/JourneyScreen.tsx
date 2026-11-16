@@ -35,16 +35,16 @@ export function JourneyScreen() {
               </button>
             </div>
             <p className="text-xs text-on-surface-variant leading-relaxed">
-              Our certified care navigators assist Dubai patients with record interpretation, insurance pre-authorizations, and clinic discovery.
+              Our certified care navigators assist Lagos patients with record interpretation, insurance pre-authorizations, and clinic discovery.
             </p>
             <div className="p-3 bg-surface-container-low rounded-xl text-xs space-y-1">
               <div className="flex items-center justify-between">
                 <span className="text-on-surface-variant">Live Hotline:</span>
-                <span className="font-bold text-primary font-mono">800-342 (DHA)</span>
+                <span className="font-bold text-primary font-mono">0800-000-0000 (DHA)</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-on-surface-variant">Support Hours:</span>
-                <span className="text-on-surface">7:30 AM – 9:00 PM (GST)</span>
+                <span className="text-on-surface">7:30 AM – 9:00 PM (WAT)</span>
               </div>
             </div>
             <button
@@ -67,7 +67,7 @@ export function JourneyScreen() {
           <div className="flex items-center gap-2 bg-surface-container px-3 py-1.5 rounded-full self-start">
             <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
             <span className="text-[11px] text-secondary tracking-wider uppercase font-bold">
-              Dubai Health Authority
+              Nigeria Dental Health Authority
             </span>
           </div>
           <div className="flex items-center gap-1.5 text-on-surface-variant text-xs font-medium">
@@ -87,7 +87,7 @@ export function JourneyScreen() {
               Everything You Need for Your Dental Health Journey
             </h1>
             <p className="text-sm sm:text-base text-on-surface-variant leading-relaxed mt-1">
-              Empowering tools built to make dental visits clearer, less stressful, and completely transparent across all UAE clinics.
+              Empowering tools built to make dental visits clearer, less stressful, and completely transparent across all Nigeria clinics.
             </p>
           </div>
 
@@ -144,7 +144,7 @@ export function JourneyScreen() {
 
             <button
               type="button"
-              onClick={() => navigate('/patient-dashboard/records/timeline')}
+              onClick={() => navigate('/portal/better-way')}
               className="mt-4 w-full py-2.5 px-4 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary text-xs sm:text-sm font-semibold flex items-center justify-between transition-colors"
             >
               <span>Explore Records &amp; Odontogram</span>
@@ -190,7 +190,7 @@ export function JourneyScreen() {
 
             <button
               type="button"
-              onClick={() => navigate('/patient-dashboard/discovery')}
+              onClick={() => navigate('/portal/find-care')}
               className="mt-4 w-full py-2.5 px-4 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary text-xs sm:text-sm font-semibold flex items-center justify-between transition-colors"
             >
               <span>Browse Accredited Clinics</span>
@@ -234,7 +234,7 @@ export function JourneyScreen() {
 
             <button
               type="button"
-              onClick={() => navigate('/patient-dashboard/reminders')}
+              onClick={() => navigate('/portal/family-care')}
               className="mt-4 w-full py-2.5 px-4 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary text-xs sm:text-sm font-semibold flex items-center justify-between transition-colors"
             >
               <span>View Care Timelines</span>
@@ -279,7 +279,7 @@ export function JourneyScreen() {
 
             <button
               type="button"
-              onClick={() => navigate('/patient-dashboard/education')}
+              onClick={() => navigate('/oral-health-guides')}
               className="mt-4 w-full py-2.5 px-4 rounded-xl bg-surface-container hover:bg-surface-container-high text-primary text-xs sm:text-sm font-semibold flex items-center justify-between transition-colors"
             >
               <span>Access Free Health Guides</span>

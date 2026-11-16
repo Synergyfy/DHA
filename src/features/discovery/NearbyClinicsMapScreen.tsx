@@ -26,68 +26,68 @@ export function NearbyClinicsMapScreen() {
 
   const clinics: MapClinic[] = [
     {
-      id: 'al-zahra',
+      id: 'Bello',
       pinNumber: 1,
-      name: 'Al Zahra Dental Hub',
+      name: 'Lagos Smile Dental Centre',
       accreditation: 'DHA Diamond • JCI Accredited',
       rating: 4.9,
       reviewsCount: 486,
-      address: 'Building 34, 19th St, Oud Metha Medical Zone',
-      district: 'Oud Metha',
+      address: 'Building 34, 19th St, Ikeja Medical Zone',
+      district: 'Ikeja',
       distance: '1.2 km away',
       nextSlot: 'Today, 3:15 PM',
       cx: 340,
       cy: 220,
       specialities: ['Prosthodontics', 'Orthodontics', 'Implantology'],
-      phone: '+971 4 336 6666',
+      phone: '+234 803 000 0001',
     },
     {
-      id: 'dubai-smile',
+      id: 'Lagos-smile',
       pinNumber: 2,
-      name: 'Dubai Smile Studio DHCC',
+      name: 'Lagos Smile Studio DHCC',
       accreditation: 'DHA Gold Star Accredited',
       rating: 4.8,
       reviewsCount: 240,
-      address: 'Al Razi Bldg 64, Dubai Healthcare City',
+      address: 'Lagos Bldg 64, Lagos Dental District',
       district: 'DHCC',
       distance: '2.1 km away',
       nextSlot: 'Tomorrow, 11:00 AM',
       cx: 430,
       cy: 260,
       specialities: ['Paediatric Dentistry', 'Cosmetics'],
-      phone: '+971 4 429 8888',
+      phone: '+234 803 000 0002',
     },
     {
-      id: 'dubai-london',
+      id: 'Lagos-Lagos',
       pinNumber: 3,
-      name: 'Dubai London Clinic Dental Unit',
+      name: 'Lagos Island Dental Centre',
       accreditation: 'DHA Accredited Facility',
       rating: 4.7,
       reviewsCount: 194,
-      address: 'Crescent Tower, Dubai Festival City',
-      district: 'Festival City',
+      address: 'Crescent Tower, Lagos Island',
+      district: 'Ikeja City Mall',
       distance: '4.8 km away',
       nextSlot: 'Wed, 10:30 AM',
       cx: 560,
       cy: 170,
       specialities: ['General Dentistry', 'Endodontics'],
-      phone: '+971 4 378 1111',
+      phone: '+234 803 000 0003',
     },
     {
-      id: 'jumeirah-oral',
+      id: 'Victoria Island-oral',
       pinNumber: 4,
-      name: 'Jumeirah Oral Studio',
+      name: 'Victoria Island Oral Studio',
       accreditation: 'DHA Diamond Star Facility',
       rating: 4.9,
       reviewsCount: 320,
-      address: 'Villa 14B, Al Wasl Road, Jumeirah 2',
-      district: 'Jumeirah',
+      address: 'Villa 14B, Admiralty Way, Lekki',
+      district: 'Victoria Island',
       distance: '5.2 km away',
       nextSlot: 'Today, 5:00 PM',
       cx: 190,
       cy: 330,
       specialities: ['Aesthetic Smile Design', 'Invisalign'],
-      phone: '+971 4 344 5555',
+      phone: '+234 803 000 0004',
     },
     {
       id: 'healthbay',
@@ -96,18 +96,18 @@ export function NearbyClinicsMapScreen() {
       accreditation: 'DHA Accredited Facility',
       rating: 4.6,
       reviewsCount: 156,
-      address: 'Al Wasl Road, Al Safa 1',
-      district: 'Al Safa',
+      address: 'Ikeja GRA',
+      district: 'Ikeja GRA',
       distance: '6.4 km away',
       nextSlot: 'Thu, 9:00 AM',
       cx: 140,
       cy: 420,
       specialities: ['Family Dentistry', 'Preventive Care'],
-      phone: '+971 4 348 7140',
+      phone: '+234 803 000 0005',
     },
   ];
 
-  const [selectedClinicId, setSelectedClinicId] = useState<string>('al-zahra');
+  const [selectedClinicId, setSelectedClinicId] = useState<string>('Bello');
   const [zoomLevel, setZoomLevel] = useState(1);
   const [searchQuery, setSearchQuery] = useState('');
 
@@ -168,7 +168,7 @@ export function NearbyClinicsMapScreen() {
             <div className="absolute top-4 left-4 z-20 bg-surface-container-lowest/90 backdrop-blur-md px-3 py-2 rounded-2xl border border-outline-variant/30 shadow-xs flex items-center gap-2">
               <div className="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></div>
               <span className="font-label-md text-on-surface font-semibold">
-                Oud Metha &amp; Healthcare City Medical Cluster
+                Ikeja &amp; Healthcare City Medical Cluster
               </span>
             </div>
 
@@ -194,7 +194,7 @@ export function NearbyClinicsMapScreen() {
                 type="button"
                 onClick={() => {
                   setZoomLevel(1);
-                  setSelectedClinicId('al-zahra');
+                  setSelectedClinicId('Bello');
                 }}
                 className="w-10 h-10 rounded-xl bg-surface-container-lowest shadow-md border border-outline-variant/30 flex items-center justify-center text-primary hover:bg-surface-container transition-colors"
                 aria-label="Recenter map"
@@ -224,7 +224,7 @@ export function NearbyClinicsMapScreen() {
 
                 <rect width="700" height="520" fill="url(#grid)" />
 
-                {/* Dubai Creek Curved Vector Body */}
+                {/* Lagos Creek Curved Vector Body */}
                 <path
                   d="M 680 0 C 600 60, 480 80, 420 120 C 370 150, 350 180, 390 230 C 420 270, 480 280, 520 330 C 560 380, 510 440, 460 520 L 700 520 L 700 0 Z"
                   fill="url(#creekGrad)"
@@ -232,7 +232,7 @@ export function NearbyClinicsMapScreen() {
                 />
 
                 {/* District Enclaves */}
-                {/* Oud Metha Medical Zone */}
+                {/* Ikeja Medical Zone */}
                 <rect
                   x="280"
                   y="160"
@@ -246,7 +246,7 @@ export function NearbyClinicsMapScreen() {
                   strokeWidth="1.2"
                 />
                 <text x="295" y="185" fill="#004b73" fontSize="11" fontWeight="700" fontFamily="Inter">
-                  OUD METHA ZONE
+                  Ikeja ZONE
                 </text>
 
                 {/* DHCC Enclave */}
@@ -266,7 +266,7 @@ export function NearbyClinicsMapScreen() {
                   DHCC MEDICAL CLUSTER
                 </text>
 
-                {/* Jumeirah Sector */}
+                {/* Victoria Island Sector */}
                 <rect
                   x="100"
                   y="280"
@@ -280,7 +280,7 @@ export function NearbyClinicsMapScreen() {
                   strokeWidth="1.2"
                 />
                 <text x="120" y="305" fill="#005049" fontSize="11" fontWeight="700" fontFamily="Inter">
-                  JUMEIRAH COASTAL
+                  Victoria Island COASTAL
                 </text>
 
                 {/* Main Arterial Roadways */}

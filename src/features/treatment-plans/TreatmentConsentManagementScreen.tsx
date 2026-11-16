@@ -70,7 +70,7 @@ export function TreatmentConsentManagementScreen() {
             </div>
 
             <p className="text-xs text-slate-600 leading-relaxed">
-              Patient: <strong>Amara Okafor</strong> (LifeCode: AE-990-281-DXB) acknowledging surgical consent for <strong>Tooth #16 Biomimetic Composite</strong>.
+              Patient: <strong>Amara Okafor</strong> (LifeCode: NG-990-281-LAG) acknowledging surgical consent for <strong>Tooth #16 Biomimetic Composite</strong>.
             </p>
 
             <div className="p-4 bg-slate-50 border-2 border-dashed border-slate-300 rounded-2xl flex flex-col items-center justify-center h-40 text-center">
@@ -81,7 +81,7 @@ export function TreatmentConsentManagementScreen() {
 
             <div className="flex items-center justify-between text-xs text-slate-500 pt-1">
               <span>Witness: Dr. Daniel James (#DEN-48912)</span>
-              <span className="font-mono text-[11px] text-[#006194]">UAE PASS Level 3</span>
+              <span className="font-mono text-[11px] text-[#006194]">NIN biometric verification</span>
             </div>
 
             <div className="flex items-center gap-3 pt-2">
@@ -116,7 +116,7 @@ export function TreatmentConsentManagementScreen() {
               <div className="flex items-center gap-2 flex-wrap">
                 <span className="text-xs font-bold text-[#006194] uppercase tracking-wider">Statutory Protocol</span>
                 <span className="bg-[#006194]/10 text-[#006194] px-2 py-0.5 rounded text-[10px] font-bold">
-                  UAE Federal Health Law &amp; DHA Dental Standards
+                  Nigeria Federal Health Law &amp; DHA Dental Standards
                 </span>
               </div>
               <p className="text-xs text-[#3f4850] leading-relaxed">
@@ -138,7 +138,7 @@ export function TreatmentConsentManagementScreen() {
                   <h2 className="font-bold text-base text-slate-900 truncate">Amara Okafor</h2>
                   <span className="bg-[#e2e7ff] text-slate-700 px-2 py-0.5 rounded text-xs font-medium">34y Female</span>
                 </div>
-                <p className="text-xs text-slate-500 truncate mt-0.5">LifeCode: AE-990-281-DXB</p>
+                <p className="text-xs text-slate-500 truncate mt-0.5">LifeCode: NG-990-281-LAG</p>
               </div>
             </div>
             <div className="text-right shrink-0">
@@ -418,7 +418,7 @@ export function TreatmentConsentManagementScreen() {
                 <Icon name="fingerprint" className="text-base" />
               </div>
               <div className="min-w-0">
-                <span className="font-semibold text-slate-900 block truncate">UAE PASS OTP • 14 Oct 2026, 11:40 GST</span>
+                <span className="font-semibold text-slate-900 block truncate">National Identification Number (NIN) verification OTP • 14 Oct 2026, 11:40 WAT</span>
                 <span className="text-[11px] font-mono text-slate-400 truncate block">Hash: 8f4e2b...39c1 (Valid DHA Audit trail)</span>
               </div>
             </div>
@@ -457,7 +457,7 @@ export function TreatmentConsentManagementScreen() {
                 <Icon name="verified" className="text-base" />
               </div>
               <div className="min-w-0">
-                <span className="font-semibold text-slate-900 block truncate">Digital Stylus • 14 Oct 2026, 11:42 GST</span>
+                <span className="font-semibold text-slate-900 block truncate">Digital Stylus • 14 Oct 2026, 11:42 WAT</span>
                 <span className="text-[11px] text-slate-400 truncate block">Witnessed: Dr. Daniel James</span>
               </div>
             </div>
@@ -493,7 +493,7 @@ export function TreatmentConsentManagementScreen() {
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             <button
               type="button"
-              onClick={() => showToast('Consent request push notification sent to Amara Okafor mobile app via UAE Pass')}
+              onClick={() => showToast('Consent request push notification sent to Amara Okafor mobile app via National Identification Number (NIN) verification')}
               className="w-full bg-white hover:bg-slate-50 text-slate-700 py-3 px-4 rounded-xl flex items-center justify-center gap-2 text-xs font-bold border border-slate-300 shadow-xs transition-colors"
             >
               <Icon name="send_to_mobile" className="text-[#006a61] text-base" />

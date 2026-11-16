@@ -35,7 +35,7 @@ export const StaffPermissionDetailsScreen: React.FC = () => {
     },
     {
       id: 'p-3',
-      title: 'Scan Emirates ID / DHA QR Pass for Arrival Check-in',
+      title: 'Scan National Identification Number (NIN) / DHA QR Pass for Arrival Check-in',
       desc: 'Direct sync with Ministry biometric authentication kiosk',
       category: 'inherited'
     },

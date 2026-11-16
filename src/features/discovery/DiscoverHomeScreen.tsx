@@ -38,18 +38,18 @@ export function DiscoverHomeScreen() {
   const navigate = useNavigate();
 
   const [searchQuery, setSearchQuery] = useState('');
-  const [selectedLocation, setSelectedLocation] = useState('Dubai Healthcare City');
+  const [selectedLocation, setSelectedLocation] = useState('Lagos Dental District');
   const [locationMenuOpen, setLocationMenuOpen] = useState(false);
 
   const locations = [
-    'Dubai Healthcare City',
-    'Oud Metha',
-    'Jumeirah 1 & 2',
-    'Downtown Dubai',
-    'Dubai Marina',
-    'Business Bay',
-    'Al Barsha',
-    'Deira / Al Rigga',
+    'Lagos Dental District',
+    'Ikeja',
+    'Victoria Island 1 & 2',
+    'Victoria Island',
+    'Lekki Phase 1',
+    'Ikeja GRA',
+    'Surulere',
+    'Lagos Island / Yaba',
   ];
 
   const specialities = [
@@ -63,12 +63,12 @@ export function DiscoverHomeScreen() {
 
   const featuredClinics: ClinicCard[] = [
     {
-      id: 'al-zahra',
-      name: 'Al Zahra Dental Hub',
+      id: 'Bello',
+      name: 'Lagos Smile Dental Centre',
       accreditation: 'DHA Diamond • JCI Accredited',
       rating: 4.9,
       reviewsCount: 486,
-      district: 'Oud Metha, Medical Zone',
+      district: 'Ikeja, Medical Zone',
       distance: '1.2 km away',
       nextSlot: 'Today, 3:15 PM',
       image: 'https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=600&q=80',
@@ -76,12 +76,12 @@ export function DiscoverHomeScreen() {
       isVerified: true,
     },
     {
-      id: 'emirates-ortho',
-      name: 'Emirates Orthodontics & Studio',
+      id: 'Nigerian-ortho',
+      name: 'Lagos Orthodontics & Studio',
       accreditation: 'DHA Gold Star Accredited',
       rating: 4.8,
       reviewsCount: 312,
-      district: 'Jumeirah 2, Al Wasl Rd',
+      district: 'Victoria Island, Lagos',
       distance: '3.4 km away',
       nextSlot: 'Tomorrow, 10:00 AM',
       image: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=600&q=80',
@@ -89,12 +89,12 @@ export function DiscoverHomeScreen() {
       isVerified: true,
     },
     {
-      id: 'dubai-london',
-      name: 'Dubai London Clinic Dental Unit',
+      id: 'Lagos-Lagos',
+      name: 'Lagos Island Dental Centre',
       accreditation: 'DHA Accredited Facility',
       rating: 4.7,
       reviewsCount: 224,
-      district: 'Dubai Festival City',
+      district: 'Lagos Island',
       distance: '4.8 km away',
       nextSlot: 'Wed, 11:30 AM',
       image: 'https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?auto=format&fit=crop&w=600&q=80',
@@ -106,46 +106,46 @@ export function DiscoverHomeScreen() {
   const topDentists: DentistCard[] = [
     {
       id: 'farouk',
-      name: 'Dr. Farouk Al-Mansoori',
+      name: 'Dr. Chinedu Okafor',
       title: 'Consultant Prosthodontist & Implantologist',
       license: 'DHA-D-48912',
       experience: '16+ Years Experience',
       rating: 4.9,
       reviewsCount: 142,
-      languages: ['Arabic', 'English', 'French'],
-      clinic: 'Al Zahra Dental Hub',
+      languages: ['Hausa', 'English', 'Igbo'],
+      clinic: 'Lagos Smile Dental Centre',
       nextSlot: 'Today, 3:15 PM',
-      fee: 'AED 350',
+      fee: 'NGN 350',
       avatarBg: 'bg-primary-fixed',
       avatarText: 'FA',
     },
     {
       id: 'mariam',
-      name: 'Dr. Mariam Al-Husseini',
+      name: 'Dr. Amina Bello',
       title: 'Specialist Paediatric Dentist',
       license: 'DHA-D-51204',
       experience: '12+ Years Experience',
       rating: 4.9,
       reviewsCount: 98,
-      languages: ['Arabic', 'English'],
-      clinic: 'Dubai Children Oral Health',
+      languages: ['Hausa', 'English'],
+      clinic: "Lagos Children's Dental Centre",
       nextSlot: 'Tomorrow, 9:30 AM',
-      fee: 'AED 300',
+      fee: 'NGN 300',
       avatarBg: 'bg-secondary-container',
       avatarText: 'MH',
     },
     {
       id: 'tariq',
-      name: 'Dr. Tariq Al-Nuaimi',
+      name: 'Dr. Ifeanyi Nwosu',
       title: 'Consultant Orthodontist',
       license: 'DHA-D-39180',
       experience: '14+ Years Experience',
       rating: 4.8,
       reviewsCount: 128,
-      languages: ['Arabic', 'English'],
-      clinic: 'Emirates Orthodontics',
+      languages: ['Hausa', 'English'],
+      clinic: 'Lagos Orthodontics',
       nextSlot: 'Tomorrow, 2:00 PM',
-      fee: 'AED 350',
+      fee: 'NGN 350',
       avatarBg: 'bg-tertiary-fixed',
       avatarText: 'TN',
     },
@@ -179,7 +179,7 @@ export function DiscoverHomeScreen() {
               Find Verified Dentists &amp; Accredited Clinics
             </h1>
             <p className="font-body-lg text-body-lg text-on-surface-variant">
-              Explore 140+ DHA-licensed dental facilities, verified consultants, transparent reference fees, and direct booking across Dubai.
+              Explore 140+ DHA-licensed dental facilities, verified consultants, transparent reference fees, and direct booking across Lagos.
             </p>
 
             {/* Global Search Bar */}
@@ -325,7 +325,7 @@ export function DiscoverHomeScreen() {
               Looking for a clinic near your home or office?
             </h3>
             <p className="font-body-md text-white/90">
-              Interactive map with live DHA wait-times, transit directions, and verified insurance in-network filters across all Dubai zones.
+              Interactive map with live DHA wait-times, transit directions, and verified insurance in-network filters across all Lagos zones.
             </p>
           </div>
           <div className="flex flex-col sm:flex-row items-center gap-3 shrink-0 w-full md:w-auto">

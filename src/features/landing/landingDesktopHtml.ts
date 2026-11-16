@@ -6,7 +6,7 @@
  * LandingPage.tsx — do not edit the raw HTML files (they no longer exist).
  */
 export const landingDesktopHtml = `
-<header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1280px] mx-auto px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-xs"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">dentistry</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">DHA</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Dental Health</span></div></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-title-sm text-title-sm rounded-lg"><a aria-current="page" class="px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary-container font-title-sm text-title-sm rounded-lg" data-path="home" href="#">Home</a><a class="px-space-sm py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="about-dha" href="#">About DHA</a><a class="px-space-sm py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="for-professionals" href="#">For Professionals</a><a class="px-space-sm py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="oral-health-guides" href="#">Oral Health Guides</a></nav><div class="flex items-center gap-space-md"><a class="font-title-sm text-title-sm text-on-surface-variant hover:text-primary transition-colors px-space-xs py-space-xs" data-path="login" href="#">Log In</a><a class="hidden sm:inline-flex items-center justify-center h-12 px-space-lg rounded-xl bg-primary text-on-primary font-title-sm text-title-sm hover:bg-primary-container transition-colors shadow-sm" data-path="get-started" href="#">Get Started</a><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-20 bg-transparent flex-1"><div class="flex flex-col w-full">
+<header class="fixed top-0 left-0 right-0 w-full z-50 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 max-w-[1280px] mx-auto px-margin-desktop flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-xs"><div class="w-10 h-10 rounded-xl bg-primary flex items-center justify-center text-on-primary shadow-sm"><span class="material-symbols-outlined text-[24px]">dentistry</span></div><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-on-surface leading-tight tracking-tight">DHA</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Dental Health</span></div></div><nav class="hidden xl:flex items-center gap-space-xs" data-active-classes="bg-primary-container text-on-primary-container font-title-sm text-title-sm rounded-lg"><a aria-current="page" class="px-space-sm py-space-xs transition-colors bg-primary-container text-on-primary-container font-title-sm text-title-sm rounded-lg" data-path="home" href="#">Home</a><a class="px-space-sm py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="about-dha" href="#">About DHA</a><a class="px-space-sm py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="for-professionals" href="#">For Professionals</a><a class="px-space-sm py-space-xs rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors" data-path="oral-health-guides" href="#">Oral Health Guides</a></nav><div class="flex items-center gap-space-md" data-auth-actions><div class="flex items-center gap-space-md" data-auth-signed-out><a class="font-title-sm text-title-sm text-on-surface-variant hover:text-primary transition-colors px-space-xs py-space-xs" data-path="login" href="#">Log In</a><a class="hidden sm:inline-flex items-center justify-center h-12 px-space-lg rounded-xl bg-primary text-on-primary font-title-sm text-title-sm hover:bg-primary-container transition-colors shadow-sm" data-path="get-started" href="#">Get Started</a></div><div class="relative flex items-center" data-auth-signed-in style="display:none"><button type="button" aria-label="Open account menu" aria-expanded="false" data-avatar-toggle class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center font-title-sm text-title-sm font-bold shadow-sm hover:bg-primary-container transition-colors"><span data-avatar-initials>AO</span></button><div data-avatar-menu class="absolute right-0 top-full mt-2 w-64 rounded-2xl bg-surface border border-outline-variant/40 shadow-[0_16px_32px_rgba(0,0,0,0.14)] p-2 z-50 flex flex-col" style="display:none"><div class="px-3 py-2"><div data-avatar-name class="font-title-sm text-title-sm text-on-surface font-semibold truncate">Amara Okafor</div><div data-avatar-role class="font-label-sm text-label-sm text-on-surface-variant">Patient account</div></div><div class="border-t border-outline-variant/40 my-1"></div><a data-path="patient-portal" href="#" class="flex items-center gap-2 rounded-xl px-3 py-2.5 font-title-sm text-title-sm text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[18px]">dashboard</span>My Dashboard</a><button type="button" data-sign-out class="w-full flex items-center gap-2 rounded-xl px-3 py-2.5 font-title-sm text-title-sm text-error hover:bg-error-container/40 transition-colors"><span class="material-symbols-outlined text-[18px]">logout</span>Sign Out</button></div></div><button aria-label="Open Menu" aria-expanded="false" data-menu-toggle class="xl:hidden w-11 h-11 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button></div></div><div data-landing-menu class="flex flex-col border-t border-outline-variant/30 bg-surface-container-lowest/95 backdrop-blur-xl shadow-[0_12px_24px_rgba(0,0,0,0.06)]" style="display:none"><div class="max-w-[1280px] mx-auto w-full px-margin-desktop py-space-md flex flex-col gap-1"><a data-path="home" href="#" class="px-space-sm py-3 rounded-lg font-title-sm text-title-sm text-on-surface hover:bg-surface-container transition-colors">Home</a><a data-path="about-dha" href="#" class="px-space-sm py-3 rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors">About DHA</a><a data-path="for-professionals" href="#" class="px-space-sm py-3 rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors">For Professionals</a><a data-path="oral-health-guides" href="#" class="px-space-sm py-3 rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors">Oral Health Guides</a><div class="flex items-center gap-space-md pt-3 mt-1 border-t border-outline-variant/30" data-auth-signed-out><a data-path="login" href="#" class="font-title-sm text-title-sm text-on-surface-variant hover:text-primary transition-colors px-space-xs py-space-xs">Log In</a><a data-path="get-started" href="#" class="inline-flex items-center justify-center h-11 px-space-lg rounded-xl bg-primary text-on-primary font-title-sm text-title-sm hover:bg-primary-container transition-colors shadow-sm">Get Started</a></div><div class="flex items-center gap-space-md pt-3 mt-1 border-t border-outline-variant/30" data-auth-signed-in style="display:none"><a data-path="patient-portal" href="#" class="inline-flex items-center gap-2 h-11 px-space-lg rounded-xl border border-outline-variant/60 font-title-sm text-title-sm text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[18px]">dashboard</span>My Dashboard</a><button type="button" data-sign-out class="inline-flex items-center gap-2 h-11 px-space-lg rounded-xl bg-error-container text-error font-title-sm text-title-sm hover:bg-error-container/70 transition-colors"><span class="material-symbols-outlined text-[18px]">logout</span>Sign Out</button></div></div></div></header><main class="w-full pt-20 bg-transparent flex-1"><div class="flex flex-col w-full">
 <!-- SECTION 2: HERO SECTION -->
 <section class="w-full max-w-[1440px] mx-auto px-margin-desktop py-space-xl">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
@@ -98,7 +98,7 @@ export const landingDesktopHtml = `
 <span class="font-body-sm text-body-sm text-on-surface-variant">Amara &amp; Tunde • Dr. Nnamdi Obi (Ikoyi Clinic)</span>
 </div>
 </div>
-<a class="hidden sm:inline-flex items-center justify-center h-9 px-3 rounded-lg bg-surface-container text-primary font-title-sm text-title-sm hover:bg-surface-container-high transition-colors" href="#">
+<a data-path="family-reminders" class="hidden sm:inline-flex items-center justify-center h-9 px-3 rounded-lg bg-surface-container text-primary font-title-sm text-title-sm hover:bg-surface-container-high transition-colors" href="#">
               Manage
             </a>
 </div>
@@ -213,7 +213,7 @@ export const landingDesktopHtml = `
             </p>
 </div>
 <div class="pt-space-md">
-<a class="inline-flex items-center text-secondary font-title-sm text-title-sm group-hover:translate-x-1 transition-transform" data-path="for-professionals" href="#">
+<a class="inline-flex items-center text-secondary font-title-sm text-title-sm group-hover:translate-x-1 transition-transform" data-path="find-care" href="#">
               Browse Clinics <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
 </a>
 </div>
@@ -230,7 +230,7 @@ export const landingDesktopHtml = `
             </p>
 </div>
 <div class="pt-space-md">
-<a class="inline-flex items-center text-tertiary font-title-sm text-title-sm group-hover:translate-x-1 transition-transform" data-path="for-patients" href="#">
+<a class="inline-flex items-center text-tertiary font-title-sm text-title-sm group-hover:translate-x-1 transition-transform" data-path="care-timeline" href="#">
               Care Timelines <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
 </a>
 </div>
@@ -302,7 +302,7 @@ export const landingDesktopHtml = `
 </div>
 </div>
 <div class="pt-space-xs">
-<a class="inline-flex items-center justify-center h-12 px-space-lg rounded-xl bg-primary text-on-primary font-title-sm text-title-sm hover:bg-primary-container shadow-md transition-all" data-path="for-patients" href="#">
+<a class="inline-flex items-center justify-center h-12 px-space-lg rounded-xl bg-primary text-on-primary font-title-sm text-title-sm hover:bg-primary-container shadow-md transition-all" data-path="register" href="#">
               Create Your Patient Account
               <span class="material-symbols-outlined ml-2 text-[18px]">arrow_forward</span>
 </a>
@@ -375,7 +375,7 @@ export const landingDesktopHtml = `
 <span class="font-body-sm text-body-sm text-error font-medium">First Pediatric Checkup Due Soon</span>
 </div>
 </div>
-<a class="px-2.5 py-1 rounded-lg bg-surface-container-lowest text-primary font-label-sm text-label-sm shadow-sm hover:bg-primary hover:text-on-primary transition-all" href="#">
+<a data-path="book-slot" class="px-2.5 py-1 rounded-lg bg-surface-container-lowest text-primary font-label-sm text-label-sm shadow-sm hover:bg-primary hover:text-on-primary transition-all" href="#">
                 Book Slot
               </a>
 </div>
@@ -443,7 +443,7 @@ export const landingDesktopHtml = `
 </div>
 </div>
 <div class="pt-space-sm">
-<a class="w-full inline-flex items-center justify-center h-11 rounded-xl bg-surface-container-high text-primary font-title-sm text-title-sm hover:bg-primary hover:text-on-primary transition-all" href="#">
+<a data-path="dentist-profile" data-param="nnamdi-obi" class="w-full inline-flex items-center justify-center h-11 rounded-xl bg-surface-container-high text-primary font-title-sm text-title-sm hover:bg-primary hover:text-on-primary transition-all" href="#">
                 View Profile
               </a>
 </div>
@@ -473,7 +473,7 @@ export const landingDesktopHtml = `
 </div>
 </div>
 <div class="pt-space-sm">
-<a class="w-full inline-flex items-center justify-center h-11 rounded-xl bg-surface-container-high text-primary font-title-sm text-title-sm hover:bg-primary hover:text-on-primary transition-all" href="#">
+<a data-path="dentist-profile" data-param="amina-bello" class="w-full inline-flex items-center justify-center h-11 rounded-xl bg-surface-container-high text-primary font-title-sm text-title-sm hover:bg-primary hover:text-on-primary transition-all" href="#">
                 View Profile
               </a>
 </div>
@@ -503,7 +503,7 @@ export const landingDesktopHtml = `
 </div>
 </div>
 <div class="pt-space-sm">
-<a class="w-full inline-flex items-center justify-center h-11 rounded-xl bg-surface-container-high text-primary font-title-sm text-title-sm hover:bg-primary hover:text-on-primary transition-all" href="#">
+<a data-path="clinic-profile" data-param="lagos-smile-centre" class="w-full inline-flex items-center justify-center h-11 rounded-xl bg-surface-container-high text-primary font-title-sm text-title-sm hover:bg-primary hover:text-on-primary transition-all" href="#">
                 View Centre
               </a>
 </div>
@@ -521,7 +521,7 @@ export const landingDesktopHtml = `
 <span class="font-body-sm text-body-sm text-on-surface-variant">Filter by NHIA coverage, weekend availability, or pediatric specialists.</span>
 </div>
 </div>
-<a class="inline-flex items-center justify-center h-11 px-space-lg rounded-xl bg-primary text-on-primary font-title-sm text-title-sm hover:bg-primary-container transition-all shrink-0" href="#">
+<a data-path="nearby-care" class="inline-flex items-center justify-center h-11 px-space-lg rounded-xl bg-primary text-on-primary font-title-sm text-title-sm hover:bg-primary-container transition-all shrink-0" href="#">
           Find Dental Care Near You
         </a>
 </div>
@@ -554,7 +554,7 @@ export const landingDesktopHtml = `
             </p>
 </div>
 <div class="pt-space-lg">
-<a class="inline-flex items-center text-primary font-title-sm text-title-sm hover:underline" data-path="for-professionals" href="#">
+<a class="inline-flex items-center text-primary font-title-sm text-title-sm hover:underline" data-path="community-dentists" href="#">
               Professional Access <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
 </a>
 </div>
@@ -571,7 +571,7 @@ export const landingDesktopHtml = `
             </p>
 </div>
 <div class="pt-space-lg">
-<a class="inline-flex items-center text-secondary font-title-sm text-title-sm hover:underline" href="#">
+<a data-path="community-clinics" class="inline-flex items-center text-secondary font-title-sm text-title-sm hover:underline" href="#">
               Clinic Access <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
 </a>
 </div>
@@ -588,7 +588,7 @@ export const landingDesktopHtml = `
             </p>
 </div>
 <div class="pt-space-lg">
-<a class="inline-flex items-center text-tertiary font-title-sm text-title-sm hover:underline" href="#">
+<a data-path="community-schools" class="inline-flex items-center text-tertiary font-title-sm text-title-sm hover:underline" href="#">
               Organisation Access <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
 </a>
 </div>
@@ -702,7 +702,7 @@ export const landingDesktopHtml = `
               </p>
 </div>
 <div class="pt-space-sm">
-<a class="inline-flex items-center text-primary font-title-sm text-title-sm hover:underline" data-path="oral-health-guides" href="#">
+<a class="inline-flex items-center text-primary font-title-sm text-title-sm hover:underline" data-path="guide-brushing" href="#">
                 Read Guide <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
 </a>
 </div>
@@ -722,7 +722,7 @@ export const landingDesktopHtml = `
               </p>
 </div>
 <div class="pt-space-sm">
-<a class="inline-flex items-center text-secondary font-title-sm text-title-sm hover:underline" data-path="oral-health-guides" href="#">
+<a class="inline-flex items-center text-secondary font-title-sm text-title-sm hover:underline" data-path="guide-children" href="#">
                 Read Guide <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
 </a>
 </div>
@@ -742,7 +742,7 @@ export const landingDesktopHtml = `
               </p>
 </div>
 <div class="pt-space-sm">
-<a class="inline-flex items-center text-tertiary font-title-sm text-title-sm hover:underline" data-path="oral-health-guides" href="#">
+<a class="inline-flex items-center text-tertiary font-title-sm text-title-sm hover:underline" data-path="guide-checkups" href="#">
                 Read Guide <span class="material-symbols-outlined text-[16px] ml-1">arrow_forward</span>
 </a>
 </div>
@@ -831,12 +831,12 @@ export const landingDesktopHtml = `
             Get Started
             <span class="material-symbols-outlined ml-2 text-[18px]">arrow_forward</span>
 </a>
-<a class="inline-flex items-center justify-center h-12 px-space-lg rounded-xl bg-surface-container-highest/20 text-inverse-on-surface font-title-sm text-title-sm hover:bg-surface-container-highest/30 transition-all duration-200" data-path="about-dha" href="#">
+<a class="inline-flex items-center justify-center h-12 px-space-lg rounded-xl bg-surface-container-highest/20 text-inverse-on-surface font-title-sm text-title-sm hover:bg-surface-container-highest/30 transition-all duration-200" data-path="explore-portal" href="#">
             Explore DHA
           </a>
 </div>
 </div>
 </div>
 </section>
-</div></main><footer class="w-full bg-surface-container-low shadow-[0_-1px_8px_rgba(0,0,0,0.02)] mt-auto"><div class="max-w-[1280px] mx-auto px-margin-desktop py-space-2xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-desktop mb-space-2xl"><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex items-center gap-space-xs"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[20px]">dentistry</span></div><span class="font-headline-sm text-headline-sm text-on-surface">DHA Dental Health</span></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-sm">Unified public dental care portal and clinical authority ecosystem. Bridging validated clinician diagnostics, patient records, and health data intelligence across Nigeria.</p><div class="flex items-center gap-space-xs"><span class="inline-flex items-center gap-space-2xs px-space-xs py-1 rounded-full bg-surface-container-lowest text-secondary font-label-sm text-label-sm border border-outline-variant/30"><span class="material-symbols-outlined text-[14px]">verified</span>NHIA Connected</span><span class="inline-flex items-center gap-space-2xs px-space-xs py-1 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm border border-outline-variant/30"><span class="material-symbols-outlined text-[14px]">lock</span>NDPR Compliant</span></div></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><h3 class="font-title-sm text-title-sm text-on-surface uppercase tracking-wider">Platform</h3><nav class="flex flex-col gap-space-xs"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="for-patients" href="#">Patient Portal</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="dental-care" href="#">Odontogram Viewer</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="oral-health-guides" href="#">Health Guides</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="appointments" href="#">Book Consultation</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="verified-records" href="#">Diagnostic Records</a></nav></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><h3 class="font-title-sm text-title-sm text-on-surface uppercase tracking-wider">Clinicians &amp; Authority</h3><nav class="flex flex-col gap-space-xs"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="for-professionals" href="#">Provider Network</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="about-dha" href="#">Clinical Standards</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="nabidh-integration" href="#">NHIA Health Exchange</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="licensing-verification" href="#">Practitioner Registry</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="clinical-research" href="#">Epidemiology &amp; Research</a></nav></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><h3 class="font-title-sm text-title-sm text-on-surface uppercase tracking-wider">Governance &amp; Security</h3><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Compliant with the Nigeria Data Protection Regulation (NDPR) and Nigeria Data Protection Act (NDPA), and international ISO 27001 standards. Encrypted clinical charting and telemetry sync.</p><div class="flex flex-col gap-space-2xs pt-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="privacy-policy" href="#">Data Governance &amp; Privacy Notice</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms of Medical Portal Use</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="accessibility" href="#">Accessibility Standards</a></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md bg-surface-container-low"><p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 DHA. All rights reserved. Dental Health Authority of Nigeria.</p><div class="flex items-center gap-space-lg"><span class="font-label-code text-label-code text-on-surface-variant">v4.2.0 • NHIA PRODUCTION</span><div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary"></span>Systems Normal</div></div></div></div></footer>
+</div></main><footer class="w-full bg-surface-container-low shadow-[0_-1px_8px_rgba(0,0,0,0.02)] mt-auto"><div class="max-w-[1280px] mx-auto px-margin-desktop py-space-2xl"><div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-gutter-desktop mb-space-2xl"><div class="lg:col-span-4 flex flex-col gap-space-md"><div class="flex items-center gap-space-xs"><div class="w-9 h-9 rounded-xl bg-primary flex items-center justify-center text-on-primary"><span class="material-symbols-outlined text-[20px]">dentistry</span></div><span class="font-headline-sm text-headline-sm text-on-surface">DHA Dental Health</span></div><p class="font-body-md text-body-md text-on-surface-variant leading-relaxed max-w-sm">Unified public dental care portal and clinical authority ecosystem. Bridging validated clinician diagnostics, patient records, and health data intelligence across Nigeria.</p><div class="flex items-center gap-space-xs"><span class="inline-flex items-center gap-space-2xs px-space-xs py-1 rounded-full bg-surface-container-lowest text-secondary font-label-sm text-label-sm border border-outline-variant/30"><span class="material-symbols-outlined text-[14px]">verified</span>NHIA Connected</span><span class="inline-flex items-center gap-space-2xs px-space-xs py-1 rounded-full bg-surface-container-lowest text-on-surface-variant font-label-sm text-label-sm border border-outline-variant/30"><span class="material-symbols-outlined text-[14px]">lock</span>NDPR Compliant</span></div></div><div class="lg:col-span-2 flex flex-col gap-space-sm"><h3 class="font-title-sm text-title-sm text-on-surface uppercase tracking-wider">Platform</h3><nav class="flex flex-col gap-space-xs"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="patient-portal" href="#">Patient Portal</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="dental-care" href="#">Odontogram Viewer</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="oral-health-guides" href="#">Health Guides</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="appointments" href="#">Book Consultation</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="verified-records" href="#">Diagnostic Records</a></nav></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><h3 class="font-title-sm text-title-sm text-on-surface uppercase tracking-wider">Clinicians &amp; Authority</h3><nav class="flex flex-col gap-space-xs"><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="for-professionals" href="#">Provider Network</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="about-dha" href="#">Clinical Standards</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="Nigeria Health Information Exchange-integration" href="#">NHIA Health Exchange</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="licensing-verification" href="#">Practitioner Registry</a><a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors" data-path="clinical-research" href="#">Epidemiology &amp; Research</a></nav></div><div class="lg:col-span-3 flex flex-col gap-space-sm"><h3 class="font-title-sm text-title-sm text-on-surface uppercase tracking-wider">Governance &amp; Security</h3><p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Compliant with the Nigeria Data Protection Regulation (NDPR) and Nigeria Data Protection Act (NDPA), and international ISO 27001 standards. Encrypted clinical charting and telemetry sync.</p><div class="flex flex-col gap-space-2xs pt-space-xs"><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="privacy-policy" href="#">Data Governance &amp; Privacy Notice</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="terms-of-service" href="#">Terms of Medical Portal Use</a><a class="font-body-sm text-body-sm text-on-surface-variant hover:text-primary transition-colors" data-path="accessibility" href="#">Accessibility Standards</a></div></div></div><div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md bg-surface-container-low"><p class="font-body-sm text-body-sm text-on-surface-variant">© 2025 DHA. All rights reserved. Dental Health Authority of Nigeria.</p><div class="flex items-center gap-space-lg"><span class="font-label-code text-label-code text-on-surface-variant">v4.2.0 • NHIA PRODUCTION</span><div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm"><span class="w-2 h-2 rounded-full bg-secondary"></span>Systems Normal</div></div></div></div></footer>
 `;

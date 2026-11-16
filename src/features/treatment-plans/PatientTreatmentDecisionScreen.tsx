@@ -201,7 +201,7 @@ export function PatientTreatmentDecisionScreen() {
             <div className="px-3.5 py-1.5 rounded-xl bg-[#faf8ff] border border-[#eaedff] text-right">
               <span className="text-[10px] block font-semibold text-slate-400 uppercase">Patient</span>
               <span className="font-bold text-xs text-slate-900">Amara Okafor</span>
-              <span className="text-[10px] font-mono block text-[#006194]">AE-990-281-DXB</span>
+              <span className="text-[10px] font-mono block text-[#006194]">NG-990-281-LAG</span>
             </div>
           </div>
         </div>
@@ -243,11 +243,11 @@ export function PatientTreatmentDecisionScreen() {
           <div className="flex items-center gap-4 self-end sm:self-center">
             <div className="text-right">
               <div className="text-[10px] font-medium text-slate-500 uppercase tracking-wider">Your Recalculated Co-Pay</div>
-              <div className="text-xl font-extrabold text-[#006194]">AED {totalAcceptedPatientCost}</div>
+              <div className="text-xl font-extrabold text-[#006194]">NGN {totalAcceptedPatientCost}</div>
             </div>
             <div className="text-right border-l border-slate-200 pl-4">
               <div className="text-[10px] font-medium text-slate-500 uppercase tracking-wider">Covered by DHA</div>
-              <div className="text-sm font-bold text-emerald-700">AED {totalAcceptedInsuranceCover}</div>
+              <div className="text-sm font-bold text-emerald-700">NGN {totalAcceptedInsuranceCover}</div>
             </div>
           </div>
         </div>
@@ -301,9 +301,9 @@ export function PatientTreatmentDecisionScreen() {
                     <div className="sm:text-right shrink-0">
                       <span className="text-[10px] block font-semibold text-slate-400 uppercase">Your Share</span>
                       <span className={`text-xl font-extrabold ${currentDecision === 'decline' ? 'line-through text-slate-400' : 'text-[#006194]'}`}>
-                        AED {proc.patientCost}
+                        NGN {proc.patientCost}
                       </span>
-                      <span className="text-[10px] text-slate-500 block">Total tariff: AED {proc.totalCost}</span>
+                      <span className="text-[10px] text-slate-500 block">Total tariff: NGN {proc.totalCost}</span>
                     </div>
                   </div>
 
@@ -383,7 +383,7 @@ export function PatientTreatmentDecisionScreen() {
         <div className="bg-[#faf8ff] rounded-2xl border border-[#eaedff] p-4 flex items-start gap-3">
           <Icon name="gavel" className="text-[#006194] text-xl mt-0.5 shrink-0" />
           <div className="text-xs text-slate-600 leading-relaxed">
-            <strong className="text-slate-900">DHA Clinical Governance Standard 4.2.B Advisory:</strong> Your decisions represent informed consent / informed refusal in accordance with Dubai Health Authority dental directives. You retain full statutory rights to modify these decisions or request second clinical opinions at any time prior to operative treatment commencement.
+            <strong className="text-slate-900">DHA Clinical Governance Standard 4.2.B Advisory:</strong> Your decisions represent informed consent / informed refusal in accordance with Nigeria Dental Health Authority dental directives. You retain full statutory rights to modify these decisions or request second clinical opinions at any time prior to operative treatment commencement.
           </div>
         </div>
 
