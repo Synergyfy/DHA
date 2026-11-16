@@ -82,7 +82,7 @@ export function ProfessionalHeroScreen() {
                   <Icon name="policy" className="text-[18px]" />
                 </div>
                 <div>
-                  <div className="font-bold text-white">UAE Compliant</div>
+                  <div className="font-bold text-white">Nigeria Compliant</div>
                   <div className="text-[11px] text-slate-400">Federal Health Data Law</div>
                 </div>
               </div>
@@ -97,7 +97,7 @@ export function ProfessionalHeroScreen() {
             <div className="relative w-full h-64 sm:h-72 overflow-hidden bg-slate-900">
               <img
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRk69bAH37vqAlThYzdeBpItf2ZkcoHnnX531QQ46S2hfnYUi6B48YfgHGlWShTVbRrPoGvSmVBGoGEAxHE0729NT39GjpjFu9NE-vm0GBZURcspHEo91hNM9zQAnydmc7iaRjswuEEqbi_jvFE8Y4XuO3pWDE3GJoqIqi8iDmQ4dSH8B2VGi52jheVtPHAQzdH0SOfim4HTdGX2ibBSLfJE1figYnq7U86dx4evGg"
-                alt="Modern UAE dental consultation clinic with licensed dentist analyzing 3D dental chart"
+                alt="Modern Nigeria dental consultation clinic with licensed dentist analyzing 3D dental chart"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex items-end p-6">
@@ -107,10 +107,10 @@ export function ProfessionalHeroScreen() {
                   </div>
                   <div>
                     <h3 className="font-headline-sm text-lg font-bold text-white">
-                      Dubai Health Unified Dental Hub
+                      Nigeria Dental Health Unified Dental Hub
                     </h3>
                     <p className="text-xs text-slate-300">
-                      Standardized FDI 2-Digit Odontograms · NABIDH Live EHR Interoperability
+                      Standardized FDI 2-Digit Odontograms · Nigeria Health Information Exchange Live EHR Interoperability
                     </p>
                   </div>
                 </div>

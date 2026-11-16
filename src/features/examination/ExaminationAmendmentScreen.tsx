@@ -34,7 +34,7 @@ export function ExaminationAmendmentScreen() {
     setTimeout(() => {
       setIsSigning(false);
       setIsSealed(true);
-      showToast('Addendum v1.1 Cryptographically Signed & Sealed in NABIDH Registry');
+      showToast('Addendum v1.1 Cryptographically Signed & Sealed in Nigeria Health Information Exchange Registry');
     }, 1200);
   };
 
@@ -76,7 +76,7 @@ export function ExaminationAmendmentScreen() {
             <div className="flex items-center gap-2 mt-1 text-xs text-on-surface-variant flex-wrap">
               <span className="font-mono text-primary font-bold">#EXAM-DHA-2025-0982</span>
               <span>•</span>
-              <span>Submitted 16 Feb 2025, 11:22 AM GST</span>
+              <span>Submitted 16 Feb 2025, 11:22 AM WAT</span>
             </div>
           </div>
 
@@ -112,7 +112,7 @@ export function ExaminationAmendmentScreen() {
                 </span>
               </div>
               <p className="text-xs text-on-surface-variant leading-relaxed">
-                Original examination baseline is legally sealed. This workflow appends a cryptographically verified version addendum (v1.1) in adherence to UAE Federal Health Law and Dubai Health Authority directives.
+                Original examination baseline is legally sealed. This workflow appends a cryptographically verified version addendum (v1.1) in adherence to Nigeria Federal Health Law and Nigeria Dental Health Authority directives.
               </p>
             </div>
           </div>
@@ -354,7 +354,7 @@ export function ExaminationAmendmentScreen() {
             ) : isSealed ? (
               <>
                 <Icon name="check_circle" className="text-base" />
-                <span>Addendum v1.1 Sealed in NABIDH</span>
+                <span>Addendum v1.1 Sealed in Nigeria Health Information Exchange</span>
               </>
             ) : (
               <>
@@ -377,7 +377,7 @@ export function ExaminationAmendmentScreen() {
         {/* Audit Footer Note */}
         <div className="flex items-center justify-center gap-1.5 text-center text-outline font-mono text-[11px] pt-1 pb-4">
           <Icon name="history_edu" className="text-xs" />
-          <span>Post-Submission amendments are irreversible and logged to DHA Health Record Exchange (NABIDH).</span>
+          <span>Post-Submission amendments are irreversible and logged to DHA Health Record Exchange (Nigeria Health Information Exchange).</span>
         </div>
       </div>
     </ExaminationShell>

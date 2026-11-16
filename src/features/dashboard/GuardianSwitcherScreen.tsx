@@ -29,7 +29,7 @@ export function GuardianSwitcherScreen() {
   const previewProfile = PROFILES[selectedPreviewId] || PROFILES.tariq;
 
   // Pediatric Deciduous tooth arrays (Universal A-T notation)
-  const maxArch = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
+  const mNHIArch = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J'];
   const manArch = ['K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T'];
 
   return (
@@ -58,7 +58,7 @@ export function GuardianSwitcherScreen() {
                 </span>
               </div>
               <p className="font-body-sm text-body-sm text-on-surface-variant mt-1 leading-relaxed">
-                Records, radiograph X-rays, prescriptions, and allergen profiles are strictly segregated between guardian and pediatric dependent charts in compliance with UAE Federal Health Privacy Regulations.
+                Records, radiograph X-rays, prescriptions, and allergen profiles are strictly segregated between guardian and pediatric dependent charts in compliance with Nigeria Federal Health Privacy Regulations.
               </p>
             </div>
           </div>
@@ -76,7 +76,7 @@ export function GuardianSwitcherScreen() {
 
         {/* Profiles Selector Responsive Grid (3 columns on desktop) */}
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {/* Profile 1: Sarah Al-Mansoor (Guardian / Account Owner) */}
+          {/* Profile 1: Ngozi Eze (Guardian / Account Owner) */}
           <div
             className={`p-5 rounded-2xl bg-surface-container-lowest shadow-sm border transition-all flex flex-col justify-between hover:shadow-md ${
               activeProfileId === 'sarah'
@@ -105,7 +105,7 @@ export function GuardianSwitcherScreen() {
               </div>
 
               <h2 className="font-title-md text-title-md text-on-surface font-bold">
-                Sarah Al-Mansoor
+                Ngozi Eze
               </h2>
               <span className="font-label-sm text-label-sm text-secondary font-semibold block mt-0.5">
                 Guardian / Account Owner
@@ -280,7 +280,7 @@ export function GuardianSwitcherScreen() {
         {/* Action Row: Add Child Dependent Profile */}
         <button
           type="button"
-          onClick={() => alert('Opening Emirates ID & Birth Certificate link verification modal...')}
+          onClick={() => alert('Opening National Identification Number (NIN) & Birth Certificate link verification modal...')}
           className="w-full p-5 rounded-2xl bg-surface-container-low/70 hover:bg-surface-container-low border border-dashed border-outline-variant/60 transition-all flex items-center justify-center gap-3 shadow-xs"
         >
           <div className="w-10 h-10 rounded-full bg-surface-container-highest text-primary flex items-center justify-center shadow-xs">
@@ -291,7 +291,7 @@ export function GuardianSwitcherScreen() {
               + Add Another Child Dependent Profile
             </span>
             <span className="font-body-sm text-body-sm text-on-surface-variant block leading-tight">
-              Link dependent via Emirates ID verification or UAE Birth Certificate
+              Link dependent via National Identification Number (NIN) verification or Nigeria Birth Certificate
             </span>
           </div>
         </button>
@@ -342,7 +342,7 @@ export function GuardianSwitcherScreen() {
               <div className="mt-2 flex items-center gap-1.5 text-on-surface-variant">
                 <Icon name="location_on" className="text-[16px] text-tertiary" />
                 <span className="font-label-sm text-label-sm truncate">
-                  Al Barsha Primary Pediatric Center
+                  Surulere Primary Pediatric Center
                 </span>
               </div>
             </div>
@@ -366,7 +366,7 @@ export function GuardianSwitcherScreen() {
                   Max
                 </span>
                 <div className="flex-1 flex justify-between gap-1">
-                  {maxArch.map((tooth) => (
+                  {mNHIArch.map((tooth) => (
                     <span
                       key={tooth}
                       className="w-7 sm:w-8 h-8 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center font-label-code text-[11px] font-bold shadow-2xs"

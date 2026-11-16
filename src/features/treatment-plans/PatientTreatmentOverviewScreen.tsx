@@ -68,7 +68,7 @@ export function PatientTreatmentOverviewScreen() {
             <div className="flex items-center gap-2.5 bg-[#ffdad6]/60 text-[#93000a] px-3.5 py-2 rounded-xl border border-[#ba1a1a]/20">
               <Icon name="warning" className="text-[18px] text-[#ba1a1a] shrink-0" />
               <span className="text-xs leading-snug">
-                <strong>Penicillin Allergy (Severe)</strong> • Anaphylaxis Risk • Verified in Unified NABIDH
+                <strong>Penicillin Allergy (Severe)</strong> • Anaphylaxis Risk • Verified in Unified Nigeria Health Information Exchange
               </span>
             </div>
             <div className="flex items-center gap-2.5 bg-[#f2f3ff] text-[#3f4850] px-3.5 py-2 rounded-xl">
@@ -158,7 +158,7 @@ export function PatientTreatmentOverviewScreen() {
               </div>
             </div>
             <div className="mt-3 flex items-baseline gap-1.5">
-              <span className="text-2xl sm:text-3xl font-extrabold text-[#006194]">AED 290</span>
+              <span className="text-2xl sm:text-3xl font-extrabold text-[#006194]">NGN 290</span>
               <span className="text-xs text-[#707881] font-medium">Estimated</span>
             </div>
           </div>
@@ -218,30 +218,30 @@ export function PatientTreatmentOverviewScreen() {
                 <span className="text-xs font-bold uppercase tracking-wider text-[#707881]">
                   Estimated Gross Total
                 </span>
-                <span className="text-lg font-extrabold text-[#006194]">AED 1,450</span>
+                <span className="text-lg font-extrabold text-[#006194]">NGN 1,450</span>
               </div>
 
               <div className="w-full bg-[#eaedff] rounded-full h-3 flex overflow-hidden">
                 <div
                   className="bg-[#006a61] h-full transition-all"
                   style={{ width: '80%' }}
-                  title="Insurance Pre-auth Approved: AED 1,160"
+                  title="Insurance Pre-auth Approved: NGN 1,160"
                 />
                 <div
                   className="bg-[#006194] h-full transition-all"
                   style={{ width: '20%' }}
-                  title="Patient Share: AED 290"
+                  title="Patient Share: NGN 290"
                 />
               </div>
 
               <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 text-xs pt-1">
                 <div className="flex items-center gap-1.5 text-[#006a61] font-semibold">
                   <span className="w-2.5 h-2.5 rounded-xs bg-[#006a61]"></span>
-                  <span>Pre-auth Approved: <strong>AED 1,160</strong> (80%)</span>
+                  <span>Pre-auth Approved: <strong>NGN 1,160</strong> (80%)</span>
                 </div>
                 <div className="flex items-center gap-1.5 text-[#006194] font-semibold">
                   <span className="w-2.5 h-2.5 rounded-xs bg-[#006194]"></span>
-                  <span>Patient Co-pay Due: <strong>AED 290</strong> (20%)</span>
+                  <span>Patient Co-pay Due: <strong>NGN 290</strong> (20%)</span>
                 </div>
               </div>
             </div>
@@ -284,7 +284,7 @@ export function PatientTreatmentOverviewScreen() {
                     <span className="flex items-center gap-1 text-[#006194] font-medium">
                       <Icon name="timer" className="text-[14px]" /> 45 mins
                     </span>
-                    <span>Est: AED 1,050</span>
+                    <span>Est: NGN 1,050</span>
                   </div>
                 </div>
               </div>
@@ -308,7 +308,7 @@ export function PatientTreatmentOverviewScreen() {
                     <span className="flex items-center gap-1 text-[#006a61] font-medium">
                       <Icon name="calendar_today" className="text-[14px]" /> Post-Phase 1
                     </span>
-                    <span>Est: AED 400</span>
+                    <span>Est: NGN 400</span>
                   </div>
                 </div>
               </div>

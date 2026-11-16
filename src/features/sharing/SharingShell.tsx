@@ -119,7 +119,7 @@ export function SharingShell({
                   Record Sharing & Access
                 </span>
                 <span className="text-[10px] text-on-surface-variant tracking-wider uppercase font-semibold block">
-                  Dubai Health Authority
+                  Nigeria Dental Health Authority
                 </span>
               </div>
             </NavLink>

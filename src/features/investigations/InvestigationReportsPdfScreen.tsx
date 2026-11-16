@@ -7,7 +7,7 @@ export function InvestigationReportsPdfScreen() {
   const navigate = useNavigate();
   const [activeArchetype, setActiveArchetype] = useState<'clinical' | 'technical' | 'patient'>('clinical');
   const [pdfZoom, setPdfZoom] = useState<number>(100);
-  const [patientLanguage, setPatientLanguage] = useState<'en' | 'ar'>('en');
+  const [patientLanguage, setPatientLanguage] = useState<'en' | 'ha'>('en');
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   const showToast = (msg: string) => {
@@ -137,7 +137,7 @@ export function InvestigationReportsPdfScreen() {
             className="w-full max-w-[850px] bg-white text-slate-900 rounded-lg shadow-2xl p-8 sm:p-12 border border-slate-300 transition-transform duration-200"
             style={{ transform: `scale(${pdfZoom / 100})`, transformOrigin: 'top center' }}
           >
-            {/* Header: Dubai Health Authority Official Branding */}
+            {/* Header: Nigeria Dental Health Authority Official Branding */}
             <div className="flex items-start justify-between border-b-2 border-slate-900 pb-6 mb-6">
               <div className="flex items-center gap-4">
                 <div className="w-14 h-14 rounded-xl bg-slate-900 text-white flex items-center justify-center font-bold text-xl tracking-wider">
@@ -145,13 +145,13 @@ export function InvestigationReportsPdfScreen() {
                 </div>
                 <div>
                   <h1 className="text-lg sm:text-xl font-bold tracking-tight text-slate-950 uppercase">
-                    Dubai Health Authority
+                    Nigeria Dental Health Authority
                   </h1>
                   <p className="text-xs font-medium text-slate-600 font-serif">
-                    هيئة الصحة بدبي &bull; Government of Dubai
+                    هيئة الصحة بدبي &bull; Government of Lagos
                   </p>
                   <p className="text-[11px] text-slate-500 mt-0.5">
-                    Central Dental Diagnostic Facility #DHA-FAC-8812 &bull; NABIDH Network
+                    Central Dental Diagnostic Facility #DHA-FAC-8812 &bull; Nigeria Health Information Exchange Network
                   </p>
                 </div>
               </div>
@@ -194,8 +194,8 @@ export function InvestigationReportsPdfScreen() {
                       <span className="font-bold text-slate-950">Chinedu Okafor</span>
                     </div>
                     <div>
-                      <span className="text-[10px] text-slate-500 uppercase block">Emirates ID:</span>
-                      <span className="font-mono font-semibold text-slate-900">784-1990-1284910-1</span>
+                      <span className="text-[10px] text-slate-500 uppercase block">National Identification Number (NIN):</span>
+                      <span className="font-mono font-semibold text-slate-900">12345678901</span>
                     </div>
                     <div>
                       <span className="text-[10px] text-slate-500 uppercase block">DHA MRN:</span>
@@ -315,7 +315,7 @@ export function InvestigationReportsPdfScreen() {
                       e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
                     </span>
                     <span className="text-[10px] text-emerald-800 font-bold block">
-                      NABIDH Live Timestamp: 16-FEB-2025 11:42:02 GST
+                      Nigeria Health Information Exchange Live Timestamp: 16-FEB-2025 11:42:02 WAT
                     </span>
                   </div>
                 </div>
@@ -401,12 +401,12 @@ export function InvestigationReportsPdfScreen() {
                     </button>
                     <button
                       type="button"
-                      onClick={() => setPatientLanguage('ar')}
+                      onClick={() => setPatientLanguage('ha')}
                       className={`px-2.5 py-1 rounded text-xs font-bold ${
-                        patientLanguage === 'ar' ? 'bg-primary text-white' : 'text-slate-600'
+                        patientLanguage === 'ha' ? 'bg-primary text-white' : 'text-slate-600'
                       }`}
                     >
-                      العربية
+                      Hausa
                     </button>
                   </div>
                 </div>
@@ -440,29 +440,29 @@ export function InvestigationReportsPdfScreen() {
                     </div>
                   </div>
                 ) : (
-                  <div className="space-y-4 text-right" dir="rtl">
+                  <div className="space-y-4">
                     <div className="p-4 bg-blue-50 border border-blue-200 rounded-xl space-y-2">
-                      <h3 className="text-sm font-bold text-blue-950">ماذا أظهرت الأشعة السينية لأسنانك؟</h3>
+                      <h3 className="text-sm font-bold text-blue-950">Me hoton X-ray na haƙoranku ya nuna?</h3>
                       <p className="text-xs text-blue-900 leading-relaxed">
-                        أظهرت الأشعة السينية وجود تسوس في الجهة الخلفية للضرس العلوي الأيمن (الضرس رقم 16). اخترق التسوس طبقة المينا
-                        الخارجية ووصل إلى الطبقة الثانية (العاج). لحسن الحظ، فإن عصب الضرس لا يزال سليماً وحياً تماماً!
+                        Hoton X-ray ya nuna ruɓewa a bayan babban haƙorin dama na sama (haƙori #16). Ruɓewar ta ratsa enamel mai tauri
+                        kuma ta shiga dentin. Abin farin ciki, jijiyar haƙorin tana da lafiya kuma tana da rai!
                       </p>
                     </div>
 
                     <div className="p-4 bg-amber-50 border border-amber-200 rounded-xl space-y-2">
-                      <h3 className="text-sm font-bold text-amber-950">ما هي الخطوة التالية الموصى بها؟</h3>
+                      <h3 className="text-sm font-bold text-amber-950">Mene ne mataki na gaba da aka ba da shawara?</h3>
                       <p className="text-xs text-amber-900 leading-relaxed">
-                        يوصي الدكتور دانيال بتحديد موعد لإجراء حشوة تجميلية بلون السن خلال الأيام السبعة القادمة. معالجة هذا التسوس الآن
-                        ستحمي العصب وتمنع الحاجة إلى علاجات أكثر تعقيداً مثل سحب العصب.
+                        Dr. Daniel ya ba da shawarar a tsara cike haƙori mai launin haƙori cikin kwanaki 7 masu zuwa. Yin magani yanzu
+                        zai kare jijiyar haƙori kuma ya hana buƙatar ƙarin magani mai rikitarwa kamar maganin tushen haƙori.
                       </p>
                     </div>
 
                     <div className="p-4 bg-emerald-50 border border-emerald-200 rounded-xl space-y-2">
-                      <h3 className="text-sm font-bold text-emerald-950">نصائح للعناية اليومية بصحة فمك:</h3>
+                      <h3 className="text-sm font-bold text-emerald-950">Shawarwari don kula da lafiyar baki kullum:</h3>
                       <ul className="list-disc list-inside space-y-1 text-xs text-emerald-900">
-                        <li>نظف أسنانك مرتين يومياً بمعجون يحتوي على الفلورايد لمدة دقيقتين كاملتين.</li>
-                        <li>استخدم خيط الأسنان بلطف بين الأضراس الخلفية كل مساء قبل النوم.</li>
-                        <li>قلل من الوجبات الخفيفة السكرية والمشروبات الغازية بين الوجبات الرئيسية.</li>
+                        <li>Goge haƙora sau biyu a rana da man goge haƙori mai fluoride na tsawon mintuna 2.</li>
+                        <li>Yi amfani da zaren tsaftace haƙora a hankali tsakanin haƙoran baya kowace yamma kafin kwanciya.</li>
+                        <li>Rage kayan ciye-ciye masu sukari da abin sha mai iskar gas tsakanin abinci.</li>
                       </ul>
                     </div>
                   </div>
@@ -477,7 +477,7 @@ export function InvestigationReportsPdfScreen() {
           <div className="flex items-center gap-2">
             <Icon name="verified_user" className="text-primary text-base" />
             <span className="font-semibold text-on-surface">Official Record:</span>
-            <span className="text-on-surface-variant">Available anytime in Patient Portal & NABIDH Core Health Records.</span>
+            <span className="text-on-surface-variant">Available anytime in Patient Portal & Nigeria Health Information Exchange Core Health Records.</span>
           </div>
 
           <div className="flex items-center gap-2">

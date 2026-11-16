@@ -40,9 +40,9 @@ const PRACTICES: PracticeBranch[] = [
     },
   },
   {
-    id: 'jumeirah',
+    id: 'Victoria Island',
     name: 'Harmony Dental Specialists',
-    subTitle: 'Jumeirah 1 Branch • Specialized Prosthodontics',
+    subTitle: 'Victoria Island 1 Branch • Specialized Prosthodontics',
     code: 'DHA-FL-2881',
     type: 'secondary',
     role: 'Visiting Prosthodontic Consultant',
@@ -59,7 +59,7 @@ const PRACTICES: PracticeBranch[] = [
   },
   {
     id: 'barsha',
-    name: 'Al-Barsha Community Dental Centre',
+    name: 'Surulere Community Dental Centre',
     subTitle: 'DHA Health Authority Partner • Public Outreach',
     code: 'DHA-FL-0812',
     type: 'community',
@@ -174,7 +174,7 @@ export function ClinicBranchSwitcherScreen() {
               Data Partitioning &amp; Jurisdiction Protocol (DHA-REG-14.19)
             </h4>
             <p className="text-[#004b74]/90 mt-1 leading-relaxed">
-              Switching operational branches dynamically reconfigures the active operatory calendar, local triage work queue, and chairside nurse allocations. Patient encounters remain strictly partitioned under UAE Federal Health Data Law No. 2 of 2019; cross-facility medical records require verified biometric patient consent.
+              Switching operational branches dynamically reconfigures the active operatory calendar, local triage work queue, and chairside nurse allocations. Patient encounters remain strictly partitioned under Nigeria Data Protection Act 2023; cross-facility medical records require verified biometric patient consent.
             </p>
           </div>
         </div>
@@ -411,10 +411,10 @@ export function ClinicBranchSwitcherScreen() {
               </div>
               <div className="text-xs">
                 <h4 className="font-bold text-[#131b2e] text-sm">
-                  Emirates Oral Maxillofacial Institute
+                  Nigerian Oral Maxillofacial Institute
                 </h4>
                 <div className="text-[#707881] mt-0.5">
-                  Downtown Dubai Facility • Surgical Implantology Privileges (#EOMI-882)
+                  Victoria Island Facility • Surgical Implantology Privileges (#EOMI-882)
                 </div>
                 <div className="text-[#006194] font-medium mt-1">
                   Medical Director credentialing committee review in progress
@@ -441,7 +441,7 @@ export function ClinicBranchSwitcherScreen() {
             <div>
               <div className="font-bold text-[#131b2e] text-sm">+ Link New Clinic Facility</div>
               <div className="text-xs text-[#707881]">
-                Requires Dubai Health Authority Facility License # and Medical Director endorsement.
+                Requires Nigeria Dental Health Authority Facility License # and Medical Director endorsement.
               </div>
             </div>
           </div>
@@ -503,7 +503,7 @@ export function ClinicBranchSwitcherScreen() {
                 </div>
 
                 <div className="p-3 bg-[#faf8ff] rounded-xl text-[11px] text-[#707881] leading-relaxed">
-                  Submitting will transmit an electronic credentialing request to the target facility Medical Director and verify your malpractice coverage under UAE health regulations.
+                  Submitting will transmit an electronic credentialing request to the target facility Medical Director and verify your malpractice coverage under Nigerian health regulations.
                 </div>
 
                 <div className="pt-2 flex justify-end gap-2">

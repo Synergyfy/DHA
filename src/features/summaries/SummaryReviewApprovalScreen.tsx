@@ -52,7 +52,7 @@ const initialChecklist: ChecklistItem[] = [
   {
     id: 'chk-7',
     title: 'Visibility & Access Bounds Set',
-    subtitle: 'Dual record dispatch scheduled for NABIDH sync',
+    subtitle: 'Dual record dispatch scheduled for Nigeria Health Information Exchange sync',
     checked: true,
   },
 ];
@@ -95,7 +95,7 @@ export function SummaryReviewApprovalScreen() {
       setIsSealing(false);
       setIsSealed(true);
       showToast(
-        'Record officially sealed by Dr. Daniel James (#DEN-48912) and dispatched to UAE NABIDH exchange!'
+        'Record officially sealed by Dr. Daniel James (#DEN-48912) and dispatched to Nigeria Nigeria Health Information Exchange exchange!'
       );
       setTimeout(() => navigate('/summaries/dashboard'), 2000);
     }, 1200);
@@ -490,7 +490,7 @@ export function SummaryReviewApprovalScreen() {
               ) : isSealed ? (
                 <>
                   <Icon name="verified" className="text-[20px]" />
-                  <span>Approved &amp; Sealed (UAE NABIDH Synced)</span>
+                  <span>Approved &amp; Sealed (Nigeria Nigeria Health Information Exchange Synced)</span>
                 </>
               ) : (
                 <>
@@ -514,7 +514,7 @@ export function SummaryReviewApprovalScreen() {
           <div className="flex items-center justify-center gap-1.5 pt-2 text-center text-[#707881] text-xs">
             <Icon name="token" className="text-[16px] text-[#006a61]" />
             <p className="font-mono text-[11px]">
-              SHA-256 commit hash will seal immediately to UAE NABIDH Health Exchange.
+              SHA-256 commit hash will seal immediately to Nigeria Nigeria Health Information Exchange Health Exchange.
             </p>
           </div>
         </section>

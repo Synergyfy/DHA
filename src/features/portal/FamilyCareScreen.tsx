@@ -189,7 +189,7 @@ export function FamilyCareScreen() {
                           SA
                         </div>
                         <div>
-                          <p className="text-sm font-bold text-on-surface">Sarah Al-Mansoor</p>
+                          <p className="text-sm font-bold text-on-surface">Ngozi Eze</p>
                           <p className="text-xs text-on-surface-variant">Primary Adult Profile</p>
                         </div>
                       </div>
@@ -215,7 +215,7 @@ export function FamilyCareScreen() {
                         <Icon name="verified_user" className="text-[14px] text-secondary" />
                         <span>14 records synchronized</span>
                       </span>
-                      <NavLink to="/patient-dashboard/oral-health" className="text-primary font-semibold hover:underline flex items-center gap-0.5 text-xs">
+                      <NavLink to="/portal/journey" className="text-primary font-semibold hover:underline flex items-center gap-0.5 text-xs">
                         <span>View Odontogram</span>
                         <Icon name="arrow_forward" className="text-[14px]" />
                       </NavLink>
@@ -231,7 +231,7 @@ export function FamilyCareScreen() {
                           ZA
                         </div>
                         <div>
-                          <p className="text-sm font-bold text-on-surface">Zayd Al-Mansoor</p>
+                          <p className="text-sm font-bold text-on-surface">Zayd Okoye</p>
                           <p className="text-xs text-on-surface-variant">Child Profile • Age 9</p>
                         </div>
                       </div>
@@ -254,7 +254,7 @@ export function FamilyCareScreen() {
                         <Icon name="school" className="text-[14px] text-primary" />
                         <span>School Oral Pass Active</span>
                       </span>
-                      <NavLink to="/patient-dashboard/reminders" className="text-primary font-semibold hover:underline flex items-center gap-0.5 text-xs">
+                      <NavLink to="/portal/family-care" className="text-primary font-semibold hover:underline flex items-center gap-0.5 text-xs">
                         <span>Schedule Check</span>
                         <Icon name="arrow_forward" className="text-[14px]" />
                       </NavLink>
@@ -270,7 +270,7 @@ export function FamilyCareScreen() {
                           LA
                         </div>
                         <div>
-                          <p className="text-sm font-bold text-on-surface">Layla Al-Mansoor</p>
+                          <p className="text-sm font-bold text-on-surface">Aisha Okoye</p>
                           <p className="text-xs text-on-surface-variant">Toddler Profile • Age 4</p>
                         </div>
                       </div>
@@ -293,7 +293,7 @@ export function FamilyCareScreen() {
                         <Icon name="child_friendly" className="text-[14px] text-secondary" />
                         <span>Gentle First Visit Toolkit</span>
                       </span>
-                      <NavLink to="/patient-dashboard/discovery" className="text-primary font-semibold hover:underline flex items-center gap-0.5 text-xs">
+                      <NavLink to="/portal/find-care" className="text-primary font-semibold hover:underline flex items-center gap-0.5 text-xs">
                         <span>Book Screening</span>
                         <Icon name="arrow_forward" className="text-[14px]" />
                       </NavLink>

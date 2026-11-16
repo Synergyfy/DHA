@@ -36,7 +36,7 @@ export function PatientOdontogramOverviewScreen() {
               {sandboxMode ? 'Live Records' : 'Sandbox Mode'}
             </button>
             <span className="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-mono text-[11px] font-bold">
-              NABIDH Sync: On
+              Nigeria Health Information Exchange Sync: On
             </span>
           </div>
         </section>

@@ -54,7 +54,7 @@ const INITIAL_SCHEDULE: DaySchedule[] = [
   {
     dayName: 'Wednesday',
     dateStr: '21 Oct 2026',
-    facility: 'Harmony Specialists Clinic (Jumeirah)',
+    facility: 'Harmony Specialists Clinic (Victoria Island)',
     operatory: 'Suite 402',
     hours: '09:00 - 17:00',
     isOffDuty: false,
@@ -65,7 +65,7 @@ const INITIAL_SCHEDULE: DaySchedule[] = [
   {
     dayName: 'Thursday',
     dateStr: '22 Oct 2026',
-    facility: 'Harmony Specialists Clinic (Jumeirah)',
+    facility: 'Harmony Specialists Clinic (Victoria Island)',
     operatory: 'Suite 402',
     hours: '09:00 - 17:00',
     isOffDuty: false,
@@ -126,7 +126,7 @@ export function WorkingScheduleAvailabilityScreen() {
   const filteredSchedule = schedule.filter((d) => {
     if (selectedFacility === 'All Facilities') return true;
     if (selectedFacility === 'Harmony Wuse 2') return d.facility.includes('Wuse 2') || d.isOffDuty;
-    if (selectedFacility === 'Harmony Jumeirah') return d.facility.includes('Jumeirah') || d.isOffDuty;
+    if (selectedFacility === 'Harmony Victoria Island') return d.facility.includes('Victoria Island') || d.isOffDuty;
     return true;
   });
 
@@ -267,7 +267,7 @@ export function WorkingScheduleAvailabilityScreen() {
               </div>
 
               <div className="grid grid-cols-3 gap-2">
-                {['All Facilities', 'Harmony Wuse 2', 'Harmony Jumeirah'].map((fac) => (
+                {['All Facilities', 'Harmony Wuse 2', 'Harmony Victoria Island'].map((fac) => (
                   <button
                     key={fac}
                     type="button"

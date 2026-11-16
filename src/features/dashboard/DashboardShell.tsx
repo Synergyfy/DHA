@@ -1,6 +1,7 @@
 import { useState, type ReactNode } from 'react';
 import { NavLink, useNavigate, useLocation } from 'react-router-dom';
 import { usePatientStore, PROFILES } from '../../store/patientStore';
+import { useAuthStore } from '../../store/authStore';
 import { Icon } from '../../design/Primitives';
 
 interface DashboardShellProps {
@@ -49,6 +50,7 @@ export function DashboardShell({
     qrModalOpen,
     setQrModalOpen,
   } = usePatientStore();
+  const signOut = useAuthStore((state) => state.signOut);
 
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
   const [mobileMoreOpen, setMobileMoreOpen] = useState(false);
@@ -106,7 +108,10 @@ export function DashboardShell({
         <div className="px-3 py-3 border-t border-outline-variant/20 shrink-0">
           <button
             type="button"
-            onClick={() => navigate('/login')}
+            onClick={() => {
+              signOut();
+              navigate('/login');
+            }}
             className="w-full px-3 py-2.5 rounded-xl bg-surface-container hover:bg-error-container/40 text-error hover:text-on-error-container text-[13px] font-semibold flex items-center justify-center gap-2 shadow-xs active:scale-[0.97] transition-all"
           >
             <Icon name="logout" className="text-[18px]" />
@@ -258,6 +263,7 @@ export function DashboardShell({
                           type="button"
                           onClick={() => {
                             setProfileDropdownOpen(false);
+                            signOut();
                             navigate('/login');
                           }}
                           className="w-full flex items-center justify-center gap-1.5 py-2 px-3 rounded-xl hover:bg-error-container/40 text-error text-xs font-semibold transition-colors"
@@ -340,6 +346,7 @@ export function DashboardShell({
                             type="button"
                             onClick={() => {
                               setProfileDropdownOpen(false);
+                              signOut();
                               navigate('/login');
                             }}
                             className="w-full py-2.5 px-3 rounded-xl bg-error-container/40 hover:bg-error-container text-error text-xs font-bold flex items-center justify-center gap-2 transition-colors"

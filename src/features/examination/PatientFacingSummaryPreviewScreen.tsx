@@ -5,7 +5,7 @@ import { Icon } from '../../design/Primitives';
 
 export function PatientFacingSummaryPreviewScreen() {
   const navigate = useNavigate();
-  const [currentLang, setCurrentLang] = useState<'en' | 'ar'>('en');
+  const [currentLang, setCurrentLang] = useState<'en' | 'ha'>('en');
   const [isEditModalOpen, setIsEditModalOpen] = useState<boolean>(false);
   const [overviewText, setOverviewText] = useState<string>(
     'Thank you for visiting DHA Dental Care today. We completed a full check-up of your teeth, gums, and oral tissues. Here is what we found and the recommended care plan.'
@@ -99,16 +99,16 @@ export function PatientFacingSummaryPreviewScreen() {
             <button
               type="button"
               onClick={() => {
-                setCurrentLang('ar');
-                showToast('Switched to Arabic Translation View');
+                setCurrentLang('ha');
+                showToast('Switched to Hausa Translation View');
               }}
               className={`px-3 py-1.5 rounded-lg font-bold transition-all ${
-                currentLang === 'ar'
+                currentLang === 'ha'
                   ? 'bg-surface-container-lowest text-primary shadow-sm'
                   : 'text-on-surface-variant hover:text-on-surface'
               }`}
             >
-              العربية
+              Hausa
             </button>
           </div>
 

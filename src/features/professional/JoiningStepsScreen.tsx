@@ -20,7 +20,7 @@ export function JoiningStepsScreen() {
       step: 2 as StepNumber,
       title: 'Complete your registration',
       desc: 'Enter verified professional email, institutional contact details, and authenticate through secure OTP.',
-      chips: ['Domain Match', '2FA OTP Enabled', 'UAE PASS OAuth'],
+      chips: ['Domain Match', '2FA OTP Enabled', 'National Identification Number (NIN) verification OAuth'],
       detail: 'Ensures institutional ownership and eliminates unauthorized proxy account registrations.',
     },
     {
@@ -42,7 +42,7 @@ export function JoiningStepsScreen() {
       title: 'Access the services available to your approved account',
       desc: 'Log in to your tailored workspace and begin coordinating screenings, examinations, or referrals.',
       chips: ['Unified Clinician Portal', 'Live Odontograms', 'Immediate EHR Sync'],
-      detail: 'Full activation of assigned capabilities with live access to the central Dubai digital health spine.',
+      detail: 'Full activation of assigned capabilities with live access to the central Lagos digital health spine.',
     },
   ];
 
@@ -65,7 +65,7 @@ export function JoiningStepsScreen() {
           </h1>
 
           <p className="text-base sm:text-lg text-on-surface-variant leading-relaxed">
-            Follow our structured verification pathway to connect your practice or organisation with the Dubai Health Authority network.
+            Follow our structured verification pathway to connect your practice or organisation with the Nigeria Dental Health Authority network.
           </p>
 
           {/* Visual Milestone Progress Bar */}

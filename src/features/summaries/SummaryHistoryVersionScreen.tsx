@@ -31,7 +31,7 @@ export function SummaryHistoryVersionScreen() {
       statusLabel: 'Changes Required',
       statusBadge: 'bg-[#ffdad6] text-[#ba1a1a]',
       title: 'Investigation Synthesis (Bitewing & PA #16)',
-      subtitle: 'Generated Today 09:45 GST • Assigned: Dr. Daniel James',
+      subtitle: 'Generated Today 09:45 WAT • Assigned: Dr. Daniel James',
       flag: 'Confirm vitality pulp cold latency before approving composite.',
       versionInfo: 'Status: v0.9 Draft Held',
       ctaText: 'Resume Review',
@@ -40,7 +40,7 @@ export function SummaryHistoryVersionScreen() {
     {
       id: 'rec-2',
       initials: 'RA',
-      name: 'Rashid Al-Maktoum',
+      name: 'Rashid Eze',
       ageGender: '52y • Male',
       dhaId: 'DHA-00892 • Endodontics',
       status: 'approved',
@@ -56,7 +56,7 @@ export function SummaryHistoryVersionScreen() {
     {
       id: 'rec-3',
       initials: 'FA',
-      name: 'Fatima Al-Zahra',
+      name: 'Fatima Bello',
       ageGender: '28y • Female',
       dhaId: 'DHA-08921 • Implantology / Perio',
       status: 'approved',
@@ -64,7 +64,7 @@ export function SummaryHistoryVersionScreen() {
       statusBadge: 'bg-[#86f2e4] text-[#006a61]',
       title: 'Comprehensive Pre-Implant CBCT & Perio Digest',
       subtitle: 'Version: v1.0 • Approved 02 Oct 2026',
-      reviewer: 'Reviewer: Dr. K. Al-Mansoor',
+      reviewer: 'Reviewer: Dr. K. Okoye',
       versionInfo: 'No pending revisions',
       ctaText: 'Open',
       actionTo: '/summaries/workspace',
@@ -262,7 +262,7 @@ export function SummaryHistoryVersionScreen() {
                     </span>
                   </div>
                   <span className="text-xs text-[#707881] block mt-0.5 truncate">
-                    Lifecode: AE-990-281-DXB • Restorative Caries Dossier
+                    Lifecode: NG-990-281-LAG • Restorative Caries Dossier
                   </span>
                 </div>
               </div>
@@ -313,7 +313,7 @@ export function SummaryHistoryVersionScreen() {
                       v1.0 Approved &amp; Sealed Record
                     </span>
                     <span className="text-xs text-[#707881]">
-                      12 Oct 2026, 11:28 GST • Signer: Dr. Daniel James
+                      12 Oct 2026, 11:28 WAT • Signer: Dr. Daniel James
                     </span>
                   </div>
                 </div>
@@ -369,7 +369,7 @@ export function SummaryHistoryVersionScreen() {
                       v0.9 AI Draft Baseline Synthesis
                     </span>
                     <span className="text-xs text-[#707881]">
-                      12 Oct 2026, 10:15 GST • Autonomous DHA Claude Engine
+                      12 Oct 2026, 10:15 WAT • Autonomous DHA Claude Engine
                     </span>
                   </div>
                 </div>
@@ -430,14 +430,14 @@ export function SummaryHistoryVersionScreen() {
               <div className="bg-white rounded-lg p-3 border border-[#eaedff]">
                 <div className="flex items-center justify-between text-xs text-[#707881] mb-1">
                   <span className="uppercase font-bold">Left: v0.9 Raw AI</span>
-                  <span className="font-mono">10:15 GST</span>
+                  <span className="font-mono">10:15 WAT</span>
                 </div>
                 <span className="text-sm font-bold text-[#131b2e]">Algorithmic Output</span>
               </div>
               <div className="bg-[#86f2e4]/30 rounded-lg p-3 border border-[#86f2e4]/50">
                 <div className="flex items-center justify-between text-xs text-[#006a61] mb-1">
                   <span className="uppercase font-bold">Right: v1.0 Doctor Verified</span>
-                  <span className="font-mono">11:28 GST</span>
+                  <span className="font-mono">11:28 WAT</span>
                 </div>
                 <span className="text-sm font-bold text-[#006a61]">
                   Clinical Additions (+24 words)

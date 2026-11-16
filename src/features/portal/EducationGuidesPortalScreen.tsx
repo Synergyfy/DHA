@@ -116,7 +116,7 @@ export function EducationGuidesPortalScreen() {
             </div>
             <div className="flex justify-between items-center pt-2">
               <NavLink
-                to="/patient-dashboard/education"
+                to="/oral-health-guides"
                 className="text-xs text-primary font-semibold hover:underline"
               >
                 Open Full Interactive Hub →
@@ -145,7 +145,7 @@ export function EducationGuidesPortalScreen() {
                 <span className="text-[11px] uppercase tracking-wider text-primary font-bold">
                   DHA Certified Hub
                 </span>
-                <span className="text-xs text-on-surface-variant font-medium">Dubai Health Authority</span>
+                <span className="text-xs text-on-surface-variant font-medium">Nigeria Dental Health Authority</span>
               </div>
             </div>
 
@@ -160,7 +160,7 @@ export function EducationGuidesPortalScreen() {
               Learn More About Your Oral Health
             </h1>
             <p className="text-sm sm:text-base text-on-surface-variant mt-1 leading-relaxed">
-              Good oral health starts with the right information. Explore simple, helpful resources for adults, parents and children verified by Dubai Health Authority dental boards.
+              Good oral health starts with the right information. Explore simple, helpful resources for adults, parents and children verified by Nigeria Dental Health Authority dental boards.
             </p>
           </div>
 
@@ -319,7 +319,7 @@ export function EducationGuidesPortalScreen() {
           </p>
           <button
             type="button"
-            onClick={() => navigate('/patient-dashboard/education')}
+            onClick={() => navigate('/oral-health-guides')}
             className="px-6 py-2.5 rounded-xl bg-primary hover:bg-primary-container text-on-primary text-xs sm:text-sm font-semibold inline-flex items-center gap-2 shadow-xs transition-all active:scale-95"
           >
             <span>Explore All Oral Health Guides</span>

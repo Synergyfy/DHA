@@ -11,7 +11,7 @@ export function InvestigationCategoryDetailsScreen() {
   const [subType, setSubType] = useState('Bitewing (BW-R) & Periapical (#16 Tri-Apex Combo)');
   const [projectionAngle, setProjectionAngle] = useState('Standard Right Molar Interproximal + Bisecting Periapical');
   const [acqDate, setAcqDate] = useState('16 Feb 2025');
-  const [acqTime, setAcqTime] = useState('09:40 GST');
+  const [acqTime, setAcqTime] = useState('09:40 WAT');
   const [facility, setFacility] = useState('DHA Central Dental Clinic (In-House Radiology)');
   const [suite, setSuite] = useState('Operatory 4 (Dexis Platinum)');
   const [seriesId, setSeriesId] = useState('DEX-2025-0216-981');
@@ -214,7 +214,7 @@ export function InvestigationCategoryDetailsScreen() {
               <h3 className="font-bold text-sm text-on-surface">3. Clinical Timestamps & Dates</h3>
             </div>
             <span className="font-mono text-xs bg-surface-container px-2 py-0.5 rounded text-outline">
-              UTC+04:00 (GST)
+              UTC+04:00 (WAT)
             </span>
           </div>
 
@@ -243,7 +243,7 @@ export function InvestigationCategoryDetailsScreen() {
           <div className="p-3 rounded-xl bg-surface-container-low border border-outline-variant/20 flex items-center justify-between text-xs">
             <div className="flex items-center gap-2 text-on-surface">
               <Icon name="cloud_done" className="text-secondary text-base" />
-              <span>Result Received: <strong>16 Feb 2025, 09:45 GST</strong></span>
+              <span>Result Received: <strong>16 Feb 2025, 09:45 WAT</strong></span>
             </div>
             <span className="text-secondary font-bold text-[11px]">Immediate Sync (5m lag)</span>
           </div>
@@ -336,7 +336,7 @@ export function InvestigationCategoryDetailsScreen() {
                 <div>
                   <span className="font-bold block">ALADA Protocol Verified</span>
                   <p className="text-[11px] opacity-90 mt-0.5 leading-snug">
-                    Radiation exposure is As Low As Diagnostically Acceptable according to UAE Federal Authority for Nuclear Regulation (FANR) standards.
+                    Radiation exposure is As Low As Diagnostically Acceptable according to Nigeria Federal Authority for Nuclear Regulation (FANR) standards.
                   </p>
                 </div>
               </div>

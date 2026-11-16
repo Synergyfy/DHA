@@ -145,7 +145,7 @@ export function FollowUpDetailsScreen() {
                   <h2 className="text-base font-bold text-slate-900 truncate">Amara Okafor</h2>
                   <span className="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded">34y Female</span>
                 </div>
-                <p className="font-mono text-xs text-slate-500 mt-0.5">DHA-2026-00451 • LifeCode: AE-990-281-DXB</p>
+                <p className="font-mono text-xs text-slate-500 mt-0.5">DHA-2026-00451 • LifeCode: NG-990-281-LAG</p>
               </div>
             </div>
 

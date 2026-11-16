@@ -74,7 +74,7 @@ export function InvestigationFollowUpScreen() {
       dueDate: '02 Mar 2025',
       dueTimeframe: 'Due in 14 Days',
       clinicalObjective: 'Repeat serum ferritin, HbA1c, and coagulation screen (INR) prior to surgical periodontal flap.',
-      attendingClinician: 'Dr. Sarah Al-Mansoor (#DEN-31092)',
+      attendingClinician: 'Dr. Ngozi Eze (#DEN-31092)',
       escalationLevel: 0,
     },
     {
@@ -537,7 +537,7 @@ export function InvestigationFollowUpScreen() {
           <div className="flex items-center gap-2">
             <Icon name="history_edu" className="text-primary text-base" />
             <span className="font-semibold text-on-surface">Audit Compliance:</span>
-            <span className="text-on-surface-variant">All follow-ups tracked in NABIDH immutable event ledger.</span>
+            <span className="text-on-surface-variant">All follow-ups tracked in Nigeria Health Information Exchange immutable event ledger.</span>
           </div>
 
           <div className="flex items-center gap-2">

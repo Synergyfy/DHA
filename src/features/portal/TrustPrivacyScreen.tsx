@@ -35,7 +35,7 @@ export default function TrustPrivacyScreen() {
           <div className="relative z-10 max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-teal-500/20 text-teal-300 border border-teal-400/30 text-xs font-semibold uppercase tracking-wider mb-4">
               <span className="w-2 h-2 rounded-full bg-teal-400 animate-pulse"></span>
-              UAE Federal Health Data Law Compliant
+              Nigeria Data Protection Act Compliant
             </div>
 
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white mb-4 leading-tight font-display">
@@ -46,7 +46,7 @@ export default function TrustPrivacyScreen() {
             </h1>
 
             <p className="text-base sm:text-lg text-slate-300 leading-relaxed max-w-2xl">
-              Dubai Health Authority puts patient data autonomy first. Every screening, X-ray, and clinical chart requires your active consent to be accessed by authorized healthcare providers.
+              Nigeria Dental Health Authority puts patient data autonomy first. Every screening, X-ray, and clinical chart requires your active consent to be accessed by authorized healthcare providers.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -278,10 +278,10 @@ export default function TrustPrivacyScreen() {
         <section className="bg-slate-100 rounded-3xl p-6 sm:p-8 border border-slate-200 text-xs text-slate-600 leading-relaxed space-y-2">
           <div className="font-bold text-slate-900 text-sm">Regulatory Notice & Sovereign Compliance</div>
           <p>
-            All health records within the DHA Oral Health platform are stored inside sovereign United Arab Emirates data centers in accordance with UAE Federal Law No. 2 of 2019 regarding the use of Information and Communication Technology in Healthcare (Health Data Law) and DHA Administrative Regulations.
+            All health records within the DHA Oral Health platform are stored inside sovereign Nigeria data centers in accordance with Nigeria Federal Law No. 2 of 2019 regarding the use of Information and Communication Technology in Healthcare (Health Data Law) and DHA Administrative Regulations.
           </p>
           <p>
-            No patient records are transferred or mirrored outside the United Arab Emirates without express prior ministerial authorization.
+            No patient records are transferred or mirrored outside the Nigeria without express prior ministerial authorization.
           </p>
         </section>
       </div>

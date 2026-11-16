@@ -145,7 +145,7 @@ export const InvoiceDetailsScreen: React.FC = () => {
                     </span>
                   </div>
                   <p className="font-mono text-xs text-[#707881] truncate mt-0.5">
-                    LifeCode: <strong className="text-[#131b2e]">AE-990-281-DXB</strong> • MRN: DHA-2026-00451
+                    LifeCode: <strong className="text-[#131b2e]">NG-990-281-LAG</strong> • MRN: DHA-2026-00451
                   </p>
                 </div>
               </div>

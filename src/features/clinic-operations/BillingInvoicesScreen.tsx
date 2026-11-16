@@ -51,7 +51,7 @@ export const BillingInvoicesScreen: React.FC = () => {
       time: '08:50 AM',
       patientName: 'Amara Okafor',
       demographics: '34y F',
-      lifeCode: 'AE-990-281-DXB',
+      lifeCode: 'NG-990-281-LAG',
       status: 'paid',
       statusLabel: 'PAID',
       procedureTitle: 'Class II Direct Composite Restoration (#16) & Bitewing X-Ray',

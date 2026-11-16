@@ -26,7 +26,7 @@ export function RecordTreatmentCompletionScreen() {
     setTimeout(() => {
       setIsSealing(false);
       setIsSealed(true);
-      showToast('Encounter #1048 legally committed & sealed to NABIDH & DHA Health Registry.');
+      showToast('Encounter #1048 legally committed & sealed to Nigeria Health Information Exchange & DHA Health Registry.');
     }, 1200);
   };
 
@@ -69,7 +69,7 @@ export function RecordTreatmentCompletionScreen() {
                 <span className="text-xs bg-slate-100 text-slate-600 px-2 py-0.5 rounded font-medium">34y Female</span>
               </div>
               <p className="text-xs text-slate-500 mt-0.5">
-                LifeCode: <span className="font-mono font-semibold text-slate-700">AE-990-281-DXB</span>
+                LifeCode: <span className="font-mono font-semibold text-slate-700">NG-990-281-LAG</span>
               </p>
             </div>
           </div>
@@ -87,7 +87,7 @@ export function RecordTreatmentCompletionScreen() {
               <Icon name="gavel" className="text-xl" />
             </div>
             <div className="space-y-1">
-              <span className="font-bold text-sm text-slate-900 block">UAE Federal Governance Mandate</span>
+              <span className="font-bold text-sm text-slate-900 block">Nigeria Federal Governance Mandate</span>
               <p className="text-xs text-[#3f4850] leading-relaxed">
                 Only an authorized licensed dentist (<strong className="text-slate-900">#DEN credentialed</strong>) may document and attest to the completion of irreversible surgical and operative treatments. Receptionists and non-clinical staff cannot confirm clinical completion.
               </p>
@@ -251,15 +251,15 @@ export function RecordTreatmentCompletionScreen() {
               className="mt-0.5 w-4 h-4 rounded accent-[#006194] cursor-pointer shrink-0"
             />
             <span className="text-slate-800 leading-relaxed">
-              I, <strong className="font-bold">Dr. Daniel James (#DEN-48912)</strong>, solemnly attest that this clinical restorative procedure has been successfully delivered in accordance with UAE DHA Operative Dentistry Standards.
+              I, <strong className="font-bold">Dr. Daniel James (#DEN-48912)</strong>, solemnly attest that this clinical restorative procedure has been successfully delivered in accordance with Nigeria DHA Operative Dentistry Standards.
             </span>
           </label>
 
           <div className="p-3 rounded-xl bg-[#faf8ff] border border-[#eaedff] flex flex-col sm:flex-row sm:items-center justify-between gap-2 font-mono text-[11px]">
-            <span className="text-slate-500">Certificate Hash: NABIDH-COMPL-20261018-DJ982</span>
+            <span className="text-slate-500">Certificate Hash: Nigeria Health Information Exchange-COMPL-20261018-DJ982</span>
             <span className="text-[#006a61] font-bold flex items-center gap-1">
               <Icon name="verified" className="text-sm" />
-              Verified NABIDH Node
+              Verified Nigeria Health Information Exchange Node
             </span>
           </div>
         </div>

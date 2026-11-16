@@ -41,7 +41,7 @@ export function DentistReviewApprovalScreen() {
   };
 
   const handleReject = () => {
-    if (confirm('Are you sure you want to reject this draft protocol? Clinical rationale must be entered in NABIDH audit trail.')) {
+    if (confirm('Are you sure you want to reject this draft protocol? Clinical rationale must be entered in Nigeria Health Information Exchange audit trail.')) {
       navigate('/treatment-plans/dashboard');
     }
   };
@@ -65,7 +65,7 @@ export function DentistReviewApprovalScreen() {
                 Statutory Review Required
               </span>
               <span className="text-[10px] font-bold px-2 py-0.5 rounded-full bg-white text-[#006194] shadow-xs">
-                NABIDH-DHA Sync
+                Nigeria Health Information Exchange-DHA Sync
               </span>
             </div>
             <h1 className="text-base sm:text-lg font-bold text-[#131b2e]">
@@ -143,12 +143,12 @@ export function DentistReviewApprovalScreen() {
 
             <div className="bg-[#f2f3ff] p-3.5 rounded-xl space-y-1">
               <span className="text-[11px] text-[#707881] block">Gross Fee</span>
-              <span className="text-base font-extrabold text-[#131b2e]">AED 1,450</span>
+              <span className="text-base font-extrabold text-[#131b2e]">NGN 1,450</span>
             </div>
 
             <div className="bg-[#89f5e7]/30 border border-[#006a61]/20 p-3.5 rounded-xl space-y-1">
               <span className="text-[11px] text-[#006a61] font-bold block">Patient Copay (20%)</span>
-              <span className="text-base font-extrabold text-[#006a61]">AED 290</span>
+              <span className="text-base font-extrabold text-[#006a61]">NGN 290</span>
             </div>
           </div>
         </div>
@@ -204,7 +204,7 @@ export function DentistReviewApprovalScreen() {
             </span>
           </div>
           <p className="text-xs text-[#707881]">
-            Required by UAE NABIDH Dental Charting Standards prior to legal plan authorization.
+            Required by Nigeria Nigeria Health Information Exchange Dental Charting Standards prior to legal plan authorization.
           </p>
 
           <div className="space-y-2">
@@ -212,7 +212,7 @@ export function DentistReviewApprovalScreen() {
               {
                 key: 'item1' as const,
                 title: 'Patient Identity & Encounter Authenticated',
-                desc: 'Confirmed chairside against Emirates ID record #EXAM-2026-1048.',
+                desc: 'Confirmed chairside against National Identification Number (NIN) record #EXAM-2026-1048.',
               },
               {
                 key: 'item2' as const,
@@ -285,7 +285,7 @@ export function DentistReviewApprovalScreen() {
                     <p className="text-[11px] text-[#707881] mt-0.5">Mesio-occlusal dual-layer resin • CDT D2392</p>
                   </div>
                 </div>
-                <span className="text-xs font-bold text-[#131b2e]">AED 850</span>
+                <span className="text-xs font-bold text-[#131b2e]">NGN 850</span>
               </div>
               <div className="flex items-center justify-between pt-1 border-t border-[#eaedff] text-[11px] text-[#707881]">
                 <span className="text-[#006a61] font-semibold flex items-center gap-1">
@@ -304,11 +304,11 @@ export function DentistReviewApprovalScreen() {
                   <div>
                     <span className="text-xs font-bold text-[#131b2e]">Preventive &amp; Recare Package</span>
                     <p className="text-[11px] text-[#707881] mt-0.5">
-                      Tooth #15 Fluoride (AED 250) + Full Quad Prophy (AED 350)
+                      Tooth #15 Fluoride (NGN 250) + Full Quad Prophy (NGN 350)
                     </p>
                   </div>
                 </div>
-                <span className="text-xs font-bold text-[#131b2e]">AED 600</span>
+                <span className="text-xs font-bold text-[#131b2e]">NGN 600</span>
               </div>
               <div className="flex items-center justify-between pt-1 border-t border-[#eaedff] text-[11px] text-[#707881]">
                 <span className="text-[#006a61] font-semibold flex items-center gap-1">
@@ -330,7 +330,7 @@ export function DentistReviewApprovalScreen() {
           <div className="p-3.5 rounded-xl bg-[#f2f3ff] text-xs text-[#131b2e] leading-relaxed italic border border-[#eaedff]">
             “I, <strong>Dr. Daniel James (#DEN-48912)</strong>, attest that I have formulated and clinically verified
             this treatment plan based on confirmed diagnostic examinations. I assume clinical governance and legal responsibility
-            under UAE DHA Federal Health Regulations.”
+            under Nigeria DHA Federal Health Regulations.”
           </div>
 
           <label className="flex items-start gap-3 cursor-pointer">
@@ -349,8 +349,8 @@ export function DentistReviewApprovalScreen() {
             <div className="flex items-center gap-2.5 min-w-0">
               <Icon name="vpn_key" className="text-[#006a61] text-[20px] shrink-0" />
               <div className="min-w-0">
-                <p className="font-mono font-bold text-[#131b2e] truncate">SIG-NABIDH-20260408-DJ982</p>
-                <p className="text-[11px] text-[#707881]">Valid UAE Malpractice Assurance Active</p>
+                <p className="font-mono font-bold text-[#131b2e] truncate">SIG-Nigeria Health Information Exchange-20260408-DJ982</p>
+                <p className="text-[11px] text-[#707881]">Valid Nigeria Malpractice Assurance Active</p>
               </div>
             </div>
             <span className="font-bold text-[11px] text-[#006a61] uppercase bg-white px-2 py-0.5 rounded shadow-xs">

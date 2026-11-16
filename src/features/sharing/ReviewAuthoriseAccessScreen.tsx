@@ -67,7 +67,7 @@ export function ReviewAuthoriseAccessScreen() {
                   <Icon name="check_circle" className="text-secondary text-[16px]" />
                 </div>
                 <div className="text-xs text-on-surface-variant font-mono">
-                  DHA Lic. #48912 · Jumeirah Dental Care Clinic
+                  DHA Lic. #48912 · Victoria Island Dental Care Clinic
                 </div>
               </div>
             </div>
@@ -92,7 +92,7 @@ export function ReviewAuthoriseAccessScreen() {
                 Patient Subject
               </span>
               <span className="font-bold text-sm text-on-surface mt-1 block">
-                Sarah Al-Mansoor (Primary Adult Profile)
+                Ngozi Eze (Primary Adult Profile)
               </span>
             </div>
           </div>

@@ -53,7 +53,7 @@ const ENCOUNTERS_DATA: PatientEncounter[] = [
     id: 'enc-01',
     patientName: 'Amara Okafor',
     demographics: '34y F',
-    lifeCode: 'AE-990-281-DXB',
+    lifeCode: 'NG-990-281-LAG',
     avatarUrl: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80',
     statusBadge: 'In Progress',
     statusBadgeStyle: 'bg-[#89f5e7] text-[#00201d]',

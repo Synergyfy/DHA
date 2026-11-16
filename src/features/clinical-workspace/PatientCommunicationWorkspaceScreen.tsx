@@ -28,7 +28,7 @@ const CONVERSATIONS: ConversationThread[] = [
     patientName: 'Amara Okafor',
     initials: 'AO',
     ageGender: '34y F',
-    lifeCode: 'AE-990-281-DXB',
+    lifeCode: 'NG-990-281-LAG',
     toothNumber: '#16 Direct',
     procedureTag: 'Tooth #16 Biomimetic Restoration',
     postOpTimeline: 'Post-Op Day 1',
@@ -44,7 +44,7 @@ const CONVERSATIONS: ConversationThread[] = [
     patientName: 'Chinedu Okafor',
     initials: 'CO',
     ageGender: '41y M',
-    lifeCode: 'AE-990-515-DXB',
+    lifeCode: 'NG-990-515-LAG',
     toothNumber: 'Tooth #46',
     procedureTag: 'Endo Prophylaxis Protocol',
     postOpTimeline: 'Pre-Op Preparation',
@@ -57,10 +57,10 @@ const CONVERSATIONS: ConversationThread[] = [
   },
   {
     id: 'conv-3',
-    patientName: 'Fatima Al-Zahra',
+    patientName: 'Fatima Bello',
     initials: 'FA',
     ageGender: '28y F',
-    lifeCode: 'AE-990-414-DXB',
+    lifeCode: 'NG-990-414-LAG',
     toothNumber: 'Quad 2 GBR',
     procedureTag: 'Bone Regeneration Recare',
     postOpTimeline: 'Recare Week 3',
@@ -76,7 +76,7 @@ const CONVERSATIONS: ConversationThread[] = [
     patientName: 'Tariq Latif',
     initials: 'TL',
     ageGender: '52y M',
-    lifeCode: 'AE-990-678-DXB',
+    lifeCode: 'NG-990-678-LAG',
     toothNumber: 'Crown Prep',
     procedureTag: 'Cardiology Clearance Review',
     postOpTimeline: 'Surgical Clearance',
@@ -195,7 +195,7 @@ export function PatientCommunicationWorkspaceScreen() {
               </span>
             </div>
             <p className="text-[#004b74]/90 mt-1 leading-relaxed">
-              Direct patient messaging is designated for post-operative clarifications, pre-appointment instructions, and recare triage. Formal clinical diagnoses, prescription modifications, and major treatment plan alterations mandate authenticated encounters under UAE Telehealth Standards.
+              Direct patient messaging is designated for post-operative clarifications, pre-appointment instructions, and recare triage. Formal clinical diagnoses, prescription modifications, and major treatment plan alterations mandate authenticated encounters under Nigeria Telehealth Standards.
             </p>
           </div>
         </div>

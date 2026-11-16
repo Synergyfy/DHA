@@ -21,7 +21,7 @@ export function PendingTreatmentRemindersScreen() {
     if (!inquiryText.trim()) return;
     setInquiryOpen(false);
     setInquiryText('');
-    showToast('Secure clinical inquiry forwarded to Al Zahra Dental Hub. Clinician response within 24h.');
+    showToast('Secure clinical inquiry forwarded to Lagos Smile Dental Centre. Clinician response within 24h.');
   };
 
   return (
@@ -172,10 +172,10 @@ export function PendingTreatmentRemindersScreen() {
                         Attending Clinician
                       </span>
                       <span className="font-title-sm text-title-sm text-on-surface font-bold truncate">
-                        Dr. Farouk Al-Mansoori
+                        Dr. Chinedu Okafor
                       </span>
                       <span className="font-body-sm text-body-sm text-on-surface-variant truncate">
-                        Al Zahra Dental Hub
+                        Lagos Smile Dental Centre
                       </span>
                     </div>
                     <div className="bg-surface-container-low p-3.5 rounded-xl flex flex-col border border-outline-variant/20">
@@ -185,11 +185,11 @@ export function PendingTreatmentRemindersScreen() {
                       <div className="flex items-center gap-1">
                         <Icon name="check_circle" className="text-secondary text-[16px]" />
                         <span className="font-title-sm text-title-sm text-secondary font-bold truncate">
-                          100% DHA Enaya
+                          100% DHA NHIA
                         </span>
                       </div>
                       <span className="font-body-sm text-body-sm text-on-surface-variant">
-                        Thiqa Tier 1 Eligible
+                        NHIA Primary Cover Eligible
                       </span>
                     </div>
                   </div>
@@ -210,7 +210,7 @@ export function PendingTreatmentRemindersScreen() {
                         </button>
                       </div>
                       <p className="font-body-sm text-body-sm text-on-surface-variant">
-                        Submit a direct query to Dr. Farouk Al-Mansoori regarding prep, pain concerns, or anesthesia requirements.
+                        Submit a direct query to Dr. Chinedu Okafor regarding prep, pain concerns, or anesthesia requirements.
                       </p>
                       <input
                         type="text"
@@ -301,7 +301,7 @@ export function PendingTreatmentRemindersScreen() {
                         DHA System Follow-up Reminder
                       </span>
                       <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5 leading-relaxed">
-                        Default 4-Month Interval • Not New Clinical Advice. Generated per Dubai Health Authority preventive oral hygiene guidelines.
+                        Default 4-Month Interval • Not New Clinical Advice. Generated per Nigeria Dental Health Authority preventive oral hygiene guidelines.
                       </p>
                     </div>
                   </div>
@@ -382,7 +382,7 @@ export function PendingTreatmentRemindersScreen() {
                         Jan 24, 2025 at 10:30 AM
                       </span>
                       <span className="font-body-sm text-body-sm text-on-secondary-container">
-                        Al Zahra Dental Hub • Room 04 (Dr. Farouk Al-Mansoori)
+                        Lagos Smile Dental Centre • Room 04 (Dr. Chinedu Okafor)
                       </span>
                     </div>
                   </div>

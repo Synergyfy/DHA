@@ -56,8 +56,8 @@ export function InvestigationAnalyticsScreen() {
                 className="bg-transparent font-bold text-sm text-on-surface focus:outline-none cursor-pointer"
               >
                 <option value="central">DHA Central Dental (All Radiology & Lab Suites)</option>
-                <option value="barsha">Al Barsha Branch Diagnostic Suite</option>
-                <option value="jumeirah">Jumeirah Specialized Imaging Center</option>
+                <option value="barsha">Surulere Branch Diagnostic Suite</option>
+                <option value="Victoria Island">Victoria Island Specialized Imaging Center</option>
               </select>
             </div>
           </div>
@@ -164,7 +164,7 @@ export function InvestigationAnalyticsScreen() {
               </div>
             </div>
             <div>
-              <div className="text-xl sm:text-2xl font-bold text-on-surface tracking-tight">AED 34,250</div>
+              <div className="text-xl sm:text-2xl font-bold text-on-surface tracking-tight">NGN 34,250</div>
               <span className="text-xs text-secondary font-bold mt-1 block">+8.6% yield / scan</span>
             </div>
           </div>
@@ -517,7 +517,7 @@ export function InvestigationAnalyticsScreen() {
                     <Icon name="biotech" className="text-xl" />
                   </div>
                   <div className="min-w-0">
-                    <p className="font-bold text-on-surface truncate">Al Barsha Reference Lab</p>
+                    <p className="font-bold text-on-surface truncate">Surulere Reference Lab</p>
                     <p className="text-[11px] text-on-surface-variant truncate">Diagnostics • Blood/Microbiology</p>
                   </div>
                 </div>

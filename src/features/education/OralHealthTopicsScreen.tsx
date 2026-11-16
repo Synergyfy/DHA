@@ -281,7 +281,7 @@ export function OralHealthTopicsScreen() {
               <span className="text-outline text-label-sm">• Federal Clinical Compliance</span>
             </div>
             <p className="font-body-sm text-body-sm text-on-surface-variant mt-0.5">
-              All educational topics are authored or peer-reviewed by DHA-licensed clinicians and verified against federal UAE dental healthcare standards.
+              All educational topics are authored or peer-reviewed by DHA-licensed clinicians and verified against federal Nigeria dental healthcare standards.
             </p>
           </div>
         </section>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { useAuthStore } from '../../store/authStore';
 import { Icon } from '../../design/Primitives';
 
 interface InvestigationShellProps {
@@ -47,7 +48,7 @@ export function InvestigationShell({
   const [profileDropdownOpen, setProfileDropdownOpen] = useState(false);
 
   const handleSignOut = () => {
-    navigate('/login');
+    useAuthStore.getState().signOut(); navigate('/login');
   };
 
   return (
@@ -164,7 +165,7 @@ export function InvestigationShell({
           <div className="flex items-center gap-2 shrink-0">
             <span className="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-50 text-emerald-700 border border-emerald-200">
               <Icon name="cloud_sync" className="text-xs" />
-              NABIDH / PACS Active
+              Nigeria Health Information Exchange / PACS Active
             </span>
           </div>
         </div>

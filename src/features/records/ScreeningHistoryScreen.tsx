@@ -20,9 +20,9 @@ interface PastScreening {
 const PAST_SCREENINGS: PastScreening[] = [
   {
     id: 'past-1',
-    title: 'Dubai Schools Oral Health Inspection 2022',
+    title: 'Lagos Schools Oral Health Inspection 2022',
     date: 'Nov 18, 2022',
-    location: 'Dubai Public Academy',
+    location: 'Lagos Public Academy',
     screener: 'Dr. Tariq Mansoor',
     screenerLic: 'DHA-GP-4190',
     priority: 'Priority 1 (Low)',
@@ -95,7 +95,7 @@ export function ScreeningHistoryScreen() {
               </span>
             </div>
             <p className="font-body-md text-body-md text-on-surface-variant mt-1">
-              Community, school &amp; outreach visual dental screenings across Dubai
+              Community, school &amp; outreach visual dental screenings across Lagos
             </p>
           </div>
 
@@ -141,7 +141,7 @@ export function ScreeningHistoryScreen() {
                 </div>
 
                 <h2 className="font-headline-sm sm:font-headline-md text-headline-sm sm:text-headline-md text-on-surface font-bold">
-                  Dubai Health Authority Community Oral Wellness Drive 2024
+                  Nigeria Dental Health Authority Community Oral Wellness Drive 2024
                 </h2>
 
                 <div className="flex items-center gap-2 text-on-surface-variant font-body-sm text-body-sm flex-wrap">
@@ -152,7 +152,7 @@ export function ScreeningHistoryScreen() {
                   <span className="text-outline">•</span>
                   <span className="flex items-center gap-1">
                     <Icon name="location_on" className="text-[16px] text-outline" />
-                    <span>Dubai Mall Public Health Pavilion</span>
+                    <span>Lagos City Mall Public Health Pavilion</span>
                   </span>
                 </div>
               </div>
@@ -161,7 +161,7 @@ export function ScreeningHistoryScreen() {
               <div className="w-full h-44 sm:h-52 rounded-2xl overflow-hidden relative shadow-sm border border-outline-variant/20">
                 <img
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUxHPKW8uzyiZdKwQjjqzd2Flf3lZqHxi-KNtguQgg46U3UvtesMmL8nKLh0NdV-0aw0Y5smtzH6MOSRgbDsM9Bb65ntdtanDds-gSFJ6Si-fS9zC6IlBDpd7R8nh_fW-C0pwSch07cpYwGy1b_1FpfQGGkBKe0-olzjjfzfJyVS_lFo_d1hNYiH0AOO2e9CSBNS7-pm9xpWkN-7fZSUYr_9fHzi4GcTRKe6gVcn_-"
-                  alt="DHA Dental Screening Booth at Dubai Mall"
+                  alt="DHA Dental Screening Booth at Lagos City Mall"
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-on-surface/85 via-transparent to-transparent flex items-end p-4">
@@ -180,7 +180,7 @@ export function ScreeningHistoryScreen() {
                   <div className="flex flex-col min-w-0">
                     <div className="flex items-center gap-1.5">
                       <span className="font-title-sm text-title-sm text-on-surface font-bold truncate">
-                        Fatima Al-Zaabi
+                        Fatima Musa
                       </span>
                       <Icon name="check_circle" filled className="text-[16px] text-primary" />
                     </div>
@@ -417,7 +417,7 @@ export function ScreeningHistoryScreen() {
                   </span>
                 </div>
                 <h3 className="font-headline-sm text-headline-sm font-bold">
-                  Al Zahra Dental Hub
+                  Lagos Smile Dental Centre
                 </h3>
                 <p className="font-body-sm text-body-sm opacity-90">
                   Community screening routing voucher for priority clinical intake verification.
@@ -449,7 +449,7 @@ export function ScreeningHistoryScreen() {
               <div className="flex flex-col gap-2.5 relative z-10 pt-1">
                 <button
                   type="button"
-                  onClick={() => showToast('Opening direct booking for Al Zahra Dental Hub...')}
+                  onClick={() => showToast('Opening direct booking for Lagos Smile Dental Centre...')}
                   className="w-full h-12 rounded-xl bg-primary hover:bg-primary-container text-on-primary font-title-sm text-title-sm font-semibold flex items-center justify-center gap-2 shadow-sm active:scale-[0.99] transition-all"
                 >
                   <Icon name="calendar_add_on" className="text-[20px]" />
@@ -474,7 +474,7 @@ export function ScreeningHistoryScreen() {
                   Missing a School or Community Screening?
                 </p>
                 <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                  Screening records sync automatically using your Emirates ID or Lifecode. Contact DHA Oral Care Toll-Free <strong className="text-on-surface font-bold">800-342</strong> for manual voucher recovery.
+                  Screening records sync automatically using your National Identification Number (NIN) or Lifecode. Contact DHA Oral Care Toll-Free <strong className="text-on-surface font-bold">0800-000-0000</strong> for manual voucher recovery.
                 </p>
               </div>
             </section>

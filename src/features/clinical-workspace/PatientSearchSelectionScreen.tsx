@@ -43,9 +43,9 @@ export function PatientSearchSelectionScreen() {
       age: 34,
       gender: 'Female',
       dob: '14 Oct 1992',
-      lifeCode: 'AE-990-281-DXB',
+      lifeCode: 'NG-990-281-LAG',
       mrn: 'DHA-2026-00451',
-      phone: '+971 50 *** 8491',
+      phone: '+234 803 *** 8491',
       avatar: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=200',
       clinic: 'Harmony Dental Clinic (Wuse 2)',
       attending: 'Dr. Daniel James (DDS, #DEN-48912)',
@@ -59,15 +59,15 @@ export function PatientSearchSelectionScreen() {
       age: 22,
       gender: 'Female',
       dob: '28 Jul 2004',
-      lifeCode: 'AE-990-812-DXB',
+      lifeCode: 'NG-990-812-LAG',
       mrn: 'DHA-2024-09182',
-      phone: '+971 52 *** 1190',
+      phone: '+234 802 *** 1190',
       avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&q=80&w=200',
-      clinic: 'Harmony Dental Clinic (Jumeirah Branch)',
-      attending: 'Dr. K. Al-Mansoor (#DEN-38291)',
+      clinic: 'Harmony Dental Clinic (Victoria Island Branch)',
+      attending: 'Dr. K. Okoye (#DEN-38291)',
       activePlan: 'Orthodontic Alignment Assessment',
       status: 'warning',
-      warningNote: 'Distinct LifeCode: Verify Emirates ID before clinical chart access',
+      warningNote: 'Distinct LifeCode: Verify National Identification Number (NIN) before clinical chart access',
     },
     {
       id: 'p-3',
@@ -75,9 +75,9 @@ export function PatientSearchSelectionScreen() {
       age: 41,
       gender: 'Female',
       dob: '05 Mar 1985',
-      lifeCode: 'AE-990-349-DXB',
+      lifeCode: 'NG-990-349-LAG',
       mrn: 'DHA-2025-01824',
-      phone: '+971 55 *** 6301',
+      phone: '+234 805 *** 6301',
       avatar: 'https://images.unsplash.com/photo-1580489944761-15a19d654956?auto=format&fit=crop&q=80&w=200',
       clinic: 'Harmony Dental Clinic (Wuse 2)',
       attending: 'Unassigned (Inactive Record)',
@@ -119,7 +119,7 @@ export function PatientSearchSelectionScreen() {
             </div>
             <h1 className="text-xl md:text-2xl font-bold">Patient Search &amp; Selection</h1>
             <p className="text-slate-300 text-sm mt-0.5">
-              Query UAE Master Health Index by LifeCode, Name, or Mobile to load verified EMR charts.
+              Query Nigeria Master Health Index by LifeCode, Name, or Mobile to load verified EMR charts.
             </p>
           </div>
 
@@ -129,10 +129,10 @@ export function PatientSearchSelectionScreen() {
               className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-white text-xs font-semibold backdrop-blur-sm transition-all"
             >
               <Icon name="qr_code_scanner" className="text-base text-teal-300" />
-              Scan UAE Pass / QR
+              Scan National Identification Number (NIN) verification / QR
             </button>
             <button
-              onClick={() => showToast('NABIDH cloud sync completed: 100% synchronized')}
+              onClick={() => showToast('Nigeria Health Information Exchange cloud sync completed: 100% synchronized')}
               className="flex items-center gap-1.5 px-3 py-2 rounded-xl bg-teal-500 hover:bg-teal-400 text-slate-950 text-xs font-bold transition-all shadow-md"
             >
               <Icon name="cloud_sync" className="text-base" />
@@ -151,7 +151,7 @@ export function PatientSearchSelectionScreen() {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search by patient name, LifeCode (e.g. AE-990-281-DXB), or phone (+971...)"
+              placeholder="Search by patient name, LifeCode (e.g. NG-990-281-LAG), or phone (+234...)"
               className="w-full pl-11 pr-10 py-3 bg-slate-50 dark:bg-slate-900 border border-slate-300 dark:border-slate-600 rounded-xl text-sm font-medium text-slate-900 dark:text-white placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-teal-500 transition-all"
             />
             {searchQuery && (
@@ -252,7 +252,7 @@ export function PatientSearchSelectionScreen() {
                     )}
                     {isWarning && (
                       <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 font-semibold">
-                        <Icon name="report_problem" className="text-sm" /> Verify Emirates ID
+                        <Icon name="report_problem" className="text-sm" /> Verify National Identification Number (NIN)
                       </span>
                     )}
                     {patient.status === 'inactive' && (
@@ -301,7 +301,7 @@ export function PatientSearchSelectionScreen() {
                       </div>
                       <p className="text-xs text-slate-600 dark:text-slate-400 mt-1 flex items-center gap-1">
                         <Icon name="call" className="text-xs text-slate-400" />
-                        <span>{patient.phone} (UAE Pass L3)</span>
+                        <span>{patient.phone} (NIN biometric verification)</span>
                       </p>
                     </div>
                   </div>
@@ -408,7 +408,7 @@ export function PatientSearchSelectionScreen() {
                   <div>
                     <strong className="block font-semibold">Critical Allergy Active:</strong>
                     <span className="text-red-800 dark:text-red-300 text-[11px]">
-                      Penicillin anaphylaxis registered on UAE Master Health Index. Beta-lactams prohibited.
+                      Penicillin anaphylaxis registered on Nigeria Master Health Index. Beta-lactams prohibited.
                     </span>
                   </div>
                 </div>
