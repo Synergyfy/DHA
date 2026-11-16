@@ -1,16 +1,17 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { ProfessionalShell } from './ProfessionalShell';
 import { Icon } from '../../design/Primitives';
+import { PublicSiteHeader } from '../portal/PublicSiteHeader';
+import { ProfessionalPublicTabs } from './ProfessionalPublicTabs';
 
-type BranchKey = 'jumeirah' | 'downtown';
+type BranchKey = 'victoria-island' | 'downtown';
 
 export function ServicesForClinicsScreen() {
-  const [activeBranch, setActiveBranch] = useState<BranchKey>('jumeirah');
+  const [activeBranch, setActiveBranch] = useState<BranchKey>('victoria-island');
 
   const branches: Record<BranchKey, { name: string; chairs: { name: string; status: string; state: 'active' | 'sterile' | 'pediatric' }[] }> = {
-    jumeirah: {
-      name: 'Jumeirah 1 (HQ)',
+    'victoria-island': {
+      name: 'Victoria Island 1 (HQ)',
       chairs: [
         { name: 'Op-1 (Dr. Farouk)', status: 'Scaling & Hygiene', state: 'active' },
         { name: 'Op-2 (Dr. Reem)', status: 'Endodontics', state: 'active' },
@@ -32,11 +33,10 @@ export function ServicesForClinicsScreen() {
   const currentChairs = branches[activeBranch].chairs;
 
   return (
-    <ProfessionalShell
-      pageTitle="Bring Your Dental Clinic onto DHA"
-      badgeCode="0B.4"
-      badgeLabel="Accredited Dental Facilities & Centres"
-    >
+    <div className="min-h-screen bg-surface font-body-md text-on-surface flex flex-col antialiased">
+      <PublicSiteHeader />
+      <ProfessionalPublicTabs />
+      <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
       <div className="space-y-10 lg:space-y-14">
         {/* Header Intro */}
         <section className="space-y-4 max-w-3xl">
@@ -71,14 +71,14 @@ export function ServicesForClinicsScreen() {
                   </span>
                 </div>
                 <div className="text-xs text-on-surface-variant font-mono mt-0.5">
-                  ID: DHA-CLINIC-884920 · 4 Operatories · NABIDH Live
+                  ID: DHA-CLINIC-884920 · 4 Operatories · Nigeria Health Information Exchange Live
                 </div>
               </div>
             </div>
 
             {/* Branch Switcher */}
             <div className="flex items-center p-1 rounded-2xl bg-surface-container-low self-start sm:self-auto">
-              {(['jumeirah', 'downtown'] as const).map((branch) => (
+              {(['victoria-island', 'downtown'] as const).map((branch) => (
                 <button
                   key={branch}
                   type="button"
@@ -89,7 +89,7 @@ export function ServicesForClinicsScreen() {
                       : 'text-on-surface-variant hover:text-on-surface'
                   }`}
                 >
-                  {branch === 'jumeirah' ? 'Jumeirah 1 (HQ)' : 'Downtown Annex'}
+                  {branch === 'victoria-island' ? 'Victoria Island 1 (HQ)' : 'Downtown Annex'}
                 </button>
               ))}
             </div>
@@ -257,7 +257,7 @@ export function ServicesForClinicsScreen() {
         <section className="relative w-full rounded-3xl overflow-hidden shadow-lg border border-outline-variant/30 h-56 sm:h-64 bg-slate-900">
           <img
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfVWoXajoJUr6QNoNVru0vWL6KlygOwpqWuIeIJXGbkms0YsuYYM7tscWm182iVf292Qtb025jn_7xk_htXiUOKqftLHXMQlye7ZJu8OAv8P23AmbuFa6IYKbHLCu82SzBdwHKXIKwN6UOQS8wKJOQB-DRDTuHw2dVw4_t_cE1o5U8B7DUFyZjld5fbSiJSxNNteDzByF_36tXFPrDeGktEgu-KAp-XKYlwSHCw-20"
-            alt="Modern accredited dental clinic in Dubai with bright natural sunlight and sterile operatory trays"
+            alt="Modern accredited dental clinic in Lagos with bright natural sunlight and sterile operatory trays"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent flex items-end p-6 sm:p-8">
@@ -267,10 +267,10 @@ export function ServicesForClinicsScreen() {
               </div>
               <div>
                 <h3 className="font-headline-sm text-lg sm:text-xl font-bold text-white">
-                  Engineered for Dubai Health Authority Standards
+                  Engineered for Nigeria Dental Health Authority Standards
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-300">
-                  Compliant with UAE Federal Health Data Law · Real-Time License Cross-Referencing
+                  Compliant with Nigeria Data Protection Act · Real-Time License Cross-Referencing
                 </p>
               </div>
             </div>
@@ -312,7 +312,8 @@ export function ServicesForClinicsScreen() {
           </div>
         </section>
       </div>
-    </ProfessionalShell>
+      </main>
+    </div>
   );
 }
 

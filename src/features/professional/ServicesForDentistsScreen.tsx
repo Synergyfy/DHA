@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { ProfessionalShell } from './ProfessionalShell';
 import { Icon } from '../../design/Primitives';
+import { PublicSiteHeader } from '../portal/PublicSiteHeader';
+import { ProfessionalPublicTabs } from './ProfessionalPublicTabs';
 
 type ToolCategory = 'all' | 'core' | 'collab';
 
@@ -21,19 +22,13 @@ export function ServicesForDentistsScreen() {
   ];
 
   return (
-    <ProfessionalShell
-      pageTitle="Digital Tools for Dental Professionals"
-      badgeCode="0B.3"
-      badgeLabel="Dental Practitioners & Specialists"
-    >
+    <div className="min-h-screen bg-surface font-body-md text-on-surface flex flex-col antialiased">
+      <PublicSiteHeader />
+      <ProfessionalPublicTabs />
+      <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
       <div className="space-y-10 lg:space-y-14">
         {/* Header Intro Section */}
         <section className="space-y-4 max-w-3xl">
-          <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-xs font-semibold">
-            <Icon name="verified_user" className="text-[14px]" />
-            <span>0B.3 DENTAL PRACTITIONERS & SPECIALISTS</span>
-          </div>
-
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-on-surface tracking-tight font-display leading-tight">
             Digital Tools for Dental Professionals
           </h1>
@@ -136,7 +131,7 @@ export function ServicesForDentistsScreen() {
         <section className="space-y-6">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <h2 className="text-xl sm:text-2xl font-bold text-on-surface font-display">
-              Clinician Suite Modules (6)
+              Clinical Services (6)
             </h2>
 
             <div className="inline-flex p-1 bg-surface-container rounded-2xl self-start sm:self-auto">
@@ -335,7 +330,8 @@ export function ServicesForDentistsScreen() {
           </div>
         </section>
       </div>
-    </ProfessionalShell>
+      </main>
+    </div>
   );
 }
 

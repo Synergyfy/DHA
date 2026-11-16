@@ -206,7 +206,7 @@ export function ClinicalPhotographViewerScreen() {
             <div className="bg-surface-container-lowest p-3 rounded-xl border border-outline-variant/20">
               <span className="text-[10px] uppercase font-mono tracking-wider text-outline block">DICOM Integration</span>
               <span className="font-semibold text-on-surface font-mono">DHA-WORM-SHA256</span>
-              <span className="text-[10px] text-emerald-700 font-medium block">NABIDH Hash Sealed</span>
+              <span className="text-[10px] text-emerald-700 font-medium block">Nigeria Health Information Exchange Hash Sealed</span>
             </div>
           </section>
         )}

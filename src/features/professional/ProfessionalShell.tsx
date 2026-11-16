@@ -1,6 +1,7 @@
 import { useState, type ReactNode } from 'react';
 import { NavLink, useNavigate } from 'react-router-dom';
 import { Icon } from '../../design/Primitives';
+import { PublicSiteHeader } from '../portal/PublicSiteHeader';
 
 interface ProfessionalShellProps {
   children: ReactNode;
@@ -47,8 +48,11 @@ export function ProfessionalShell({
 
   return (
     <div className="min-h-screen bg-surface font-body-md text-on-surface flex flex-col antialiased selection:bg-secondary-container selection:text-on-secondary-container">
-      {/* Top Professional Portal Header */}
-      <header className="sticky top-0 w-full z-50 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+      {/* Shared public-site header — identical on every public page */}
+      <PublicSiteHeader />
+
+      {/* Secondary suite toolbar (return bar, page title, 0B Suite Modules menu) */}
+      <header className="relative w-full z-20 bg-surface/90 backdrop-blur-xl border-b border-outline-variant/30 shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
         {/* Top return utility bar */}
         <div className="bg-surface-container-low px-4 sm:px-6 lg:px-8 py-1.5 flex items-center justify-between text-xs border-b border-outline-variant/20">
           <NavLink
@@ -319,7 +323,7 @@ export function ProfessionalShell({
                     Dental Health Authority (DHA) Healthcare Operations
                   </h4>
                   <p className="text-xs text-on-surface-variant">
-                    Digital Professional & Institutional Gateway · Unified NABIDH Architecture
+                    Digital Professional & Institutional Gateway · Unified Nigeria Health Information Exchange Architecture
                   </p>
                 </div>
               </div>
@@ -360,7 +364,7 @@ export function ProfessionalShell({
                 </span>
                 <ul className="space-y-2 text-on-surface-variant">
                   <li><NavLink to="/professional/verification-trust" className="hover:text-primary">Data Protection & Role Matrix</NavLink></li>
-                  <li><NavLink to="/portal/privacy" className="hover:text-primary">UAE Federal Health Data Law</NavLink></li>
+                  <li><NavLink to="/portal/privacy" className="hover:text-primary">Nigeria Data Protection Act</NavLink></li>
                   <li><NavLink to="/professional/joining-steps" className="hover:text-primary">Verification SLAs & Review</NavLink></li>
                   <li><NavLink to="/professional/who-can-join" className="hover:text-primary">Eligibility Requirements</NavLink></li>
                 </ul>
@@ -387,13 +391,13 @@ export function ProfessionalShell({
                 </p>
                 <div className="flex items-center gap-1.5 font-semibold text-primary">
                   <Icon name="support_agent" className="text-[16px]" />
-                  <span>DHA Hotline: 800-342 (DHA)</span>
+                  <span>DHA Hotline: 0800-000-0000 (DHA)</span>
                 </div>
               </div>
             </div>
 
             <div className="pt-6 border-t border-outline-variant/20 flex flex-col sm:flex-row items-center justify-between text-[11px] text-on-surface-variant gap-3">
-              <p>© 2025 DHA Digital Registry. All rights reserved. Government of Dubai.</p>
+              <p>© 2025 DHA Digital Registry. All rights reserved. Government of Lagos.</p>
               <div className="flex items-center gap-4">
                 <span>Terms of Service</span>
                 <span>Privacy Notice</span>

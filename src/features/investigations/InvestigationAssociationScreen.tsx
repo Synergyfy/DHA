@@ -101,7 +101,7 @@ export function InvestigationAssociationScreen() {
                 </span>
               </div>
               <p className="text-on-surface-variant text-[11px] font-mono mt-0.5">
-                34y Male • MRN: DHA-10482 • NABIDH Synced
+                34y Male • MRN: DHA-10482 • Nigeria Health Information Exchange Synced
               </p>
             </div>
           </div>
@@ -393,8 +393,8 @@ export function InvestigationAssociationScreen() {
             <div>
               <span className="font-bold text-sm block">Duplicate Check Passed</span>
               <p className="text-xs mt-1 leading-relaxed text-on-surface-variant">
-                No prior bitewing uploaded for <strong>Quadrant 1</strong> within the last 6 months. Prior OPG baseline from <strong>14 Oct 2024</strong> is referenced as historical control (NABIDH Ref:{' '}
-                <span className="font-mono font-bold text-secondary">#NB-DXB-98310</span>).
+                No prior bitewing uploaded for <strong>Quadrant 1</strong> within the last 6 months. Prior OPG baseline from <strong>14 Oct 2024</strong> is referenced as historical control (Nigeria Health Information Exchange Ref:{' '}
+                <span className="font-mono font-bold text-secondary">#NB-LAG-98310</span>).
               </p>
             </div>
           </div>

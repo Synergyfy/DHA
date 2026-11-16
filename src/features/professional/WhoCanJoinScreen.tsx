@@ -31,7 +31,7 @@ export function WhoCanJoinScreen() {
             </h1>
 
             <p className="text-base sm:text-xl text-slate-200 leading-relaxed max-w-2xl font-light">
-              Select the role that fits your clinical practice, medical facility, or educational institution. Every category receives a tailored workspace compliant with Dubai healthcare governance.
+              Select the role that fits your clinical practice, medical facility, or educational institution. Every category receives a tailored workspace compliant with Nigeria Dental Healthcare governance.
             </p>
 
             {/* Trust Pill */}
@@ -41,8 +41,8 @@ export function WhoCanJoinScreen() {
                   <Icon name="health_and_safety" className="text-[20px]" />
                 </div>
                 <div>
-                  <div className="text-sm font-bold text-white">Unified Dubai Health Network</div>
-                  <div className="text-xs text-slate-400">Instant NABIDH E-Record Link</div>
+                  <div className="text-sm font-bold text-white">Unified Nigeria Dental Health Network</div>
+                  <div className="text-xs text-slate-400">Instant Nigeria Health Information Exchange E-Record Link</div>
                 </div>
               </div>
               <div className="flex items-center gap-1.5 text-teal-300 text-xs font-bold">
@@ -115,7 +115,7 @@ export function WhoCanJoinScreen() {
                       Referral Tracking
                     </span>
                     <span className="px-2.5 py-1 rounded-lg bg-secondary-container text-on-secondary-container font-bold shadow-2xs">
-                      NABIDH Sync
+                      Nigeria Health Information Exchange Sync
                     </span>
                   </div>
                 </div>

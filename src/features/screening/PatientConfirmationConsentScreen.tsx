@@ -46,7 +46,7 @@ export function PatientConfirmationConsentScreen() {
                 <div className="w-16 h-16 rounded-2xl overflow-hidden bg-surface-container-high ring-2 ring-primary/20">
                   <img
                     src="https://lh3.googleusercontent.com/aida-public/AB6AXuBglZZMQ_An0n9f9K2SPaHl8d2XE7EoDbdn1Xq_LzTnGCqxGykSRmBvUFflkSck2YPK6LA_0DzcotpXOuy6UQQO0tOlrCap3UeL7yv0SQGNmB6L_dpDSLG9pWcKWgl_N9vvl1f41_68qhcY1v5yCQjYE_48btr1ZF01qzOuzb3ME21FIrx--FLkLuy6jBomQQLSicA-AQEXj7xWXKijYbL72ZMXv4R8bZUsy8piTYdt"
-                    alt="Zayd Tariq Al-Mansoori"
+                    alt="Zayd Tariq Okafor"
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -58,7 +58,7 @@ export function PatientConfirmationConsentScreen() {
               <div>
                 <div className="flex items-center gap-2 flex-wrap">
                   <h3 className="font-title-md text-base sm:text-lg font-bold text-on-surface">
-                    Zayd Tariq Al-Mansoori
+                    Zayd Tariq Okafor
                   </h3>
                   <span className="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-bold">
                     Identity Confirmed
@@ -92,13 +92,13 @@ export function PatientConfirmationConsentScreen() {
                 <span className="text-[10px] uppercase font-bold text-on-surface-variant block">
                   Linked Legal Guardian
                 </span>
-                <span className="font-bold text-on-surface">Sarah Al-Mansoor (Mother)</span>
+                <span className="font-bold text-on-surface">Ngozi Eze (Mother)</span>
               </div>
             </div>
 
             <span className="px-2 py-0.5 rounded-full bg-secondary-container text-secondary text-[11px] font-bold hidden sm:inline-flex items-center gap-1">
               <Icon name="verified" className="text-[13px]" />
-              <span>UAE PASS Verified</span>
+              <span>National Identification Number (NIN) verification Verified</span>
             </span>
           </div>
         </section>
@@ -189,7 +189,7 @@ export function PatientConfirmationConsentScreen() {
                 </span>
               </div>
               <p className="text-on-surface-variant">
-                Statutory clinical record inclusion in the national Nabidh Digital Health network.
+                Statutory clinical record inclusion in the national Nigeria Health Information Exchange Digital Health network.
               </p>
             </div>
           </div>

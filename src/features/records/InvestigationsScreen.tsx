@@ -28,7 +28,7 @@ const VAULT_FILES: VaultFile[] = [
     fileName: 'DHA_BW_Right_01.dicom',
     dateStr: 'Dec 12, 2024',
     size: '3.4 MB',
-    doctor: 'Dr. Farouk Al-Mansoori',
+    doctor: 'Dr. Chinedu Okafor',
     badge: 'Tooth #16 Margin',
     badgeTone: 'bg-surface-container text-primary',
     code: 'BW-01',
@@ -70,7 +70,7 @@ const VAULT_FILES: VaultFile[] = [
     fileName: 'Salivary_Panel_Lab.pdf',
     dateStr: 'Aug 15, 2024',
     size: '420 KB PDF',
-    doctor: 'Dubai Central Diagnostic Labs',
+    doctor: 'Lagos Central Diagnostic Labs',
     badge: 'Verified Lab',
     badgeTone: 'bg-tertiary-fixed text-on-tertiary-fixed',
     notes: 'Unstimulated Salivary Flow & pH Analysis: 0.42 mL/min (Normal), pH 7.1 Optimal.',
@@ -320,7 +320,7 @@ export function InvestigationsScreen() {
                     Full permanent dentition visible. No apical radiolucency or periapical pathosis observed. Alveolar crest levels remain within physiological limits. Symmetrical condylar morphology bilaterally.
                   </p>
                   <span className="font-label-sm text-label-sm text-on-surface-variant mt-1">
-                    Verified by Radiologist <strong className="text-on-surface">Dr. Tariq Al-Nuaimi</strong> (DHA Lic #48201)
+                    Verified by Radiologist <strong className="text-on-surface">Dr. Ifeanyi Nwosu</strong> (DHA Lic #48201)
                   </span>
                 </div>
 
@@ -479,7 +479,7 @@ export function InvestigationsScreen() {
                     Previous Clinic Panoramic Scan
                   </h4>
                   <p className="font-body-sm text-[12px] text-on-surface-variant">
-                    Uploaded Oct 18, 2023 • 8.1 MB • Exterior Provider (Dubai Healthcare City)
+                    Uploaded Oct 18, 2023 • 8.1 MB • Exterior Provider (Lagos Dental District)
                   </p>
                 </div>
 
@@ -588,7 +588,7 @@ export function InvestigationsScreen() {
                     Salivary_Panel_Lab.pdf
                   </h3>
                   <span className="font-label-sm text-[11px] text-on-surface-variant">
-                    Dubai Central Diagnostic Laboratories
+                    Lagos Central Diagnostic Laboratories
                   </span>
                 </div>
               </div>

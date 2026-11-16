@@ -50,7 +50,7 @@ export function PatientTreatmentPreviewScreen() {
           <div className="flex items-center gap-2 self-start sm:self-auto">
             <div className="px-3 py-1.5 rounded-xl bg-[#faf8ff] border border-[#eaedff] text-right">
               <span className="text-[11px] block font-medium text-slate-400 uppercase tracking-wider">LifeCode ID</span>
-              <span className="font-mono text-xs font-bold text-[#006194]">AE-990-281-DXB</span>
+              <span className="font-mono text-xs font-bold text-[#006194]">NG-990-281-LAG</span>
             </div>
           </div>
         </div>
@@ -186,7 +186,7 @@ export function PatientTreatmentPreviewScreen() {
                 <div className="flex items-center gap-3 self-end sm:self-center">
                   <div className="text-right">
                     <span className="text-[10px] block font-semibold text-slate-400 uppercase">Your Share (20%)</span>
-                    <span className="text-lg font-bold text-[#006194]">AED 170</span>
+                    <span className="text-lg font-bold text-[#006194]">NGN 170</span>
                   </div>
                   <button
                     type="button"
@@ -238,10 +238,10 @@ export function PatientTreatmentPreviewScreen() {
                 <div className="p-3.5 rounded-xl bg-white border border-[#eaedff] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
                   <div className="flex items-center gap-2 text-slate-600">
                     <Icon name="health_and_safety" className="text-emerald-600 text-lg" />
-                    <span>Insurance (DHA Enaya 80%): <strong>AED 680 Covered</strong></span>
+                    <span>Insurance (DHA NHIA 80%): <strong>NGN 680 Covered</strong></span>
                   </div>
                   <div className="text-slate-500">
-                    Total Statutory Tariff: <span className="line-through">AED 850</span> → Patient Co-pay: <strong>AED 170</strong>
+                    Total Statutory Tariff: <span className="line-through">NGN 850</span> → Patient Co-pay: <strong>NGN 170</strong>
                   </div>
                 </div>
               </div>
@@ -278,7 +278,7 @@ export function PatientTreatmentPreviewScreen() {
                 <div className="flex items-center gap-3 self-end sm:self-center">
                   <div className="text-right">
                     <span className="text-[10px] block font-semibold text-slate-400 uppercase">Your Share (20%)</span>
-                    <span className="text-lg font-bold text-[#006a61]">AED 120</span>
+                    <span className="text-lg font-bold text-[#006a61]">NGN 120</span>
                   </div>
                   <button
                     type="button"
@@ -330,10 +330,10 @@ export function PatientTreatmentPreviewScreen() {
                 <div className="p-3.5 rounded-xl bg-white border border-[#eaedff] flex flex-col sm:flex-row items-center justify-between gap-3 text-xs">
                   <div className="flex items-center gap-2 text-slate-600">
                     <Icon name="health_and_safety" className="text-teal-600 text-lg" />
-                    <span>Insurance (DHA Enaya 80%): <strong>AED 480 Covered</strong></span>
+                    <span>Insurance (DHA NHIA 80%): <strong>NGN 480 Covered</strong></span>
                   </div>
                   <div className="text-slate-500">
-                    Total Statutory Tariff: <span className="line-through">AED 600</span> → Patient Co-pay: <strong>AED 120</strong>
+                    Total Statutory Tariff: <span className="line-through">NGN 600</span> → Patient Co-pay: <strong>NGN 120</strong>
                   </div>
                 </div>
               </div>
@@ -365,7 +365,7 @@ export function PatientTreatmentPreviewScreen() {
               onClick={() => setShowInlayModal(!showInlayModal)}
               className="px-4 py-2 rounded-xl text-xs font-bold bg-white text-slate-800 border border-amber-300 hover:bg-amber-100/60 transition-colors whitespace-nowrap shadow-xs"
             >
-              {showInlayModal ? 'Hide Comparison' : 'Compare Upgrade (+AED 750)'}
+              {showInlayModal ? 'Hide Comparison' : 'Compare Upgrade (+NGN 750)'}
             </button>
           </div>
 
@@ -376,7 +376,7 @@ export function PatientTreatmentPreviewScreen() {
                 <ul className="space-y-1 text-slate-600">
                   <li>• 1 single visit (45 minutes)</li>
                   <li>• 5–7 years durability</li>
-                  <li>• Fully covered under 20% co-pay (AED 170)</li>
+                  <li>• Fully covered under 20% co-pay (NGN 170)</li>
                 </ul>
               </div>
               <div className="p-3 bg-amber-100/60 rounded-xl border border-amber-300">
@@ -384,7 +384,7 @@ export function PatientTreatmentPreviewScreen() {
                 <ul className="space-y-1 text-amber-900">
                   <li>• 2 visits or in-house CAD/CAM milling</li>
                   <li>• 15+ years superior wear resistance</li>
-                  <li>• Out-of-pocket upgrade: AED 750 + AED 170</li>
+                  <li>• Out-of-pocket upgrade: NGN 750 + NGN 170</li>
                 </ul>
               </div>
             </div>
@@ -409,25 +409,25 @@ export function PatientTreatmentPreviewScreen() {
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             <div className="bg-white/5 rounded-xl p-3.5 border border-white/10">
               <div className="text-[11px] text-slate-400 font-medium">Your Total Co-Pay</div>
-              <div className="text-2xl font-extrabold text-white mt-1">AED 290</div>
+              <div className="text-2xl font-extrabold text-white mt-1">NGN 290</div>
               <div className="text-[10px] text-emerald-400 mt-0.5">20% Patient Share</div>
             </div>
 
             <div className="bg-white/5 rounded-xl p-3.5 border border-white/10">
               <div className="text-[11px] text-slate-400 font-medium">DHA Covered (80%)</div>
-              <div className="text-2xl font-extrabold text-emerald-300 mt-1">AED 1,160</div>
+              <div className="text-2xl font-extrabold text-emerald-300 mt-1">NGN 1,160</div>
               <div className="text-[10px] text-slate-400 mt-0.5">Direct Billing</div>
             </div>
 
             <div className="bg-white/5 rounded-xl p-3.5 border border-white/10">
               <div className="text-[11px] text-slate-400 font-medium">Total Procedure Cost</div>
-              <div className="text-2xl font-extrabold text-slate-300 mt-1">AED 1,450</div>
+              <div className="text-2xl font-extrabold text-slate-300 mt-1">NGN 1,450</div>
               <div className="text-[10px] text-slate-400 mt-0.5">Statutory 2026 Tariff</div>
             </div>
 
             <div className="bg-white/5 rounded-xl p-3.5 border border-white/10">
               <div className="text-[11px] text-slate-400 font-medium">Flexible Payment</div>
-              <div className="text-sm font-bold text-amber-300 mt-1.5">3 × AED 96.67</div>
+              <div className="text-sm font-bold text-amber-300 mt-1.5">3 × NGN 96.67</div>
               <div className="text-[10px] text-slate-400 mt-0.5">0% Interest EasyPay</div>
             </div>
           </div>

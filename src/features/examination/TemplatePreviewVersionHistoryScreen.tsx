@@ -84,7 +84,7 @@ export function TemplatePreviewVersionHistoryScreen() {
               </div>
               <div className="min-w-0 text-xs">
                 <p className="text-[10px] text-secondary uppercase tracking-wider font-bold">Medical Approver</p>
-                <p className="font-bold text-on-surface text-sm truncate">Dr. K. Al-Falasi</p>
+                <p className="font-bold text-on-surface text-sm truncate">Dr. K. Okafor</p>
                 <p className="text-secondary font-semibold">Medical Director</p>
               </div>
             </div>
@@ -237,7 +237,7 @@ export function TemplatePreviewVersionHistoryScreen() {
                         Current • Active
                       </span>
                     </div>
-                    <p className="text-[11px] text-on-surface-variant mt-0.5">Active since 10 Feb 2025 • 08:30 GST</p>
+                    <p className="text-[11px] text-on-surface-variant mt-0.5">Active since 10 Feb 2025 • 08:30 WAT</p>
                   </div>
                   <div className="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-primary">
                     <Icon name="lock" className="text-sm" />
@@ -340,7 +340,7 @@ export function TemplatePreviewVersionHistoryScreen() {
                     <span>Author: <strong className="text-on-surface">Dr. Daniel James</strong></span>
                   </div>
                   <p className="text-on-surface leading-relaxed">
-                    Initial creation and regulatory branch registration under UAE DHA Standard Guidelines for Restorative Dentistry.
+                    Initial creation and regulatory branch registration under Nigeria DHA Standard Guidelines for Restorative Dentistry.
                   </p>
                 </div>
 

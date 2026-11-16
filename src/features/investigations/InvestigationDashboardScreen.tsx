@@ -98,7 +98,7 @@ export function InvestigationDashboardScreen() {
     },
     {
       ref: 'REQ-2025-0902',
-      patient: 'Fatima Al-Zahra',
+      patient: 'Fatima Bello',
       dhaId: 'DHA-08921',
       ageGender: '29y F',
       modality: '3D CBCT Scan',
@@ -107,7 +107,7 @@ export function InvestigationDashboardScreen() {
       status: 'Scheduled',
       timestamp: 'Today, 10:30 AM',
       teeth: ['Maxilla'],
-      assignedTech: 'Humaid Al-Zaabi',
+      assignedTech: 'Humaid Musa',
       criticalAlert: false,
     },
     {
@@ -440,7 +440,7 @@ export function InvestigationDashboardScreen() {
                       <span>Tech: {req.assignedTech}</span>
                       <span className="flex items-center gap-1 text-emerald-700 font-medium">
                         <Icon name="verified" className="text-xs" />
-                        NABIDH Hashed & Signed
+                        Nigeria Health Information Exchange Hashed & Signed
                       </span>
                     </div>
                   </div>
@@ -599,13 +599,13 @@ export function InvestigationDashboardScreen() {
                   </div>
                   <div className="min-w-0 flex-1">
                     <div className="flex items-center justify-between gap-1">
-                      <h4 className="font-semibold text-xs text-on-surface truncate">Fatima Al-Zahra</h4>
+                      <h4 className="font-semibold text-xs text-on-surface truncate">Fatima Bello</h4>
                       <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded">
                         Confirmed
                       </span>
                     </div>
                     <p className="text-[11px] text-on-surface-variant truncate">3D CBCT Full Maxillary Arch</p>
-                    <span className="text-[10px] text-outline">Tech: Humaid Al-Zaabi • Suite 2</span>
+                    <span className="text-[10px] text-outline">Tech: Humaid Musa • Suite 2</span>
                   </div>
                 </div>
 
@@ -639,7 +639,7 @@ export function InvestigationDashboardScreen() {
                       </span>
                     </div>
                     <p className="text-[11px] text-on-surface-variant truncate">Full OPG + Cephalometric Scan</p>
-                    <span className="text-[10px] text-outline">Tech: Humaid Al-Zaabi • Suite 2</span>
+                    <span className="text-[10px] text-outline">Tech: Humaid Musa • Suite 2</span>
                   </div>
                 </div>
               </div>

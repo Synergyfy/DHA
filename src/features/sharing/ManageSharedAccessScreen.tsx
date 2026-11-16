@@ -31,7 +31,7 @@ const PROVIDERS: Provider[] = [
   {
     id: 'tariq',
     name: 'Dr. Tariq Mansoor',
-    facility: 'Jumeirah Dental Care',
+    facility: 'Victoria Island Dental Care',
     type: 'individual',
     photoUrl: null,
     icon: 'dentistry',
@@ -48,7 +48,7 @@ const PROVIDERS: Provider[] = [
   },
   {
     id: 'reem',
-    name: 'Dr. Reem Al-Nuaimi',
+    name: 'Dr. Reem Nwosu',
     facility: 'Medcare Clinic',
     type: 'individual',
     photoUrl:
@@ -67,7 +67,7 @@ const PROVIDERS: Provider[] = [
   },
   {
     id: 'alzahra',
-    name: 'Al Zahra Dental Hub',
+    name: 'Lagos Smile Dental Centre',
     facility: 'Institutional Facility',
     type: 'institutional',
     photoUrl: null,
@@ -421,7 +421,7 @@ export function ManageSharedAccessScreen() {
                 <p>
                   Revoking access will immediately terminate this provider's ability to view, download,
                   or process your shared dental records. This action is logged in the DHA Consent Vault
-                  and is compliant with UAE Federal Decree-Law No. 3 of 2022 on Medical Liability. A
+                  and is compliant with Nigeria Federal Decree-Law No. 3 of 2022 on Medical Liability. A
                   copy of this revocation will be sent to both parties.
                 </p>
               </div>

@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { ProfessionalShell } from './ProfessionalShell';
 import { Icon } from '../../design/Primitives';
+import { PublicSiteHeader } from '../portal/PublicSiteHeader';
+import { ProfessionalPublicTabs } from './ProfessionalPublicTabs';
 
 export function ServicesForSchoolsScreen() {
   const [selectedCohort, setSelectedCohort] = useState<'grade3' | 'grade5' | 'community'>('grade3');
@@ -23,7 +24,7 @@ export function ServicesForSchoolsScreen() {
       referrals: 18,
     },
     community: {
-      name: 'Dubai Cares Community Outreach Camp',
+      name: 'Lagos Cares Community Outreach Camp',
       total: 650,
       screened: 455,
       percent: 70,
@@ -34,11 +35,10 @@ export function ServicesForSchoolsScreen() {
   const currentCohort = cohortData[selectedCohort];
 
   return (
-    <ProfessionalShell
-      pageTitle="Make Community Dental Screening More Organised"
-      badgeCode="0B.5"
-      badgeLabel="Schools & Organisations Outreach"
-    >
+    <div className="min-h-screen bg-surface font-body-md text-on-surface flex flex-col antialiased">
+      <PublicSiteHeader />
+      <ProfessionalPublicTabs />
+      <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
       <div className="space-y-10 lg:space-y-14">
         {/* Header Intro */}
         <section className="space-y-4 max-w-3xl">
@@ -370,7 +370,8 @@ export function ServicesForSchoolsScreen() {
           </div>
         )}
       </div>
-    </ProfessionalShell>
+      </main>
+    </div>
   );
 }
 

@@ -314,18 +314,18 @@ export function UploadInvestigationScreen() {
           )}
         </div>
 
-        {/* NABIDH Compliance Notice */}
+        {/* Nigeria Health Information Exchange Compliance Notice */}
         <div className="bg-surface-container-low rounded-2xl p-4 border border-outline-variant/20 flex items-start gap-3 text-xs">
           <div className="p-2 rounded-xl bg-secondary-container text-on-secondary-container shrink-0 mt-0.5">
             <Icon name="security" className="text-base" />
           </div>
           <div>
             <div className="flex items-center gap-1.5 font-bold text-secondary">
-              <span>NABIDH Compliance Verification</span>
+              <span>Nigeria Health Information Exchange Compliance Verification</span>
               <span className="px-1.5 py-0.2 rounded bg-secondary/10 text-[10px] font-mono">SHA-256</span>
             </div>
             <p className="text-on-surface-variant mt-1 leading-relaxed">
-              All uploaded clinical media are assigned an immutable cryptographic hash upon ingestion. Post-hoc tamper or replacement is strictly audited under UAE Health Data Law.
+              All uploaded clinical media are assigned an immutable cryptographic hash upon ingestion. Post-hoc tamper or replacement is strictly audited under Nigeria Health Data Law.
             </p>
           </div>
         </div>

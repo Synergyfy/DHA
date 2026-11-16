@@ -36,7 +36,7 @@ export function RegistrationConfirmationScreen() {
             </div>
             <div>
               <div className="text-xs font-semibold text-teal-700 uppercase tracking-wider">
-                Dubai Health Authority &amp; FCT Healthcare Registry
+                Nigeria Dental Health Authority &amp; FCT Healthcare Registry
               </div>
               <h1 className="text-sm font-bold text-slate-900">Application Acknowledgment</h1>
             </div>

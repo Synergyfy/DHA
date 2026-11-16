@@ -150,7 +150,7 @@ export function InvestigationRequestConfirmationScreen() {
               </span>
               <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-semibold">
                 <Icon name="verified" className="text-xs" />
-                NABIDH E-Signed
+                Nigeria Health Information Exchange E-Signed
               </span>
             </div>
 
@@ -209,7 +209,7 @@ export function InvestigationRequestConfirmationScreen() {
           <div className="bg-surface-container-low px-5 py-3 border-t border-outline-variant/20 flex items-center justify-between text-xs text-on-surface-variant">
             <div className="flex items-center gap-1.5 font-mono">
               <Icon name="schedule" className="text-sm" />
-              <span>Logged: 16 Feb 2025, 09:15 GST</span>
+              <span>Logged: 16 Feb 2025, 09:15 WAT</span>
             </div>
             <span className="font-mono font-bold text-primary">Encounter: #EXAM-DHA-2025-0982</span>
           </div>
@@ -262,7 +262,7 @@ export function InvestigationRequestConfirmationScreen() {
                 3
               </div>
               <div className="flex-1 min-w-0">
-                <h4 className="font-semibold text-xs text-on-surface">3. DICOM Auto-Ingestion & NABIDH Sync</h4>
+                <h4 className="font-semibold text-xs text-on-surface">3. DICOM Auto-Ingestion & Nigeria Health Information Exchange Sync</h4>
                 <p className="text-xs text-on-surface-variant mt-0.5">
                   Lossless calibrated transmission directly to the DHA central clinical vault.
                 </p>
@@ -323,7 +323,7 @@ export function InvestigationRequestConfirmationScreen() {
 
         {/* Legal Disclaimer */}
         <p className="text-[11px] text-center text-outline max-w-md mx-auto leading-relaxed pt-2">
-          Dispatched under UAE Federal Health Law & NABIDH e-order standard. Modality protocol bound to encounter <span className="font-mono text-on-surface font-semibold">#EXAM-DHA-2025-0982</span>.
+          Dispatched under Nigeria Federal Health Law & Nigeria Health Information Exchange e-order standard. Modality protocol bound to encounter <span className="font-mono text-on-surface font-semibold">#EXAM-DHA-2025-0982</span>.
         </p>
       </div>
     </InvestigationShell>

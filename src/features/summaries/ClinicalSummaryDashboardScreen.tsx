@@ -24,7 +24,7 @@ const mockPriorityQueue: PrioritySummary[] = [
     dhaCode: 'DHA-2026-00451',
     status: 'PENDING_REVIEW',
     title: 'Comprehensive Oral-Health Summary',
-    meta: 'v1.0 AI Draft • Generated Today, 10:15 GST • Dr. Daniel James',
+    meta: 'v1.0 AI Draft • Generated Today, 10:15 WAT • Dr. Daniel James',
   },
   {
     id: 'sum-02',
@@ -42,7 +42,7 @@ const mockPriorityQueue: PrioritySummary[] = [
 const mockRecentSummaries = [
   {
     id: 'rec-01',
-    patient: 'Rashid Al-Maktoum',
+    patient: 'Rashid Eze',
     title: 'Post-Endo Final Synthesis • Sec 9, 10',
     status: 'APPROVED',
     doctor: 'Dr. Daniel James (DHA-D-491)',
@@ -50,7 +50,7 @@ const mockRecentSummaries = [
   },
   {
     id: 'rec-02',
-    patient: 'Sarah Al-Zahra',
+    patient: 'Sarah Bello',
     title: 'Periodontal Re-evaluation • Sec 11',
     status: 'APPROVED',
     doctor: 'Dr. Daniel James (DHA-D-491)',
@@ -194,7 +194,7 @@ export function ClinicalSummaryDashboardScreen() {
             </div>
             <div className="mt-3">
               <span className="text-2xl sm:text-3xl font-extrabold text-[#006a61]">126</span>
-              <span className="text-xs text-[#707881] block mt-0.5">Ready &amp; NABIDH Synced</span>
+              <span className="text-xs text-[#707881] block mt-0.5">Ready &amp; Nigeria Health Information Exchange Synced</span>
             </div>
           </button>
 

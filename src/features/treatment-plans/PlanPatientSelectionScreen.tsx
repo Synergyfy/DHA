@@ -97,7 +97,7 @@ export function PlanPatientSelectionScreen() {
             Select Patient for Treatment Plan
           </h1>
           <p className="text-sm text-[#707881] mt-1">
-            Link new or amended treatment plan to a verified clinical patient record with UAE Pass biometric identity.
+            Link new or amended treatment plan to a verified clinical patient record with National Identification Number (NIN) verification biometric identity.
           </p>
         </div>
 
@@ -244,7 +244,7 @@ export function PlanPatientSelectionScreen() {
           <div className="flex items-center justify-between pb-2 border-b border-[#eaedff]">
             <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#89f5e7]/30 text-[#006a61] text-xs font-bold">
               <Icon name="verified" className="text-[16px]" />
-              <span>NABIDH Synced Record</span>
+              <span>Nigeria Health Information Exchange Synced Record</span>
             </div>
             <span className="text-xs px-2.5 py-1 rounded-md bg-[#f2f3ff] text-[#3f4850] font-medium">
               Autonomous Adult Patient
@@ -274,7 +274,7 @@ export function PlanPatientSelectionScreen() {
               <p className="text-xs text-[#707881] mt-0.5">34y Female • DOB: 14 Oct 1992</p>
               <div className="flex items-center gap-2 mt-1 text-xs text-[#006a61] font-semibold">
                 <Icon name="fingerprint" className="text-[16px]" />
-                <span>UAE Pass Level 3 Biometric Verified</span>
+                <span>NIN biometric verification Verified</span>
               </div>
             </div>
           </div>
@@ -299,7 +299,7 @@ export function PlanPatientSelectionScreen() {
             <div className="min-w-0 flex-1">
               <p className="text-xs font-bold text-[#93000a]">Critical Medical Flag</p>
               <p className="text-xs text-[#ba1a1a] font-medium leading-snug">
-                Penicillin Anaphylaxis • Verified via Unified NABIDH Allergy Registry
+                Penicillin Anaphylaxis • Verified via Unified Nigeria Health Information Exchange Allergy Registry
               </p>
             </div>
           </div>
@@ -406,7 +406,7 @@ export function PlanPatientSelectionScreen() {
               />
               <div className="flex-1">
                 <span className="text-xs font-bold text-[#131b2e] block">Biometric Chairside Confirmation</span>
-                <span className="text-[11px] text-[#707881]">Verified against UAE Pass Level 3 token</span>
+                <span className="text-[11px] text-[#707881]">Verified against NIN biometric verification token</span>
               </div>
               <Icon name="fingerprint" className="text-[#006a61] text-[18px]" />
             </label>
@@ -420,7 +420,7 @@ export function PlanPatientSelectionScreen() {
               />
               <div className="flex-1">
                 <span className="text-xs font-bold text-[#131b2e] block">Valid Medical History On File</span>
-                <span className="text-[11px] text-[#707881]">Penicillin Anaphylaxis flag cross-referenced in NABIDH</span>
+                <span className="text-[11px] text-[#707881]">Penicillin Anaphylaxis flag cross-referenced in Nigeria Health Information Exchange</span>
               </div>
               <Icon name="medical_services" className="text-[#006a61] text-[18px]" />
             </label>

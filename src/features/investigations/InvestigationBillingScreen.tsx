@@ -40,15 +40,15 @@ export function InvestigationBillingScreen() {
       serviceTitle: 'Digital Bitewing (2 Views) + Periapical #16 Apex',
       facility: 'In-House Dexis Suite (Operatory 4)',
       grossAmount: 350.0,
-      insuranceName: 'Daman Thiqa (80%)',
+      insuranceName: 'NHIA (80%)',
       insuranceAmount: 280.0,
       patientDue: 70.0,
       paymentMethod: 'Apple Pay • RCP-9021',
-      notes: 'Reviewed by Dr. K. Al-Mansoor',
+      notes: 'Reviewed by Dr. K. Okoye',
     },
     {
       id: 'dossier-2',
-      patientName: 'Fatima Al-Zahra',
+      patientName: 'Fatima Bello',
       initials: 'FA',
       dhaId: 'DHA-08921',
       invoiceRef: 'INV-2025-0902',
@@ -77,7 +77,7 @@ export function InvestigationBillingScreen() {
       insuranceAmount: 0.0,
       patientDue: 450.0,
       paymentMethod: 'Credit Card (Ending •• 4910) • #AUTH-8812',
-      notes: 'Settled Yesterday 16:42 GST',
+      notes: 'Settled Yesterday 16:42 WAT',
     },
     {
       id: 'dossier-4',
@@ -88,12 +88,12 @@ export function InvestigationBillingScreen() {
       status: 'progress',
       statusLabel: 'Claim Processing • Pre-Auth',
       serviceTitle: 'Full Blood Count & Coagulation Profile (PT/INR)',
-      facility: 'Al Barsha Diagnostic Laboratory (Partner)',
+      facility: 'Surulere Diagnostic Laboratory (Partner)',
       grossAmount: 520.0,
-      insuranceName: 'AXA Insurance Gulf (GEMS Gold)',
+      insuranceName: 'NHIA Insurance Gulf (GEMS Gold)',
       insuranceAmount: 520.0,
       patientDue: 0.0,
-      notes: 'Pre-authorization reference #AXA-DHA-909 • Submitted 4h ago',
+      notes: 'Pre-authorization reference #NHIA-DHA-909 • Submitted 4h ago',
     },
   ];
 
@@ -109,7 +109,7 @@ export function InvestigationBillingScreen() {
 
   const handleConfirmPayment = () => {
     setIsPosModalOpen(false);
-    showToast(`Payment of AED ${selectedDossier?.patientDue.toFixed(2)} recorded successfully via DHA Smart POS.`);
+    showToast(`Payment of NGN ${selectedDossier?.patientDue.toFixed(2)} recorded successfully via DHA Smart POS.`);
   };
 
   const filteredDossiers = dossiers.filter((d) => {
@@ -160,7 +160,7 @@ export function InvestigationBillingScreen() {
           <div>
             <h2 className="text-xl sm:text-2xl font-bold text-on-surface">Diagnostic Claims & Fees</h2>
             <p className="text-xs text-on-surface-variant mt-0.5">
-              Real-time Dubai Health Authority insurance adjudication and patient copay settlement logs
+              Real-time Nigeria Dental Health Authority insurance adjudication and patient copay settlement logs
             </p>
           </div>
           <span className="font-mono text-xs font-semibold text-primary bg-primary/10 px-3 py-1 rounded-full self-start sm:self-auto border border-primary/20">
@@ -179,7 +179,7 @@ export function InvestigationBillingScreen() {
               </div>
             </div>
             <div>
-              <div className="text-xl sm:text-2xl font-bold text-on-surface">AED 34,250</div>
+              <div className="text-xl sm:text-2xl font-bold text-on-surface">NGN 34,250</div>
               <div className="flex items-center gap-1 mt-1 text-secondary text-xs font-semibold">
                 <Icon name="trending_up" className="text-sm" />
                 <span>+8.4% vs last cycle</span>
@@ -196,7 +196,7 @@ export function InvestigationBillingScreen() {
               </div>
             </div>
             <div>
-              <div className="text-xl sm:text-2xl font-bold text-secondary">AED 28,400</div>
+              <div className="text-xl sm:text-2xl font-bold text-secondary">NGN 28,400</div>
               <div className="flex items-center gap-1.5 mt-1 text-xs text-on-surface-variant">
                 <span className="w-2 h-2 rounded-full bg-secondary"></span>
                 <span>83% settlement rate</span>
@@ -213,7 +213,7 @@ export function InvestigationBillingScreen() {
               </div>
             </div>
             <div>
-              <div className="text-xl sm:text-2xl font-bold text-on-surface">AED 4,150</div>
+              <div className="text-xl sm:text-2xl font-bold text-on-surface">NGN 4,150</div>
               <span className="text-xs text-tertiary font-semibold mt-1 inline-block">5 orders awaiting</span>
             </div>
           </div>
@@ -227,7 +227,7 @@ export function InvestigationBillingScreen() {
               </div>
             </div>
             <div>
-              <div className="text-xl sm:text-2xl font-bold text-rose-700">AED 1,700</div>
+              <div className="text-xl sm:text-2xl font-bold text-rose-700">NGN 1,700</div>
               <span className="text-xs text-rose-600 font-semibold mt-1 inline-block">2 denials under appeal</span>
             </div>
           </div>
@@ -319,19 +319,19 @@ export function InvestigationBillingScreen() {
                     <div>
                       <span className="text-[10px] uppercase font-bold text-outline block">Gross Charge</span>
                       <span className="font-bold text-on-surface text-sm sm:text-base">
-                        AED {dos.grossAmount.toFixed(2)}
+                        NGN {dos.grossAmount.toFixed(2)}
                       </span>
                     </div>
                     <div>
                       <span className="text-[10px] uppercase font-bold text-outline block">{dos.insuranceName}</span>
                       <span className="font-bold text-secondary text-sm sm:text-base">
-                        AED {dos.insuranceAmount.toFixed(2)}
+                        NGN {dos.insuranceAmount.toFixed(2)}
                       </span>
                     </div>
                     <div>
                       <span className="text-[10px] uppercase font-bold text-outline block">Patient Copay</span>
                       <span className="font-bold text-on-surface text-sm sm:text-base">
-                        AED {dos.patientDue.toFixed(2)}
+                        NGN {dos.patientDue.toFixed(2)}
                       </span>
                     </div>
                   </div>
@@ -411,13 +411,13 @@ export function InvestigationBillingScreen() {
                 </div>
                 <div className="flex justify-between pt-2 border-t border-outline-variant/20 text-sm">
                   <span className="font-bold text-on-surface">Copay Due:</span>
-                  <span className="font-bold text-primary">AED {selectedDossier.patientDue.toFixed(2)}</span>
+                  <span className="font-bold text-primary">NGN {selectedDossier.patientDue.toFixed(2)}</span>
                 </div>
               </div>
 
               <div className="p-3 bg-blue-50 border border-blue-200 rounded-xl text-blue-900 text-xs flex items-center gap-2">
                 <Icon name="contactless" className="text-2xl text-blue-600 shrink-0" />
-                <p>Terminal ready: Tap Apple Pay, Samsung Pay, or insert Emirates ID card to debit linked insurance wallet.</p>
+                <p>Terminal ready: Tap Apple Pay, Samsung Pay, or insert National Identification Number (NIN) card to debit linked insurance wallet.</p>
               </div>
 
               <div className="flex items-center justify-end gap-2 pt-2 border-t border-outline-variant/20">

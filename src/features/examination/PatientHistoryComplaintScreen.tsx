@@ -259,7 +259,7 @@ export function PatientHistoryComplaintScreen() {
             </div>
             <span className="text-[10px] font-bold text-on-surface-variant bg-surface-container px-2.5 py-0.5 rounded-full flex items-center gap-1">
               <Icon name="cloud_sync" className="text-xs" />
-              <span>NABIDH Synced</span>
+              <span>Nigeria Health Information Exchange Synced</span>
             </span>
           </div>
 

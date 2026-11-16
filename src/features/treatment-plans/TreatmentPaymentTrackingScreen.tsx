@@ -23,7 +23,7 @@ export function TreatmentPaymentTrackingScreen() {
 
   // State
   const [paymentAmount, setPaymentAmount] = useState('120.00');
-  const [paymentTarget, setPaymentTarget] = useState('Phase 2: Tooth #15 Fluoride + Prophy (AED 120.00)');
+  const [paymentTarget, setPaymentTarget] = useState('Phase 2: Tooth #15 Fluoride + Prophy (NGN 120.00)');
   const [paymentMethod, setPaymentMethod] = useState('Credit/Debit Card (POS)');
   const [authCode, setAuthCode] = useState('AUTH-99482 / Terminal POS 2');
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -41,10 +41,10 @@ export function TreatmentPaymentTrackingScreen() {
     {
       id: 'tx-1',
       txCode: 'TX #TX-2026-8812',
-      timestamp: '18 Oct 2026, 11:45 GST',
+      timestamp: '18 Oct 2026, 11:45 WAT',
       title: 'Chairside Copay - POS Terminal',
       badge: 'Successful',
-      amount: '+AED 170.00',
+      amount: '+NGN 170.00',
       amountType: 'credit',
       target: 'Tooth #16 Direct Biomimetic Resin',
       method: 'Apple Pay / Visa (*4021)',
@@ -54,12 +54,12 @@ export function TreatmentPaymentTrackingScreen() {
     {
       id: 'tx-2',
       txCode: 'TX #TX-2026-8790',
-      timestamp: '14 Oct 2026, 11:30 GST',
+      timestamp: '14 Oct 2026, 11:30 WAT',
       title: 'Insurance Pre-Auth Settlement',
       badge: 'Guaranteed',
-      amount: 'AED 1,160.00',
+      amount: 'NGN 1,160.00',
       amountType: 'neutral',
-      target: 'Daman Thiqa E-Gate (#CL-99210)',
+      target: 'NHIA E-Gate (#CL-99210)',
       method: 'Direct Settlement (80% Plan)',
       cashier: 'Automated DHA Billing Gateway',
       notes: 'Direct E-Billing Clearance',
@@ -75,10 +75,10 @@ export function TreatmentPaymentTrackingScreen() {
       const newTx: TransactionLog = {
         id: `tx-${Date.now()}`,
         txCode: `TX #TX-2026-${Math.floor(1000 + Math.random() * 9000)}`,
-        timestamp: 'Just now, 12:00 GST',
+        timestamp: 'Just now, 12:00 WAT',
         title: 'In-Clinic Advance Copay',
         badge: 'Cleared',
-        amount: `+AED ${parseFloat(paymentAmount).toFixed(2)}`,
+        amount: `+NGN ${parseFloat(paymentAmount).toFixed(2)}`,
         amountType: 'credit',
         target: paymentTarget,
         method: paymentMethod,
@@ -198,7 +198,7 @@ export function TreatmentPaymentTrackingScreen() {
                     <Icon name="check_circle" className="text-[16px] text-[#006a61]" />
                   </div>
                   <div>
-                    <span className="text-2xl font-bold text-[#131b2e]">AED 170.00</span>
+                    <span className="text-2xl font-bold text-[#131b2e]">NGN 170.00</span>
                     <div className="text-xs text-[#707881] flex items-center gap-1.5 mt-1">
                       <span className="font-semibold text-[#006a61]">Phase 1 Cleared</span>
                       <span>•</span>
@@ -213,7 +213,7 @@ export function TreatmentPaymentTrackingScreen() {
                     <Icon name="schedule" className="text-[16px] text-[#006194]" />
                   </div>
                   <div>
-                    <span className="text-2xl font-bold text-[#006194]">AED 120.00</span>
+                    <span className="text-2xl font-bold text-[#006194]">NGN 120.00</span>
                     <p className="text-xs text-[#004b73] mt-1 font-medium">Due Phase 2 Check-in (02 Nov)</p>
                   </div>
                 </div>
@@ -222,7 +222,7 @@ export function TreatmentPaymentTrackingScreen() {
               {/* Co-pay Progress Visual Meter */}
               <div className="space-y-2 pt-1 border-t border-[#eaedff]">
                 <div className="flex items-center justify-between text-xs text-[#3f4850]">
-                  <span className="font-semibold">Patient Approved Copay Total: AED 290.00</span>
+                  <span className="font-semibold">Patient Approved Copay Total: NGN 290.00</span>
                   <span className="font-bold text-[#006a61]">58.6% Paid</span>
                 </div>
                 <div className="w-full h-3 bg-[#eaedff] rounded-full overflow-hidden flex">
@@ -232,11 +232,11 @@ export function TreatmentPaymentTrackingScreen() {
                 <div className="flex items-center justify-between text-xs text-[#707881]">
                   <span className="flex items-center gap-1.5 font-medium text-[#006a61]">
                     <span className="w-2 h-2 rounded-full bg-[#006a61] inline-block"></span>
-                    AED 170.00 Cleared
+                    NGN 170.00 Cleared
                   </span>
                   <span className="flex items-center gap-1.5 font-medium text-[#006194]">
                     <span className="w-2 h-2 rounded-full bg-[#007bb9] inline-block"></span>
-                    AED 120.00 Pending Phase 2
+                    NGN 120.00 Pending Phase 2
                   </span>
                 </div>
               </div>
@@ -249,7 +249,7 @@ export function TreatmentPaymentTrackingScreen() {
                   </div>
                   <div className="min-w-0">
                     <div className="text-xs font-bold text-[#131b2e] truncate">
-                      Daman Thiqa Direct Pre-Auth
+                      NHIA Direct Pre-Auth
                     </div>
                     <div className="font-mono text-[11px] text-[#707881] truncate">
                       E-Billing #CL-99210 • 80% Coverage
@@ -257,7 +257,7 @@ export function TreatmentPaymentTrackingScreen() {
                   </div>
                 </div>
                 <div className="shrink-0 text-right">
-                  <span className="text-sm font-bold text-[#006a61]">AED 1,160.00</span>
+                  <span className="text-sm font-bold text-[#006a61]">NGN 1,160.00</span>
                   <div className="flex items-center justify-end gap-1 text-[10px] font-bold text-[#006a61]">
                     <Icon name="verified" className="text-[12px]" /> Approved Direct Pay
                   </div>
@@ -286,7 +286,7 @@ export function TreatmentPaymentTrackingScreen() {
                       <div className="text-[11px] text-[#707881]">Clinical Copay Share (20%)</div>
                     </div>
                   </div>
-                  <div className="text-xs font-bold text-[#131b2e]">AED 50.00</div>
+                  <div className="text-xs font-bold text-[#131b2e]">NGN 50.00</div>
                 </div>
 
                 <div className="flex items-center justify-between p-3.5 rounded-xl bg-[#f2f3ff] border border-[#eaedff]">
@@ -299,7 +299,7 @@ export function TreatmentPaymentTrackingScreen() {
                       <div className="text-[11px] text-[#707881]">Preventive Subgingival Debridement</div>
                     </div>
                   </div>
-                  <div className="text-xs font-bold text-[#131b2e]">AED 70.00</div>
+                  <div className="text-xs font-bold text-[#131b2e]">NGN 70.00</div>
                 </div>
               </div>
 
@@ -308,7 +308,7 @@ export function TreatmentPaymentTrackingScreen() {
                   <Icon name="smartphone" className="text-[16px] text-[#006194]" />
                   <span>Payable via DHA Smart App or at clinic reception</span>
                 </div>
-                <span className="font-mono font-bold text-[#006194]">AED 120.00</span>
+                <span className="font-mono font-bold text-[#006194]">NGN 120.00</span>
               </div>
             </div>
 
@@ -410,16 +410,16 @@ export function TreatmentPaymentTrackingScreen() {
                     }}
                     className="w-full h-11 px-3 bg-[#faf8ff] rounded-xl border border-[#bfc7d2] text-[#131b2e] focus:outline-none focus:ring-2 focus:ring-[#006194]"
                   >
-                    <option>Phase 2: Tooth #15 Fluoride + Prophy (AED 120.00)</option>
-                    <option>Tooth #15 Fluoride Varnish only (AED 50.00)</option>
-                    <option>Periodontal Scaling / Prophy only (AED 70.00)</option>
+                    <option>Phase 2: Tooth #15 Fluoride + Prophy (NGN 120.00)</option>
+                    <option>Tooth #15 Fluoride Varnish only (NGN 50.00)</option>
+                    <option>Periodontal Scaling / Prophy only (NGN 70.00)</option>
                     <option>Custom Settlement Allocation</option>
                   </select>
                 </div>
 
                 <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label className="font-semibold text-[#131b2e] block mb-1">Amount (AED)</label>
+                    <label className="font-semibold text-[#131b2e] block mb-1">Amount (NGN)</label>
                     <input
                       type="text"
                       value={paymentAmount}
@@ -559,9 +559,9 @@ export function TreatmentPaymentTrackingScreen() {
                 <div>
                   <label className="font-semibold text-[#131b2e] block mb-1">Waiver Target</label>
                   <select className="w-full h-10 px-3 rounded-lg border border-[#bfc7d2] bg-[#faf8ff] text-[#131b2e] focus:outline-none focus:ring-2 focus:ring-[#006194]">
-                    <option>Phase 2: Tooth #15 Fluoride Varnish (AED 50.00)</option>
-                    <option>Phase 2: Periodontal Prophylaxis (AED 70.00)</option>
-                    <option>Entire Remaining Copay (AED 120.00)</option>
+                    <option>Phase 2: Tooth #15 Fluoride Varnish (NGN 50.00)</option>
+                    <option>Phase 2: Periodontal Prophylaxis (NGN 70.00)</option>
+                    <option>Entire Remaining Copay (NGN 120.00)</option>
                   </select>
                 </div>
                 <div>
@@ -624,7 +624,7 @@ export function TreatmentPaymentTrackingScreen() {
                 <div>
                   <label className="font-semibold text-[#131b2e] block mb-1">Target Receipt</label>
                   <select className="w-full h-10 px-3 rounded-lg border border-[#bfc7d2] bg-[#faf8ff] text-[#131b2e] focus:outline-none focus:ring-2 focus:ring-[#006194]">
-                    <option>REC-2026-904 (18 Oct 2026 - AED 170.00)</option>
+                    <option>REC-2026-904 (18 Oct 2026 - NGN 170.00)</option>
                   </select>
                 </div>
                 <div>

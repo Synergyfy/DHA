@@ -46,7 +46,7 @@ const PATIENTS: PatientCard[] = [
     plan: 'TP-2026-089',
     lastVisit: '18 Oct 2026',
     nextVisit: '25 Oct 2026',
-    insurance: 'Daman National Health',
+    insurance: 'National Health Insurance Authority (NHIA)',
     alerts: [{ label: 'Penicillin Allergy', tone: 'red' }],
     avatarBg: 'bg-teal-600',
     initials: 'AO',
@@ -62,13 +62,13 @@ const PATIENTS: PatientCard[] = [
     current: 'Endo Review #16 — Post-Op Assessment',
     lastVisit: '12 Oct 2026',
     nextVisit: '18 Oct 2026',
-    insurance: 'AXA Gulf',
+    insurance: 'NHIA Gulf',
     avatarBg: 'bg-blue-600',
     initials: 'CO',
   },
   {
     id: '3',
-    name: 'Fatima Al-Zahra',
+    name: 'Fatima Bello',
     age: 28,
     sex: 'F',
     dhaId: 'DHA-08921',
@@ -78,7 +78,7 @@ const PATIENTS: PatientCard[] = [
     plan: 'TP-2026-112',
     lastVisit: '10 Oct 2026',
     nextVisit: '18 Oct 2026',
-    insurance: 'Daman National Health',
+    insurance: 'National Health Insurance Authority (NHIA)',
     avatarBg: 'bg-purple-600',
     initials: 'FA',
   },
@@ -93,7 +93,7 @@ const PATIENTS: PatientCard[] = [
     current: 'Periodontal Maintenance',
     lastVisit: '18 Oct 2026',
     nextVisit: '18 Apr 2027 (6-month recare)',
-    insurance: 'ADNIC Premium',
+    insurance: 'NHIA Premium',
     microBadge: { label: 'BOP 4%', tone: 'green' },
     avatarBg: 'bg-emerald-600',
     initials: 'MV',
@@ -442,18 +442,18 @@ export function MyPatientsScreen() {
         ))}
       </div>
 
-      {/* ── NABIDH Governance Notice ── */}
+      {/* ── Nigeria Health Information Exchange Governance Notice ── */}
       <div className="bg-[#f0f4ff] border border-[#d6e2ff] rounded-2xl p-4 flex items-start gap-3 mb-8">
         <div className="w-9 h-9 rounded-xl bg-[#dbe4ff] flex items-center justify-center shrink-0">
           <Icon name="verified_user" className="text-[20px] text-[#006194]" />
         </div>
         <div>
           <h3 className="text-sm font-bold text-[#131b2e] mb-0.5">
-            NABIDH Access Governance
+            Nigeria Health Information Exchange Access Governance
           </h3>
           <p className="text-xs text-[#3f4850] leading-relaxed">
             Patient records are accessed under DHA Clinical Privilege License
-            CPL-2026-DJ-0891. All access logged per Dubai Health Data Protection
+            CPL-2026-DJ-0891. All access logged per Nigeria Data Protection Act
             Regulation.
           </p>
         </div>

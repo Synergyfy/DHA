@@ -28,7 +28,7 @@ export function GettingStartedStepsScreen() {
             </div>
             <div className="flex flex-col">
               <span className="text-sm font-bold text-on-surface tracking-tight leading-none">DHA Dental</span>
-              <span className="text-[10px] text-primary font-bold tracking-wider uppercase">DUBAI HEALTH AUTHORITY</span>
+              <span className="text-[10px] text-primary font-bold tracking-wider uppercase">Nigeria Dental Health Authority</span>
             </div>
           </div>
 
@@ -42,7 +42,7 @@ export function GettingStartedStepsScreen() {
 
         {/* 2-Column Responsive Layout on Desktop */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
-          {/* Left Column: Context, UAE Pass Banner, & Regulatory Info (5 cols on lg) */}
+          {/* Left Column: Context, National Identification Number (NIN) verification Banner, & Regulatory Info (5 cols on lg) */}
           <div className="lg:col-span-5 space-y-6">
             <div className="space-y-2">
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-primary text-[11px] uppercase tracking-wider font-semibold">
@@ -53,23 +53,23 @@ export function GettingStartedStepsScreen() {
                 Getting Started Is Simple
               </h1>
               <p className="text-sm text-on-surface-variant leading-relaxed">
-                Connect your UAE Pass or verify your clinic registration in a few straightforward steps.
+                Connect your National Identification Number (NIN) verification or verify your clinic registration in a few straightforward steps.
               </p>
             </div>
 
-            {/* UAE Pass Feature Card */}
+            {/* National Identification Number (NIN) verification Feature Card */}
             <div className="p-4 rounded-2xl bg-surface-container-lowest border border-outline-variant/30 shadow-sm space-y-3">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-xl bg-secondary-container flex items-center justify-center text-secondary shadow-xs">
                   <Icon name="fingerprint" filled className="text-[22px]" />
                 </div>
                 <div>
-                  <h2 className="text-sm font-bold text-on-surface">UAE PASS Instant Verification</h2>
+                  <h2 className="text-sm font-bold text-on-surface">National Identification Number (NIN) verification Instant Verification</h2>
                   <p className="text-xs text-on-surface-variant">Automated identity retrieval in 30 seconds</p>
                 </div>
               </div>
               <p className="text-xs text-on-surface-variant leading-relaxed">
-                No manual document scanning required for UAE residents. Secure biometric authorization links your Emirates ID directly.
+                No manual document scanning required for Nigerian residents. Secure biometric authorization links your National Identification Number (NIN) directly.
               </p>
             </div>
 
@@ -93,14 +93,14 @@ export function GettingStartedStepsScreen() {
               <div className="w-14 h-14 rounded-xl overflow-hidden flex-shrink-0 bg-surface-container-high shadow-xs">
                 <img
                   className="w-full h-full object-cover"
-                  alt="A reassuring modern dental clinic in Dubai"
+                  alt="A reassuring modern dental clinic in Lagos"
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJRXGFoK5GB-uJJKw18yUC7iPaT1cvZiCJ4UmbxTa3X9i3aGNzSURGXRwBoJlqheXPmJ2hSOl9LlcMwBzzngeS8QE0Nja3AmivgteNyyularsTIZ8iHYYAf7hgMu4boPIuUTCZvdt8KaNudknHAnM9HghV5sGs2QRFpTZP57iYDsg8oZsOwg2H4wfv_urvP3s6UNb8LtHeXvx7wCVhTizgb2a5lI6htc-zoTG-hpAg"
                 />
               </div>
               <div className="flex-1 min-w-0">
-                <h4 className="text-xs sm:text-sm font-bold text-on-surface truncate">Official Dubai Healthcare Gateway</h4>
+                <h4 className="text-xs sm:text-sm font-bold text-on-surface truncate">Official Nigeria Dental Healthcare Gateway</h4>
                 <p className="text-[11px] text-on-surface-variant line-clamp-2 mt-0.5">
-                  Unified diagnostic exchange compliant with Dubai Health Authority digital standards.
+                  Unified diagnostic exchange compliant with Nigeria Dental Health Authority digital standards.
                 </p>
               </div>
             </div>
@@ -198,12 +198,12 @@ export function GettingStartedStepsScreen() {
                       </span>
                     </div>
                     <p className="text-xs text-on-surface-variant leading-relaxed mb-2.5">
-                      Complete relevant verification and registration details seamlessly with your UAE Pass or official Emirates ID / license credentials.
+                      Complete relevant verification and registration details seamlessly with your National Identification Number (NIN) verification or official National Identification Number (NIN) / license credentials.
                     </p>
                     <div className="flex items-center gap-2 p-2.5 rounded-xl bg-surface-container-low border border-outline-variant/20">
                       <Icon name="fingerprint" filled className="text-secondary text-[20px]" />
                       <div className="min-w-0 flex-1">
-                        <div className="text-xs font-semibold text-on-surface truncate">UAE PASS Instant Verification</div>
+                        <div className="text-xs font-semibold text-on-surface truncate">National Identification Number (NIN) verification Instant Verification</div>
                         <div className="text-[11px] text-outline truncate">Automated identity retrieval</div>
                       </div>
                       <Icon name="check_circle" className="text-secondary text-[18px]" />
@@ -260,7 +260,7 @@ export function GettingStartedStepsScreen() {
                     </p>
                     <div className="flex items-center gap-2 pt-1 text-on-surface-variant text-xs">
                       <Icon name="notifications_active" className="text-[16px] text-tertiary" />
-                      <span>Automatic sync with Dubai Unified Dental System</span>
+                      <span>Automatic sync with Lagos Unified Dental System</span>
                     </div>
                   </div>
                 </div>
@@ -288,7 +288,7 @@ export function GettingStartedStepsScreen() {
                 )}
               </button>
               <p className="text-center text-xs text-outline">
-                Takes less than 2 minutes • Secured by UAE PASS
+                Takes less than 2 minutes • Secured by National Identification Number (NIN) verification
               </p>
             </div>
           </div>

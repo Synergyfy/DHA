@@ -119,7 +119,7 @@ export function ProfessionalProfileScreen() {
                 </span>
                 <span className="flex items-center gap-1">
                   <Icon name="location_on" className="text-[15px] text-[#006194]" />
-                  <span>Dubai, UAE</span>
+                  <span>Lagos, Nigeria</span>
                 </span>
               </div>
             </div>
@@ -168,7 +168,7 @@ export function ProfessionalProfileScreen() {
 
             <div className="p-3 bg-[#f2f3ff] rounded-2xl">
               <div className="text-[11px] font-bold uppercase tracking-wider text-[#707881]">
-                NABIDH Quality Score
+                Nigeria Health Information Exchange Quality Score
               </div>
               <div className="text-xl font-bold text-[#006a61] mt-0.5">98.4%</div>
               <div className="text-[10px] text-[#006a61] font-medium">Tier 1 Compliance</div>
@@ -212,7 +212,7 @@ export function ProfessionalProfileScreen() {
                 <p>
                   Dr. Daniel James is a Senior Specialist in Restorative Dentistry and Biomimetic Odontology
                   with over a decade of dedicated clinical practice across premier dental hospitals and private
-                  surgical centers in Nigeria and the United Arab Emirates.
+                  surgical centers in Nigeria and the Nigeria.
                 </p>
                 <p>
                   Specializing in complex fixed prosthodontics, adhesive conservative restorations, and digital
@@ -232,7 +232,7 @@ export function ProfessionalProfileScreen() {
                   {[
                     { lang: 'English', level: 'Native / Bilingual' },
                     { lang: 'Yoruba', level: 'Fluent' },
-                    { lang: 'Arabic', level: 'Clinical Proficiency (B2)' },
+                    { lang: 'Hausa', level: 'Clinical Proficiency (B2)' },
                   ].map((l) => (
                     <span
                       key={l.lang}
@@ -292,7 +292,7 @@ export function ProfessionalProfileScreen() {
                 {[
                   {
                     title: 'DHA Specialist Dentist — Restorative Dentistry',
-                    issuer: 'Dubai Health Authority (Health Regulation Sector)',
+                    issuer: 'Nigeria Dental Health Authority (Health Regulation Sector)',
                     licNo: '#DEN-48912',
                     status: 'Active (Valid through 24 Oct 2027)',
                     psv: 'DataFlow Primary Cleared',
@@ -300,7 +300,7 @@ export function ProfessionalProfileScreen() {
                   },
                   {
                     title: 'Fellow of the International Congress of Oral Implantologists (FICOI)',
-                    issuer: 'International Congress of Oral Implantologists (ICOI, USA)',
+                    issuer: 'Nigerian Association of Restorative Dentistry',
                     licNo: '#FICOI-2019-892',
                     status: 'Good Standing',
                     psv: 'Direct Institution Cleared',
@@ -387,7 +387,7 @@ export function ProfessionalProfileScreen() {
                     </span>
                   </div>
                   <div className="text-xs text-[#707881]">
-                    Jumeirah Healthcare Hub, Facility #DHA-FAC-99211
+                    Victoria Island Healthcare Hub, Facility #DHA-FAC-99211
                   </div>
                   <div className="text-[11px] font-medium text-[#006194] flex items-center gap-1">
                     <Icon name="chair" className="text-[13px]" />
@@ -416,7 +416,7 @@ export function ProfessionalProfileScreen() {
               <div className="space-y-2 text-xs">
                 {[
                   { day: 'Sun - Tue', time: '08:30 - 17:00', loc: 'Harmony Wuse 2 (Op 02)', active: true },
-                  { day: 'Wed - Thu', time: '09:00 - 17:00', loc: 'Harmony Jumeirah (Ste 402)', active: true },
+                  { day: 'Wed - Thu', time: '09:00 - 17:00', loc: 'Harmony Victoria Island (Ste 402)', active: true },
                   { day: 'Friday', time: '08:30 - 12:30', loc: 'Harmony Wuse 2 (Half Day)', active: true },
                   { day: 'Saturday', time: 'Off-Duty', loc: 'Rest Day / On-Call Only', active: false },
                 ].map((s) => (
@@ -460,8 +460,8 @@ export function ProfessionalProfileScreen() {
                 </span>
               </div>
               <p className="text-[11px] text-[#707881] leading-relaxed">
-                Profile records are digitally linked with the Dubai Health Authority Central Registry
-                and NABIDH Health Information Exchange under Law No. (32) of 2015.
+                Profile records are digitally linked with the Nigeria Dental Health Authority Central Registry
+                and Nigeria Health Information Exchange Health Information Exchange under Law No. (32) of 2015.
               </p>
               <div className="pt-2 border-t border-[#eaedff] text-[10px] font-mono text-[#707881] flex items-center justify-between">
                 <span>Verification Hash:</span>

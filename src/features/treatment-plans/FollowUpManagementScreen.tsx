@@ -72,7 +72,7 @@ export function FollowUpManagementScreen() {
     },
     {
       id: 'FOL-003',
-      patientName: 'Fatima Al-Zahra',
+      patientName: 'Fatima Bello',
       ageGender: '28y F',
       dhaId: 'DHA-08921',
       avatar: 'FA',
@@ -85,7 +85,7 @@ export function FollowUpManagementScreen() {
       dueDate: '22 Oct 2026',
       scheduledTime: '11:30 AM',
       operatory: 'Operatory 03',
-      clinician: 'Dr. K. Al-Mansoor',
+      clinician: 'Dr. K. Okoye',
     },
     {
       id: 'FOL-004',

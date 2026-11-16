@@ -28,7 +28,7 @@ export function DentistProfileScreen() {
   const selectedDateObj = dates.find((d) => d.id === selectedDate) || dates[0];
 
   return (
-    <DashboardShell pageTitle="Dentist Profile — Dr. Farouk Al-Mansoori" showBack>
+    <DashboardShell pageTitle="Dentist Profile — Dr. Chinedu Okafor" showBack>
       <DiscoverySubNav />
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 space-y-8">
@@ -51,7 +51,7 @@ export function DentistProfileScreen() {
                 </div>
 
                 <h1 className="font-headline-lg text-headline-lg font-bold text-on-surface">
-                  Dr. Farouk Al-Mansoori
+                  Dr. Chinedu Okafor
                 </h1>
                 <p className="font-title-md text-title-md text-on-surface-variant font-medium">
                   Consultant Prosthodontist &amp; Oral Implantologist
@@ -60,11 +60,11 @@ export function DentistProfileScreen() {
                 <div className="flex flex-wrap items-center gap-3 text-body-sm text-on-surface-variant pt-1">
                   <div className="flex items-center gap-1">
                     <Icon name="apartment" className="text-[17px] text-primary" />
-                    <span className="text-on-surface font-semibold">Al Zahra Dental Hub (Oud Metha)</span>
+                    <span className="text-on-surface font-semibold">Lagos Smile Dental Centre (Ikeja)</span>
                   </div>
                   <div className="flex items-center gap-1">
                     <Icon name="translate" className="text-[17px] text-secondary" />
-                    <span>Arabic (Native), English, French</span>
+                    <span>Hausa (Native), English, Igbo</span>
                   </div>
                 </div>
               </div>
@@ -73,7 +73,7 @@ export function DentistProfileScreen() {
             {/* Quick Fee & Action Box */}
             <div className="bg-surface-container-low p-4 sm:p-5 rounded-2xl border border-outline-variant/30 w-full md:w-auto shrink-0 text-left md:text-right space-y-2">
               <span className="font-label-sm text-on-surface-variant block">Consultation Reference Fee</span>
-              <div className="font-headline-md font-bold text-primary">AED 350</div>
+              <div className="font-headline-md font-bold text-primary">NGN 350</div>
               <span className="font-label-sm text-secondary font-semibold block">
                 Standard DHA Approved Tariff
               </span>
@@ -91,7 +91,7 @@ export function DentistProfileScreen() {
           <div className="mt-6 pt-5 border-t border-outline-variant/30 grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
             <div className="bg-surface-container-low/60 p-3 rounded-2xl">
               <span className="font-label-sm text-on-surface-variant block">Licensing Authority</span>
-              <span className="font-title-sm font-bold text-on-surface">Dubai Health Authority</span>
+              <span className="font-title-sm font-bold text-on-surface">Nigeria Dental Health Authority</span>
             </div>
             <div className="bg-surface-container-low/60 p-3 rounded-2xl">
               <span className="font-label-sm text-on-surface-variant block">License Validity</span>
@@ -119,7 +119,7 @@ export function DentistProfileScreen() {
                 <span>Biography &amp; Clinical Expertise</span>
               </h2>
               <p className="font-body-md text-body-md text-on-surface-variant leading-relaxed">
-                Dr. Farouk Al-Mansoori is a Senior Consultant Prosthodontist with over 16 years of specialized clinical practice across the UAE and Europe. He completed his advanced fellowship in Oral Rehabilitation at Kings College London and currently chairs the prosthodontic review panel at Al Zahra Dental Hub.
+                Dr. Chinedu Okafor is a Senior Consultant Prosthodontist with over 16 years of specialized clinical practice across the Nigeria and Nigeria. He completed his advanced fellowship in Oral Rehabilitation at University of Lagos and currently chairs the prosthodontic review panel at Lagos Smile Dental Centre.
               </p>
               <div className="pt-2">
                 <span className="font-label-sm text-on-surface-variant font-bold uppercase tracking-wider block mb-2">
@@ -220,11 +220,11 @@ export function DentistProfileScreen() {
 
               <div className="divide-y divide-outline-variant/30">
                 {[
-                  { service: 'Initial Specialist Consultation & Oral Exam', code: 'DHA-PR-01', fee: 'AED 350' },
-                  { service: 'Single Titanium Implant (Fixture + Abutment)', code: 'DHA-PR-18', fee: 'AED 4,500' },
-                  { service: 'High-Translucency E-max Porcelain Veneer', code: 'DHA-PR-22', fee: 'AED 1,800' },
-                  { service: 'Digital 3D Smile Design & Occlusal Scan', code: 'DHA-PR-05', fee: 'AED 500' },
-                  { service: 'Full Arch Fixed Restoration (All-on-4 Stage 1)', code: 'DHA-PR-35', fee: 'AED 18,500' },
+                  { service: 'Initial Specialist Consultation & Oral Exam', code: 'DHA-PR-01', fee: 'NGN 350' },
+                  { service: 'Single Titanium Implant (Fixture + Abutment)', code: 'DHA-PR-18', fee: 'NGN 4,500' },
+                  { service: 'High-Translucency E-max Porcelain Veneer', code: 'DHA-PR-22', fee: 'NGN 1,800' },
+                  { service: 'Digital 3D Smile Design & Occlusal Scan', code: 'DHA-PR-05', fee: 'NGN 500' },
+                  { service: 'Full Arch Fixed Restoration (All-on-4 Stage 1)', code: 'DHA-PR-35', fee: 'NGN 18,500' },
                 ].map((item) => (
                   <div key={item.code} className="py-3 flex items-center justify-between gap-4">
                     <div>
@@ -260,7 +260,7 @@ export function DentistProfileScreen() {
                     date: '1 month ago',
                     rating: 5,
                     review:
-                      'Hands down the most skilled prosthodontist in Dubai. No sensitivity at all, and my smile looks completely natural. Al Zahra staff are also very courteous.',
+                      'Hands down the most skilled prosthodontist in Lagos. No sensitivity at all, and my smile looks completely natural. Al Zahra staff are also very courteous.',
                   },
                   {
                     name: 'Kevin W.',
@@ -374,7 +374,7 @@ export function DentistProfileScreen() {
               <div className="bg-surface-container-low rounded-2xl p-4 border border-outline-variant/30 space-y-2 text-body-sm">
                 <div className="flex items-center justify-between">
                   <span className="text-on-surface-variant">Doctor:</span>
-                  <span className="font-semibold text-on-surface">Dr. Farouk Al-Mansoori</span>
+                  <span className="font-semibold text-on-surface">Dr. Chinedu Okafor</span>
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-on-surface-variant">Slot:</span>
@@ -384,11 +384,11 @@ export function DentistProfileScreen() {
                 </div>
                 <div className="flex items-center justify-between">
                   <span className="text-on-surface-variant">Facility:</span>
-                  <span className="font-semibold text-on-surface">Al Zahra Dental Hub</span>
+                  <span className="font-semibold text-on-surface">Lagos Smile Dental Centre</span>
                 </div>
                 <div className="flex items-center justify-between border-t border-outline-variant/30 pt-2 font-title-sm">
                   <span className="text-on-surface font-bold">Consultation Fee:</span>
-                  <span className="text-primary font-bold">AED 350</span>
+                  <span className="text-primary font-bold">NGN 350</span>
                 </div>
               </div>
 
@@ -415,10 +415,10 @@ export function DentistProfileScreen() {
                 <div className="p-3 rounded-2xl bg-surface-container-low border border-outline-variant/20 flex items-center justify-between">
                   <div>
                     <span className="font-title-sm font-bold text-on-surface block">
-                      Al Zahra Dental Hub (Main)
+                      Lagos Smile Dental Centre (Main)
                     </span>
                     <span className="font-body-sm text-on-surface-variant">
-                      Oud Metha • Mon, Wed, Thu
+                      Ikeja • Mon, Wed, Thu
                     </span>
                   </div>
                   <button
@@ -433,7 +433,7 @@ export function DentistProfileScreen() {
                 <div className="p-3 rounded-2xl bg-surface-container-low border border-outline-variant/20 flex items-center justify-between">
                   <div>
                     <span className="font-title-sm font-bold text-on-surface block">
-                      Al Barsha Medical Complex
+                      Surulere Medical Complex
                     </span>
                     <span className="font-body-sm text-on-surface-variant">
                       Barsha Heights • Tue, Sat
@@ -463,12 +463,12 @@ export function DentistProfileScreen() {
                 Appointment Reserved!
               </h3>
               <p className="font-body-md text-body-md text-on-surface-variant">
-                Your consultation with <span className="font-semibold text-on-surface">Dr. Farouk Al-Mansoori</span> has been registered and synced with your DHA Lifecode for <span className="font-semibold text-primary">{selectedDateObj.day}, {selectedDateObj.date} at {selectedTime}</span>.
+                Your consultation with <span className="font-semibold text-on-surface">Dr. Chinedu Okafor</span> has been registered and synced with your DHA Lifecode for <span className="font-semibold text-primary">{selectedDateObj.day}, {selectedDateObj.date} at {selectedTime}</span>.
               </p>
               <div className="p-3.5 bg-surface-container rounded-2xl text-left text-body-sm space-y-1">
                 <div className="flex justify-between">
                   <span className="text-on-surface-variant">Facility:</span>
-                  <span className="font-semibold text-on-surface">Al Zahra Dental Hub</span>
+                  <span className="font-semibold text-on-surface">Lagos Smile Dental Centre</span>
                 </div>
                 <div className="flex justify-between">
                   <span className="text-on-surface-variant">Reference Token:</span>

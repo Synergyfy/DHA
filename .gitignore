@@ -12,7 +12,7 @@ vite.config.d.ts
 # Editor / OS
 .DS_Store
 *.local
-.vscode/
 
 # Screenshots / test output
 *.log
+config.bat
