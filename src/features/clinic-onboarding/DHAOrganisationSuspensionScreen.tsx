@@ -44,7 +44,7 @@ export function DHAOrganisationSuspensionScreen() {
             </button>
             <div className="flex flex-col">
               <span className="text-[10px] font-bold text-[#ba1a1a] uppercase tracking-wider">
-                Section 15 • Enforcement
+                DHA Registry • Enforcement
               </span>
               <h1 className="text-base sm:text-lg font-bold text-[#131b2e] tracking-tight">
                 DHA Organisation Suspension

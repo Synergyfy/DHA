@@ -143,7 +143,7 @@ export function TreatmentConsentManagementScreen() {
             </div>
             <div className="text-right shrink-0">
               <span className="font-mono text-xs font-bold text-[#006194] block">#TP-2026-089</span>
-              <span className="text-[11px] text-slate-500">DHA Section 13.13</span>
+              <span className="text-[11px] text-slate-500">Informed Consent</span>
             </div>
           </div>
 

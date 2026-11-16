@@ -52,8 +52,6 @@ export const AppointmentAttendanceReportsScreen: React.FC = () => {
             <div className="flex flex-col min-w-0">
               <div className="flex items-center gap-2">
                 <span className="text-[11px] font-semibold text-[#707881] uppercase tracking-wider">Clinical Intelligence</span>
-                <span className="text-[11px] text-[#707881]">•</span>
-                <span className="text-[11px] font-medium text-[#006194]">Section 16.37</span>
               </div>
               <h1 className="font-['Plus_Jakarta_Sans',sans-serif] text-base md:text-lg font-bold text-[#131b2e] truncate">
                 Appointment & Attendance Reports

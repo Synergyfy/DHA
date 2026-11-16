@@ -173,7 +173,7 @@ export function AppointmentsCalendarScreen() {
                 className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-[#707881] hover:text-[#131b2e] text-xs font-semibold transition-colors"
               >
                 <Icon name="format_list_bulleted" className="text-[16px]" />
-                <span>List (14.4)</span>
+                <span>List View</span>
               </button>
             </div>
           </div>

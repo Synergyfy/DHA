@@ -206,7 +206,7 @@ export function PatientProfessionalOverviewScreen() {
         <div className="bg-slate-100 dark:bg-slate-900 p-1 rounded-2xl flex items-center gap-1 overflow-x-auto no-scrollbar">
           {([
             { id: 'overview' as const, label: 'Overview', icon: 'dashboard' },
-            { id: 'records' as const, label: 'Clinical Records', icon: 'folder_shared', badge: 'Sec 3' },
+            { id: 'records' as const, label: 'Clinical Records', icon: 'folder_shared' },
             { id: 'appointments' as const, label: 'Appointments', icon: 'event_note' },
             { id: 'treatments' as const, label: 'Treatment History', icon: 'receipt_long' },
             { id: 'investigations' as const, label: 'Investigations', icon: 'radiology' },
@@ -329,7 +329,7 @@ export function PatientProfessionalOverviewScreen() {
               className="w-full h-11 rounded-xl bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-teal-700 dark:text-teal-300 font-semibold text-xs md:text-sm flex items-center justify-center gap-2 transition-colors"
             >
               <Icon name="view_in_ar" className="text-base" />
-              <span>Open Odontogram Workspace (Sec 9)</span>
+              <span>Open Odontogram Workspace</span>
               <Icon name="arrow_forward" className="text-sm" />
             </button>
           </div>
@@ -386,7 +386,7 @@ export function PatientProfessionalOverviewScreen() {
               className="w-full h-11 rounded-xl bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-teal-700 dark:text-teal-300 font-semibold text-xs md:text-sm flex items-center justify-center gap-2 transition-colors"
             >
               <Icon name="checklist_rtl" className="text-base" />
-              <span>Open Treatment Plan Workspace (Sec 13.17)</span>
+              <span>Open Treatment Plan Workspace</span>
               <Icon name="arrow_forward" className="text-sm" />
             </button>
           </div>
@@ -436,7 +436,7 @@ export function PatientProfessionalOverviewScreen() {
               className="w-full h-11 rounded-xl bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-teal-700 dark:text-teal-300 font-semibold text-xs md:text-sm flex items-center justify-center gap-2 transition-colors"
             >
               <Icon name="zoom_in" className="text-base" />
-              <span>View Radiographs (Sec 11)</span>
+              <span>View Radiographs</span>
               <Icon name="arrow_forward" className="text-sm" />
             </button>
           </div>
@@ -484,7 +484,7 @@ export function PatientProfessionalOverviewScreen() {
               className="w-full h-11 rounded-xl bg-slate-100 dark:bg-slate-700 hover:bg-slate-200 dark:hover:bg-slate-600 text-teal-700 dark:text-teal-300 font-semibold text-xs md:text-sm flex items-center justify-center gap-2 transition-colors"
             >
               <Icon name="psychology" className="text-base" />
-              <span>View AI Clinical Summary (Sec 12)</span>
+              <span>View AI Clinical Summary</span>
               <Icon name="arrow_forward" className="text-sm" />
             </button>
           </div>

@@ -35,7 +35,7 @@ export function SubmissionConfirmationScreen() {
             <div className="space-y-2">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/20 backdrop-blur-sm text-xs font-semibold tracking-wide uppercase">
                 <Icon name="verified" className="text-emerald-300 text-sm" />
-                <span>Section 9.8 • DHA Electronic Health Registry</span>
+                <span>DHA Electronic Health Registry</span>
               </div>
               <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">Clinical Odontogram Sealed</h1>
               <p className="text-emerald-100 text-sm md:text-base max-w-xl">

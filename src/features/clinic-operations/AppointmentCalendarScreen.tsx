@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '../../design/Primitives';
+import { QuickLinks } from '../../design/QuickLinks';
 
 type ViewMode = 'Day' | 'Week' | 'Month';
 type DentistFilter = 'all' | 'okoro' | 'bello' | 'james';
@@ -724,6 +725,15 @@ export const AppointmentCalendarScreen: React.FC = () => {
           ))}
         </div>
       </nav>
+
+      <QuickLinks
+        title="Appointment Tools"
+        links={[
+          { to: '/clinic-operations/create-appointment', label: 'New Appointment', icon: 'add' },
+          { to: '/clinic-operations/appointment-list', label: 'Appointment List', icon: 'list_alt' },
+          { to: '/clinic-operations/walk-in-registration', label: 'Walk-In Registration', icon: 'directions_walk' },
+        ]}
+      />
     </div>
   );
 };

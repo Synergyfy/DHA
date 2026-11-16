@@ -121,7 +121,7 @@ export function StaffRoleAssignmentScreen() {
             <div>
               <div className="flex items-center gap-2 mb-1 text-secondary font-bold text-xs uppercase tracking-wider">
                 <Icon name="shield" className="text-base" />
-                <span>DHA Section 15 Compliance</span>
+                <span>DHA Statutory Compliance</span>
               </div>
               <h2 className="text-xl sm:text-2xl font-heading font-extrabold text-on-surface">
                 Staff &amp; Role Assignment Roster

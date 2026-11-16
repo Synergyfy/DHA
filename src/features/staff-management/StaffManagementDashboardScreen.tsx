@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { StaffManagementShell } from './StaffManagementShell';
 import { Icon } from '../../design/Primitives';
 
 type BranchFilter = 'all' | 'wuse' | 'maitama' | 'gwarinpa';
@@ -69,61 +70,8 @@ export const StaffManagementDashboardScreen: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#faf8ff] text-[#131b2e] flex flex-col font-['Inter']">
-      {/* Top Header */}
-      <header className="sticky top-0 z-40 bg-[#faf8ff]/90 backdrop-blur-xl border-b border-[#dae2fd]/50 shadow-xs">
-        <div className="max-w-7xl mx-auto h-16 px-4 md:px-8 flex items-center justify-between gap-4">
-          <button 
-            type="button" 
-            onClick={() => navigate('/staff-management/directory')}
-            className="flex items-center gap-3 text-left p-1 rounded-xl hover:bg-[#f2f3ff] transition-colors group"
-          >
-            <div className="w-10 h-10 rounded-xl bg-[#e2e7ff] flex items-center justify-center text-[#006194] group-hover:scale-105 transition-transform">
-              <Icon name="local_hospital" className="text-xl" />
-            </div>
-            <div className="flex flex-col min-w-0">
-              <div className="flex items-center gap-1">
-                <span className="font-['Plus_Jakarta_Sans'] font-semibold text-[#131b2e] text-base truncate">
-                  Harmony Dental Group
-                </span>
-                <Icon name="expand_more" className="text-sm text-[#707881]" />
-              </div>
-              <span className="text-xs text-[#006a61] font-medium truncate">
-                {selectedBranch === 'all' ? 'All Clinics Matrix' : selectedBranch === 'wuse' ? 'Wuse 2 Main Branch' : selectedBranch === 'maitama' ? 'Maitama Specialist' : 'Gwarinpa Outpost'}
-              </span>
-            </div>
-          </button>
-
-          <div className="flex items-center gap-2">
-            <button
-              type="button"
-              onClick={() => navigate('/staff-management/directory')}
-              aria-label="Search directory"
-              className="w-10 h-10 flex items-center justify-center rounded-full text-[#3f4850] hover:text-[#131b2e] hover:bg-[#f2f3ff] transition-colors"
-            >
-              <Icon name="search" className="text-xl" />
-            </button>
-            <button
-              type="button"
-              onClick={() => triggerToast('Notification: 1 staff invite requires authorization.')}
-              aria-label="Notifications"
-              className="w-10 h-10 flex items-center justify-center rounded-full text-[#3f4850] hover:text-[#131b2e] hover:bg-[#f2f3ff] transition-colors relative"
-            >
-              <Icon name="notifications" className="text-xl" />
-              <span className="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-[#ba1a1a] ring-2 ring-[#faf8ff]"></span>
-            </button>
-            <div 
-              onClick={() => navigate('/staff-management/profile/STF-ADE-01')}
-              className="w-9 h-9 rounded-full bg-[#006194] flex items-center justify-center text-white cursor-pointer hover:opacity-90 transition-opacity ml-1"
-            >
-              <Icon name="person" className="text-lg" />
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Main Content */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 md:px-8 py-6 space-y-6">
+    <StaffManagementShell pageTitle="Workforce Overview">
+      <div className="w-full space-y-6">
         {/* Top Context & Branch Filter Bar */}
         <div className="bg-white rounded-2xl p-4 md:p-6 shadow-xs border border-[#eaedff] flex flex-col md:flex-row md:items-center md:justify-between gap-4">
           <div className="flex items-center justify-between md:justify-start gap-4">
@@ -623,45 +571,7 @@ export const StaffManagementDashboardScreen: React.FC = () => {
             </div>
           </div>
         </div>
-      </main>
-
-      {/* Floating Bottom Navigation Bar for Quick Switching */}
-      <nav className="sticky bottom-0 z-40 bg-white/95 backdrop-blur-md border-t border-[#dae2fd] shadow-lg">
-        <div className="max-w-7xl mx-auto flex justify-around items-center h-16 px-4">
-          <button
-            type="button"
-            onClick={() => navigate('/staff-management/dashboard')}
-            className="flex flex-col items-center justify-center min-w-[56px] text-[#006194] font-semibold text-xs"
-          >
-            <Icon name="dashboard" className="text-xl" />
-            <span className="mt-1">Overview</span>
-          </button>
-          <button
-            type="button"
-            onClick={() => navigate('/staff-management/directory')}
-            className="flex flex-col items-center justify-center min-w-[56px] text-[#3f4850] hover:text-[#131b2e] text-xs transition-colors"
-          >
-            <Icon name="badge" className="text-xl" />
-            <span className="mt-1">Directory</span>
-          </button>
-          <button
-            type="button"
-            onClick={() => navigate('/staff-management/add')}
-            className="flex flex-col items-center justify-center min-w-[56px] text-[#3f4850] hover:text-[#131b2e] text-xs transition-colors"
-          >
-            <Icon name="person_add" className="text-xl" />
-            <span className="mt-1">Invite</span>
-          </button>
-          <button
-            type="button"
-            onClick={() => navigate('/clinic-operations')}
-            className="flex flex-col items-center justify-center min-w-[56px] text-[#3f4850] hover:text-[#131b2e] text-xs transition-colors"
-          >
-            <Icon name="domain" className="text-xl" />
-            <span className="mt-1">Branches</span>
-          </button>
-        </div>
-      </nav>
+      </div>
 
       {/* Toast Notification */}
       {showToast && (
@@ -670,6 +580,6 @@ export const StaffManagementDashboardScreen: React.FC = () => {
           <span>{showToast}</span>
         </div>
       )}
-    </div>
+    </StaffManagementShell>
   );
 };

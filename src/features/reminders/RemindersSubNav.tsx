@@ -14,7 +14,7 @@ const NAV_ITEMS: SubNavItem[] = [
   { to: '/patient-dashboard/reminders/daily-care', label: 'Daily Oral Care', icon: 'brush', count: 3 },
   { to: '/patient-dashboard/reminders/checkups', label: 'Check-ups', icon: 'stethoscope', count: 1 },
   { to: '/patient-dashboard/reminders/treatments', label: 'Pending Care', icon: 'healing', count: 2 },
-  { to: '/patient-dashboard/reminders/details', label: 'Reminder Details', icon: 'info' },
+  // Reminder Details is a dependent page — it opens from a reminder row, not from the sub-nav.
 ];
 
 export function RemindersSubNav() {

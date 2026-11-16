@@ -203,9 +203,7 @@ export const BillingInvoicesScreen: React.FC = () => {
             </button>
             <div className="flex flex-col min-w-0">
               <div className="flex items-center gap-2">
-                <span className="text-[11px] font-semibold text-[#707881] uppercase tracking-wider">Clinic Hub</span>
-                <span className="text-[11px] text-[#707881]">•</span>
-                <span className="text-[11px] font-medium text-[#006194]">Section 16.31</span>
+                <span className="text-[11px] font-semibold text-[#707881] uppercase tracking-wider">Clinic Operations</span>
               </div>
               <h1 className="font-['Plus_Jakarta_Sans',sans-serif] text-base md:text-lg font-bold text-[#131b2e] truncate">
                 Billing &amp; Invoices

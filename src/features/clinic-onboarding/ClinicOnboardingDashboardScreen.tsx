@@ -5,6 +5,7 @@ import { Icon } from '../../design/Primitives';
 export function ClinicOnboardingDashboardScreen() {
   const navigate = useNavigate();
   const [activeNav, setActiveNav] = useState<'dashboard' | 'profile' | 'structure' | 'branches' | 'staff'>('dashboard');
+  const [mobileMoreOpen, setMobileMoreOpen] = useState(false);
 
   const milestones = [
     { id: 1, title: 'Entity Account Setup', desc: 'Secure portal credentials verified', status: 'completed', route: '/clinic-onboarding/clinic-account-registration' },
@@ -53,51 +54,113 @@ export function ClinicOnboardingDashboardScreen() {
     },
   ];
 
-  return (
-    <div className="min-h-screen bg-slate-50 text-slate-800 pb-28">
-      {/* Top Header */}
-      <header className="sticky top-0 z-30 bg-white border-b border-slate-200 px-4 lg:px-8 py-3.5 shadow-sm">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-teal-700 text-white flex items-center justify-center font-bold text-base shadow-sm">
-              GD
-            </div>
-            <div>
-              <div className="flex items-center gap-2">
-                <h1 className="text-sm sm:text-base font-bold text-slate-900 leading-tight">
-                  Greenfield Dental Clinic Limited
-                </h1>
-                <span className="hidden sm:inline-flex text-[10px] font-bold text-teal-800 bg-teal-100 px-2 py-0.5 rounded uppercase">
-                  RC-1489201
-                </span>
-              </div>
-              <p className="text-xs text-slate-500">
-                Dr. Amina Bello (CMD) • Docket #DHA-APP-2026-8819
-              </p>
-            </div>
-          </div>
+  const ONBOARDING_SIDE_NAV = [
+    { to: '/clinic-onboarding/dashboard', label: 'Onboarding Dashboard', icon: 'dashboard', end: true },
+    { to: '/clinic-onboarding/profile-management', label: 'Organisation Profile', icon: 'business' },
+    { to: '/clinic-onboarding/organisation-structure', label: 'Practice Structure', icon: 'account_tree' },
+    { to: '/clinic-onboarding/branch-management', label: 'Branch Directory', icon: 'storefront' },
+    { to: '/clinic-onboarding/staff-roles', label: 'Staff Roles & Roster', icon: 'group' },
+    { to: '/clinic-onboarding/operating-hours', label: 'Operating Hours', icon: 'schedule' },
+    { to: '/clinic-onboarding/more-information', label: 'Statutory Verification', icon: 'verified_user' },
+    { to: '/clinic-onboarding/application-status', label: 'Application Status', icon: 'assignment' },
+    { to: '/clinic-onboarding/support', label: 'Help & Support', icon: 'help_outline' },
+  ];
 
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => navigate('/clinic-onboarding/profile-management')}
-              className="text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-50 flex items-center gap-1 transition-colors"
-            >
-              <Icon name="business" className="text-sm text-teal-600" />
-              <span className="hidden sm:inline">Org Profile (15.23)</span>
-            </button>
-            <button
-              onClick={() => navigate('/clinic-onboarding/organisation-structure')}
-              className="text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-50 flex items-center gap-1 transition-colors"
-            >
-              <Icon name="account_tree" className="text-sm text-indigo-600" />
-              <span className="hidden sm:inline">Structure (15.24)</span>
-            </button>
+  return (
+    <div className="min-h-screen bg-slate-50 text-slate-800 flex font-sans antialiased">
+      {/* ════════════ Desktop Left Sidebar (md+) ════════════ */}
+      <aside className="hidden md:flex flex-col w-60 lg:w-64 fixed inset-y-0 left-0 z-30 bg-white border-r border-slate-200 shadow-[2px_0_16px_rgba(15,23,42,0.03)]">
+        <div className="px-5 py-4 border-b border-slate-200 flex items-center gap-2.5">
+          <div className="w-9 h-9 rounded-xl bg-teal-700 text-white flex items-center justify-center font-bold text-sm shadow-xs shrink-0">
+            GD
+          </div>
+          <div className="flex flex-col min-w-0">
+            <span className="text-sm font-bold text-slate-900 truncate">Greenfield Dental</span>
+            <span className="text-[10px] text-teal-700 font-semibold uppercase tracking-wider">RC-1489201</span>
           </div>
         </div>
-      </header>
 
-      {/* Main Container */}
-      <main className="max-w-6xl mx-auto px-4 lg:px-8 pt-6 space-y-6">
+        <nav className="flex-1 overflow-y-auto px-3 py-3 space-y-0.5">
+          <div className="text-[10px] font-bold uppercase tracking-wider text-slate-400 px-2.5 py-1">
+            Enrollment Flow
+          </div>
+          {ONBOARDING_SIDE_NAV.map((item) => {
+            const isActive = item.end ? activeNav === 'dashboard' : location.pathname === item.to;
+            return (
+              <button
+                key={item.to}
+                type="button"
+                onClick={() => navigate(item.to)}
+                className={`w-full flex items-center gap-2.5 px-3 py-2.5 rounded-xl text-xs font-semibold transition-all text-left ${
+                  isActive
+                    ? 'bg-teal-50 text-teal-800 font-bold shadow-xs'
+                    : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+                }`}
+              >
+                <Icon name={item.icon} className={`text-[18px] shrink-0 ${isActive ? 'text-teal-700' : 'text-slate-400'}`} />
+                <span className="truncate">{item.label}</span>
+              </button>
+            );
+          })}
+        </nav>
+
+        <div className="p-3 border-t border-slate-200 shrink-0 bg-white">
+          <button
+            type="button"
+            onClick={() => navigate('/login')}
+            className="w-full px-3 py-2 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 text-xs font-bold flex items-center justify-center gap-2 transition-colors"
+          >
+            <Icon name="logout" className="text-[16px]" />
+            <span>Sign Out</span>
+          </button>
+        </div>
+      </aside>
+
+      {/* ════════════ Main Wrapper ════════════ */}
+      <div className="md:pl-60 lg:pl-64 flex flex-col min-h-screen w-full">
+        {/* Top Header */}
+        <header className="sticky top-0 z-30 bg-white/90 backdrop-blur-xl border-b border-slate-200 px-4 lg:px-8 py-3.5 shadow-sm">
+          <div className="max-w-6xl mx-auto flex items-center justify-between">
+            <div className="flex items-center gap-3">
+              <div className="md:hidden w-9 h-9 rounded-xl bg-teal-700 text-white flex items-center justify-center font-bold text-sm shadow-sm shrink-0">
+                GD
+              </div>
+              <div>
+                <div className="flex items-center gap-2">
+                  <h1 className="text-sm sm:text-base font-bold text-slate-900 leading-tight">
+                    Greenfield Dental Clinic Limited
+                  </h1>
+                  <span className="hidden sm:inline-flex text-[10px] font-bold text-teal-800 bg-teal-100 px-2 py-0.5 rounded uppercase">
+                    RC-1489201
+                  </span>
+                </div>
+                <p className="text-xs text-slate-500">
+                  Dr. Amina Bello (CMD) • Docket #DHA-APP-2026-8819
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => navigate('/clinic-onboarding/profile-management')}
+                className="text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-50 flex items-center gap-1 transition-colors"
+              >
+                <Icon name="business" className="text-sm text-teal-600" />
+                <span className="hidden sm:inline">Org Profile</span>
+              </button>
+              <button
+                onClick={() => navigate('/clinic-onboarding/organisation-structure')}
+                className="text-xs font-semibold px-3 py-1.5 rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-50 flex items-center gap-1 transition-colors"
+              >
+                <Icon name="account_tree" className="text-sm text-indigo-600" />
+                <span className="hidden sm:inline">Structure</span>
+              </button>
+            </div>
+          </div>
+        </header>
+
+        {/* Main Container */}
+        <main className="max-w-6xl w-full mx-auto px-4 lg:px-8 py-6 pb-24 md:pb-8 space-y-6">
         {/* Launch Announcement Ribbon */}
         <div className="bg-gradient-to-r from-teal-800 to-slate-900 rounded-2xl p-4 sm:p-5 text-white flex flex-col sm:flex-row items-center justify-between gap-4 shadow-md">
           <div className="flex items-center gap-3 text-center sm:text-left">
@@ -366,7 +429,7 @@ export function ClinicOnboardingDashboardScreen() {
               >
                 <div className="flex items-center gap-2">
                   <Icon name="badge" className="text-blue-600 text-base" />
-                  <span className="text-xs font-semibold text-slate-800">Staff &amp; Role Assignment (15.16)</span>
+                  <span className="text-xs font-semibold text-slate-800">Staff &amp; Role Assignment</span>
                 </div>
                 <Icon name="arrow_forward" className="text-slate-400 text-sm" />
               </button>
@@ -375,19 +438,95 @@ export function ClinicOnboardingDashboardScreen() {
         </div>
       </main>
 
-      {/* Persistent Bottom Bar for Mobile & Desktop Navigation */}
-      <nav className="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-slate-200 py-2.5 px-4 shadow-lg">
+      {/* ════════════ Mobile Bottom Popup: "More" Bottom Sheet ════════════ */}
+      {mobileMoreOpen && (
+        <div className="md:hidden fixed inset-0 z-50 flex items-end justify-center">
+          <div
+            className="fixed inset-0 bg-black/40 backdrop-blur-xs animate-in fade-in"
+            onClick={() => setMobileMoreOpen(false)}
+          />
+          <div className="relative w-full max-h-[85vh] bg-white rounded-t-3xl shadow-2xl flex flex-col z-10 animate-in slide-in-from-bottom duration-200 pb-safe">
+            <div className="flex justify-center pt-3 pb-1 shrink-0">
+              <div className="w-10 h-1 bg-slate-300 rounded-full" />
+            </div>
+
+            <div className="px-5 py-3 border-b border-slate-200 flex items-center justify-between shrink-0">
+              <div>
+                <h3 className="text-sm font-bold text-slate-900">Onboarding Navigation</h3>
+                <p className="text-[11px] text-slate-500">Practice registration & compliance</p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setMobileMoreOpen(false)}
+                className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center text-slate-500"
+              >
+                <Icon name="close" className="text-[18px]" />
+              </button>
+            </div>
+
+            <div className="flex-1 overflow-y-auto p-4 space-y-2">
+              {[
+                { to: '/clinic-onboarding/dashboard', label: 'Dashboard Overview', icon: 'dashboard', desc: 'Milestone tracker & status' },
+                { to: '/clinic-onboarding/profile-management', label: 'Organisation Profile', icon: 'business', desc: 'CAC legal entity profile' },
+                { to: '/clinic-onboarding/organisation-structure', label: 'Practice Structure', icon: 'account_tree', desc: 'Leadership & governance' },
+                { to: '/clinic-onboarding/branch-management', label: 'Branch Directory', icon: 'storefront', desc: 'Facilities & satellite sites' },
+                { to: '/clinic-onboarding/staff-roles', label: 'Staff Roles & Roster', icon: 'group', desc: 'Workforce registrations' },
+                { to: '/clinic-onboarding/operating-hours', label: 'Operating Hours', icon: 'schedule', desc: 'Clinical schedule & on-call' },
+                { to: '/clinic-onboarding/more-information', label: 'Statutory Verification', icon: 'verified_user', desc: 'Regulatory filings & audit' },
+                { to: '/clinic-onboarding/application-status', label: 'Application Status', icon: 'assignment', desc: 'Docket triage & approval' },
+                { to: '/clinic-onboarding/support', label: 'Support & Queries', icon: 'help_outline', desc: 'Registry desk assistance' },
+              ].map((item) => (
+                <button
+                  key={item.to}
+                  type="button"
+                  onClick={() => {
+                    setMobileMoreOpen(false);
+                    navigate(item.to);
+                  }}
+                  className="w-full flex items-center gap-3 p-3 rounded-2xl bg-slate-50 hover:bg-slate-100 transition-colors text-left"
+                >
+                  <div className="w-9 h-9 rounded-xl bg-teal-50 text-teal-700 flex items-center justify-center shrink-0">
+                    <Icon name={item.icon} className="text-[20px]" />
+                  </div>
+                  <div className="min-w-0 flex-1">
+                    <span className="text-xs font-bold text-slate-900 block truncate">{item.label}</span>
+                    <span className="text-[11px] text-slate-500 block truncate">{item.desc}</span>
+                  </div>
+                  <Icon name="chevron_right" className="text-slate-400 text-[18px] shrink-0" />
+                </button>
+              ))}
+
+              <div className="pt-2 border-t border-slate-200">
+                <button
+                  type="button"
+                  onClick={() => {
+                    setMobileMoreOpen(false);
+                    navigate('/login');
+                  }}
+                  className="w-full py-2.5 rounded-xl bg-rose-50 hover:bg-rose-100 text-rose-700 text-xs font-bold flex items-center justify-center gap-2 transition-colors"
+                >
+                  <Icon name="logout" className="text-[16px]" />
+                  <span>Sign Out</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Persistent Bottom Bar for Mobile Navigation only */}
+      <nav className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-slate-200 py-2 px-3 shadow-lg">
         <div className="max-w-xl mx-auto flex items-center justify-around">
           <button
             onClick={() => {
               setActiveNav('dashboard');
               navigate('/clinic-onboarding/dashboard');
             }}
-            className={`flex flex-col items-center gap-1 text-[11px] font-semibold transition-colors ${
-              activeNav === 'dashboard' ? 'text-teal-700' : 'text-slate-500 hover:text-slate-800'
+            className={`flex flex-col items-center gap-0.5 text-[10px] font-semibold transition-colors min-w-[56px] ${
+              activeNav === 'dashboard' ? 'text-teal-700 font-bold' : 'text-slate-500 hover:text-slate-800'
             }`}
           >
-            <Icon name="dashboard" className="text-lg" />
+            <Icon name="dashboard" className="text-[20px]" />
             <span>Dashboard</span>
           </button>
           <button
@@ -395,35 +534,23 @@ export function ClinicOnboardingDashboardScreen() {
               setActiveNav('profile');
               navigate('/clinic-onboarding/profile-management');
             }}
-            className={`flex flex-col items-center gap-1 text-[11px] font-semibold transition-colors ${
-              activeNav === 'profile' ? 'text-teal-700' : 'text-slate-500 hover:text-slate-800'
+            className={`flex flex-col items-center gap-0.5 text-[10px] font-semibold transition-colors min-w-[56px] ${
+              activeNav === 'profile' ? 'text-teal-700 font-bold' : 'text-slate-500 hover:text-slate-800'
             }`}
           >
-            <Icon name="business" className="text-lg" />
+            <Icon name="business" className="text-[20px]" />
             <span>Profile</span>
-          </button>
-          <button
-            onClick={() => {
-              setActiveNav('structure');
-              navigate('/clinic-onboarding/organisation-structure');
-            }}
-            className={`flex flex-col items-center gap-1 text-[11px] font-semibold transition-colors ${
-              activeNav === 'structure' ? 'text-teal-700' : 'text-slate-500 hover:text-slate-800'
-            }`}
-          >
-            <Icon name="account_tree" className="text-lg" />
-            <span>Structure</span>
           </button>
           <button
             onClick={() => {
               setActiveNav('branches');
               navigate('/clinic-onboarding/branch-management');
             }}
-            className={`flex flex-col items-center gap-1 text-[11px] font-semibold transition-colors ${
-              activeNav === 'branches' ? 'text-teal-700' : 'text-slate-500 hover:text-slate-800'
+            className={`flex flex-col items-center gap-0.5 text-[10px] font-semibold transition-colors min-w-[56px] ${
+              activeNav === 'branches' ? 'text-teal-700 font-bold' : 'text-slate-500 hover:text-slate-800'
             }`}
           >
-            <Icon name="storefront" className="text-lg" />
+            <Icon name="storefront" className="text-[20px]" />
             <span>Branches</span>
           </button>
           <button
@@ -431,15 +558,25 @@ export function ClinicOnboardingDashboardScreen() {
               setActiveNav('staff');
               navigate('/clinic-onboarding/staff-roles');
             }}
-            className={`flex flex-col items-center gap-1 text-[11px] font-semibold transition-colors ${
-              activeNav === 'staff' ? 'text-teal-700' : 'text-slate-500 hover:text-slate-800'
+            className={`flex flex-col items-center gap-0.5 text-[10px] font-semibold transition-colors min-w-[56px] ${
+              activeNav === 'staff' ? 'text-teal-700 font-bold' : 'text-slate-500 hover:text-slate-800'
             }`}
           >
-            <Icon name="group" className="text-lg" />
+            <Icon name="group" className="text-[20px]" />
             <span>Staff</span>
+          </button>
+          <button
+            onClick={() => setMobileMoreOpen(true)}
+            className={`flex flex-col items-center gap-0.5 text-[10px] font-semibold transition-colors min-w-[56px] ${
+              mobileMoreOpen ? 'text-teal-700 font-bold' : 'text-slate-500 hover:text-slate-800'
+            }`}
+          >
+            <Icon name="grid_view" className="text-[20px]" />
+            <span>More</span>
           </button>
         </div>
       </nav>
+      </div>
     </div>
   );
 }

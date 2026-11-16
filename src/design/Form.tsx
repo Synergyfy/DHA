@@ -2,8 +2,8 @@ import { useId, useState, type InputHTMLAttributes, type ReactNode, type SelectH
 import { Icon } from './Primitives';
 
 const inputBase =
-  'h-12 w-full rounded-lg bg-surface-container-lowest px-3.5 font-body-md text-body-md text-on-surface ' +
-  'shadow-sm outline-none transition-colors placeholder:text-outline-variant focus:bg-surface-container-low';
+  'h-12 lg:h-[52px] w-full rounded-xl bg-surface-container-lowest px-4 font-body-md text-sm lg:text-[15px] text-on-surface ' +
+  'shadow-xs outline-none transition-all placeholder:text-outline-variant border border-outline-variant/30 focus:border-primary/50 focus:bg-surface-container-low/60 focus:ring-2 focus:ring-primary/20';
 
 interface FieldProps {
   label?: ReactNode;

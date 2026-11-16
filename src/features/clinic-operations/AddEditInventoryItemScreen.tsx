@@ -98,8 +98,6 @@ export const AddEditInventoryItemScreen: React.FC = () => {
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-xs uppercase tracking-wider font-semibold text-[#006194]">Dispensary Catalog</span>
-                <span className="text-xs text-[#707881]">•</span>
-                <span className="font-mono text-xs text-[#3f4850]">Section 16.28</span>
               </div>
               <h1 className="font-['Plus_Jakarta_Sans',sans-serif] text-base md:text-lg font-bold text-[#131b2e] truncate">
                 {mode === 'add' ? 'Register New Inventory Item' : 'Edit Inventory Item Record'}

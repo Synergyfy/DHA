@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { TreatmentPlanShell } from './TreatmentPlanShell';
+import { QuickLinks } from '../../design/QuickLinks';
 import { Icon } from '../../design/Primitives';
 
 interface TreatmentItem {
@@ -547,6 +548,15 @@ export function TreatmentPlanBuilderScreen() {
           </div>
         )}
       </div>
+      <QuickLinks
+        title="Plan Sections"
+        links={[
+          { to: '/treatment-plans/item-config', label: 'Add Treatment Item', icon: 'post_add' },
+          { to: '/treatment-plans/cost-estimate', label: 'Cost Estimator', icon: 'payments' },
+          { to: '/treatment-plans/consent', label: 'Informed Consent', icon: 'draw' },
+          { to: '/treatment-plans/scheduling', label: 'Appointment Scheduling', icon: 'event_available' },
+        ]}
+      />
     </TreatmentPlanShell>
   );
 }

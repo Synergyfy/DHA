@@ -92,7 +92,7 @@ export function QuickScreeningAssessmentScreen() {
           <div>
             <strong className="text-error font-bold block text-sm">Non-Diagnostic Screening</strong>
             <p className="mt-0.5 leading-relaxed">
-              Basic visual field inspection only. Full 32-tooth odontogram charting, probing depths, and radiographs belong to clinical clinic sections.
+              Basic visual field inspection only. Full 32-tooth odontogram charting, probing depths, and radiographs belong to comprehensive clinical examinations.
             </p>
           </div>
         </div>

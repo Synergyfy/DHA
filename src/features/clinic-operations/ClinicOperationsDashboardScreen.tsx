@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { ClinicOperationsShell } from './ClinicOperationsShell';
 import { Icon } from '../../design/Primitives';
 
 export function ClinicOperationsDashboardScreen() {
@@ -15,7 +16,7 @@ export function ClinicOperationsDashboardScreen() {
   };
 
   return (
-    <div className="bg-[#faf8ff] text-[#131b2e] min-h-screen flex flex-col font-['Inter',sans-serif]">
+    <ClinicOperationsShell pageTitle="Operations Dashboard">
       {/* Toast Notification */}
       {showToast && (
         <div className="fixed top-20 left-1/2 -translate-x-1/2 bg-[#283044] text-[#eef0ff] px-5 py-2.5 rounded-full text-xs font-semibold shadow-2xl flex items-center gap-2 z-[100] animate-in fade-in slide-in-from-top-2 duration-200">
@@ -24,54 +25,7 @@ export function ClinicOperationsDashboardScreen() {
         </div>
       )}
 
-      {/* Top App Header */}
-      <header className="fixed top-0 w-full z-40 bg-[#faf8ff]/85 backdrop-blur-xl border-b border-[#dae2fd]/50 shadow-[0_1px_8px_rgba(0,0,0,0.03)]">
-        <div className="max-w-7xl mx-auto h-16 px-4 sm:px-6 flex items-center justify-between gap-3">
-          <div className="flex items-center gap-3 min-w-0">
-            <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-[#006194] text-white shadow-sm shrink-0">
-              <Icon name="dentistry" className="text-[22px]" />
-            </div>
-            <div className="flex flex-col min-w-0">
-              <div className="flex items-center gap-1.5">
-                <span className="text-sm font-bold text-[#131b2e] truncate">
-                  BrightSmile Dental OS
-                </span>
-                <span className="px-1.5 py-0.5 rounded-full bg-[#eaedff] text-[#006194] text-[10px] font-bold uppercase tracking-wider">
-                  DHA
-                </span>
-              </div>
-              <button
-                type="button"
-                onClick={() => navigate('/clinic-operations/branch-switcher')}
-                className="flex items-center gap-0.5 text-xs text-[#3f4850] hover:text-[#131b2e] transition-colors text-left"
-              >
-                <span className="font-medium truncate max-w-[140px] sm:max-w-xs">
-                  {selectedBranch === 'wuse' ? 'Wuse 2 Branch (HQ)' : 'All Branches (Consolidated)'}
-                </span>
-                <Icon name="keyboard_arrow_down" className="text-[16px]" />
-              </button>
-            </div>
-          </div>
-
-          <div className="flex items-center gap-2 shrink-0">
-            <button
-              type="button"
-              aria-label="Notifications"
-              onClick={() => triggerToast('No pending urgent notifications')}
-              className="relative w-10 h-10 flex items-center justify-center rounded-xl text-[#3f4850] hover:text-[#131b2e] hover:bg-[#eaedff] transition-colors"
-            >
-              <Icon name="notifications" className="text-[22px]" />
-              <span className="absolute top-2.5 right-2.5 w-2 h-2 rounded-full bg-[#ba1a1a] ring-2 ring-white" />
-            </button>
-            <div className="w-8 h-8 rounded-full bg-[#006194] flex items-center justify-center shadow-sm text-white ml-1">
-              <Icon name="person" className="text-[18px]" />
-            </div>
-          </div>
-        </div>
-      </header>
-
-      {/* Main Content Area */}
-      <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 pt-20 pb-28 space-y-6">
+      <div className="w-full space-y-6">
         {/* Top Greeting & Branch Toggle Bar */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pt-1">
           <div className="flex flex-col min-w-0">
@@ -693,54 +647,8 @@ export function ClinicOperationsDashboardScreen() {
             </div>
           </div>
         </div>
-      </main>
-
-      {/* RegOps Bottom Navigation Dock */}
-      <footer className="fixed bottom-0 w-full z-40 bg-[#faf8ff]/90 backdrop-blur-xl border-t border-[#dae2fd] shadow-lg">
-        <div className="max-w-md sm:max-w-xl mx-auto h-16 px-4 flex items-center justify-around text-xs">
-          <button
-            type="button"
-            onClick={() => navigate('/clinic-operations/dashboard')}
-            className="flex flex-col items-center gap-1 text-[#006194] font-bold"
-          >
-            <Icon name="dashboard" className="text-[20px]" />
-            <span className="text-[10px]">Overview</span>
-          </button>
-          <button
-            type="button"
-            onClick={() => navigate('/clinic-operations/calendar')}
-            className="flex flex-col items-center gap-1 text-[#707881] hover:text-[#131b2e] transition-colors"
-          >
-            <Icon name="calendar_today" className="text-[20px]" />
-            <span className="text-[10px]">Schedule</span>
-          </button>
-          <button
-            type="button"
-            onClick={() => navigate('/clinic-operations/branch-overview')}
-            className="flex flex-col items-center gap-1 text-[#707881] hover:text-[#131b2e] transition-colors"
-          >
-            <Icon name="hub" className="text-[20px]" />
-            <span className="text-[10px]">Branch Ops</span>
-          </button>
-          <button
-            type="button"
-            onClick={() => navigate('/clinic-operations/org-overview')}
-            className="flex flex-col items-center gap-1 text-[#707881] hover:text-[#131b2e] transition-colors"
-          >
-            <Icon name="corporate_fare" className="text-[20px]" />
-            <span className="text-[10px]">Org-Wide</span>
-          </button>
-          <button
-            type="button"
-            onClick={() => navigate('/clinic-operations/customise')}
-            className="flex flex-col items-center gap-1 text-[#707881] hover:text-[#131b2e] transition-colors"
-          >
-            <Icon name="tune" className="text-[20px]" />
-            <span className="text-[10px]">Customize</span>
-          </button>
-        </div>
-      </footer>
-    </div>
+      </div>
+    </ClinicOperationsShell>
   );
 }
 export default ClinicOperationsDashboardScreen;

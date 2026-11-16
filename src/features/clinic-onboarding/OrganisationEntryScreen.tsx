@@ -50,7 +50,7 @@ export function OrganisationEntryScreen() {
         <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-container/60 text-on-secondary-container text-xs font-semibold uppercase tracking-wider mb-3">
             <Icon name="badge" className="text-sm" />
-            SEC 15.1 &bull; Organisation Registration
+            Organisation Registration
           </div>
           <h1 className="text-2xl sm:text-3xl lg:text-4xl font-heading font-extrabold text-on-surface tracking-tight mb-3">
             Register or Link Your Healthcare Facility

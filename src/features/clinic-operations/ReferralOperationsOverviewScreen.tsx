@@ -50,7 +50,7 @@ const REFERRALS_DATA: ReferralRecord[] = [
     scopeDetail: 'Tooth #14 Canal Calcification & Recurrent Lesion',
     dateStr: '20 Oct 2026',
     actions: [
-      { label: 'View Referral Dossier (Sec 20)', icon: 'arrow_forward', primary: true, key: 'dossier' },
+      { label: 'View Referral Dossier', icon: 'arrow_forward', primary: true, key: 'dossier' },
     ],
   },
   {
@@ -563,7 +563,7 @@ export const ReferralOperationsOverviewScreen: React.FC = () => {
                     Inter-Clinic Handshake Hub
                   </span>
                   <span className="px-2 py-0.5 rounded-full bg-[#89f5e7] text-[#00201d] text-[11px] font-bold">
-                    Sec 20 Gateway
+                    Referral Gateway
                   </span>
                 </div>
                 <p className="text-xs md:text-sm text-[#3f4850] mt-1 leading-relaxed">

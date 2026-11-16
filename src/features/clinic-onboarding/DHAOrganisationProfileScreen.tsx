@@ -48,7 +48,7 @@ export function DHAOrganisationProfileScreen() {
             </button>
             <div className="flex flex-col">
               <span className="text-[10px] font-bold text-[#707881] uppercase tracking-wider">
-                Section 15 • Profile
+                DHA Registry • Profile
               </span>
               <h1 className="text-base sm:text-lg font-bold text-[#131b2e] tracking-tight truncate max-w-[220px] sm:max-w-md">
                 DHA Organisation Profile
