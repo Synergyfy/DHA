@@ -348,7 +348,7 @@ export function TreatmentPriorityRationaleScreen() {
               <div className="flex-1">
                 <div className="flex items-center justify-between">
                   <span className="font-bold text-[#131b2e]">Initial AI Recommendation</span>
-                  <span className="text-[10px] text-[#707881]">10:15 GST</span>
+                  <span className="text-[10px] text-[#707881]">10:15 WAT</span>
                 </div>
                 <p className="text-[#707881] mt-0.5">Proposed: Urgent (&lt; 7 Days) on 12 Oct 2026</p>
               </div>
@@ -361,7 +361,7 @@ export function TreatmentPriorityRationaleScreen() {
               <div className="flex-1">
                 <div className="flex items-center justify-between">
                   <span className="font-bold text-[#131b2e]">Clinician Endorsement</span>
-                  <span className="text-[10px] text-[#707881]">11:28 GST</span>
+                  <span className="text-[10px] text-[#707881]">11:28 WAT</span>
                 </div>
                 <p className="text-[#707881] mt-0.5">
                   Confirmed by Dr. Daniel James (#DEN-48912) on 12 Oct 2026.

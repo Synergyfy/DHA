@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Icon } from '../../design/Primitives';
+import { PublicSiteHeader } from './PublicSiteHeader';
 
-type TabKey = 'dental-care' | 'practice-management' | 'outreach' | 'accreditation';
+type TabKey = 'dental-care' | 'practice-management' | 'outreach';
 
 export const ForProfessionalsScreen: React.FC = () => {
   const navigate = useNavigate();
@@ -10,62 +11,8 @@ export const ForProfessionalsScreen: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-[#faf8ff] text-[#131b2e] font-['Inter'] flex flex-col antialiased">
-      {/* Top Header */}
-      <header className="sticky top-0 z-50 bg-white/90 backdrop-blur-xl border-b border-[#eaedff] shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-4">
-          <div className="flex items-center gap-3 cursor-pointer" onClick={() => navigate('/')}>
-            <div className="w-10 h-10 rounded-xl bg-[#006194] flex items-center justify-center text-white shadow-sm">
-              <Icon name="dentistry" className="text-[24px]" />
-            </div>
-            <div className="flex flex-col">
-              <span className="text-base font-bold font-['Plus_Jakarta_Sans'] text-[#131b2e] leading-tight">DHA</span>
-              <span className="text-[10px] text-[#707881] uppercase tracking-wider font-semibold">Dental Health</span>
-            </div>
-          </div>
-
-          <nav className="hidden md:flex items-center gap-1 lg:gap-2">
-            <button
-              onClick={() => navigate('/')}
-              className="px-3 py-1.5 rounded-lg text-xs font-semibold text-[#3f4850] hover:text-[#131b2e] hover:bg-[#f2f3ff] transition-colors"
-            >
-              Home
-            </button>
-            <button
-              onClick={() => navigate('/about')}
-              className="px-3 py-1.5 rounded-lg text-xs font-semibold text-[#3f4850] hover:text-[#131b2e] hover:bg-[#f2f3ff] transition-colors"
-            >
-              About DHA
-            </button>
-            <button
-              onClick={() => navigate('/for-professionals')}
-              className="px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[#cce5ff] text-[#001d31] transition-colors"
-            >
-              For Professionals
-            </button>
-            <button
-              onClick={() => navigate('/oral-health-guides')}
-              className="px-3 py-1.5 rounded-lg text-xs font-semibold text-[#3f4850] hover:text-[#131b2e] hover:bg-[#f2f3ff] transition-colors"
-            >
-              Oral Health Guides
-            </button>
-          </nav>
-
-          <div className="flex items-center gap-3">
-            <button
-              onClick={() => navigate('/login')}
-              className="text-xs font-semibold text-[#3f4850] hover:text-[#006194] px-3 py-2 transition-colors"
-            >
-              Log In
-            </button>
-            <button
-              onClick={() => navigate('/join-role')}
-              className="h-10 px-4 rounded-xl bg-[#006194] text-white text-xs font-semibold hover:bg-[#007bb9] shadow-sm transition-all active:scale-[0.98]"
-            >
-              Join Network
-            </button>
-          </div>
-        </div>
-      </header>
+      {/* Top Header — shared public-site header */}
+      <PublicSiteHeader />
 
       {/* Main Content */}
       <main className="flex-1 w-full">
@@ -125,17 +72,6 @@ export const ForProfessionalsScreen: React.FC = () => {
             >
               <Icon name="fact_check" className="text-[18px]" />
               <span>School &amp; Outreach Screening</span>
-            </button>
-            <button
-              onClick={() => setActiveTab('accreditation')}
-              className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold transition-all shrink-0 flex items-center gap-2 ${
-                activeTab === 'accreditation'
-                  ? 'bg-[#006194] text-white shadow-sm'
-                  : 'bg-[#f2f3ff] text-[#3f4850] hover:text-[#131b2e]'
-              }`}
-            >
-              <Icon name="verified" className="text-[18px]" filled={true} />
-              <span>MDCN Verification &amp; Trust</span>
             </button>
           </div>
         </section>
@@ -214,10 +150,10 @@ export const ForProfessionalsScreen: React.FC = () => {
                   </p>
                 </div>
                 <button
-                  onClick={() => navigate('/dentist/dashboard')}
+                  onClick={() => navigate('/onboarding/clinician')}
                   className="h-11 px-5 rounded-xl bg-[#006194] text-white text-xs font-semibold hover:bg-[#007bb9] shrink-0"
                 >
-                  Open Clinician Workspace
+                  Join Clinician Workspace
                 </button>
               </div>
             </div>
@@ -290,7 +226,7 @@ export const ForProfessionalsScreen: React.FC = () => {
                   </p>
                 </div>
                 <button
-                  onClick={() => navigate('/clinic-onboarding/intro')}
+                  onClick={() => navigate('/clinic-onboarding/entry')}
                   className="h-11 px-5 rounded-xl bg-[#006194] text-white text-xs font-semibold hover:bg-[#007bb9] shrink-0"
                 >
                   Start Clinic Onboarding
@@ -365,55 +301,53 @@ export const ForProfessionalsScreen: React.FC = () => {
                   </p>
                 </div>
                 <button
-                  onClick={() => navigate('/screening/dashboard')}
+                  onClick={() => navigate('/onboarding/clinician')}
                   className="h-11 px-5 rounded-xl bg-[#006194] text-white text-xs font-semibold hover:bg-[#007bb9] shrink-0"
                 >
-                  Open Screener Portal
+                  Join Screener Portal
                 </button>
               </div>
             </div>
           )}
 
-          {activeTab === 'accreditation' && (
-            <div className="space-y-8 max-w-4xl">
-              <div className="max-w-3xl">
-                <span className="text-xs font-semibold text-[#006a61] uppercase tracking-wider">
-                  Statutory Compliance
-                </span>
-                <h2 className="text-2xl sm:text-3xl font-bold font-['Plus_Jakarta_Sans'] text-[#131b2e] mt-1">
-                  Practitioner Accreditation &amp; MDCN Regulatory Trust
-                </h2>
-                <p className="text-sm text-[#3f4850] mt-2 leading-relaxed">
-                  Every practitioner practicing on DHA must hold an active practicing license verified directly against
-                  the Medical and Dental Council of Nigeria records.
-                </p>
+          <div className="space-y-8 max-w-4xl mt-12">
+            <div className="max-w-3xl">
+              <span className="text-xs font-semibold text-[#006a61] uppercase tracking-wider">
+                Statutory Compliance
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-bold font-['Plus_Jakarta_Sans'] text-[#131b2e] mt-1">
+                MDCN Verification &amp; Trust
+              </h2>
+              <p className="text-sm text-[#3f4850] mt-2 leading-relaxed">
+                Every practitioner practicing on DHA must hold an active practicing license verified directly against
+                the Medical and Dental Council of Nigeria records.
+              </p>
+            </div>
+
+            <div className="space-y-4">
+              <div className="p-5 rounded-2xl bg-white border border-[#eaedff] shadow-sm flex items-start gap-4">
+                <Icon name="verified_user" className="text-[24px] text-[#006a61] shrink-0 mt-1" filled={true} />
+                <div>
+                  <h3 className="text-sm font-bold text-[#131b2e]">Automated MDCN Folio Check</h3>
+                  <p className="text-xs text-[#3f4850] mt-1 leading-relaxed">
+                    Instant validation of practitioner folio numbers against registered dental cadres (BDS, FWACS,
+                    FMCDS) to guarantee that only authorized dentists can sign diagnostic charts.
+                  </p>
+                </div>
               </div>
 
-              <div className="space-y-4">
-                <div className="p-5 rounded-2xl bg-white border border-[#eaedff] shadow-sm flex items-start gap-4">
-                  <Icon name="verified_user" className="text-[24px] text-[#006a61] shrink-0 mt-1" filled={true} />
-                  <div>
-                    <h3 className="text-sm font-bold text-[#131b2e]">Automated MDCN Folio Check</h3>
-                    <p className="text-xs text-[#3f4850] mt-1 leading-relaxed">
-                      Instant validation of practitioner folio numbers against registered dental cadres (BDS, FWACS,
-                      FMCDS) to guarantee that only authorized dentists can sign diagnostic charts.
-                    </p>
-                  </div>
-                </div>
-
-                <div className="p-5 rounded-2xl bg-white border border-[#eaedff] shadow-sm flex items-start gap-4">
-                  <Icon name="lock" className="text-[24px] text-[#006194] shrink-0 mt-1" filled={true} />
-                  <div>
-                    <h3 className="text-sm font-bold text-[#131b2e]">Immutable Audit Ledger</h3>
-                    <p className="text-xs text-[#3f4850] mt-1 leading-relaxed">
-                      Every modification to a tooth surface, periodontal score, or prescription is sealed with the
-                      practitioner's digital signature and timestamped into the ISO 27001 sovereign ledger.
-                    </p>
-                  </div>
+              <div className="p-5 rounded-2xl bg-white border border-[#eaedff] shadow-sm flex items-start gap-4">
+                <Icon name="lock" className="text-[24px] text-[#006194] shrink-0 mt-1" filled={true} />
+                <div>
+                  <h3 className="text-sm font-bold text-[#131b2e]">Immutable Audit Ledger</h3>
+                  <p className="text-xs text-[#3f4850] mt-1 leading-relaxed">
+                    Every modification to a tooth surface, periodontal score, or prescription is sealed with the
+                    practitioner's digital signature and timestamped into the ISO 27001 sovereign ledger.
+                  </p>
                 </div>
               </div>
             </div>
-          )}
+          </div>
         </section>
 
         {/* Global CTA Banner */}

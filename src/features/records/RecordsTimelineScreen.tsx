@@ -34,7 +34,7 @@ const TIMELINE_DATA: TimelineEvent[] = [
     badgeClass: 'bg-primary-fixed text-on-primary-fixed-variant',
     dotClass: 'bg-primary-container',
     title: 'Record Amendment v1.1',
-    clinicianOrFacility: 'Dr. Farouk Al-Mansoori (Prosthodontics)',
+    clinicianOrFacility: 'Dr. Chinedu Okafor (Prosthodontics)',
     clinicianIcon: 'stethoscope',
     summarySnippet: 'Tooth #16 post-op thermal vitality note updated following restorative check.',
     contentNode: 'amendment',
@@ -49,7 +49,7 @@ const TIMELINE_DATA: TimelineEvent[] = [
     badgeClass: 'bg-secondary-container text-on-secondary-container',
     dotClass: 'bg-secondary-fixed text-on-secondary-fixed',
     title: 'Comprehensive Examination & Routine Charting',
-    clinicianOrFacility: 'Al Zahra Dental Hub • Clinic Room 4B',
+    clinicianOrFacility: 'Lagos Smile Dental Centre • Clinic Room 4B',
     clinicianIcon: 'domain',
     summarySnippet: '28 teeth checked • 1 restored • Periodontal health physiologically stable.',
     contentNode: 'exam',
@@ -79,7 +79,7 @@ const TIMELINE_DATA: TimelineEvent[] = [
     badgeClass: 'bg-surface-container-high text-on-surface-variant',
     dotClass: 'bg-outline',
     title: 'Community Dental Screening',
-    clinicianOrFacility: 'Dubai Primary Care Mobile Screening Camp #3',
+    clinicianOrFacility: 'Lagos Primary Care Mobile Screening Camp #3',
     clinicianIcon: 'health_and_safety',
     summarySnippet: 'Mobile field triage observation • Referral REF-DHA-2024-8841 generated.',
     contentNode: 'screening',
@@ -94,7 +94,7 @@ const TIMELINE_DATA: TimelineEvent[] = [
     badgeClass: 'bg-secondary-fixed text-on-secondary-fixed-variant',
     dotClass: 'bg-secondary',
     title: 'Preventive Prophylaxis & Scaling Completed',
-    clinicianOrFacility: 'Dr. Mariam Al-Husseini (Dental Hygienist)',
+    clinicianOrFacility: 'Dr. Amina Bello (Dental Hygienist)',
     clinicianIcon: 'person_check',
     summarySnippet: 'Full-mouth supragingival ultrasonic debridement with topical fluoridation.',
     contentNode: 'prophylaxis',
@@ -231,7 +231,7 @@ export function RecordsTimelineScreen() {
                   Appended thermal sensitivity response verification on tooth #16 composite restoration.
                 </p>
                 <span className="text-[10px] text-on-surface-variant mt-0.5 block">
-                  Author: Dr. Farouk Al-Mansoori (DHA #D-3309)
+                  Author: Dr. Chinedu Okafor (DHA #D-3309)
                 </span>
               </div>
 
@@ -861,7 +861,7 @@ export function RecordsTimelineScreen() {
                 </span>
               </div>
               <p className="text-[11px] text-on-surface-variant leading-relaxed">
-                All records stored with 256-bit AES encryption in compliance with the UAE Health Data Law. Patient retains irrevocable full access to historical milestones.
+                All records stored with 256-bit AES encryption in compliance with the Nigeria Health Data Law. Patient retains irrevocable full access to historical milestones.
               </p>
             </div>
           </div>

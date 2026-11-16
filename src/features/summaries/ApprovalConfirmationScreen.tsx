@@ -70,7 +70,7 @@ export function ApprovalConfirmationScreen() {
             Clinical Dossier Approved &amp; Sealed
           </h2>
           <p className="text-xs sm:text-sm text-[#707881] max-w-md leading-relaxed">
-            Authoritatively signed by <strong className="text-[#131b2e]">Dr. Daniel James</strong> (DDS, #DEN-48912) on 12 Oct 2026, 11:28 GST
+            Authoritatively signed by <strong className="text-[#131b2e]">Dr. Daniel James</strong> (DDS, #DEN-48912) on 12 Oct 2026, 11:28 WAT
           </p>
         </section>
 
@@ -88,7 +88,7 @@ export function ApprovalConfirmationScreen() {
                 </div>
               </div>
               <span className="px-3 py-1 rounded-full bg-[#86f2e4]/30 text-[#006a61] font-mono text-xs font-bold uppercase">
-                NABIDH SYNCED
+                Nigeria Health Information Exchange SYNCED
               </span>
             </div>
 
@@ -99,7 +99,7 @@ export function ApprovalConfirmationScreen() {
               </div>
               <div className="flex flex-col justify-center bg-[#faf8ff] p-3 rounded-xl border border-[#eaedff]">
                 <span className="text-[#707881]">Commit Timestamp:</span>
-                <span className="font-mono text-[#131b2e] mt-0.5">12 Oct 2026 • 11:28:44 GST</span>
+                <span className="font-mono text-[#131b2e] mt-0.5">12 Oct 2026 • 11:28:44 WAT</span>
               </div>
             </div>
           </div>
@@ -110,7 +110,7 @@ export function ApprovalConfirmationScreen() {
               <Icon name="fingerprint" className="text-[18px]" />
               <span>SHA-256 Ledger Receipt</span>
               <span className="w-1.5 h-1.5 rounded-full bg-[#006a61]" />
-              <span className="font-normal text-[#707881]">Verified UAE NABIDH</span>
+              <span className="font-normal text-[#707881]">Verified Nigeria Nigeria Health Information Exchange</span>
             </div>
             <div className="flex items-center gap-2 w-full sm:w-auto">
               <span className="font-mono text-[11px] text-[#707881] bg-white px-3 py-1 rounded-lg border border-[#eaedff] truncate max-w-xs">
@@ -154,7 +154,7 @@ export function ApprovalConfirmationScreen() {
                   <Icon name="lock" className="text-[#707881] text-[18px]" />
                 </div>
                 <p className="text-xs text-[#707881] leading-relaxed">
-                  Synced automatically to Clinic EHR &amp; encrypted UAE NABIDH Health Registry archive.
+                  Synced automatically to Clinic EHR &amp; encrypted Nigeria Nigeria Health Information Exchange Health Registry archive.
                 </p>
               </div>
             </div>

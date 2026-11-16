@@ -1,5 +1,6 @@
 import { useState, type ReactNode } from 'react';
 import { NavLink, useNavigate, useLocation } from 'react-router-dom';
+import { useAuthStore } from '../../store/authStore';
 import { Icon } from '../../design/Primitives';
 
 interface ClinicOperationsShellProps {
@@ -251,7 +252,7 @@ export function ClinicOperationsShell({
           </NavLink>
           <button
             type="button"
-            onClick={() => navigate('/login')}
+            onClick={() => { useAuthStore.getState().signOut(); navigate('/login'); }}
             className="w-full px-3 py-2 rounded-xl bg-[#ffdad6]/40 hover:bg-[#ffdad6]/70 text-[#ba1a1a] text-xs font-bold flex items-center justify-center gap-2 shadow-xs transition-colors"
           >
             <Icon name="logout" className="text-[16px]" />
@@ -415,7 +416,7 @@ export function ClinicOperationsShell({
                       type="button"
                       onClick={() => {
                         setProfileDropdownOpen(false);
-                        navigate('/login');
+                        useAuthStore.getState().signOut(); navigate('/login');
                       }}
                       className="w-full px-3 py-2 text-left text-xs text-[#ba1a1a] font-semibold hover:bg-[#ffdad6]/30 flex items-center gap-2"
                     >
@@ -553,7 +554,7 @@ export function ClinicOperationsShell({
                 type="button"
                 onClick={() => {
                   setProfileDropdownOpen(false);
-                  navigate('/login');
+                  useAuthStore.getState().signOut(); navigate('/login');
                 }}
                 className="w-full py-3 rounded-2xl bg-[#ffdad6] text-[#ba1a1a] text-xs font-bold flex items-center justify-center gap-2 shadow-xs"
               >
@@ -644,7 +645,7 @@ export function ClinicOperationsShell({
                     type="button"
                     onClick={() => {
                       setMobileMoreOpen(false);
-                      navigate('/login');
+                      useAuthStore.getState().signOut(); navigate('/login');
                     }}
                     className="w-full py-2.5 rounded-xl bg-[#ffdad6]/50 hover:bg-[#ffdad6] text-[#ba1a1a] text-xs font-bold flex items-center justify-center gap-2 transition-colors"
                   >

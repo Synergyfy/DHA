@@ -39,7 +39,7 @@ const INITIAL_NOTIFICATIONS: NotificationItem[] = [
     time: 'In 4 days',
     title: 'Upcoming Dental Hygiene Checkup',
     description:
-      'Scheduled for Fri, Jan 24 at 10:30 AM with Dr. Farouk Al-Mansoori at Jumeirah Clinical Center.',
+      'Scheduled for Fri, Jan 24 at 10:30 AM with Dr. Chinedu Okafor at Victoria Island Clinical Center.',
     badge: 'High Priority',
     badgeTone: 'bg-error-container text-on-error-container',
     icon: 'calendar_clock',
@@ -83,7 +83,7 @@ const INITIAL_NOTIFICATIONS: NotificationItem[] = [
     time: 'Today, 8:15 AM',
     title: 'Third-Party Record Access Request',
     description:
-      'Dr. Tariq Al-Nuaimi (Dubai London Clinic) requests temporary 24-hr access to your complete dental odontogram for a consultation review.',
+      'Dr. Ifeanyi Nwosu (Lagos Island Dental Centre) requests temporary 24-hr access to your complete dental odontogram for a consultation review.',
     badge: 'Action Required',
     badgeTone: 'bg-error-container text-on-error-container',
     icon: 'lock_open',
@@ -139,7 +139,7 @@ const INITIAL_NOTIFICATIONS: NotificationItem[] = [
     time: 'Jan 18',
     title: 'Lifecode QR Scanned',
     description:
-      'Identity verification completed at Dubai Primary Dental Hub reception kiosk (Terminal 4B).',
+      'Identity verification completed at Lagos Primary Dental Hub reception kiosk (Terminal 4B).',
     badge: 'Access Log',
     badgeTone: 'bg-surface-container text-on-surface-variant',
     icon: 'qr_code_scanner',
@@ -198,7 +198,7 @@ export function NotificationsScreen() {
           : n
       )
     );
-    setActionNotice('Access approved for Dr. Tariq Al-Nuaimi for 24 hours. Token generated.');
+    setActionNotice('Access approved for Dr. Ifeanyi Nwosu for 24 hours. Token generated.');
     setTimeout(() => setActionNotice(null), 4000);
   };
 

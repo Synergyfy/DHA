@@ -27,7 +27,7 @@ interface InvestigationItem {
   viewerUrl: string;
   viewerLabel: string;
   viewerIcon: string;
-  nabidhVerified?: boolean;
+  nhieVerified?: boolean;
 }
 
 const mockInvestigations: InvestigationItem[] = [
@@ -42,7 +42,7 @@ const mockInvestigations: InvestigationItem[] = [
     modalityTitle: 'Dental Radiography',
     modalitySub: 'Bitewing BW-R & PA #16',
     tag: 'DICOM',
-    timestamp: '16 Feb 2025, 09:40 GST',
+    timestamp: '16 Feb 2025, 09:40 WAT',
     clinician: 'Nurse Zainab Tariq',
     teeth: [
       { code: '#16', label: '#16 (Primary Caries OM)', primary: true },
@@ -67,11 +67,11 @@ const mockInvestigations: InvestigationItem[] = [
     viewerUrl: '/investigations/viewer/xray',
     viewerLabel: 'Open Viewer (11.15)',
     viewerIcon: 'visibility',
-    nabidhVerified: true,
+    nhieVerified: true,
   },
   {
     id: 'INV-08921',
-    patientName: 'Fatima Al-Zahra',
+    patientName: 'Fatima Bello',
     patientInitials: 'FA',
     patientAgeGender: '29y F',
     dhaId: 'DHA-08921',
@@ -79,8 +79,8 @@ const mockInvestigations: InvestigationItem[] = [
     category: 'CBCT 3D',
     modalityTitle: 'CBCT 3D Maxillary Arch',
     modalitySub: '0.2mm voxel volume • Al Zahra Imaging',
-    tag: 'NABIDH',
-    timestamp: '14 Feb 2025, 11:20 GST',
+    tag: 'Nigeria Health Information Exchange',
+    timestamp: '14 Feb 2025, 11:20 WAT',
     clinician: 'Dr. Tariq Mansoor',
     indication: 'Pre-implant alveolar bone volume mapping #14-#16. Ridge width optimal.',
     cbctMock: {
@@ -92,7 +92,7 @@ const mockInvestigations: InvestigationItem[] = [
     viewerUrl: '/investigations/viewer/cbct',
     viewerLabel: 'Open 3D Viewer (11.17)',
     viewerIcon: 'view_in_ar',
-    nabidhVerified: true,
+    nhieVerified: true,
   },
   {
     id: 'INV-00412',
@@ -105,7 +105,7 @@ const mockInvestigations: InvestigationItem[] = [
     modalityTitle: 'Panoramic Radiograph (OPG)',
     modalitySub: 'Full Arch • Emergency Radiology Unit',
     tag: 'OPG',
-    timestamp: '12 Feb 2025, 16:15 GST',
+    timestamp: '12 Feb 2025, 16:15 WAT',
     clinician: 'Dr. Daniel James',
     finding: 'Impacted lower third molars #38, #48 in close proximity to inferior alveolar nerve (IAN) canal.',
     opgMock: {
@@ -116,7 +116,7 @@ const mockInvestigations: InvestigationItem[] = [
     viewerUrl: '/investigations/viewer/opg',
     viewerLabel: 'Open OPG Viewer (11.16)',
     viewerIcon: 'photo_size_select_large',
-    nabidhVerified: false,
+    nhieVerified: false,
   },
   {
     id: 'INV-00245',
@@ -127,9 +127,9 @@ const mockInvestigations: InvestigationItem[] = [
     status: 'Reviewed',
     category: 'Laboratory',
     modalityTitle: 'Full Blood Count & Coagulation',
-    modalitySub: 'Pre-surgical screening • Al Barsha Diagnostic Lab',
+    modalitySub: 'Pre-surgical screening • Surulere Diagnostic Lab',
     tag: 'LAB',
-    timestamp: '10 Feb 2025, 08:30 GST',
+    timestamp: '10 Feb 2025, 08:30 WAT',
     clinician: 'Verified LIS Entry',
     metrics: [
       { label: 'Platelet Count', value: '240', unit: 'x10^9/L', normal: 'Normal (150-400)' },
@@ -139,7 +139,7 @@ const mockInvestigations: InvestigationItem[] = [
     viewerUrl: '/investigations/viewer/lab',
     viewerLabel: 'Open Lab Viewer (11.18)',
     viewerIcon: 'lab_profile',
-    nabidhVerified: true,
+    nhieVerified: true,
   },
 ];
 
@@ -148,7 +148,7 @@ export function InvestigationLibraryScreen() {
   const [selectedCategory, setSelectedCategory] = useState<string>('All');
   const [selectedTimeRange, setSelectedTimeRange] = useState<string>('Last 6 Months');
   const [selectedStatus, setSelectedStatus] = useState<string>('All');
-  const [nabidhFilterActive, setNabidhFilterActive] = useState<boolean>(false);
+  const [nhieFilterActive, setNhieFilterActive] = useState<boolean>(false);
   const [actionFeedback, setActionFeedback] = useState<string | null>(null);
 
   const categories = [
@@ -170,8 +170,8 @@ export function InvestigationLibraryScreen() {
       if (selectedStatus !== 'All' && item.status !== selectedStatus) {
         return false;
       }
-      // NABIDH verified toggle
-      if (nabidhFilterActive && !item.nabidhVerified) {
+      // Nigeria Health Information Exchange verified toggle
+      if (nhieFilterActive && !item.nhieVerified) {
         return false;
       }
       // Text query
@@ -185,7 +185,7 @@ export function InvestigationLibraryScreen() {
       }
       return true;
     });
-  }, [selectedCategory, selectedStatus, nabidhFilterActive, searchQuery]);
+  }, [selectedCategory, selectedStatus, nhieFilterActive, searchQuery]);
 
   const triggerFeedback = (message: string) => {
     setActionFeedback(message);
@@ -222,7 +222,7 @@ export function InvestigationLibraryScreen() {
 
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary-fixed/50 text-on-secondary-fixed text-xs font-semibold self-start sm:self-auto">
               <span className="w-2 h-2 rounded-full bg-secondary animate-pulse" />
-              <span>NABIDH Linked & Synchronized</span>
+              <span>Nigeria Health Information Exchange Linked & Synchronized</span>
             </div>
           </div>
 
@@ -333,19 +333,19 @@ export function InvestigationLibraryScreen() {
             </div>
           </div>
 
-          {/* NABIDH Verified filter badge button */}
+          {/* Nigeria Health Information Exchange Verified filter badge button */}
           <button
             type="button"
-            onClick={() => setNabidhFilterActive(!nabidhFilterActive)}
+            onClick={() => setNhieFilterActive(!nhieFilterActive)}
             className={`flex-shrink-0 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
-              nabidhFilterActive
+              nhieFilterActive
                 ? 'bg-secondary text-on-secondary shadow-xs ring-2 ring-secondary/30'
                 : 'bg-secondary-container/40 text-on-secondary-container hover:bg-secondary-container/60'
             }`}
           >
             <Icon name="verified" className="text-sm" />
-            <span>NABIDH Verified Only</span>
-            {nabidhFilterActive && <span className="text-[10px] bg-secondary-fixed/30 px-1 rounded">ON</span>}
+            <span>Nigeria Health Information Exchange Verified Only</span>
+            {nhieFilterActive && <span className="text-[10px] bg-secondary-fixed/30 px-1 rounded">ON</span>}
           </button>
         </div>
 
@@ -374,7 +374,7 @@ export function InvestigationLibraryScreen() {
                 setSearchQuery('');
                 setSelectedCategory('All');
                 setSelectedStatus('All');
-                setNabidhFilterActive(false);
+                setNhieFilterActive(false);
               }}
               className="mt-2 px-4 py-2 rounded-xl bg-primary text-on-primary text-xs font-semibold hover:bg-primary/90 transition-colors"
             >
@@ -618,7 +618,7 @@ export function InvestigationLibraryScreen() {
         <div className="sticky bottom-4 z-30 w-full p-4 rounded-2xl bg-surface/95 backdrop-blur-xl border border-outline-variant/30 shadow-lg flex flex-col sm:flex-row items-center justify-between gap-3">
           <div className="flex items-center gap-2 text-xs text-on-surface-variant w-full sm:w-auto">
             <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 shrink-0" />
-            <span className="truncate">NABIDH Live Sync Engine: 42 records cached</span>
+            <span className="truncate">Nigeria Health Information Exchange Live Sync Engine: 42 records cached</span>
           </div>
 
           <div className="flex items-center gap-2 w-full sm:w-auto">
@@ -632,11 +632,11 @@ export function InvestigationLibraryScreen() {
             </button>
             <button
               type="button"
-              onClick={() => triggerFeedback('NABIDH bidirectional sync completed successfully!')}
+              onClick={() => triggerFeedback('Nigeria Health Information Exchange bidirectional sync completed successfully!')}
               className="flex-1 sm:flex-initial h-11 px-4 rounded-xl bg-secondary-container text-on-secondary-container hover:bg-secondary-fixed transition-all text-xs font-semibold flex items-center justify-center gap-2"
             >
               <Icon name="sync" className="text-secondary text-base" />
-              <span>Sync NABIDH</span>
+              <span>Sync Nigeria Health Information Exchange</span>
             </button>
           </div>
         </div>

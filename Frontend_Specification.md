@@ -88,7 +88,7 @@ Although the list is organised by product area, I recommend that we design the p
 4. Screening programmes and administration (Sections 18–22).  
 5. Shared components and system-wide experiences (Sections 23–26).
 
-This gives us a coherent patient experience first, followed by the clinical tools that make the platform valuable to dentists.
+This gives Nigeria a coherent patient experience first, followed by the clinical tools that make the platform valuable to dentists.
 
 One important distinction: The 26 sections are our complete planning structure, not 26 separate applications. They should share consistent navigation, design components and user experiences, with different interfaces depending on the account type and access level.
 

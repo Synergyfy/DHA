@@ -18,7 +18,7 @@ export default function PortalHeroScreen() {
           <div className="relative z-10 max-w-3xl">
             <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 backdrop-blur-md text-white border border-white/20 text-xs font-semibold uppercase tracking-wider mb-6">
               <span className="w-2 h-2 rounded-full bg-teal-300 animate-pulse"></span>
-              Official Dubai Health Authority Gateway
+              Official Nigeria Dental Health Authority Gateway
             </div>
 
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight font-display">
@@ -55,11 +55,11 @@ export default function PortalHeroScreen() {
             <div className="mt-10 pt-8 border-t border-white/15 flex flex-wrap items-center gap-6 sm:gap-10 text-xs text-primary-200 font-medium">
               <div className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-teal-300 text-lg">verified_user</span>
-                <span>UAE PASS Authenticated</span>
+                <span>National Identification Number (NIN) verification Authenticated</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-teal-300 text-lg">sync_saved_locally</span>
-                <span>NABIDH Ecosystem Live</span>
+                <span>Nigeria Health Information Exchange Ecosystem Live</span>
               </div>
               <div className="flex items-center gap-2">
                 <span className="material-symbols-outlined text-teal-300 text-lg">lock</span>
@@ -94,7 +94,7 @@ export default function PortalHeroScreen() {
                 Visualise all 32 teeth with clear condition codes for restorations, fillings, caries, and healthy surfaces.
               </p>
               <Link
-                to="/patient-dashboard/records"
+                to="/portal/journey"
                 className="text-xs font-bold text-primary-600 hover:text-primary-800 inline-flex items-center gap-1"
               >
                 <span>View Odontogram demo</span>
@@ -211,7 +211,7 @@ export default function PortalHeroScreen() {
             >
               <div className="text-xs text-amber-400 font-semibold mb-1">0.7 Module</div>
               <div className="font-bold text-white text-base group-hover:text-teal-300 transition">Get Started</div>
-              <p className="text-xs text-slate-400 mt-1">UAE PASS & registration steps</p>
+              <p className="text-xs text-slate-400 mt-1">National Identification Number (NIN) verification & registration steps</p>
             </Link>
 
             <Link

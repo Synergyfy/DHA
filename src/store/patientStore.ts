@@ -35,8 +35,8 @@ export const PROFILES: Record<string, PatientProfile> = {
   },
   sarah: {
     id: 'sarah',
-    name: 'Sarah Al-Mansoor',
-    shortName: 'Sarah Al-M.',
+    name: 'Ngozi Eze',
+    shortName: 'Ngozi E.',
     role: 'Guardian / Account Owner',
     initials: 'SM',
     lifecode: 'DHA-8102-ADL',

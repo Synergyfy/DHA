@@ -287,7 +287,7 @@ export function CreateInvestigationRequestScreen() {
                 >
                   <option value="DHA Central Radiology Dept (Suite 1)">DHA Central Radiology Dept (Suite 1)</option>
                   <option value="Al Zahra Diagnostic Imaging Wing">Al Zahra Diagnostic Imaging Wing</option>
-                  <option value="Dubai Hospital Maxillofacial Suite">Dubai Hospital Maxillofacial Suite</option>
+                  <option value="Lagos Hospital Maxillofacial Suite">Lagos Hospital Maxillofacial Suite</option>
                 </select>
               </div>
             </div>
@@ -479,7 +479,7 @@ export function CreateInvestigationRequestScreen() {
               <span>DHA Radiation Protection & Regulatory Governance</span>
             </div>
             <p className="text-xs text-amber-800">
-              In accordance with UAE Federal Authority for Nuclear Regulation (FANR) and DHA Clinical Guidelines:
+              In accordance with Nigeria Federal Authority for Nuclear Regulation (FANR) and DHA Clinical Guidelines:
             </p>
 
             <div className="space-y-2 pt-1 text-xs text-amber-950">
@@ -525,7 +525,7 @@ export function CreateInvestigationRequestScreen() {
           <div className="sticky bottom-4 bg-surface/95 backdrop-blur-xl border border-outline-variant/30 rounded-2xl p-4 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-3">
             <div className="flex items-center gap-2 text-xs text-on-surface-variant">
               <Icon name="lock" className="text-sm text-emerald-700" />
-              <span>NABIDH Audit Hash Ready</span>
+              <span>Nigeria Health Information Exchange Audit Hash Ready</span>
             </div>
 
             <div className="flex items-center gap-2 w-full sm:w-auto">

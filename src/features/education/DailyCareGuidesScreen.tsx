@@ -45,7 +45,7 @@ export function DailyCareGuidesScreen() {
             <div className="flex items-center gap-2">
               <Icon name="verified" className="text-secondary text-[16px]" />
               <span className="font-label-sm text-on-surface-variant font-medium">
-                Personalized Care Routine for Sarah Al-Mansoor (Primary)
+                Personalized Care Routine for Ngozi Eze (Primary)
               </span>
             </div>
           </div>
@@ -147,7 +147,7 @@ export function DailyCareGuidesScreen() {
                   <div>
                     <span className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm font-bold uppercase mb-1">
                       <Icon name="verified" className="text-[14px]" />
-                      <span>Recommended by Dr. Tariq Al-Nuaimi</span>
+                      <span>Recommended by Dr. Ifeanyi Nwosu</span>
                     </span>
                     <h2 className="font-headline-sm text-headline-sm font-bold text-white">
                       Morning Sulcular Brushing Protocol

@@ -45,7 +45,7 @@ export function InvestigationHistoryVersionScreen() {
       deltaHighlights: [
         '+ Added ICD-10 K02.52 diagnosis and vitality scores (EPT 24/80, Cold +ve lingering 3s)',
         '+ Assigned Procedure Directive DHA-RES-2S (Biomimetic 2-surface composite)',
-        '+ Generated patient-friendly summary in English and Arabic',
+        '+ Generated patient-friendly summary in English and Hausa',
       ],
     },
     {
@@ -108,9 +108,9 @@ export function InvestigationHistoryVersionScreen() {
     {
       id: 'aud-4',
       timestamp: '16 Feb 2025, 09:31:40 AM',
-      action: 'NABIDH PACS WORM Ingestion Receipt Generated',
-      operator: 'Automated Gateway (NABIDH-BUS-01)',
-      terminal: 'NABIDH Core Hub',
+      action: 'Nigeria Health Information Exchange PACS WORM Ingestion Receipt Generated',
+      operator: 'Automated Gateway (Nigeria Health Information Exchange-BUS-01)',
+      terminal: 'Nigeria Health Information Exchange Core Hub',
       result: 'Verified',
     },
     {
@@ -133,7 +133,7 @@ export function InvestigationHistoryVersionScreen() {
     setTimeout(() => {
       setIsVerifyingHashes(false);
       setVerificationPassed(true);
-      showToast('All 3 cryptographic version hashes verified against NABIDH WORM Root Ledger.');
+      showToast('All 3 cryptographic version hashes verified against Nigeria Health Information Exchange WORM Root Ledger.');
     }, 1200);
   };
 
@@ -269,7 +269,7 @@ export function InvestigationHistoryVersionScreen() {
                 <Icon name="shield_with_heart" className="text-xl text-emerald-600 shrink-0" />
                 <div className="text-[11px] leading-relaxed">
                   <span className="font-bold block">Chain Integrity Verified:</span>
-                  All version hashes form a continuous immutable chain anchored in NABIDH blockchain block #914820.
+                  All version hashes form a continuous immutable chain anchored in Nigeria Health Information Exchange blockchain block #914820.
                 </div>
               </div>
             )}

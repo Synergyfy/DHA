@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
-import { ProfessionalShell } from './ProfessionalShell';
 import { Icon } from '../../design/Primitives';
+import { PublicSiteHeader } from '../portal/PublicSiteHeader';
+import { ProfessionalPublicTabs } from './ProfessionalPublicTabs';
 
 type StageId = 1 | 2 | 3 | 4;
 
@@ -56,11 +57,12 @@ export function CarePathwayContinuumScreen() {
   ];
 
   return (
-    <ProfessionalShell
-      pageTitle="From Screening to Appropriate Dental Care"
-      badgeCode="0B.6"
-      badgeLabel="Connected Care Pathway"
-    >
+    <div className="min-h-screen bg-surface font-body-md text-on-surface flex flex-col antialiased">
+      <PublicSiteHeader />
+
+      <ProfessionalPublicTabs />
+
+      <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10">
       <div className="space-y-10 lg:space-y-14">
         {/* Header Intro */}
         <section className="space-y-4 max-w-3xl">
@@ -242,7 +244,8 @@ export function CarePathwayContinuumScreen() {
           </div>
         </section>
       </div>
-    </ProfessionalShell>
+      </main>
+    </div>
   );
 }
 

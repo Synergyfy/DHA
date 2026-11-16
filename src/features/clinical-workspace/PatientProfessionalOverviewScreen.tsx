@@ -42,7 +42,7 @@ export function PatientProfessionalOverviewScreen() {
                 />
                 <div
                   className="absolute -bottom-1 -right-1 w-6 h-6 rounded-full bg-teal-600 text-white flex items-center justify-center shadow-md ring-2 ring-white dark:ring-slate-800"
-                  title="UAE Pass L3 Verified Record"
+                  title="NIN biometric verification Verified Record"
                 >
                   <Icon name="verified" filled className="text-sm" />
                 </div>
@@ -55,7 +55,7 @@ export function PatientProfessionalOverviewScreen() {
                   </h1>
                   <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-teal-100 dark:bg-teal-900/40 text-teal-800 dark:text-teal-300 text-xs font-bold shrink-0">
                     <Icon name="shield" filled className="text-xs" />
-                    UAE PASS L3
+                    NIN biometric verification
                   </span>
                 </div>
 
@@ -70,7 +70,7 @@ export function PatientProfessionalOverviewScreen() {
                 {/* Identifiers */}
                 <div className="flex flex-wrap items-center gap-2 mt-2.5 text-xs">
                   <span className="px-2.5 py-1 rounded-lg bg-slate-100 dark:bg-slate-700/60 font-mono font-medium text-slate-700 dark:text-slate-300">
-                    LC: AE-990-281-DXB
+                    LC: NG-990-281-LAG
                   </span>
                   <span className="px-2.5 py-1 rounded-lg bg-teal-50 dark:bg-teal-950/40 font-mono font-bold text-teal-700 dark:text-teal-300">
                     MRN: DHA-2026-00451
@@ -93,7 +93,7 @@ export function PatientProfessionalOverviewScreen() {
                 </div>
               </div>
               <div className="text-right shrink-0">
-                <span className="font-mono text-[11px] text-slate-400 block">EID: 784-1992-*******-1</span>
+                <span className="font-mono text-[11px] text-slate-400 block">NIN: 12345-*******-1</span>
                 <span className="text-[10px] text-emerald-600 dark:text-emerald-400 font-bold uppercase">Assigned Attending</span>
               </div>
             </div>
@@ -371,11 +371,11 @@ export function PatientProfessionalOverviewScreen() {
                 <div className="grid grid-cols-2 gap-3 bg-slate-50 dark:bg-slate-700/40 rounded-xl p-3">
                   <div>
                     <span className="text-[11px] text-slate-400 uppercase font-semibold block">Phase 1 (Settled)</span>
-                    <span className="font-bold text-teal-700 dark:text-teal-300 text-sm md:text-base">AED 170.00</span>
+                    <span className="font-bold text-teal-700 dark:text-teal-300 text-sm md:text-base">NGN 170.00</span>
                   </div>
                   <div>
                     <span className="text-[11px] text-slate-400 uppercase font-semibold block">Phase 2 (Pending)</span>
-                    <span className="font-bold text-slate-900 dark:text-white text-sm md:text-base">AED 120.00</span>
+                    <span className="font-bold text-slate-900 dark:text-white text-sm md:text-base">NGN 120.00</span>
                   </div>
                 </div>
               </div>
@@ -514,7 +514,7 @@ export function PatientProfessionalOverviewScreen() {
               </button>
 
               <button
-                onClick={() => showToast('Record sharing consent requested via UAE Pass')}
+                onClick={() => showToast('Record sharing consent requested via National Identification Number (NIN) verification')}
                 className="flex-1 sm:flex-none px-4 py-3 rounded-xl border border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-700 dark:text-slate-300 text-xs md:text-sm font-semibold transition-colors flex items-center justify-center gap-1.5"
               >
                 <Icon name="ios_share" className="text-base text-teal-600" />

@@ -38,10 +38,10 @@ export function AIActivitySourceHistoryScreen() {
       iconBg: 'bg-[#86f2e4] text-[#006a61]',
       badge: 'Human Clinician',
       badgeColor: 'bg-[#86f2e4] text-[#006a61]',
-      timestamp: 'Today 11:28:44 GST',
+      timestamp: 'Today 11:28:44 WAT',
       title: 'Dossier Approved & Sealed',
       description:
-        'Signed with digital signature key by Dr. Daniel James (#DEN-48912). Cryptographic SHA-256 seal verified and broadcasted to UAE NABIDH Health Exchange.',
+        'Signed with digital signature key by Dr. Daniel James (#DEN-48912). Cryptographic SHA-256 seal verified and broadcasted to Nigeria Nigeria Health Information Exchange Health Exchange.',
       extraElement: (
         <div className="mt-2 bg-[#faf8ff] p-2.5 rounded-lg border border-[#eaedff] flex items-center justify-between text-xs">
           <div className="flex items-center gap-1.5 text-[#707881]">
@@ -59,7 +59,7 @@ export function AIActivitySourceHistoryScreen() {
       iconBg: 'bg-[#eaedff] text-[#006194]',
       badge: 'Human Clinician',
       badgeColor: 'bg-[#eaedff] text-[#006194]',
-      timestamp: 'Today 11:24:10 GST',
+      timestamp: 'Today 11:24:10 WAT',
       title: 'Patient Portal Visibility Authorized',
       description:
         "Authorized plain-language explainer and interactive Tooth #16 restorative diagram for Amara's mobile portal. Sensitive internal EMR SOAP metrics restricted to clinical view.",
@@ -81,7 +81,7 @@ export function AIActivitySourceHistoryScreen() {
       iconBg: 'bg-[#dae2fd] text-[#006194]',
       badge: 'Human Clinician',
       badgeColor: 'bg-[#dae2fd] text-[#006194]',
-      timestamp: 'Today 11:15:22 GST',
+      timestamp: 'Today 11:15:22 WAT',
       title: 'Clinician Custom Directive Added',
       description: 'Added specific restorative instruction for preparation.',
       extraElement: (
@@ -100,7 +100,7 @@ export function AIActivitySourceHistoryScreen() {
       iconBg: 'bg-[#cce5ff] text-[#006194]',
       badge: 'AI Engine v2.4',
       badgeColor: 'bg-[#cce5ff] text-[#006194]',
-      timestamp: 'Today 10:42:05 GST',
+      timestamp: 'Today 10:42:05 WAT',
       title: 'Patient-Friendly Explainer Formulated',
       description:
         'Translated anatomical Latin terms to lay dental vocabulary. Readability audited at Flesch-Kincaid Grade 6.2 with safety guardrails applied.',
@@ -122,7 +122,7 @@ export function AIActivitySourceHistoryScreen() {
       iconBg: 'bg-[#cce5ff] text-[#006194]',
       badge: 'AI Engine v2.4',
       badgeColor: 'bg-[#cce5ff] text-[#006194]',
-      timestamp: 'Today 10:20:18 GST',
+      timestamp: 'Today 10:20:18 WAT',
       title: 'Clinical SOAP Summary Generated',
       description:
         'Structured diagnostic synthesis using template DHA Standard Comprehensive v2.4. Diagnostic correlation mapped to ICD-10 K02.62 (Caries of Dentin).',
@@ -140,7 +140,7 @@ export function AIActivitySourceHistoryScreen() {
       iconBg: 'bg-[#eaedff] text-[#707881]',
       badge: 'System Ingestion',
       badgeColor: 'bg-[#eaedff] text-[#707881]',
-      timestamp: 'Today 10:16:04 GST',
+      timestamp: 'Today 10:16:04 WAT',
       title: 'Clinical Data Sources Ingested',
       description:
         'Secure ingestion of 6 verified records: Sec 9 Odontogram, Sec 10 Periodontal Exam, Sec 11 Dexis Bitewing Radiographs, CAP Lab Panel, & Medical History (Penicillin Anaphylaxis flag).',
@@ -152,10 +152,10 @@ export function AIActivitySourceHistoryScreen() {
       iconBg: 'bg-[#86f2e4] text-[#006a61]',
       badge: 'Consent Verified',
       badgeColor: 'bg-[#86f2e4] text-[#006a61]',
-      timestamp: 'Today 10:14:30 GST',
+      timestamp: 'Today 10:14:30 WAT',
       title: 'Patient Identity & Consent Verified',
       description:
-        'Biometric token & UAE Pass Level 3 validation confirmed chairside with Amara Okafor. Explicit consent granted for AI synthesis and NABIDH syncing.',
+        'Biometric token & NIN biometric verification validation confirmed chairside with Amara Okafor. Explicit consent granted for AI synthesis and Nigeria Health Information Exchange syncing.',
     },
     {
       id: 'ev-1',
@@ -164,7 +164,7 @@ export function AIActivitySourceHistoryScreen() {
       iconBg: 'bg-[#dae2fd] text-[#131b2e]',
       badge: 'Session Origin',
       badgeColor: 'bg-[#dae2fd] text-[#131b2e]',
-      timestamp: 'Today 10:12:00 GST',
+      timestamp: 'Today 10:12:00 WAT',
       title: 'AI Summary Session Initiated',
       description:
         'Triggered by Dr. Daniel James from Dental Terminal D-04 (Operatory 2). Session key established via TLS 1.3.',
@@ -229,7 +229,7 @@ export function AIActivitySourceHistoryScreen() {
 
             <span className="px-3 py-1 rounded-full bg-[#86f2e4] text-[#006a61] text-xs font-bold flex items-center gap-1">
               <Icon name="shield" className="text-[14px]" />
-              NABIDH Synced
+              Nigeria Health Information Exchange Synced
             </span>
           </div>
 
@@ -361,7 +361,7 @@ export function AIActivitySourceHistoryScreen() {
           </div>
 
           <p className="text-xs text-[#707881] leading-relaxed">
-            Verified pursuant to <strong className="text-[#131b2e]">UAE Federal Health Law No. 2</strong> and DHA Health Information Exchange governance standard.
+            Verified pursuant to <strong className="text-[#131b2e]">Nigeria Federal Health Law No. 2</strong> and DHA Health Information Exchange governance standard.
           </p>
 
           <div className="space-y-2.5">
@@ -415,7 +415,7 @@ export function AIActivitySourceHistoryScreen() {
           </button>
           <button
             type="button"
-            onClick={() => showToast('Blockchain verification receipt confirmed valid on UAE HealthNet')}
+            onClick={() => showToast('Blockchain verification receipt confirmed valid on Nigeria HealthNet')}
             className="w-full h-12 bg-white text-[#006194] border border-[#eaedff] rounded-xl font-bold text-sm flex items-center justify-center gap-2 shadow-xs hover:bg-[#faf8ff] transition-colors"
           >
             <Icon name="policy" className="text-[20px]" />

@@ -6,7 +6,7 @@
  * LandingPage.tsx — do not edit the raw HTML files (they no longer exist).
  */
 export const landingMobileHtml = `
-<header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container shadow-[0_2px_4px_rgba(0,97,148,0.15)]"><span class="material-symbols-outlined text-[20px]">dentistry</span></div><div class="flex flex-col"><div class="flex items-center gap-1"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">DHA</span><span class="font-label-sm text-label-sm uppercase px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">Health</span></div></div></div><div class="flex items-center gap-space-xs"><a class="hidden sm:inline-flex items-center justify-center h-11 px-space-md rounded-lg bg-primary text-on-primary font-title-sm text-title-sm shadow-sm hover:bg-primary-container transition-colors" data-path="get-started" href="#">Get Started</a><button aria-label="Open Menu" class="w-11 h-11 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="sr-only">Public Landing Page</div><div class="flex flex-col w-full text-on-surface">
+<header class="fixed top-0 w-full z-50 pt-safe bg-surface/80 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-16 px-margin flex items-center justify-between"><div class="flex items-center gap-space-xs"><div class="w-9 h-9 rounded-lg bg-primary-container flex items-center justify-center text-on-primary-container shadow-[0_2px_4px_rgba(0,97,148,0.15)]"><span class="material-symbols-outlined text-[20px]">dentistry</span></div><div class="flex flex-col"><div class="flex items-center gap-1"><span class="font-headline-sm text-headline-sm text-primary tracking-tight font-bold">DHA</span><span class="font-label-sm text-label-sm uppercase px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-semibold">Health</span></div></div></div><div class="flex items-center gap-space-xs" data-auth-actions><div class="flex items-center gap-space-xs" data-auth-signed-out><a class="inline-flex items-center justify-center h-11 px-2 rounded-lg font-title-sm text-title-sm text-on-surface-variant hover:text-primary transition-colors" data-path="login" href="#">Log In</a><a class="hidden sm:inline-flex items-center justify-center h-11 px-space-md rounded-lg bg-primary text-on-primary font-title-sm text-title-sm shadow-sm hover:bg-primary-container transition-colors" data-path="get-started" href="#">Get Started</a></div><div class="relative flex items-center" data-auth-signed-in style="display:none"><button type="button" aria-label="Open account menu" aria-expanded="false" data-avatar-toggle class="w-9 h-9 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-label-sm font-bold shadow-sm hover:bg-primary-container transition-colors"><span data-avatar-initials>AO</span></button><div data-avatar-menu class="absolute right-0 top-full mt-2 w-60 rounded-2xl bg-surface border border-outline-variant/40 shadow-[0_16px_32px_rgba(0,0,0,0.14)] p-2 z-50 flex flex-col" style="display:none"><div class="px-3 py-2"><div data-avatar-name class="font-title-sm text-title-sm text-on-surface font-semibold truncate">Amara Okafor</div><div data-avatar-role class="font-label-sm text-label-sm text-on-surface-variant">Patient account</div></div><div class="border-t border-outline-variant/40 my-1"></div><a data-path="patient-portal" href="#" class="flex items-center gap-2 rounded-xl px-3 py-2.5 font-title-sm text-title-sm text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[18px]">dashboard</span>My Dashboard</a><button type="button" data-sign-out class="w-full flex items-center gap-2 rounded-xl px-3 py-2.5 font-title-sm text-title-sm text-error hover:bg-error-container/40 transition-colors"><span class="material-symbols-outlined text-[18px]">logout</span>Sign Out</button></div></div><button aria-label="Open Menu" aria-expanded="false" data-menu-toggle class="w-11 h-11 rounded-lg flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" type="button"><span class="material-symbols-outlined text-[24px]">menu</span></button></div></div><div data-landing-menu class="flex flex-col gap-1 border-t border-outline-variant/40 bg-surface px-margin pt-3 pb-5 shadow-[0_12px_24px_rgba(0,0,0,0.08)]" style="display:none"><a data-path="home" href="#" class="flex items-center justify-between rounded-lg px-3 py-3 font-title-sm text-title-sm text-on-surface hover:bg-surface-container transition-colors">Home<span class="material-symbols-outlined text-[18px] text-outline">chevron_right</span></a><a data-path="about-dha" href="#" class="flex items-center justify-between rounded-lg px-3 py-3 font-title-sm text-title-sm text-on-surface hover:bg-surface-container transition-colors">About DHA<span class="material-symbols-outlined text-[18px] text-outline">chevron_right</span></a><a data-path="for-professionals" href="#" class="flex items-center justify-between rounded-lg px-3 py-3 font-title-sm text-title-sm text-on-surface hover:bg-surface-container transition-colors">For Professionals<span class="material-symbols-outlined text-[18px] text-outline">chevron_right</span></a><a data-path="oral-health-guides" href="#" class="flex items-center justify-between rounded-lg px-3 py-3 font-title-sm text-title-sm text-on-surface hover:bg-surface-container transition-colors">Oral Health Guides<span class="material-symbols-outlined text-[18px] text-outline">chevron_right</span></a><div data-auth-signed-out class="mt-3 flex gap-2"><a data-path="login" href="#" class="h-11 flex-1 rounded-xl border border-outline-variant/60 flex items-center justify-center font-title-sm text-title-sm text-on-surface hover:bg-surface-container transition-colors">Log In</a><a data-path="get-started" href="#" class="h-11 flex-1 rounded-xl bg-primary text-on-primary flex items-center justify-center font-title-sm text-title-sm shadow-sm hover:bg-primary-container transition-colors">Get Started</a></div><div data-auth-signed-in class="mt-3 flex gap-2" style="display:none"><a data-path="patient-portal" href="#" class="h-11 flex-1 rounded-xl border border-outline-variant/60 flex items-center justify-center gap-2 font-title-sm text-title-sm text-on-surface hover:bg-surface-container transition-colors"><span class="material-symbols-outlined text-[18px]">dashboard</span>My Dashboard</a><button type="button" data-sign-out class="h-11 flex-1 rounded-xl bg-error-container text-error flex items-center justify-center gap-2 font-title-sm text-title-sm hover:bg-error-container/70 transition-colors"><span class="material-symbols-outlined text-[18px]">logout</span>Sign Out</button></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-safe bg-surface"><div class="sr-only">Public Landing Page</div><div class="flex flex-col w-full text-on-surface">
 <!-- 1. HERO SECTION -->
 <section class="flex flex-col px-margin pt-space-md pb-space-xl">
 <!-- Main Headline -->
@@ -19,7 +19,7 @@ export const landingMobileHtml = `
     </p>
 <!-- CTAs -->
 <div class="flex flex-col sm:flex-row gap-space-xs mt-space-lg">
-<a class="h-12 px-space-lg rounded-xl bg-primary text-on-primary font-title-sm text-title-sm flex items-center justify-center gap-2 shadow-sm active:bg-primary-container transition-colors" href="#">
+<a data-path="get-started" class="h-12 px-space-lg rounded-xl bg-primary text-on-primary font-title-sm text-title-sm flex items-center justify-center gap-2 shadow-sm active:bg-primary-container transition-colors" href="#">
 <span>Get Started</span>
 <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
 </a>
@@ -169,7 +169,7 @@ export const landingMobileHtml = `
             Keep screening results, dental examinations, approved clinical summaries, investigations, and treatment history organized in one interactive timeline.
           </p>
 </div>
-<a class="inline-flex items-center gap-1 font-title-sm text-title-sm text-primary font-semibold mt-space-md" href="#">
+<a data-path="dental-care" class="inline-flex items-center gap-1 font-title-sm text-title-sm text-primary font-semibold mt-space-md" href="#">
 <span>Explore Odontogram</span>
 <span class="material-symbols-outlined text-[16px]">chevron_right</span>
 </a>
@@ -185,7 +185,7 @@ export const landingMobileHtml = `
             Discover accredited DHA providers across Nigeria, explore specialized clinical services, inspect practitioner credentials, and request bookings.
           </p>
 </div>
-<a class="inline-flex items-center gap-1 font-title-sm text-title-sm text-secondary font-semibold mt-space-md" href="#">
+<a data-path="find-care" class="inline-flex items-center gap-1 font-title-sm text-title-sm text-secondary font-semibold mt-space-md" href="#">
 <span>Browse Clinics</span>
 <span class="material-symbols-outlined text-[16px]">chevron_right</span>
 </a>
@@ -201,7 +201,7 @@ export const landingMobileHtml = `
             Stay informed about oral care habits, routine scaling check-ups, post-operative care routines, and dentist-recommended intervals.
           </p>
 </div>
-<a class="inline-flex items-center gap-1 font-title-sm text-title-sm text-tertiary font-semibold mt-space-md" href="#">
+<a data-path="care-timeline" class="inline-flex items-center gap-1 font-title-sm text-title-sm text-tertiary font-semibold mt-space-md" href="#">
 <span>Care Timelines</span>
 <span class="material-symbols-outlined text-[16px]">chevron_right</span>
 </a>
@@ -217,7 +217,7 @@ export const landingMobileHtml = `
             Explore helpful articles, clinician videos, interactive tooth anatomy guides, and age-appropriate educational tips for children and adults.
           </p>
 </div>
-<a class="inline-flex items-center gap-1 font-title-sm text-title-sm text-primary font-semibold mt-space-md" href="#">
+<a data-path="oral-health-guides" class="inline-flex items-center gap-1 font-title-sm text-title-sm text-primary font-semibold mt-space-md" href="#">
 <span>View Library</span>
 <span class="material-symbols-outlined text-[16px]">chevron_right</span>
 </a>
@@ -308,7 +308,7 @@ export const landingMobileHtml = `
 </div>
 </div>
 <!-- CTA Button -->
-<a class="h-12 w-full mt-space-md rounded-xl bg-primary text-on-primary font-title-sm text-title-sm flex items-center justify-center gap-2 active:bg-primary-container transition-colors shadow-sm" href="#">
+<a data-path="register" class="h-12 w-full mt-space-md rounded-xl bg-primary text-on-primary font-title-sm text-title-sm flex items-center justify-center gap-2 active:bg-primary-container transition-colors shadow-sm" href="#">
 <span>Create Your Patient Account</span>
 <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
 </a>
@@ -322,15 +322,15 @@ export const landingMobileHtml = `
       </h2>
 <!-- Filter Chips Row -->
 <div class="flex gap-2 overflow-x-auto mt-space-sm [scrollbar-width:none] [-ms-overflow-style:none]">
-<button class="shrink-0 px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1">
+<button data-path="services" class="shrink-0 px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1">
 <span class="material-symbols-outlined text-[16px]">tune</span>
           All Services
         </button>
-<button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1">
+<button data-path="search-results" class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1">
 <span class="material-symbols-outlined text-[16px]">verified</span>
           Verified Licenses
         </button>
-<button class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1">
+<button data-path="search-results" class="shrink-0 px-3 py-1.5 rounded-full bg-surface-container text-on-surface font-label-md text-label-md flex items-center gap-1">
 <span class="material-symbols-outlined text-[16px]">star</span>
           Top Ratings
         </button>
@@ -365,8 +365,8 @@ export const landingMobileHtml = `
 </div>
 </div>
 <div class="flex items-center gap-2 mt-space-md">
-<a class="h-10 flex-1 rounded-xl bg-primary text-on-primary font-title-sm text-title-sm flex items-center justify-center" href="#">Book</a>
-<a class="h-10 px-3 rounded-xl bg-surface-container text-primary font-title-sm text-title-sm flex items-center justify-center" href="#">Profile</a>
+<a data-path="dentist-profile" data-param="nnamdi-obi" class="h-10 flex-1 rounded-xl bg-primary text-on-primary font-title-sm text-title-sm flex items-center justify-center" href="#">Book</a>
+<a data-path="dentist-profile" data-param="nnamdi-obi" class="h-10 px-3 rounded-xl bg-surface-container text-primary font-title-sm text-title-sm flex items-center justify-center" href="#">Profile</a>
 </div>
 </div>
 </div>
@@ -397,8 +397,8 @@ export const landingMobileHtml = `
 </div>
 </div>
 <div class="flex items-center gap-2 mt-space-md">
-<a class="h-10 flex-1 rounded-xl bg-primary text-on-primary font-title-sm text-title-sm flex items-center justify-center" href="#">Book</a>
-<a class="h-10 px-3 rounded-xl bg-surface-container text-primary font-title-sm text-title-sm flex items-center justify-center" href="#">Profile</a>
+<a data-path="dentist-profile" data-param="amina-bello" class="h-10 flex-1 rounded-xl bg-primary text-on-primary font-title-sm text-title-sm flex items-center justify-center" href="#">Book</a>
+<a data-path="dentist-profile" data-param="amina-bello" class="h-10 px-3 rounded-xl bg-surface-container text-primary font-title-sm text-title-sm flex items-center justify-center" href="#">Profile</a>
 </div>
 </div>
 </div>
@@ -431,14 +431,14 @@ export const landingMobileHtml = `
 </div>
 </div>
 <div class="flex items-center gap-2 mt-space-md">
-<a class="h-10 flex-1 rounded-xl bg-primary text-on-primary font-title-sm text-title-sm flex items-center justify-center" href="#">View Centre</a>
+<a data-path="clinic-profile" data-param="lagos-smile-centre" class="h-10 flex-1 rounded-xl bg-primary text-on-primary font-title-sm text-title-sm flex items-center justify-center" href="#">View Centre</a>
 </div>
 </div>
 </div>
 </div>
 <!-- Banner Below Carousel -->
 <div class="px-margin mt-space-md">
-<a class="w-full p-space-md rounded-2xl bg-surface-container-high flex items-center justify-between text-primary active:bg-surface-container-highest transition-colors" href="#">
+<a data-path="nearby-care" class="w-full p-space-md rounded-2xl bg-surface-container-high flex items-center justify-between text-primary active:bg-surface-container-highest transition-colors" href="#">
 <div class="flex items-center gap-2 min-w-0">
 <span class="material-symbols-outlined text-[20px]">near_me</span>
 <span class="font-title-sm text-title-sm truncate font-semibold">Find Dental Care Near You</span>
@@ -470,7 +470,7 @@ export const landingMobileHtml = `
             Access licensing updates, diagnostic standards, and unified digital records workflows.
           </p>
 </div>
-<a class="mt-space-md inline-flex items-center gap-1 font-title-sm text-title-sm text-primary font-semibold" href="#">
+<a data-path="community-dentists" class="mt-space-md inline-flex items-center gap-1 font-title-sm text-title-sm text-primary font-semibold" href="#">
 <span>Professional Access</span>
 <span class="material-symbols-outlined text-[16px]">chevron_right</span>
 </a>
@@ -486,7 +486,7 @@ export const landingMobileHtml = `
             Register your clinical facility, streamline patient referrals, and integrate with NHIA.
           </p>
 </div>
-<a class="mt-space-md inline-flex items-center gap-1 font-title-sm text-title-sm text-secondary font-semibold" href="#">
+<a data-path="community-clinics" class="mt-space-md inline-flex items-center gap-1 font-title-sm text-title-sm text-secondary font-semibold" href="#">
 <span>Clinic Access</span>
 <span class="material-symbols-outlined text-[16px]">chevron_right</span>
 </a>
@@ -502,7 +502,7 @@ export const landingMobileHtml = `
             Coordinate public health dental screenings and track child oral preventive milestones.
           </p>
 </div>
-<a class="mt-space-md inline-flex items-center gap-1 font-title-sm text-title-sm text-tertiary font-semibold" href="#">
+<a data-path="community-schools" class="mt-space-md inline-flex items-center gap-1 font-title-sm text-title-sm text-tertiary font-semibold" href="#">
 <span>Organisation Access</span>
 <span class="material-symbols-outlined text-[16px]">chevron_right</span>
 </a>
@@ -580,7 +580,7 @@ export const landingMobileHtml = `
               Master the modified Bass technique to clean along the gumline without enamel erosion.
             </p>
 </div>
-<a class="mt-space-md inline-flex items-center gap-1 font-title-sm text-title-sm text-primary font-semibold" href="#">
+<a data-path="guide-brushing" class="mt-space-md inline-flex items-center gap-1 font-title-sm text-title-sm text-primary font-semibold" href="#">
 <span>Read Guide</span>
 <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
 </a>
@@ -599,7 +599,7 @@ export const landingMobileHtml = `
               Engaging activities and nutritional choices that protect developing primary teeth.
             </p>
 </div>
-<a class="mt-space-md inline-flex items-center gap-1 font-title-sm text-title-sm text-tertiary font-semibold" href="#">
+<a data-path="guide-children" class="mt-space-md inline-flex items-center gap-1 font-title-sm text-title-sm text-tertiary font-semibold" href="#">
 <span>Read Guide</span>
 <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
 </a>
@@ -618,7 +618,7 @@ export const landingMobileHtml = `
               Early detection prevents periodontal complications before symptoms develop.
             </p>
 </div>
-<a class="mt-space-md inline-flex items-center gap-1 font-title-sm text-title-sm text-primary font-semibold" href="#">
+<a data-path="guide-checkups" class="mt-space-md inline-flex items-center gap-1 font-title-sm text-title-sm text-primary font-semibold" href="#">
 <span>Read Guide</span>
 <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
 </a>
@@ -675,11 +675,11 @@ export const landingMobileHtml = `
         Join thousands of Nigerian residents managing their oral wellness through a unified clinical network.
       </p>
 <div class="flex flex-col gap-space-xs mt-space-lg">
-<a class="h-12 w-full rounded-xl bg-primary text-on-primary font-title-sm text-title-sm flex items-center justify-center gap-2 shadow-sm" href="#">
+<a data-path="get-started" class="h-12 w-full rounded-xl bg-primary text-on-primary font-title-sm text-title-sm flex items-center justify-center gap-2 shadow-sm" href="#">
 <span>Get Started</span>
 <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
 </a>
-<a class="h-12 w-full rounded-xl bg-inverse-surface text-inverse-on-surface font-title-sm text-title-sm flex items-center justify-center" href="#">
+<a data-path="explore-portal" class="h-12 w-full rounded-xl bg-inverse-surface text-inverse-on-surface font-title-sm text-title-sm flex items-center justify-center" href="#">
           Explore DHA Portal
         </a>
 </div>
@@ -697,17 +697,17 @@ export const landingMobileHtml = `
 <div class="grid grid-cols-2 gap-space-md mb-space-lg">
 <div class="flex flex-col gap-2">
 <span class="font-label-md text-label-md font-semibold text-on-surface uppercase">For Patients</span>
-<a class="font-body-sm text-body-sm hover:text-primary" href="#">Find a Dentist</a>
-<a class="font-body-sm text-body-sm hover:text-primary" href="#">Family Profiles</a>
-<a class="font-body-sm text-body-sm hover:text-primary" href="#">Dental Records</a>
-<a class="font-body-sm text-body-sm hover:text-primary" href="#">Oral Health Library</a>
+<a data-path="find-care" class="font-body-sm text-body-sm hover:text-primary" href="#">Find a Dentist</a>
+<a data-path="family-profiles" class="font-body-sm text-body-sm hover:text-primary" href="#">Family Profiles</a>
+<a data-path="dental-records" class="font-body-sm text-body-sm hover:text-primary" href="#">Dental Records</a>
+<a data-path="oral-health-guides" class="font-body-sm text-body-sm hover:text-primary" href="#">Oral Health Library</a>
 </div>
 <div class="flex flex-col gap-2">
 <span class="font-label-md text-label-md font-semibold text-on-surface uppercase">Healthcare Network</span>
-<a class="font-body-sm text-body-sm hover:text-primary" href="#">Clinician Login</a>
-<a class="font-body-sm text-body-sm hover:text-primary" href="#">Clinic Registration</a>
-<a class="font-body-sm text-body-sm hover:text-primary" href="#">NHIA Guidelines</a>
-<a class="font-body-sm text-body-sm hover:text-primary" href="#">School Programs</a>
+<a data-path="clinician-login" class="font-body-sm text-body-sm hover:text-primary" href="#">Clinician Login</a>
+<a data-path="clinic-registration" class="font-body-sm text-body-sm hover:text-primary" href="#">Clinic Registration</a>
+<a data-path="Nigeria Health Information Exchange-integration" class="font-body-sm text-body-sm hover:text-primary" href="#">NHIA Guidelines</a>
+<a data-path="school-programs" class="font-body-sm text-body-sm hover:text-primary" href="#">School Programs</a>
 </div>
 </div>
 <!-- Compliance & Trust Strip -->

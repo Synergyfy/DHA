@@ -140,7 +140,7 @@ export function ProfessionalVerificationStatusScreen() {
                     </span>
                   </div>
                   <div className="text-xs text-white/80 mt-1 font-mono">
-                    Official License: #DEN-48912 • UAE Unified ID: 784-1988-1293810-1
+                    Official License: #DEN-48912 • Nigeria Unified ID: 12345678901
                   </div>
                 </div>
               </div>
@@ -162,7 +162,7 @@ export function ProfessionalVerificationStatusScreen() {
                 </div>
                 <div>
                   <div className="text-[10px] uppercase tracking-wider text-white/70 font-bold">
-                    UAE Pass Identity
+                    National Identification Number (NIN) verification Identity
                   </div>
                   <div className="text-xs font-bold text-white mt-0.5">Level 3 Authenticated</div>
                   <div className="text-[10px] text-white/80">Biometrics on Record</div>
@@ -190,7 +190,7 @@ export function ProfessionalVerificationStatusScreen() {
                   <div className="text-[10px] uppercase tracking-wider text-white/70 font-bold">
                     Malpractice Indemnity
                   </div>
-                  <div className="text-xs font-bold text-white mt-0.5">AED 5,000,000 Coverage</div>
+                  <div className="text-xs font-bold text-white mt-0.5">NGN 5,000,000 Coverage</div>
                   <div className="text-[10px] text-white/80">Orient Insurance (Dec 2027)</div>
                 </div>
               </div>
@@ -207,7 +207,7 @@ export function ProfessionalVerificationStatusScreen() {
                 <span>Statutory 5-Point Verification Audit</span>
               </h2>
               <p className="text-xs text-[#707881] mt-0.5">
-                Real-time validation against the Dubai Health Regulation Sector central registry.
+                Real-time validation against the Nigeria Dental Health Regulatory Unit central registry.
               </p>
             </div>
             <span className="px-3 py-1 rounded-full bg-[#86f2e4]/30 text-[#006f66] text-xs font-bold border border-[#86f2e4]/50 self-start sm:self-auto">
@@ -218,8 +218,8 @@ export function ProfessionalVerificationStatusScreen() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[
               {
-                title: 'Legal Identity & Emirates ID',
-                detail: 'Emirates ID #784-1988-1293810-1 verified with Federal Authority for Identity, Citizenship, Customs and Port Security.',
+                title: 'Legal Identity & National Identification Number (NIN)',
+                detail: 'National Identification Number (NIN) #12345678901 verified with National Identity Management Commission (NIMC).',
                 status: '100% Cleared',
                 date: 'Valid through 18 May 2029',
                 icon: 'badge',
@@ -240,7 +240,7 @@ export function ProfessionalVerificationStatusScreen() {
               },
               {
                 title: 'Facility Clinical Privileges',
-                detail: 'Endorsed attending practitioner at Harmony Dental Clinic (Facility #88190) and Harmony Specialists Jumeirah (#99211).',
+                detail: 'Endorsed attending practitioner at Harmony Dental Clinic (Facility #88190) and Harmony Specialists Victoria Island (#99211).',
                 status: '100% Endorsed',
                 date: '2 Operatories Active',
                 icon: 'domain',
@@ -447,7 +447,7 @@ export function ProfessionalVerificationStatusScreen() {
                   <label className="block font-bold text-[#131b2e] mb-1">Activity Title</label>
                   <input
                     type="text"
-                    placeholder="e.g. 8th Emirates International Dental Congress"
+                    placeholder="e.g. 8th Nigerian International Dental Congress"
                     className="w-full px-3 py-2 bg-white border border-[#eaedff] rounded-xl text-xs text-[#131b2e] focus:outline-none focus:border-[#006194]"
                   />
                 </div>

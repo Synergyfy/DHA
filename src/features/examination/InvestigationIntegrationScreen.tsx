@@ -34,7 +34,7 @@ export function InvestigationIntegrationScreen() {
       title: 'Right Posterior Bitewing Radiograph',
       modality: 'Bitewing',
       date: '16 Feb 2025',
-      time: '09:42 GST',
+      time: '09:42 WAT',
       reviewedBy: 'Dr. Daniel James (#DEN-48912)',
       status: 'reviewed',
       finding: 'Coronal radiolucency involving outer third of dentin on Tooth #16 Occlusal-Mesial aspect. Correlates with ICDAS 3/4 active caries. Crestal bone level stable at 1.5mm from CEJ.',
@@ -49,7 +49,7 @@ export function InvestigationIntegrationScreen() {
       title: 'Periapical Radiograph — Tooth #16',
       modality: 'Periapical',
       date: '16 Feb 2025',
-      time: '09:48 GST',
+      time: '09:48 WAT',
       reviewedBy: 'Dr. Daniel James (#DEN-48912)',
       status: 'reviewed',
       finding: 'Continuous lamina dura and uniform periodontal ligament space around mesiobuccal, distobuccal, and palatal roots. No periapical radiolucency. Root anatomy normal.',
@@ -64,7 +64,7 @@ export function InvestigationIntegrationScreen() {
       title: 'Digital Orthopantomogram (Panoramic)',
       modality: 'Panoramic',
       date: '14 Oct 2024',
-      time: '11:15 GST',
+      time: '11:15 WAT',
       reviewedBy: 'Dr. Tariq Mansoor (#DEN-31204)',
       status: 'baseline',
       finding: 'Baseline full dentition. Symmetrical condylar heads bilaterally. Maxillary sinuses clear. No radiopaque or radiolucent bony pathologies across maxilla and mandible.',
@@ -113,7 +113,7 @@ export function InvestigationIntegrationScreen() {
           </div>
         </section>
 
-        {/* NABIDH DICOM Hub Banner */}
+        {/* Nigeria Health Information Exchange DICOM Hub Banner */}
         <div className="bg-surface-container-lowest rounded-2xl p-4 border border-outline-variant/30 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-secondary-container text-on-secondary-container flex items-center justify-center font-bold shrink-0">
@@ -121,7 +121,7 @@ export function InvestigationIntegrationScreen() {
             </div>
             <div>
               <div className="flex items-center gap-2">
-                <h2 className="text-sm font-bold text-on-surface">NABIDH PACS Diagnostic Bridge</h2>
+                <h2 className="text-sm font-bold text-on-surface">Nigeria Health Information Exchange PACS Diagnostic Bridge</h2>
                 <span className="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-mono text-[10px] font-bold">
                   3 ACTIVE DICOM STUDIES
                 </span>
@@ -133,7 +133,7 @@ export function InvestigationIntegrationScreen() {
           </div>
           <button
             type="button"
-            onClick={() => showToast('Connecting to NABIDH Central PACS Archive...')}
+            onClick={() => showToast('Connecting to Nigeria Health Information Exchange Central PACS Archive...')}
             className="px-3 py-1.5 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-semibold flex items-center gap-1.5 transition-colors shrink-0"
           >
             <Icon name="refresh" className="text-sm text-primary" />
@@ -302,7 +302,7 @@ export function InvestigationIntegrationScreen() {
                     </div>
 
                     <span className="text-[10px] text-outline font-mono">
-                      NABIDH SHA-256 Verified
+                      Nigeria Health Information Exchange SHA-256 Verified
                     </span>
                   </div>
                 </div>
@@ -351,7 +351,7 @@ export function InvestigationIntegrationScreen() {
                     {selectedStudy.modality.toUpperCase()} DICOM ENGINE
                   </span>
                   <span className="font-mono text-[10px] text-neutral-500 mt-1">
-                    Lossless Bit-Depth Calibrated (NABIDH PACS)
+                    Lossless Bit-Depth Calibrated (Nigeria Health Information Exchange PACS)
                   </span>
 
                   {selectedStudy.targetTooth && (
@@ -432,7 +432,7 @@ export function InvestigationIntegrationScreen() {
           </div>
           <button
             type="button"
-            onClick={() => showToast('Opening NABIDH DICOM Study Selector...')}
+            onClick={() => showToast('Opening Nigeria Health Information Exchange DICOM Study Selector...')}
             className="px-4 py-2 rounded-xl bg-surface-container hover:bg-surface-container-high text-on-surface text-xs font-bold flex items-center gap-1.5 transition-colors shrink-0"
           >
             <Icon name="link" className="text-sm text-primary" />

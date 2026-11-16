@@ -20,7 +20,7 @@ export function ScreeningDashboardScreen() {
               <div className="w-14 h-14 rounded-2xl overflow-hidden bg-primary-fixed/20 ring-2 ring-primary/20">
                 <img
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAox45_IcYIPwdLF2V13J9VZAIBfBEc2BozBpSvT2HaKGHCLTX76VQTvHIpiDOwfR-0ui06Azu7vAf2RuIKCfIagroTh8fgU9YeqzN91gmkQ-p3e9njujNaKOiSpxc85RAv6cdrUS6c_kqbYa2fbxEQyFYWvLs9TrcbooNJ6NuNuy0uktkFlKJ5nsNVT5nIqTyINegeczIcTnj6FrwGtj4ouHZ5MyYzbl5VqEcl5GYV"
-                  alt="Dr. Sarah Al-Mansoor"
+                  alt="Dr. Ngozi Eze"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -30,7 +30,7 @@ export function ScreeningDashboardScreen() {
             <div className="min-w-0">
               <div className="flex items-center gap-2 flex-wrap">
                 <h1 className="font-headline-sm text-lg sm:text-xl font-bold text-on-surface">
-                  Dr. Sarah Al-Mansoor
+                  Dr. Ngozi Eze
                 </h1>
                 <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-bold">
                   <span className="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse" />
@@ -38,7 +38,7 @@ export function ScreeningDashboardScreen() {
                 </span>
               </div>
               <p className="text-xs text-on-surface-variant font-mono mt-0.5">
-                Clinical Screener • License #SC-8921 • Dubai Health Authority
+                Clinical Screener • License #SC-8921 • Nigeria Dental Health Authority
               </p>
             </div>
           </div>
@@ -245,17 +245,17 @@ export function ScreeningDashboardScreen() {
 
                     <div>
                       <h3 className="font-title-md text-base sm:text-lg font-bold text-on-surface">
-                        Al Wasl Model Girls School – Annual Grade 4 Dental Outreach
+                        Lagos Mainland Community School – Annual Grade 4 Dental Outreach
                       </h3>
                       <p className="text-xs text-on-surface-variant mt-0.5">
-                        Dubai Knowledge & Human Development Authority (KHDA)
+                        Lagos Knowledge & Human Development Authority (KHDA)
                       </p>
                     </div>
 
                     <div className="grid grid-cols-2 gap-2 text-xs text-on-surface-variant pt-1">
                       <div className="flex items-center gap-1.5 truncate">
                         <Icon name="location_on" className="text-[16px] text-primary" />
-                        <span className="truncate">Jumeirah 1, Dubai</span>
+                        <span className="truncate">Victoria Island 1, Lagos</span>
                       </div>
                       <div className="flex items-center gap-1.5 truncate">
                         <Icon name="date_range" className="text-[16px] text-primary" />
@@ -307,17 +307,17 @@ export function ScreeningDashboardScreen() {
 
                     <div>
                       <h3 className="font-title-md text-base sm:text-lg font-bold text-on-surface">
-                        Emirates Foundation Community Health Caravan
+                        Nigerian Foundation Community Health Caravan
                       </h3>
                       <p className="text-xs text-on-surface-variant mt-0.5">
-                        Dubai Community Welfare Hub & Mobile Clinic Fleet
+                        Lagos Community Welfare Hub & Mobile Clinic Fleet
                       </p>
                     </div>
 
                     <div className="grid grid-cols-2 gap-2 text-xs text-on-surface-variant pt-1">
                       <div className="flex items-center gap-1.5 truncate">
                         <Icon name="place" className="text-[16px] text-primary" />
-                        <span className="truncate">Al Barsha Park Pavilion</span>
+                        <span className="truncate">Surulere Park Pavilion</span>
                       </div>
                       <div className="flex items-center gap-1.5 truncate">
                         <Icon name="event" className="text-[16px] text-primary" />
@@ -374,7 +374,7 @@ export function ScreeningDashboardScreen() {
                     <div>
                       <div className="flex items-center gap-2">
                         <span className="font-title-sm text-sm font-bold text-on-surface">
-                          Zayd Al-Mansoori
+                          Zayd Okafor
                         </span>
                         <span className="font-mono text-xs text-on-surface-variant">DHA-P-49102</span>
                       </div>
@@ -402,7 +402,7 @@ export function ScreeningDashboardScreen() {
                     <div>
                       <div className="flex items-center gap-2">
                         <span className="font-title-sm text-sm font-bold text-on-surface">
-                          Mariam Al-Hashemi
+                          Dr. Mariam Adebayo
                         </span>
                         <span className="font-mono text-xs text-on-surface-variant">DHA-P-88319</span>
                       </div>

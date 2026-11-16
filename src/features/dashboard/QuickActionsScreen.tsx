@@ -66,13 +66,13 @@ export function QuickActionsScreen() {
       title: 'Find a Dentist & Clinics',
       destination: 'Accredited DHA Provider Directory',
       description:
-        'Search trusted clinics by orthodontic/pediatric sub-specialties, Dubai districts, and direct insurance tiers.',
-      tag: 'Nearest 1.4 km • Enaya / Saada',
+        'Search trusted clinics by orthodontic/pediatric sub-specialties, Lagos districts, and direct insurance tiers.',
+      tag: 'Nearest 1.4 km • NHIA / Saada',
       icon: 'location_on',
       iconBg: 'bg-secondary-fixed',
       iconColor: 'text-on-secondary-fixed',
       onClick: () => {
-        setActiveNotice('Opening Dubai Accredited Clinic Directory...');
+        setActiveNotice('Opening Lagos Accredited Clinic Directory...');
         setTimeout(() => setActiveNotice(null), 3000);
       },
       searchKeywords: 'find dentist accredited clinics directory specialty location insurance network',
@@ -229,7 +229,7 @@ export function QuickActionsScreen() {
               className="h-12 px-6 rounded-xl bg-error text-on-error hover:bg-error/95 font-title-sm text-title-sm font-semibold flex items-center justify-center gap-2 shadow-sm shrink-0 active:scale-95 transition-all"
             >
               <Icon name="call" className="text-[20px]" />
-              <span>Call Triage (800-342)</span>
+              <span>Call Triage (0800-000-0000)</span>
             </a>
           </div>
         </section>
@@ -361,7 +361,7 @@ export function QuickActionsScreen() {
                   </span>
                 </div>
                 <p className="font-body-sm text-body-sm text-on-surface-variant truncate">
-                  Shared with Dr. Al-Mansoori • Specialist Endodontics
+                  Shared with Dr. Okafor • Specialist Endodontics
                 </p>
                 <div className="flex items-center gap-2 mt-1">
                   <span className="px-2 py-0.5 rounded bg-surface-container font-label-sm text-[10px] text-secondary font-medium flex items-center gap-1">
@@ -390,7 +390,7 @@ export function QuickActionsScreen() {
                   </span>
                 </div>
                 <p className="font-body-sm text-body-sm text-on-surface-variant truncate">
-                  Al Barsha Primary Clinic • Kiosk Terminal #03
+                  Surulere Primary Clinic • Kiosk Terminal #03
                 </p>
                 <div className="flex items-center gap-2 mt-1">
                   <span className="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-label-sm text-[10px] font-medium flex items-center gap-1">
@@ -416,7 +416,7 @@ export function QuickActionsScreen() {
                   </span>
                 </div>
                 <p className="font-body-sm text-body-sm text-on-surface-variant truncate">
-                  Primary Guardian phone (+971 50 *** 921) verified
+                  Primary Guardian phone (+234 803 *** 921) verified
                 </p>
                 <div className="flex items-center gap-2 mt-1">
                   <span className="px-2 py-0.5 rounded bg-surface-container font-label-sm text-[10px] text-on-surface-variant font-medium">

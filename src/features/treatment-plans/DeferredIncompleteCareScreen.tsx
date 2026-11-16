@@ -73,7 +73,7 @@ export function DeferredIncompleteCareScreen() {
       category: 'deferred',
       categoryLabel: 'Deferred by Clinician',
       categoryBadgeColor: 'bg-[#cce5ff] text-[#001d31] border-blue-200',
-      patientName: 'Fatima Al-Zahra',
+      patientName: 'Fatima Bello',
       ageGender: '28y F',
       dhaId: 'DHA-08921',
       avatar: 'FA',
@@ -84,7 +84,7 @@ export function DeferredIncompleteCareScreen() {
       narrativeTitle: 'Clinical Deferred Rationale',
       narrativeBody:
         'Autogenous bone graft site demonstrates positive healing but requires additional 4-week consolidation index prior to titanium osteotomy stress.',
-      clinician: 'Dr. K. Al-Mansoor',
+      clinician: 'Dr. K. Okoye',
       clinicianId: '#DEN-39011',
       riskStatus: 'Planned Re-eval',
       riskText: 'Volumetric CBCT Scan (15 Nov 2026)',
@@ -160,7 +160,7 @@ export function DeferredIncompleteCareScreen() {
       narrativeTitle: 'Clinical Deferred Rationale',
       narrativeBody:
         'Awaiting cardiological clearance and INR coagulation calibration window from primary cardiologist before initiating periodontal surgical flap.',
-      clinician: 'Dr. K. Al-Mansoor',
+      clinician: 'Dr. K. Okoye',
       clinicianId: '#DEN-39011',
       riskStatus: 'Cardio Clearance',
       riskText: 'Medical Consult Pending',
@@ -388,12 +388,12 @@ export function DeferredIncompleteCareScreen() {
 
             <button
               type="button"
-              onClick={() => showToast('Filtering by Clinic Branch: All Dubai Facilities (Active)')}
+              onClick={() => showToast('Filtering by Clinic Branch: All Lagos Facilities (Active)')}
               className="p-3.5 rounded-xl bg-slate-50 hover:bg-slate-100 border border-slate-200 text-slate-800 font-bold flex items-center justify-between transition-colors"
             >
               <div className="flex items-center gap-2">
                 <Icon name="domain" className="text-[#006a61] text-base" />
-                <span>Filter by Clinic Branch: All Dubai Facilities</span>
+                <span>Filter by Clinic Branch: All Lagos Facilities</span>
               </div>
               <Icon name="tune" className="text-slate-400 text-sm" />
             </button>

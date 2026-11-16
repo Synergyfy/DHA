@@ -36,20 +36,20 @@ export function TreatmentDecisionConsentHistoryScreen() {
     {
       id: 'EV-001',
       category: 'consent',
-      timestamp: 'Today 11:42 GST',
+      timestamp: 'Today 11:42 WAT',
       title: 'Periodontal Recare Consent Granted',
       badge: 'Active Consent',
       badgeColor: 'bg-teal-100 text-teal-800 border-teal-200',
       icon: 'check',
       iconBg: 'bg-[#006a61] text-white',
-      details: 'Patient: Amara Okafor · Authentication: UAE Pass L3 Biometric',
+      details: 'Patient: Amara Okafor · Authentication: NIN biometric verification Biometric',
       meta: 'Witnessed: Dr. Daniel James',
       refCode: '#CON-089-C v1.0',
     },
     {
       id: 'EV-002',
       category: 'consent',
-      timestamp: 'Today 11:40 GST',
+      timestamp: 'Today 11:40 WAT',
       title: 'Fluoride Varnish Consent Granted',
       badge: 'Active Consent',
       badgeColor: 'bg-teal-100 text-teal-800 border-teal-200',
@@ -62,7 +62,7 @@ export function TreatmentDecisionConsentHistoryScreen() {
     {
       id: 'EV-003',
       category: 'plan',
-      timestamp: 'Today 11:35 GST',
+      timestamp: 'Today 11:35 WAT',
       title: 'Patient Treatment Plan Decision: Full Acceptance',
       badge: 'Full Acceptance',
       badgeColor: 'bg-[#cce5ff] text-[#001d31]',
@@ -70,12 +70,12 @@ export function TreatmentDecisionConsentHistoryScreen() {
       iconBg: 'bg-[#006194] text-white',
       details: 'Patient accepted all 3 of 3 items presented in treatment regimen (Direct Composite, Fluoride Varnish, Periodontal Scaling).',
       meta: 'Recorded by Amara Okafor (Autonomous Adult)',
-      copay: 'AED 290.00',
+      copay: 'NGN 290.00',
     },
     {
       id: 'EV-004',
       category: 'plan',
-      timestamp: '14 Oct 2026, 11:15 GST',
+      timestamp: '14 Oct 2026, 11:15 WAT',
       title: 'Plan Formally Approved & Released to Patient',
       badge: 'Draft → Approved',
       badgeColor: 'bg-slate-100 text-slate-800',
@@ -88,7 +88,7 @@ export function TreatmentDecisionConsentHistoryScreen() {
     {
       id: 'EV-005',
       category: 'item',
-      timestamp: '12 Oct 2026, 16:30 GST',
+      timestamp: '12 Oct 2026, 16:30 WAT',
       title: 'Alternative Treatment Option B (Ceramic Inlay) Explored',
       badge: 'Option Explored',
       badgeColor: 'bg-amber-100 text-amber-900',
@@ -100,7 +100,7 @@ export function TreatmentDecisionConsentHistoryScreen() {
     {
       id: 'EV-006',
       category: 'item',
-      timestamp: '12 Oct 2026, 14:10 GST',
+      timestamp: '12 Oct 2026, 14:10 WAT',
       title: 'Treatment Plan #TP-2026-089 Created',
       badge: 'Genesis Record',
       badgeColor: 'bg-purple-100 text-purple-900',
@@ -245,10 +245,10 @@ export function TreatmentDecisionConsentHistoryScreen() {
             <div className="flex items-center gap-2 self-start sm:self-auto text-xs text-slate-500">
               <span className="flex items-center gap-1 bg-teal-50 text-[#006a61] border border-teal-200 px-2.5 py-1 rounded-full font-semibold">
                 <Icon name="shield" className="text-sm" />
-                UAE Pass Level 3
+                NIN biometric verification
               </span>
               <span className="bg-slate-100 px-2.5 py-1 rounded-full font-mono text-[11px] text-slate-700">
-                NABIDH Node #DXB-9811
+                Nigeria Health Information Exchange Node #LAG-9811
               </span>
             </div>
           </div>
@@ -293,7 +293,7 @@ export function TreatmentDecisionConsentHistoryScreen() {
               <h3 className="font-bold text-base text-slate-900">Chronological Event Ledger</h3>
             </div>
             <span className="text-xs text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full font-medium">
-              GST Timezone (UTC+4)
+              WAT Timezone (UTC+4)
             </span>
           </div>
 
@@ -378,11 +378,11 @@ export function TreatmentDecisionConsentHistoryScreen() {
           </button>
           <button
             type="button"
-            onClick={() => showToast('NABIDH Node Confirmed: Block #8421 cryptographic match valid')}
+            onClick={() => showToast('Nigeria Health Information Exchange Node Confirmed: Block #8421 cryptographic match valid')}
             className="w-full h-12 rounded-xl bg-white hover:bg-slate-50 text-slate-700 font-bold text-xs border border-slate-300 flex items-center justify-center gap-2 shadow-xs transition-all"
           >
             <Icon name="verified" className="text-[#006a61] text-base" />
-            <span>Verify NABIDH Ledger Hash</span>
+            <span>Verify Nigeria Health Information Exchange Ledger Hash</span>
           </button>
         </div>
 

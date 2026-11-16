@@ -20,7 +20,7 @@ export function InvestigationActivityAccessScreen() {
     setTimeout(() => {
       setIsVerifying(false);
       setVerifiedSuccess(true);
-      showToast('NABIDH Node Hash Verified: 100% cryptographic match with consensus ledger.');
+      showToast('Nigeria Health Information Exchange Node Hash Verified: 100% cryptographic match with consensus ledger.');
       setTimeout(() => setVerifiedSuccess(false), 4000);
     }, 1200);
   };
@@ -56,7 +56,7 @@ export function InvestigationActivityAccessScreen() {
                 </span>
                 <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-xs font-semibold">
                   <Icon name="verified" className="text-xs" />
-                  NABIDH Synced
+                  Nigeria Health Information Exchange Synced
                 </span>
                 <span className="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-800 text-xs font-mono font-bold border border-emerald-200">
                   WORM IMMUTABLE
@@ -106,10 +106,10 @@ export function InvestigationActivityAccessScreen() {
                 Statutory WORM Compliance Mandate
               </span>
               <span className="w-1.5 h-1.5 rounded-full bg-secondary"></span>
-              <span className="text-xs font-semibold text-secondary uppercase">UAE Federal Law No. 2</span>
+              <span className="text-xs font-semibold text-secondary uppercase">Nigeria Federal Law No. 2</span>
             </div>
             <p className="text-xs text-on-surface-variant mt-1 leading-relaxed">
-              Read-only immutable audit chronology. Under UAE Federal Health Data Governance and DHA Administrative Standards,
+              Read-only immutable audit chronology. Under Nigeria Federal Health Data Governance and DHA Administrative Standards,
               all activity and electronic access events are cryptographically sealed and cannot be edited, purged, or retroactively altered.
             </p>
           </div>
@@ -150,7 +150,7 @@ export function InvestigationActivityAccessScreen() {
               <span className="text-xs font-bold uppercase tracking-wider text-outline">
                 Chronological Investigation Timeline (5 Events)
               </span>
-              <span className="text-xs font-mono text-primary font-medium">Standard Gulf Time (GST)</span>
+              <span className="text-xs font-mono text-primary font-medium">Standard Gulf Time (WAT)</span>
             </div>
 
             <div className="relative flex flex-col gap-6 pl-2 sm:pl-4">
@@ -165,7 +165,7 @@ export function InvestigationActivityAccessScreen() {
                 <div className="flex-1 bg-surface-container-low/60 rounded-xl p-4 border border-outline-variant/20">
                   <div className="flex items-baseline justify-between flex-wrap gap-2">
                     <span className="text-sm font-bold text-on-surface">Clinical Review Signed & Sealed</span>
-                    <span className="text-xs font-mono text-outline font-semibold">16 Feb 2025 • 11:22 GST</span>
+                    <span className="text-xs font-mono text-outline font-semibold">16 Feb 2025 • 11:22 WAT</span>
                   </div>
                   <p className="text-xs text-on-surface-variant mt-1">
                     By <span className="font-semibold text-on-surface">Dr. Daniel James (#DEN-48912)</span> • Lead Consultant Restorative Dentist
@@ -193,7 +193,7 @@ export function InvestigationActivityAccessScreen() {
                 <div className="flex-1 bg-surface-container-low/60 rounded-xl p-4 border border-outline-variant/20">
                   <div className="flex items-baseline justify-between flex-wrap gap-2">
                     <span className="text-sm font-bold text-on-surface">Tooth Association & Caliper Tagging Updated</span>
-                    <span className="text-xs font-mono text-outline font-semibold">16 Feb 2025 • 10:15 GST</span>
+                    <span className="text-xs font-mono text-outline font-semibold">16 Feb 2025 • 10:15 WAT</span>
                   </div>
                   <p className="text-xs text-on-surface-variant mt-1">
                     By <span className="font-semibold text-on-surface">Dr. Daniel James (#DEN-48912)</span>
@@ -218,10 +218,10 @@ export function InvestigationActivityAccessScreen() {
                 <div className="flex-1 bg-surface-container-low/60 rounded-xl p-4 border border-outline-variant/20">
                   <div className="flex items-baseline justify-between flex-wrap gap-2">
                     <span className="text-sm font-bold text-on-surface">DICOM Ingestion Committed to PACS</span>
-                    <span className="text-xs font-mono text-outline font-semibold">16 Feb 2025 • 09:45 GST</span>
+                    <span className="text-xs font-mono text-outline font-semibold">16 Feb 2025 • 09:45 WAT</span>
                   </div>
                   <p className="text-xs text-on-surface-variant mt-1">
-                    By <span className="font-semibold text-on-surface">Automated WORM Ingestion Pipeline (NABIDH Gateway)</span>
+                    By <span className="font-semibold text-on-surface">Automated WORM Ingestion Pipeline (Nigeria Health Information Exchange Gateway)</span>
                   </p>
                   <div className="bg-surface-container-lowest rounded-lg p-2.5 mt-2 flex items-center justify-between text-xs font-mono text-on-surface-variant border border-outline-variant/20">
                     <span>2 DICOM series (27.0 MB)</span>
@@ -238,7 +238,7 @@ export function InvestigationActivityAccessScreen() {
                 <div className="flex-1 bg-surface-container-low/60 rounded-xl p-4 border border-outline-variant/20">
                   <div className="flex items-baseline justify-between flex-wrap gap-2">
                     <span className="text-sm font-bold text-on-surface">Radiographic Acquisition Completed</span>
-                    <span className="text-xs font-mono text-outline font-semibold">16 Feb 2025 • 09:40 GST</span>
+                    <span className="text-xs font-mono text-outline font-semibold">16 Feb 2025 • 09:40 WAT</span>
                   </div>
                   <p className="text-xs text-on-surface-variant mt-1">
                     By <span className="font-semibold text-on-surface">Nurse Zainab Tariq (RN-9428)</span> • Operatory 4 Radiology Bay
@@ -258,7 +258,7 @@ export function InvestigationActivityAccessScreen() {
                 <div className="flex-1 bg-surface-container-low/60 rounded-xl p-4 border border-outline-variant/20">
                   <div className="flex items-baseline justify-between flex-wrap gap-2">
                     <span className="text-sm font-bold text-on-surface">Investigation Order Created</span>
-                    <span className="text-xs font-mono text-outline font-semibold">16 Feb 2025 • 09:15 GST</span>
+                    <span className="text-xs font-mono text-outline font-semibold">16 Feb 2025 • 09:15 WAT</span>
                   </div>
                   <p className="text-xs text-on-surface-variant mt-1">
                     By <span className="font-semibold text-on-surface">Dr. Daniel James (#DEN-48912)</span>
@@ -305,7 +305,7 @@ export function InvestigationActivityAccessScreen() {
                 <div className="flex-1 min-w-0">
                   <div className="flex items-baseline justify-between">
                     <h4 className="text-sm font-bold text-on-surface truncate">Dr. Daniel James</h4>
-                    <span className="text-xs font-mono text-outline font-semibold">11:15 GST</span>
+                    <span className="text-xs font-mono text-outline font-semibold">11:15 WAT</span>
                   </div>
                   <span className="text-xs font-medium text-primary">Consultant Restorative</span>
                   <div className="bg-surface-container-low rounded-xl p-3 mt-2 space-y-1 text-xs">
@@ -329,7 +329,7 @@ export function InvestigationActivityAccessScreen() {
                 <div className="flex-1 min-w-0">
                   <div className="flex items-baseline justify-between">
                     <h4 className="text-sm font-bold text-on-surface truncate">Nurse Zainab Tariq</h4>
-                    <span className="text-xs font-mono text-outline font-semibold">09:38 GST</span>
+                    <span className="text-xs font-mono text-outline font-semibold">09:38 WAT</span>
                   </div>
                   <span className="text-xs font-medium text-secondary">Dental Radiographer</span>
                   <div className="bg-surface-container-low rounded-xl p-3 mt-2 space-y-1 text-xs">
@@ -353,7 +353,7 @@ export function InvestigationActivityAccessScreen() {
                 <div className="flex-1 min-w-0">
                   <div className="flex items-baseline justify-between">
                     <h4 className="text-sm font-bold text-on-surface truncate">Chinedu Okafor</h4>
-                    <span className="text-xs font-mono text-outline font-semibold">11:30 GST</span>
+                    <span className="text-xs font-mono text-outline font-semibold">11:30 WAT</span>
                   </div>
                   <span className="text-xs font-medium text-outline">Patient (Self Service)</span>
                   <div className="bg-surface-container-low rounded-xl p-3 mt-2 space-y-1 text-xs">
@@ -376,8 +376,8 @@ export function InvestigationActivityAccessScreen() {
                 </div>
                 <div className="flex-1 min-w-0">
                   <div className="flex items-baseline justify-between">
-                    <h4 className="text-sm font-bold text-on-surface truncate">Sarah Al-Nuaimi</h4>
-                    <span className="text-xs font-mono text-outline font-semibold">10:05 GST</span>
+                    <h4 className="text-sm font-bold text-on-surface truncate">Sarah Nwosu</h4>
+                    <span className="text-xs font-mono text-outline font-semibold">10:05 WAT</span>
                   </div>
                   <span className="text-xs font-medium text-outline">Clinic Operations</span>
                   <div className="bg-surface-container-low rounded-xl p-3 mt-2 space-y-1 text-xs">
@@ -400,7 +400,7 @@ export function InvestigationActivityAccessScreen() {
         <section className="bg-surface-container-lowest rounded-2xl p-4 border border-outline-variant/30 flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-xs shadow-sm">
           <div className="flex items-center gap-2">
             <Icon name="verified_user" className="text-secondary text-base" />
-            <span className="font-mono text-outline">NABIDH Node Hash: 0x88f4921adbe28014890c2</span>
+            <span className="font-mono text-outline">Nigeria Health Information Exchange Node Hash: 0x88f4921adbe28014890c2</span>
             <span className="text-secondary font-bold uppercase">&bull; Audited & Verified</span>
           </div>
 

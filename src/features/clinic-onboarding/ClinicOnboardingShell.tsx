@@ -69,7 +69,7 @@ export function ClinicOnboardingShell({
                   </span>
                 </div>
                 <p className="text-xs text-on-surface-variant hidden sm:block">
-                  Dubai Health Authority &bull; Clinical Governance Gateway
+                  Nigeria Dental Health Authority &bull; Clinical Governance Gateway
                 </p>
               </div>
             </div>

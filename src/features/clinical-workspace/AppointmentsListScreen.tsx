@@ -73,7 +73,7 @@ const APPOINTMENTS: Appointment[] = [
     time: '11:45 AM',
     duration: '45m',
     status: 'arrived',
-    patient: 'Fatima Al-Zahra',
+    patient: 'Fatima Bello',
     age: '28y',
     sex: 'F',
     dhaId: 'DHA-08921',

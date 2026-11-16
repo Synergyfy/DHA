@@ -95,7 +95,7 @@ const mockDataSources: DataSourceItem[] = [
     title: 'Pre-Op Coagulation & Salivary Flow Panel',
     sectionCode: 'Laboratory',
     date: '14 Oct 2026',
-    author: 'Al Barsha Diagnostic Lab',
+    author: 'Surulere Diagnostic Lab',
     isVerified: true,
     type: 'lab',
     badgeLabel: 'Verified Lab',
@@ -229,7 +229,7 @@ export function SummaryDataSourceSelectionScreen() {
 
             <div className="flex items-center gap-2">
               <span className="text-xs font-bold px-3 py-1 rounded-full bg-[#86f2e4] text-[#006f66]">
-                NABIDH Verified
+                Nigeria Health Information Exchange Verified
               </span>
             </div>
           </div>

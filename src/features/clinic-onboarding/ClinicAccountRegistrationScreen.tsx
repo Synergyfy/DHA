@@ -190,9 +190,6 @@ export function ClinicAccountRegistrationScreen() {
                   className="w-28 px-2 py-2.5 text-xs sm:text-sm rounded-xl border border-outline-variant bg-surface focus:ring-2 focus:ring-primary focus:outline-none"
                 >
                   <option value="+234">+234 (NG)</option>
-                  <option value="+971">+971 (AE)</option>
-                  <option value="+44">+44 (UK)</option>
-                  <option value="+1">+1 (US)</option>
                 </select>
                 <div className="relative flex-1">
                   <Icon name="phone" className="absolute left-3 top-1/2 -translate-y-1/2 text-on-surface-variant text-base" />

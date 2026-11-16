@@ -34,7 +34,7 @@ export function MyTasksWorkQueueScreen() {
 
   // New task form fields
   const [newTaskTitle, setNewTaskTitle] = useState('');
-  const [newTaskPatient, setNewTaskPatient] = useState('Amara Okafor (AE-990-281-DXB)');
+  const [newTaskPatient, setNewTaskPatient] = useState('Amara Okafor (NG-990-281-LAG)');
   const [newTaskPriority, setNewTaskPriority] = useState<'urgent' | 'high' | 'normal'>('high');
 
   const showToast = (msg: string) => {
@@ -50,10 +50,10 @@ export function MyTasksWorkQueueScreen() {
       category: 'plan',
       categoryLabel: 'Sec. 13 • Plan',
       priority: 'urgent',
-      dueTime: 'Today, 14:00 GST',
+      dueTime: 'Today, 14:00 WAT',
       patientName: 'Amara Okafor',
       patientInitials: 'AO',
-      patientMeta: '34y F • AE-990-281-DXB',
+      patientMeta: '34y F • NG-990-281-LAG',
       summary: 'Attending clinician sign-off required following mesio-occlusal composite restoration & fluoride recare phase.',
       actionPrimary: 'Review & Sign',
       actionSecondary: 'Delegate',
@@ -68,10 +68,10 @@ export function MyTasksWorkQueueScreen() {
       category: 'imaging',
       categoryLabel: 'Sec. 11 • Imaging',
       priority: 'urgent',
-      dueTime: 'Today, 16:30 GST',
+      dueTime: 'Today, 16:30 WAT',
       patientName: 'Chinedu Okafor',
       patientInitials: 'CO',
-      patientMeta: '41y M • AE-990-515-DXB',
+      patientMeta: '41y M • NG-990-515-LAG',
       badge: 'Tooth #16',
       summary: 'Suspected recurrent secondary caries approximating pulp ceiling. Radiographic calibration requested.',
       actionPrimary: 'Open DICOM Viewer',
@@ -90,7 +90,7 @@ export function MyTasksWorkQueueScreen() {
       dueTime: '02 Nov 2026',
       patientName: 'Amara Okafor',
       patientInitials: 'AO',
-      patientMeta: '34y F • AE-990-281-DXB',
+      patientMeta: '34y F • NG-990-281-LAG',
       badge: 'Routine Check',
       summary: 'Patient reported cold sensitivity after step 1 bonding. Cold test verification needed before enamel polish.',
       actionPrimary: 'View Protocol & Charting',
@@ -107,9 +107,9 @@ export function MyTasksWorkQueueScreen() {
       categoryLabel: 'Sec. 10 • Examination',
       priority: 'high',
       dueTime: 'In-Clinic Today',
-      patientName: 'Fatima Al-Zahra',
+      patientName: 'Fatima Bello',
       patientInitials: 'FZ',
-      patientMeta: '28y F • AE-990-414-DXB',
+      patientMeta: '28y F • NG-990-414-LAG',
       badge: 'Chair 02',
       summary: 'Probing depths Q1 and Q2 recorded. Furcation involvement Q3 molar requires attending review.',
       actionPrimary: 'Resume Exam',
@@ -126,8 +126,8 @@ export function MyTasksWorkQueueScreen() {
       dueTime: '2h ago',
       patientName: 'Tariq Latif',
       patientInitials: 'TL',
-      patientMeta: '52y M • AE-990-678-DXB',
-      summary: 'Patient leaves for London on Nov 10; wants confirmation on whether fixture integration permits flight cabin pressure.',
+      patientMeta: '52y M • NG-990-678-LAG',
+      summary: 'Patient leaves for Lagos on Nov 10; wants confirmation on whether fixture integration permits flight cabin pressure.',
       actionPrimary: 'Reply Clinical Note',
       actionSecondary: 'Dismiss',
       actionPrimaryIcon: 'reply',
@@ -160,7 +160,7 @@ export function MyTasksWorkQueueScreen() {
                 Active Session • Dr. Daniel James
               </span>
               <span className="text-xs font-mono text-slate-500 bg-slate-100 dark:bg-slate-700 px-2 py-0.5 rounded-full">
-                GST 11:42
+                WAT 11:42
               </span>
             </div>
             <div className="flex items-baseline gap-3">

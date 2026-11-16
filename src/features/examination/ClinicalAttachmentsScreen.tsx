@@ -31,7 +31,7 @@ export function ClinicalAttachmentsScreen() {
     {
       id: 'f-1',
       category: 'patient',
-      name: 'Emirates_ID_Chinedu_Okafor_FrontBack.pdf',
+      name: 'Nigerian_ID_Chinedu_Okafor_FrontBack.pdf',
       type: 'document',
       format: 'PDF',
       size: '1.2 MB',
@@ -356,7 +356,7 @@ export function ClinicalAttachmentsScreen() {
 
                 <div className="p-3 rounded-xl bg-surface-container-low border border-outline-variant/20 space-y-1">
                   <div className="flex items-center justify-between">
-                    <span className="text-on-surface-variant font-semibold">SHA-256 Digest (NABIDH Vault)</span>
+                    <span className="text-on-surface-variant font-semibold">SHA-256 Digest (Nigeria Health Information Exchange Vault)</span>
                     <button
                       type="button"
                       onClick={() => showToast('SHA-256 Checksum copied to clipboard')}

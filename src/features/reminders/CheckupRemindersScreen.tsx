@@ -165,10 +165,10 @@ export function CheckupRemindersScreen() {
                   </div>
                   <div className="flex flex-col min-w-0">
                     <span className="font-title-sm text-title-sm text-on-surface font-bold">
-                      Dr. Farouk Al-Mansoori
+                      Dr. Chinedu Okafor
                     </span>
                     <span className="font-body-sm text-body-sm text-on-surface-variant">
-                      Al Zahra Dental Hub, Oud Metha • License DHA-D-48912
+                      Lagos Smile Dental Centre, Ikeja • License DHA-D-48912
                     </span>
                     <span className="font-label-code text-label-code text-on-surface-variant mt-0.5">
                       Clinical Evaluation Date: Dec 12, 2024
@@ -211,7 +211,7 @@ export function CheckupRemindersScreen() {
                   </div>
                   <div>
                     <h2 className="font-title-md text-title-md text-on-surface font-bold">
-                      Tariq Al-Mansoor
+                      Tariq Okoye
                     </h2>
                     <span className="font-body-sm text-body-sm text-on-surface-variant">
                       Age 6 • Pediatric Preventive Recall
@@ -243,7 +243,7 @@ export function CheckupRemindersScreen() {
                     </span>
                     <span className="font-body-sm text-body-sm text-primary flex items-center gap-1 mt-0.5">
                       <Icon name="pin_drop" className="text-[15px]" />
-                      Dubai London Clinic, Festival City
+                      Lagos Island Dental Centre, Ikeja City Mall
                     </span>
                   </div>
                 </div>
@@ -257,7 +257,7 @@ export function CheckupRemindersScreen() {
                   </NavLink>
                   <button
                     type="button"
-                    onClick={() => showToast('Directions to Festival City Clinic opened.')}
+                    onClick={() => showToast('Directions to Ikeja City Mall Clinic opened.')}
                     className="py-2.5 px-4 rounded-xl bg-secondary-container text-on-secondary-container font-label-md text-label-md font-semibold hover:bg-secondary-fixed transition-colors flex items-center gap-1.5"
                   >
                     <Icon name="directions" className="text-[17px]" />
@@ -278,7 +278,7 @@ export function CheckupRemindersScreen() {
                     Making Check-ups Fun for Tariq
                   </span>
                   <p className="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">
-                    Track Tariq's morning and night brushing challenges to earn his Dubai Health “Sparkle Seal” at the January appointment!
+                    Track Tariq's morning and night brushing challenges to earn his Nigeria Dental Health “Sparkle Seal” at the January appointment!
                   </p>
                 </div>
               </div>
@@ -308,7 +308,7 @@ export function CheckupRemindersScreen() {
                       Comprehensive Exam &amp; Routine Charting
                     </span>
                     <span className="font-body-sm text-body-sm text-on-surface-variant">
-                      Dr. Farouk Al-Mansoori (DHA-D-48912)
+                      Dr. Chinedu Okafor (DHA-D-48912)
                     </span>
                   </div>
                   <div className="px-2 py-0.5 rounded-md bg-secondary-container/40 text-on-secondary-container font-label-sm text-label-sm shrink-0 font-bold">
@@ -395,7 +395,7 @@ export function CheckupRemindersScreen() {
                     Browse DHA-Accredited Clinics
                   </span>
                   <span className="font-body-sm text-body-sm text-on-surface-variant truncate">
-                    Over 380 certified centers across Dubai
+                    Over 380 certified centers across Lagos
                   </span>
                 </div>
               </div>

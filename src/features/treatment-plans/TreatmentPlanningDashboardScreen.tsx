@@ -50,7 +50,7 @@ export function TreatmentPlanningDashboardScreen() {
       clinicianLic: 'DDS #DEN-48912',
       grossAmount: 1450,
       dueAmount: 290,
-      dueLabel: 'Due: AED 290 (Ins. Pending)',
+      dueLabel: 'Due: NGN 290 (Ins. Pending)',
     },
     {
       id: '2',
@@ -69,13 +69,13 @@ export function TreatmentPlanningDashboardScreen() {
       clinicianLic: 'DDS #DEN-48912',
       grossAmount: 3200,
       dueAmount: 640,
-      dueLabel: 'Copay: AED 640',
-      nextAppt: '18 Oct 2026, 10:00 GST',
+      dueLabel: 'Copay: NGN 640',
+      nextAppt: '18 Oct 2026, 10:00 WAT',
     },
     {
       id: '3',
       code: '#TP-2026-062',
-      patientName: 'Fatima Al-Zahra',
+      patientName: 'Fatima Bello',
       patientInitials: 'FA',
       ageGender: '28y F',
       dhaId: 'DHA-08921',
@@ -85,11 +85,11 @@ export function TreatmentPlanningDashboardScreen() {
       priorityBadge: 'Routine',
       title: 'Pre-Implant Guided Bone Regeneration & Socket Shield',
       chips: ['4 Planned Procedures', 'Healing Phase (Week 4)'],
-      clinician: 'Dr. K. Al-Mansoor',
+      clinician: 'Dr. K. Okoye',
       clinicianLic: 'DDS #DEN-39104',
       grossAmount: 4800,
       dueAmount: 960,
-      dueLabel: 'Copay: AED 960',
+      dueLabel: 'Copay: NGN 960',
       phaseInfo: 'In Progress (Phase 2/3)',
     },
     {
@@ -542,7 +542,7 @@ export function TreatmentPlanningDashboardScreen() {
                   <div className="flex items-baseline sm:items-end justify-between sm:justify-start gap-4">
                     <div className="text-left sm:text-right">
                       <div className="text-base font-extrabold text-[#131b2e]">
-                        AED {plan.grossAmount.toLocaleString()}
+                        NGN {plan.grossAmount.toLocaleString()}
                       </div>
                       <div className="text-[11px] text-[#707881]">{plan.dueLabel}</div>
                     </div>
@@ -603,7 +603,7 @@ export function TreatmentPlanningDashboardScreen() {
             <p className="text-xs text-amber-900/90 leading-relaxed mt-0.5">
               Only verified dental surgeons with active license (<span className="font-mono font-medium">#DEN</span>)
               can authorize surgical, restorative, or invasive dental treatment plans. All draft items remain non-binding
-              until clinical sign-off is logged in the permanent NABIDH ledger.
+              until clinical sign-off is logged in the permanent Nigeria Health Information Exchange ledger.
             </p>
           </div>
         </div>

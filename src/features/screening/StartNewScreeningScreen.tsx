@@ -66,13 +66,13 @@ export function StartNewScreeningScreen() {
                 ZT
               </div>
               <div>
-                <span className="font-bold text-on-surface block">Zayd Tariq Al-Mansoori</span>
+                <span className="font-bold text-on-surface block">Zayd Tariq Okafor</span>
                 <span className="text-on-surface-variant font-mono">DHA-P-49102 · Grade 4B</span>
               </div>
             </div>
 
             <span className="text-primary font-semibold hidden sm:inline">
-              Al Wasl Model Girls School
+              Lagos Mainland Community School
             </span>
           </div>
         </section>

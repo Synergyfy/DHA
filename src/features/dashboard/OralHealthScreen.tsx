@@ -92,7 +92,7 @@ export function OralHealthScreen() {
                 </span>
               </div>
               <p className="font-body-md text-body-md text-on-surface font-medium leading-snug">
-                Attested by <strong className="text-primary font-bold">Dr. Farouk Al-Mansoori</strong>{' '}
+                Attested by <strong className="text-primary font-bold">Dr. Chinedu Okafor</strong>{' '}
                 <span className="text-on-surface-variant font-mono text-label-sm">(Lic #DHA-D-48912)</span>
               </p>
               <div className="mt-2.5 p-3 rounded-xl bg-surface-container-lowest/90 border border-outline-variant/30 flex items-start gap-2">
@@ -149,10 +149,10 @@ export function OralHealthScreen() {
                     Examining Facility
                   </span>
                   <span className="font-title-sm text-title-sm text-on-surface font-bold block mt-0.5 truncate">
-                    Al Zahra Dental Hub
+                    Lagos Smile Dental Centre
                   </span>
                   <span className="font-body-sm text-[12px] text-on-surface-variant">
-                    Oud Metha, Dubai
+                    Ikeja, Lagos
                   </span>
                 </div>
               </div>

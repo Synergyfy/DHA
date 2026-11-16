@@ -441,7 +441,7 @@ export function PeriodontalExaminationScreen() {
         <section className="bg-surface-container-lowest rounded-2xl p-5 shadow-sm border border-outline-variant/30 space-y-3">
           <div className="flex items-center justify-between text-xs">
             <span className="font-bold text-sm text-on-surface">Overall Periodontal Diagnostic Indices</span>
-            <span className="text-secondary font-semibold">NABIDH Standardized</span>
+            <span className="text-secondary font-semibold">Nigeria Health Information Exchange Standardized</span>
           </div>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 text-center text-xs">
